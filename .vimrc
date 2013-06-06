@@ -132,3 +132,59 @@ if has("multi_byte_encoding")
 else 
 	set encoding=latin1
 endif
+
+if has('unix')
+	set termencoding=utf-8                 " terminal encoding
+	set fileformat=unix                    " unix rocks :)
+	set fileformats=unix                   " unix rocks :)
+
+	"
+	" TODO: set up a mapping for dictionary
+	"
+	set dictionary+=/usr/share/dict/ogerman
+	set dictionary+=/usr/share/dict/brazilian
+	set dictionary+=/usr/share/dict/british-english
+	set path+=~/projekte
+else
+    " write specific stuff for non-unix systems here
+	"source $VIMRUNTIME/mswin.vim
+	"behave mswin
+	"set fileformat=dos                       " unix rocks :)
+	set fileformats=unix,dos                   " unix rocks :)
+endif
+
+"===============================================================================
+" 2.2 - Text Formatting/Layout
+"===============================================================================
+
+syntax enable                     " syntax highlight on and keep your settings
+filetype on                       " enable file type detection 
+filetype plugin on                " enable filetxype plugins
+filetype indent on
+
+if has("multi_byte_encoding")
+	set encoding=utf-8		               " charcter encoding used in vim
+else 
+	set encoding=latin1
+endif
+
+" system dependent configuration
+if has('unix')
+	set termencoding=utf-8                 " terminal encoding
+	set fileformat=unix                    " unix rocks :)
+	set fileformats=unix                   " unix rocks :)
+
+	"
+	" TODO: set up a mapping for dictionary
+	"
+	set dictionary+=/usr/share/dict/ogerman
+	set dictionary+=/usr/share/dict/brazilian
+	set dictionary+=/usr/share/dict/british-english
+	set path+=~/projekte
+else
+    " write specific stuff for non-unix systems here
+	"source $VIMRUNTIME/mswin.vim
+	"behave mswin
+	"set fileformat=dos                       " unix rocks :)
+	set fileformats=unix,dos                   " unix rocks :)
+endif

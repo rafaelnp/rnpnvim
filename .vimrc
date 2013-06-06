@@ -4,7 +4,7 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.06.04 (MI) 16:23:53
+" Last update:   2013.06.06 (th) 17:13:53
 "===============================================================================
 
 "===============================================================================
@@ -51,9 +51,9 @@
 "   CTRL+F (insert mode)    indent line
 "   normal <key-cmd>        execute a sequence of keys
 "   execute <command>       execute a :command
-"   yaw                     copia palavra pra yank register
+"   yaw                     copies word to yank register
 "   '.                      goto position where last change was made
-"   K                       executa keywordprg para a palavra no cursor
+"   K                       executes man page for the word under the cursor
 "   split                   horizontal split
 "   vsplit                  vertical split
 "   q:	                    show command line window
@@ -66,22 +66,22 @@
 "   o or A<CR>              adds new line bellow 
 "   O or ko                 adds new line above
 "   c-w =                   makes windows have the same size
-"   Ctrl+a                  Increment number under the cursor
-"   Ctrl+x                  Decrement number under cursor
-"   bd	                    Buffer delete
+"   Ctrl+a                  increment number under the cursor
+"   Ctrl+x                  decrement number under cursor
+"   bd	                    buffer delete
 "   <C-a>                   increments the number under the cursor
 "   <C-x>                   decrements the number under the cursor
 "
 "   Mapping:
 "
 "   Here is an overview of map commands and in which mode they work:
-"	:map         Normal, Visual and Operator-pending
-"	:vmap        Visual
-"	:nmap        Normal
-"	:omap        Operator-pending
-"	:map!        Insert and Command-line
-"	:imap        Insert
-"	:cmap        Command-line
+"	:map                    Normal, Visual and Operator-pending
+"	:vmap                   Visual
+"	:nmap                   Normal
+"	:omap                   Operator-pending
+"	:map!                   Insert and Command-line
+"	:imap                   Insert
+"	:cmap                   Command-line
 "
 "    Search:  
 "    /^\(.*pattern\)\@!.*$  for lines not containing pattern:

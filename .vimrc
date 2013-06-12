@@ -4,7 +4,7 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.06.11 (tue) 22:13:53
+" Last update:   2013.06.12 (wed) 12:03:53
 "===============================================================================
 "
 "TODO:
@@ -240,6 +240,14 @@ set incsearch                     " incremental search
 " 2.3 - GUI Options
 "===============================================================================
 
+set laststatus=2                          " statusline always visible
+set shortmess=atToO                       " see: help shortmess 
+
+if has('mouse')
+  set mouse=a                          " enable mouse in all modes
+  set mousehide                        " hides the mouse while typing
+endif
+
 function! SetupGUI()
 	set ea                                  " make all windows the same size when
                                             " adding/removing windows
@@ -249,11 +257,6 @@ function! SetupGUI()
 	set showmode                           " display current mode
 	set cursorline                          " sets cursor line highlight. cool :)
 	set display=uhex
-
-	if has('mouse')
-	  set mouse=a                          " enable mouse in all modes
-	  set mousehide                        " hides the mouse while typing
-	endif
 
 	" TODO: Which is the best font (proportional) for programming ??
 	if has('unix')
@@ -269,22 +272,11 @@ function! SetupGUI()
 
 	colorscheme  wombat
 	set guioptions=aAgi                       " see: help guioptions 
-	set shortmess=atToO                       " see: help shortmess 
 
 	"Pop-up menu color setteings 
 	highlight Pmenu guibg=brown gui=bold      "gui
 	highlight Pmenu ctermbg=238 gui=bold      "terminal
 	set mousemodel=popup
-	set laststatus=2                          " statusline always visible
-
-"	set statusline=%t%m%r%h%w\                " options
-"	set statusline+=[%{&ff}]\                 " system
-"	set statusline+=%y\                       " file type
-"	set statusline+=[ASCII=%03.3b,0x%02.2B]\  " ascii
-"	set statusline+=[OFFSET=%o,0x%O]          " offset
-"	set statusline+=[LN=%l,C=%v]              " line and column
-"	set statusline+=[%p%%]\                   " percentage 
-"	set statusline+=[LN=%L]                   " total lines 
 endfunction
 
 if has('gui_running')
@@ -297,6 +289,14 @@ else
 		                        " and make xterm vim shine
 	endif
 	set term=builtin_ansi       " Make arrow and other keys work
+	set statusline=%t%m%r%h%w\                " options
+	set statusline+=[%{&ff}]\                 " system
+	set statusline+=%y\                       " file type
+	set statusline+=[ASCII=%03.3b,0x%02.2B]\  " ascii
+	set statusline+=[OFFSET=%o,0x%O]          " offset
+	set statusline+=[LN=%l,C=%v]              " line and column
+	set statusline+=[%p%%]\                   " percentage 
+	set statusline+=[LN=%L]                   " total lines 
 endif
 
 "===============================================================================

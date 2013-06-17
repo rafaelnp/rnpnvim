@@ -12,7 +12,7 @@
 "   find a good colorcheme
 "   install project management funcionality
 "   install autocomplete funcionality 
-"	write the index
+"   write the index
 "
 "   .vimrc links: https://github.com/spf13/spf13-vim
 "===============================================================================
@@ -197,7 +197,7 @@ filetype plugin on                " enable filetxype plugins
 filetype indent on
 
 if has("multi_byte_encoding")
-	set encoding=utf-8		               " charcter encoding used in vim
+	set encoding=utf-8                       " charcter encoding used in vim
 else 
 	set encoding=latin1
 endif
@@ -239,6 +239,14 @@ set hls                           " highlight search patern
 set wrapmargin=1                  " space after linebrake
 set textwidth=90                  " no fucking long lines
 set incsearch                     " incremental search
+
+" compatible options
+set cpoptions=BceFs 
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
 
 "===============================================================================
 " 2.3 - GUI Options

@@ -22,22 +22,22 @@
 "   Vim quick and advanced reference card
 "   http://tnerual.eriogerg.free.fr/vimqrc.html
 "
-"	Navigation:
-"	$                       end of line
-"	^                       first character in current line
-"	w                       next word
-"	b                       preview word
-"   <C-o>                   jumps to previous location 
-"   <C-i>                   jumps to next location 
-"	CTRL-]                  jump to link/tag under the cursor
-"	CTRL-T or CTRL-O        jump back to previous postion
-"	%                       match brackets open/closing
-"   [TAB                    goes to definition
+"    Navigation:
+"    $                       end of line
+"    ^                       first character in current line
+"    w                       next word
+"    b                       preview word
+"    <C-o>                   jumps to previous location 
+"    <C-i>                   jumps to next location 
+"    CTRL-]                  jump to link/tag under the cursor
+"    CTRL-T or CTRL-O        jump back to previous postion
+"    %                       match brackets open/closing
+"    [TAB                    goes to definition
 "
-"   Sessions:
-"   mksession <file>        saves session to a file
+"    Sessions:
+"    mksession <file>        saves session to a file
 "                            (Ex:  mksession session.vim)
-"   source <file>           recovers a vim session
+"    source <file>           recovers a vim session
 "                            (Ex:  source session.vim)
 "                            (Ex:  vim -S session.vim)
 "
@@ -47,49 +47,49 @@
 "    CTRL-N                 completes a parcially typed word searching
 "                           forward
 "
-"	Editing:
-"	VU                      uppercase the whole current line
-"   mark <n>                create a new mark `n`
-"   `<n>                    go to mark `n` 
-"   ^E e ^Y                 less-like page navigation
-"   gg=G                    reidenta o codigo todo
-"   CTRL+D (insert mode)    retira um `tab` de identacao
-"   %retab                  replaces TABs by spaces
-"   gq (visual selected)    ajusta texto em textwidth
-"   CTRL+F (insert mode)    indent line
-"   normal <key-cmd>        execute a sequence of keys
-"   execute <command>       execute a :command
-"   yaw                     copies word to yank register
-"   '.                      goto position where last change was made
-"   K                       executes man page for the word under the cursor
-"   split                   horizontal split
-"   vsplit                  vertical split
-"   q:	                    show command line window
-"   ce	                    change to end of word (a complete change command)
-"   C or c$                 change to end of wine
-"   s or cl                 erase character under the cursosr and enters in insert mode
-"   S or ^C                 erase the whole line 
-"   I or ^i                 goes to the line begin and enters in insert mode
-"   A or $a                 goes to the line end and enters in edit mode
-"   o or A<CR>              adds new line bellow 
-"   O or ko                 adds new line above
-"   c-w =                   makes windows have the same size
-"   Ctrl+a                  increment number under the cursor
-"   Ctrl+x                  decrement number under cursor
-"   bd	                    buffer delete
-"   <C-a>                   increments the number under the cursor
-"   <C-x>                   decrements the number under the cursor
+"   Editing:
+"    VU                      uppercase the whole current line
+"    mark <n>                create a new mark `n`
+"    `<n>                    go to mark `n` 
+"    ^E e ^Y                 less-like page navigation
+"    gg=G                    reidenta o codigo todo
+"    CTRL+D (insert mode)    retira um `tab` de identacao
+"    %retab                  replaces TABs by spaces
+"    gq (visual selected)    ajusta texto em textwidth
+"    CTRL+F (insert mode)    indent line
+"    normal <key-cmd>        execute a sequence of keys
+"    execute <command>       execute a :command
+"    yaw                     copies word to yank register
+"    '.                      goto position where last change was made
+"    K                       executes man page for the word under the cursor
+"    split                   horizontal split
+"    vsplit                  vertical split
+"    q:                      show command line window
+"    ce                      change to end of word (a complete change command)
+"    C or c$                 change to end of wine
+"    s or cl                 erase character under the cursosr and enters in insert mode
+"    S or ^C                 erase the whole line 
+"    I or ^i                 goes to the line begin and enters in insert mode
+"    A or $a                 goes to the line end and enters in edit mode
+"    o or A<CR>              adds new line bellow 
+"    O or ko                 adds new line above
+"    c-w =                   makes windows have the same size
+"    Ctrl+a                  increment number under the cursor
+"    Ctrl+x                  decrement number under cursor
+"    bdi                     buffer delete
+"    <C-a>                   increments the number under the cursor
+"    <C-x>                   decrements the number under the cursor
 "
 "   Mapping:
 "
 "   Here is an overview of map commands and in which mode they work:
-"	:map                    Normal, Visual and Operator-pending
-"	:vmap                   Visual
-"	:nmap                   Normal
-"	:omap                   Operator-pending
-"	:map!                   Insert and Command-line
-"	:imap                   Insert
-"	:cmap                   Command-line
+"    :map                    Normal, Visual and Operator-pending
+"    :vmap                   Visual
+"    :nmap                   Normal
+"    :omap                   Operator-pending
+"    :map!                   Insert and Command-line
+"    :imap                   Insert
+"    :cmap                   Command-line
 "
 "    Search:  
 "    /^\(.*pattern\)\@!.*$  for lines not containing pattern:
@@ -101,7 +101,7 @@
 "   :50,100s/search/replace/g    search and replace between the lines 50 and 100
 
 "   Misc:
-"	so ~/.vimrc             reloads .vimrc
+"    so ~/.vimrc             reloads .vimrc
 
 "   Easter Eggs:
 "    :help 42
@@ -141,13 +141,13 @@ Bundle 'moria'
 " 2.1 - General Options
 "===============================================================================
 
-set nocompatible                       " no vi-compatibility
-set autochdir                          " always switch to the current file directory
-set autowriteall                       " automatically save all buffers
-set backspace=indent,eol,start         " see :help bs
-set helplang=de,en                     " help language
+set nocompatible                        " no vi-compatibility
+set autochdir                           " always switch to the current file directory
+set autowriteall                        " automatically save all buffers
+set backspace=indent,eol,start          " see :help bs
+set helplang=de,en                      " help language
 set history=100                         " command history
-set printoptions=paper:a4              " printer options
+set printoptions=paper:a4               " printer options
 set ruler
 set wildignore=*.o,*.obj,*.bak,*.exe,*~ " wildmenu: ignore these extensions
 set updatetime=4000                     " update every 4000 ms
@@ -161,7 +161,7 @@ set spelllang=de,pt_br,en,es
 set browsedir=buffer                    " defaults to the current file's directory
 
 if has("multi_byte_encoding")
-	set encoding=utf-8		               " charcter encoding used in vim
+	set encoding=utf-8                  " charcter encoding used in vim
 else 
 	set encoding=latin1
 endif
@@ -180,7 +180,7 @@ if has('unix')
 	set dictionary+=/usr/share/dict/british-english
 	set path+=~/projekte
 else
-    " write specific stuff for non-unix systems here
+	" write specific stuff for non-unix systems here
 	"source $VIMRUNTIME/mswin.vim
 	"behave mswin
 	"set fileformat=dos                       " unix rocks :)
@@ -222,6 +222,10 @@ else
 	"set fileformat=dos                       " unix rocks :)
 	set fileformats=unix,dos                   " unix rocks :)
 endif
+set fo=tcrqan2                    " See Help (:help fo-table)
+set ai                            " autoindent
+set si                            " smartindent
+set cindent                       " do c-style indenting
 
 " tabs are for indenting and aligning text.
 " spaces are for separating keywords.
@@ -240,22 +244,22 @@ set incsearch                     " incremental search
 " 2.3 - GUI Options
 "===============================================================================
 
-set laststatus=2                          " statusline always visible
-set shortmess=atToO                       " see: help shortmess 
+set laststatus=2                       " statusline always visible
+set shortmess=atToO                    " see: help shortmess 
 
 if has('mouse')
-  set mouse=a                          " enable mouse in all modes
-  set mousehide                        " hides the mouse while typing
+	set mouse=a                        " enable mouse in all modes
+	set mousehide                      " hides the mouse while typing
 endif
 
 function! SetupGUI()
-	set ea                                  " make all windows the same size when
-                                            " adding/removing windows
-	set ead=both                            "set in which direction 'equalalways'
-                                            " works: "ver", "hor" or "both"
-	set wildmenu
-	set showmode                           " display current mode
-	set cursorline                          " sets cursor line highlight. cool :)
+	set ea                             " make all windows the same size when
+                                       " adding/removing windows
+	set ead=both                       "set in which direction 'equalalways'
+                                       " works: "ver", "hor" or "both"
+	set wildmenu                       "
+	set showmode                       " display current mode
+	set cursorline                     " sets cursor line highlight. cool :)
 	set display=uhex
 
 	" TODO: Which is the best font (proportional) for programming ??
@@ -318,6 +322,10 @@ endfunction
 nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>P
 inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>
 
+"Very useful :)
+map <buffer> <a-m> :%s///g<CR>     " remove ^M in current file
+map <a-q> :ccl<CR>                " closes quickfix
+
 " CTRL+F1 to toggle the menu bar
 nmap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<cr><ESC>
 
@@ -363,3 +371,38 @@ map <Left>  <Nop>
 map <Right> <Nop>
 map <Up>    <Nop>
 map <Down>  <Nop>
+
+"===============================================================================
+" 3 - Plugins
+"===============================================================================
+" Here can be found the plugins settings and other relevant informations
+" 
+" TODO: Test/install/configure the following plugins:
+"
+" Supertab??
+" c.vim ??
+"
+"===============================================================================
+" 3.1 - Plugins list
+"===============================================================================
+"
+" 1 - Name    : vundle
+"     Version : 
+"     Link    : 
+"
+" 2 - Name    : genutils General utility functions
+"     Version : 2.5 - 2009.09.17
+"     Link    : http://www.vim.org/scripts/script.php?script_id=197
+"
+" 3 - Name    : SelectBuf
+"     Version : 4.3 - 2007.06.12
+"     Link    : http://www.vim.org/scripts/script.php?script_id=107
+"
+" 4 - Name    : vimexplorer
+"     Version : 0.99 - 2011.07.08
+"     Link    : http://www.vim.org/scripts/script.php?script_id=1950
+"
+" 5 - Name    : ColorSamplerPack
+"     Version : 8.01 - 2010.01.25
+"     Link    : http://www.vim.org/scripts/script.php?script_id=625
+"

@@ -222,7 +222,7 @@ else
 	"set fileformat=dos                       " unix rocks :)
 	set fileformats=unix,dos                   " unix rocks :)
 endif
-set fo=tcrqan2                    " See Help (:help fo-table)
+set fo=tcrqn                      " See Help (:help fo-table)
 set ai                            " autoindent
 set si                            " smartindent
 set cindent                       " do c-style indenting
@@ -234,7 +234,7 @@ set softtabstop=4                 " unify
 set shiftwidth=4                  " unify
 set noexpandtab                   " just tabs please :) 
 set showcmd                       " show command in last line of screen
-set nu                            " line numbers :-)
+set nu                            " line numbers :)
 set hls                           " highlight search patern
 set wrapmargin=1                  " space after linebrake
 set textwidth=90                  " no fucking long lines

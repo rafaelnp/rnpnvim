@@ -133,7 +133,15 @@ Bundle 'SelectBuf'
 Bundle 'VimExplorer'
 Bundle 'Color-Sampler-Pack'
 Bundle 'Tagbar'
+Bundle 'vim-colors-solarized'
 Bundle 'moria'
+Bundle 'https://github.com/tpope/vim-vividchalk.git'
+if has('gui_running')
+	Bundle 'Lokaltog/powerline'
+	set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+endif
+let g:vundle_default_git_proto = 'https'
+filetype plugin indent on     " required!
 "===============================================================================
 " 2 - VIM setup and costumization
 "===============================================================================
@@ -282,7 +290,7 @@ function! SetupGUI()
 		set guifont=Lucida_Sans_Typewriter:h9
 	endif
 
-	colorscheme  wombat
+	colorscheme vividchalk
 	set guioptions=aAgi                       " see: help guioptions 
 
 	"Pop-up menu color setteings 
@@ -414,3 +422,60 @@ map <Down>  <Nop>
 "     Version : 8.01 - 2010.01.25
 "     Link    : http://www.vim.org/scripts/script.php?script_id=625
 "
+"===============================================================================
+" 3.2 - Plugins Settings
+"===============================================================================
+
+"===============================================================================
+" 3.2.1 - Vundle
+"===============================================================================
+" Configured in the beginning of the file
+
+"===============================================================================
+" 3.2.2 - genutils
+"===============================================================================
+"
+"
+"===============================================================================
+" 3.2.3 - SelectBuf
+"===============================================================================
+nmap <silent> <F3> <Plug>SelectBuf
+let g:selBufDefaultSortOrder  = "name"
+let g:selBufDisableMRUlisting = 0
+let g:selBufAlwaysShowDetails = 1
+
+
+"===============================================================================
+" 3.2.4 - vimexplorer
+"===============================================================================
+nnoremap <silent> <F7> :VE ~<CR>
+let g:VEConf_treePanelWidth = 40           " Width of tree panel. Default: 30
+
+if has('unix')
+	let g:VEConf_externalExplorer = "dolphin"
+	let g:VEConf_showHiddenFiles  = 0
+	let g:VEConf_usingGnome       = 0
+	let g:VEConf_usingKDE         = 1
+	let g:VEConf_systemEncoding   = 'utf-8'
+elseif has('win32' || 'win64')
+	let g:VEConf_externalExplorer = "explorer.exe"
+	let g:VEConf_systemEncoding   = 'utf-16'
+endif
+
+"===============================================================================
+" 3.2.5 - ColorSamplerPack
+"===============================================================================
+
+"===============================================================================
+" 3.2.6 - Tagbar
+"===============================================================================
+
+nnoremap <silent> <F8> :TagbarToggle<CR>
+let g:tagbar_autoclose   = 0
+let g:tagbar_autofocus   = 1
+let g:tagbar_autoshowtag = 1
+let g:tagbar_left        = 0
+let g:tagbar_expand      = 0
+let g:tagbar_autoshowtag = 1
+
+

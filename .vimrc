@@ -303,7 +303,7 @@ if has('gui_running')
 	:call SetupGUI()
 else
 	set bg=dark
-	colorscheme  wombat
+	colorscheme vividchalk
 	if &term == 'xterm' || &term == 'screen'
 		set t_Co=256            " Enable 256 colors to stop the CSApprox warning
 		                        " and make xterm vim shine
@@ -318,6 +318,8 @@ else
 	set statusline+=[%p%%]\                   " percentage 
 	set statusline+=[LN=%L]                   " total lines 
 endif
+
+syntax enable                          " syntax highlight on and keep your settings
 
 "===============================================================================
 " 2.4 - mappings

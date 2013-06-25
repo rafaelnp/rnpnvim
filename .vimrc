@@ -4,7 +4,7 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.06.12 (wed) 12:03:53
+" Last update:   2013.06.25 (wed) 14:03:53
 "===============================================================================
 "
 "TODO:
@@ -134,6 +134,8 @@ Bundle 'VimExplorer'
 Bundle 'Color-Sampler-Pack'
 Bundle 'Tagbar'
 Bundle 'vim-colors-solarized'
+Bundle 'tabular'
+Bundle 'kien/ctrlp.vim'
 Bundle 'moria'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
 if has('gui_running')
@@ -480,4 +482,31 @@ let g:tagbar_left        = 0
 let g:tagbar_expand      = 0
 let g:tagbar_autoshowtag = 1
 
+"===============================================================================
+" 3.2.7 - vim-colors-solarized
+"===============================================================================
+
+" Already configure on SetupGui()
+
+"===============================================================================
+" 3.2.8 - Tabular
+"===============================================================================
+
+"===============================================================================
+" 3.2.9 - ctrlp
+"===============================================================================
+
+" TODO: not yet complete
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+
+let g:ctrlp_match_window_bottom = 1
+let g:ctrlp_show_hidden         = 1
 

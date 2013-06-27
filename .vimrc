@@ -282,7 +282,7 @@ function! SetupGUI()
 	set ead=both                       "set in which direction 'equalalways'
                                        " works: "ver", "hor" or "both"
 	set wildmenu                       "
-	set showmode                       " display current mode
+	set noshowmode                       " display current mode
 	set cursorline                     " sets cursor line highlight. cool :)
 	set display=uhex
 
@@ -310,6 +310,7 @@ endfunction
 if has('gui_running')
 	:call SetupGUI()
 else
+	set showmode
 	set bg=dark
 	colorscheme vividchalk
 	if &term == 'xterm' || &term == 'screen'

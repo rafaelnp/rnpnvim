@@ -4,17 +4,17 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.06.12 (wed) 12:03:53
+" Last update:   2013.06.26 (wed) 14:03:53
 "===============================================================================
 "
 "TODO:
 "   fix tag generation
-"   find a good colorcheme
 "   install project management funcionality
 "   install autocomplete funcionality 
-"	write the index
+"   configure powerline
+"   http://vim.spf13.com/
+"    configure clang_indexer/clang_complete
 "
-"   .vimrc links: https://github.com/spf13/spf13-vim
 "===============================================================================
 " 1 - useful commands
 "===============================================================================
@@ -22,22 +22,22 @@
 "   Vim quick and advanced reference card
 "   http://tnerual.eriogerg.free.fr/vimqrc.html
 "
-"	Navigation:
-"	$                       end of line
-"	^                       first character in current line
-"	w                       next word
-"	b                       preview word
-"   <C-o>                   jumps to previous location 
-"   <C-i>                   jumps to next location 
-"	CTRL-]                  jump to link/tag under the cursor
-"	CTRL-T or CTRL-O        jump back to previous postion
-"	%                       match brackets open/closing
-"   [TAB                    goes to definition
+"    Navigation:
+"    $                       end of line
+"    ^                       first character in current line
+"    w                       next word
+"    b                       preview word
+"    <C-o>                   jumps to previous location 
+"    <C-i>                   jumps to next location 
+"    CTRL-]                  jump to link/tag under the cursor
+"    CTRL-T or CTRL-O        jump back to previous postion
+"    %                       match brackets open/closing
+"    [TAB                    goes to definition
 "
-"   Sessions:
-"   mksession <file>        saves session to a file
+"    Sessions:
+"    mksession <file>        saves session to a file
 "                            (Ex:  mksession session.vim)
-"   source <file>           recovers a vim session
+"    source <file>           recovers a vim session
 "                            (Ex:  source session.vim)
 "                            (Ex:  vim -S session.vim)
 "
@@ -47,49 +47,49 @@
 "    CTRL-N                 completes a parcially typed word searching
 "                           forward
 "
-"	Editing:
-"	VU                      uppercase the whole current line
-"   mark <n>                create a new mark `n`
-"   `<n>                    go to mark `n` 
-"   ^E e ^Y                 less-like page navigation
-"   gg=G                    reidenta o codigo todo
-"   CTRL+D (insert mode)    retira um `tab` de identacao
-"   %retab                  replaces TABs by spaces
-"   gq (visual selected)    ajusta texto em textwidth
-"   CTRL+F (insert mode)    indent line
-"   normal <key-cmd>        execute a sequence of keys
-"   execute <command>       execute a :command
-"   yaw                     copies word to yank register
-"   '.                      goto position where last change was made
-"   K                       executes man page for the word under the cursor
-"   split                   horizontal split
-"   vsplit                  vertical split
-"   q:	                    show command line window
-"   ce	                    change to end of word (a complete change command)
-"   C or c$                 change to end of wine
-"   s or cl                 erase character under the cursosr and enters in insert mode
-"   S or ^C                 erase the whole line 
-"   I or ^i                 goes to the line begin and enters in insert mode
-"   A or $a                 goes to the line end and enters in edit mode
-"   o or A<CR>              adds new line bellow 
-"   O or ko                 adds new line above
-"   c-w =                   makes windows have the same size
-"   Ctrl+a                  increment number under the cursor
-"   Ctrl+x                  decrement number under cursor
-"   bd	                    buffer delete
-"   <C-a>                   increments the number under the cursor
-"   <C-x>                   decrements the number under the cursor
+"   Editing:
+"    VU                      uppercase the whole current line
+"    mark <n>                create a new mark `n`
+"    `<n>                    go to mark `n` 
+"    ^E e ^Y                 less-like page navigation
+"    gg=G                    reidenta o codigo todo
+"    CTRL+D (insert mode)    retira um `tab` de identacao
+"    %retab                  replaces TABs by spaces
+"    gq (visual selected)    ajusta texto em textwidth
+"    CTRL+F (insert mode)    indent line
+"    normal <key-cmd>        execute a sequence of keys
+"    execute <command>       execute a :command
+"    yaw                     copies word to yank register
+"    '.                      goto position where last change was made
+"    K                       executes man page for the word under the cursor
+"    split                   horizontal split
+"    vsplit                  vertical split
+"    q:                      show command line window
+"    ce                      change to end of word (a complete change command)
+"    C or c$                 change to end of wine
+"    s or cl                 erase character under the cursosr and enters in insert mode
+"    S or ^C                 erase the whole line 
+"    I or ^i                 goes to the line begin and enters in insert mode
+"    A or $a                 goes to the line end and enters in edit mode
+"    o or A<CR>              adds new line bellow 
+"    O or ko                 adds new line above
+"    c-w =                   makes windows have the same size
+"    Ctrl+a                  increment number under the cursor
+"    Ctrl+x                  decrement number under cursor
+"    bdi                     buffer delete
+"    <C-a>                   increments the number under the cursor
+"    <C-x>                   decrements the number under the cursor
 "
 "   Mapping:
 "
 "   Here is an overview of map commands and in which mode they work:
-"	:map                    Normal, Visual and Operator-pending
-"	:vmap                   Visual
-"	:nmap                   Normal
-"	:omap                   Operator-pending
-"	:map!                   Insert and Command-line
-"	:imap                   Insert
-"	:cmap                   Command-line
+"    :map                    Normal, Visual and Operator-pending
+"    :vmap                   Visual
+"    :nmap                   Normal
+"    :omap                   Operator-pending
+"    :map!                   Insert and Command-line
+"    :imap                   Insert
+"    :cmap                   Command-line
 "
 "    Search:  
 "    /^\(.*pattern\)\@!.*$  for lines not containing pattern:
@@ -101,7 +101,7 @@
 "   :50,100s/search/replace/g    search and replace between the lines 50 and 100
 
 "   Misc:
-"	so ~/.vimrc             reloads .vimrc
+"    so ~/.vimrc             reloads .vimrc
 
 "   Easter Eggs:
 "    :help 42
@@ -133,7 +133,23 @@ Bundle 'SelectBuf'
 Bundle 'VimExplorer'
 Bundle 'Color-Sampler-Pack'
 Bundle 'Tagbar'
+Bundle 'Syntastic'
+Bundle 'vim-colors-solarized'
+Bundle 'tabular'
+Bundle 'kien/ctrlp.vim'
 Bundle 'moria'
+Bundle 'https://github.com/oinksoft/proj.vim.git'
+Bundle 'https://github.com/myusuf3/numbers.vim.git'
+Bundle 'vim-nerdtree-tabs'
+Bundle 'nerdtree'
+Bundle 'https://github.com/tpope/vim-vividchalk.git'
+if has('gui_running')
+	Bundle 'Lokaltog/powerline'
+	set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+endif
+let g:vundle_default_git_proto = 'https'
+filetype plugin indent on     " required!
+
 "===============================================================================
 " 2 - VIM setup and costumization
 "===============================================================================
@@ -141,13 +157,13 @@ Bundle 'moria'
 " 2.1 - General Options
 "===============================================================================
 
-set nocompatible                       " no vi-compatibility
-set autochdir                          " always switch to the current file directory
-set autowriteall                       " automatically save all buffers
-set backspace=indent,eol,start         " see :help bs
-set helplang=de,en                     " help language
+set nocompatible                        " no vi-compatibility
+set autochdir                           " always switch to the current file directory
+set autowriteall                        " automatically save all buffers
+set backspace=indent,eol,start          " see :help bs
+set helplang=de,en                      " help language
 set history=100                         " command history
-set printoptions=paper:a4              " printer options
+set printoptions=paper:a4               " printer options
 set ruler
 set wildignore=*.o,*.obj,*.bak,*.exe,*~ " wildmenu: ignore these extensions
 set updatetime=4000                     " update every 4000 ms
@@ -161,7 +177,7 @@ set spelllang=de,pt_br,en,es
 set browsedir=buffer                    " defaults to the current file's directory
 
 if has("multi_byte_encoding")
-	set encoding=utf-8		               " charcter encoding used in vim
+	set encoding=utf-8                  " charcter encoding used in vim
 else 
 	set encoding=latin1
 endif
@@ -180,7 +196,7 @@ if has('unix')
 	set dictionary+=/usr/share/dict/british-english
 	set path+=~/projekte
 else
-    " write specific stuff for non-unix systems here
+	" write specific stuff for non-unix systems here
 	"source $VIMRUNTIME/mswin.vim
 	"behave mswin
 	"set fileformat=dos                       " unix rocks :)
@@ -197,7 +213,7 @@ filetype plugin on                " enable filetxype plugins
 filetype indent on
 
 if has("multi_byte_encoding")
-	set encoding=utf-8		               " charcter encoding used in vim
+	set encoding=utf-8                       " charcter encoding used in vim
 else 
 	set encoding=latin1
 endif
@@ -222,6 +238,10 @@ else
 	"set fileformat=dos                       " unix rocks :)
 	set fileformats=unix,dos                   " unix rocks :)
 endif
+set fo=tcrqn                      " See Help (:help fo-table)
+set ai                            " autoindent
+set si                            " smartindent
+set cindent                       " do c-style indenting
 
 " tabs are for indenting and aligning text.
 " spaces are for separating keywords.
@@ -230,32 +250,40 @@ set softtabstop=4                 " unify
 set shiftwidth=4                  " unify
 set noexpandtab                   " just tabs please :) 
 set showcmd                       " show command in last line of screen
-set nu                            " line numbers :-)
+set nu                            " line numbers :)
 set hls                           " highlight search patern
 set wrapmargin=1                  " space after linebrake
 set textwidth=90                  " no fucking long lines
 set incsearch                     " incremental search
 
+" compatible options
+set cpoptions=BceFs 
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
+
 "===============================================================================
 " 2.3 - GUI Options
 "===============================================================================
 
-set laststatus=2                          " statusline always visible
-set shortmess=atToO                       " see: help shortmess 
+set laststatus=2                       " statusline always visible
+set shortmess=atToO                    " see: help shortmess 
 
 if has('mouse')
-  set mouse=a                          " enable mouse in all modes
-  set mousehide                        " hides the mouse while typing
+	set mouse=a                        " enable mouse in all modes
+	set mousehide                      " hides the mouse while typing
 endif
 
 function! SetupGUI()
-	set ea                                  " make all windows the same size when
-                                            " adding/removing windows
-	set ead=both                            "set in which direction 'equalalways'
-                                            " works: "ver", "hor" or "both"
-	set wildmenu
-	set showmode                           " display current mode
-	set cursorline                          " sets cursor line highlight. cool :)
+	set ea                             " make all windows the same size when
+                                       " adding/removing windows
+	set ead=both                       "set in which direction 'equalalways'
+                                       " works: "ver", "hor" or "both"
+	set wildmenu                       "
+	set noshowmode                       " display current mode
+	set cursorline                     " sets cursor line highlight. cool :)
 	set display=uhex
 
 	" TODO: Which is the best font (proportional) for programming ??
@@ -270,7 +298,7 @@ function! SetupGUI()
 		set guifont=Lucida_Sans_Typewriter:h9
 	endif
 
-	colorscheme  wombat
+	colorscheme vividchalk
 	set guioptions=aAgi                       " see: help guioptions 
 
 	"Pop-up menu color setteings 
@@ -282,8 +310,9 @@ endfunction
 if has('gui_running')
 	:call SetupGUI()
 else
+	set showmode
 	set bg=dark
-	colorscheme  wombat
+	colorscheme vividchalk
 	if &term == 'xterm' || &term == 'screen'
 		set t_Co=256            " Enable 256 colors to stop the CSApprox warning
 		                        " and make xterm vim shine
@@ -298,6 +327,8 @@ else
 	set statusline+=[%p%%]\                   " percentage 
 	set statusline+=[LN=%L]                   " total lines 
 endif
+
+syntax enable                          " syntax highlight on and keep your settings
 
 "===============================================================================
 " 2.4 - mappings
@@ -318,6 +349,10 @@ endfunction
 nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>P
 inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>
 
+"Very useful :)
+map <buffer> <a-m> :%s///g<CR>     " remove ^M in current file
+map <a-q> :ccl<CR>                " closes quickfix
+
 " CTRL+F1 to toggle the menu bar
 nmap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<cr><ESC>
 
@@ -333,7 +368,6 @@ nmap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set gui
 "===============================================================================
 " 2.5 - Mapping commands for window changing
 "===============================================================================
-
 "
 " Moving cursor to other windows
 " 
@@ -346,7 +380,6 @@ nmap <s-down>   <c-w>w
 nmap <s-up>     <c-w>W
 nmap <s-left>   <c-w>h
 nmap <s-right>  <c-w>l
-
 
 "===============================================================================
 " 2.6 - Colorscheme for defined filetypes
@@ -363,3 +396,180 @@ map <Left>  <Nop>
 map <Right> <Nop>
 map <Up>    <Nop>
 map <Down>  <Nop>
+
+"===============================================================================
+" 3 - Plugins
+"===============================================================================
+" Here can be found the plugins settings and other relevant informations
+" 
+" TODO: Test/install/configure the following plugins:
+"
+" Supertab??
+" c.vim ??
+"
+"===============================================================================
+" 3.1 - Plugins list
+"===============================================================================
+"
+" 1 - Name    : vundle
+"     Version : 
+"     Link    : 
+"
+" 2 - Name    : genutils General utility functions
+"     Version : 2.5 - 2009.09.17
+"     Link    : http://www.vim.org/scripts/script.php?script_id=197
+"
+" 3 - Name    : SelectBuf
+"     Version : 4.3 - 2007.06.12
+"     Link    : http://www.vim.org/scripts/script.php?script_id=107
+"
+" 4 - Name    : vimexplorer
+"     Version : 0.99 - 2011.07.08
+"     Link    : http://www.vim.org/scripts/script.php?script_id=1950
+"
+" 5 - Name    : ColorSamplerPack
+"     Version : 8.01 - 2010.01.25
+"     Link    : http://www.vim.org/scripts/script.php?script_id=625
+"
+"===============================================================================
+" 3.2 - Plugins Settings
+"===============================================================================
+
+"===============================================================================
+" 3.2.1 - Vundle
+"===============================================================================
+" Configured in the beginning of the file
+
+"===============================================================================
+" 3.2.2 - genutils
+"===============================================================================
+"
+"
+"===============================================================================
+" 3.2.3 - SelectBuf
+"===============================================================================
+nmap <silent> <F3> <Plug>SelectBuf
+let g:selBufDefaultSortOrder  = "name"
+let g:selBufDisableMRUlisting = 0
+let g:selBufAlwaysShowDetails = 1
+
+
+"===============================================================================
+" 3.2.4 - vimexplorer
+"===============================================================================
+nnoremap <silent> <F7> :VE ~<CR>
+let g:VEConf_treePanelWidth = 40           " Width of tree panel. Default: 30
+
+if has('unix')
+	let g:VEConf_externalExplorer = "dolphin"
+	let g:VEConf_showHiddenFiles  = 0
+	let g:VEConf_usingGnome       = 0
+	let g:VEConf_usingKDE         = 1
+	let g:VEConf_systemEncoding   = 'utf-8'
+elseif has('win32' || 'win64')
+	let g:VEConf_externalExplorer = "explorer.exe"
+	let g:VEConf_systemEncoding   = 'utf-16'
+endif
+
+"===============================================================================
+" 3.2.5 - ColorSamplerPack
+"===============================================================================
+
+"===============================================================================
+" 3.2.6 - Tagbar
+"===============================================================================
+
+nnoremap <silent> <F8> :TagbarToggle<CR>
+let g:tagbar_autoclose   = 0
+let g:tagbar_autofocus   = 1
+let g:tagbar_autoshowtag = 1
+let g:tagbar_left        = 0
+let g:tagbar_expand      = 0
+let g:tagbar_autoshowtag = 1
+
+"===============================================================================
+" 3.2.7 - Syntastic
+"===============================================================================
+
+let g:syntastic_auto_loc_list = 1
+"let g:easytags_updatetime_min
+
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['c', 'cpp','vim'],
+                           \ 'passive_filetypes': [] }
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"===============================================================================
+" 3.2.8 - vim-colors-solarized
+"===============================================================================
+
+" Already configure on SetupGui()
+
+"===============================================================================
+" 3.2.9 - Tabular
+"===============================================================================
+
+"===============================================================================
+" 3.2.10 - ctrlp
+"===============================================================================
+
+" TODO: not yet complete
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+
+let g:ctrlp_match_window_bottom = 1
+let g:ctrlp_show_hidden         = 1
+
+"===============================================================================
+" 3.2.11 - nerdtree
+"===============================================================================
+
+let NERDTreeCaseSensitiveSort = 1
+let NERDTreeShowHidden        = 1
+let NERDTreeShowLineNumbers   = 0
+
+
+"===============================================================================
+" 3.2.12 - nerdtree-tabs
+"===============================================================================
+"
+" TODO: setup nerdtreewidth
+"
+map <F9>  :NERDTreeTabsToggle<CR>
+""map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+let g:nerdtree_tabs_open_on_gui_startup     = 0
+let g:nerdtree_tabs_open_on_console_startup = 0
+let g:nerdtree_tabs_no_startup_for_diff     = 0
+
+"===============================================================================
+" 3.2.13 - proj
+"          http://www.vim.org/scripts/script.php?script_id=2719
+"          https://github.com/oinksoft/proj.vim
+"===============================================================================
+
+let g:ProjFile = "~/projekte/rnp.vimproj"
+
+"===============================================================================
+" 3.2.14 - supertab
+"===============================================================================
+
+let g:SuperTabDefaultCompletionType = "context"
+
+"===============================================================================
+" 3.2.15 - numbers
+"===============================================================================
+
+nnoremap <A-F3> :NumbersToggle<CR>
+nnoremap <A-F4> :NumbersOnOff<CR>
+

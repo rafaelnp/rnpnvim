@@ -4,7 +4,7 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.06.26 (wed) 14:03:53
+" Last update:   2013.07.01 (Mo) 16:31:48
 "===============================================================================
 "
 "TODO:
@@ -573,3 +573,7 @@ let g:SuperTabDefaultCompletionType = "context"
 nnoremap <A-F3> :NumbersToggle<CR>
 nnoremap <A-F4> :NumbersOnOff<CR>
 
+"===============================================================================
+" 3.2.17 - clang_complete
+"          https://github.com/exclipy/clang_complete
+"===============================================================================

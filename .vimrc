@@ -127,21 +127,22 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Bundle 'vundle'
 Bundle 'genutils'
 Bundle 'SelectBuf'
 Bundle 'VimExplorer'
 Bundle 'Color-Sampler-Pack'
 Bundle 'Tagbar'
 Bundle 'Syntastic'
-Bundle 'vim-colors-solarized'
-Bundle 'tabular'
-Bundle 'kien/ctrlp.vim'
+Bundle 'https://github.com/altercation/vim-colors-solarized'
+"Bundle 'tabular'
+Bundle 'https://github.com/godlygeek/tabular.git'
+Bundle 'ctrlp.vim'
 Bundle 'moria'
 Bundle 'https://github.com/oinksoft/proj.vim.git'
 Bundle 'https://github.com/myusuf3/numbers.vim.git'
-Bundle 'vim-nerdtree-tabs'
-Bundle 'nerdtree'
+Bundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
+Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
 if has('gui_running')
 	Bundle 'Lokaltog/powerline'

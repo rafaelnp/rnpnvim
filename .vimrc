@@ -4,16 +4,14 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.07.01 (Mo) 16:31:48
+" Last update:   2013.07.05 (Fr) 16:41:07
 "===============================================================================
 "
 "TODO:
 "   fix tag generation
-"   install project management funcionality
 "   install autocomplete funcionality 
 "   configure powerline
-"   http://vim.spf13.com/
-"    configure clang_indexer/clang_complete
+"   configure clang_indexer/clang_complete
 "
 "===============================================================================
 " 1 - useful commands
@@ -135,7 +133,6 @@ Bundle 'Color-Sampler-Pack'
 Bundle 'Tagbar'
 Bundle 'Syntastic'
 Bundle 'https://github.com/altercation/vim-colors-solarized'
-"Bundle 'tabular'
 Bundle 'https://github.com/godlygeek/tabular.git'
 Bundle 'ctrlp.vim'
 Bundle 'moria'
@@ -198,9 +195,6 @@ if has('unix')
 	set path+=~/projekte
 else
 	" write specific stuff for non-unix systems here
-	"source $VIMRUNTIME/mswin.vim
-	"behave mswin
-	"set fileformat=dos                       " unix rocks :)
 	set fileformats=unix,dos                   " unix rocks :)
 endif
 
@@ -234,9 +228,6 @@ if has('unix')
 	set path+=~/projekte
 else
     " write specific stuff for non-unix systems here
-	"source $VIMRUNTIME/mswin.vim
-	"behave mswin
-	"set fileformat=dos                       " unix rocks :)
 	set fileformats=unix,dos                   " unix rocks :)
 endif
 set fo=tcrqn                      " See Help (:help fo-table)
@@ -244,6 +235,7 @@ set ai                            " autoindent
 set si                            " smartindent
 set cindent                       " do c-style indenting
 
+" Don't forget:
 " tabs are for indenting and aligning text.
 " spaces are for separating keywords.
 set tabstop=4                     " tab spacing (settings below are to unify it)
@@ -383,14 +375,7 @@ nmap <s-left>   <c-w>h
 nmap <s-right>  <c-w>l
 
 "===============================================================================
-" 2.6 - Colorscheme for defined filetypes
-"===============================================================================
-
-"autocmd FileType c   colorscheme wombat
-"autocmd FileType c++ colorscheme desert
-
-"===============================================================================
-" 2.7 - Unmap arrow keys in normal mode
+" 2.8 - Unmap arrow keys in normal mode
 "===============================================================================
 
 map <Left>  <Nop>
@@ -409,45 +394,23 @@ map <Down>  <Nop>
 " c.vim ??
 "
 "===============================================================================
-" 3.1 - Plugins list
-"===============================================================================
-"
-" 1 - Name    : vundle
-"     Version : 
-"     Link    : 
-"
-" 2 - Name    : genutils General utility functions
-"     Version : 2.5 - 2009.09.17
-"     Link    : http://www.vim.org/scripts/script.php?script_id=197
-"
-" 3 - Name    : SelectBuf
-"     Version : 4.3 - 2007.06.12
-"     Link    : http://www.vim.org/scripts/script.php?script_id=107
-"
-" 4 - Name    : vimexplorer
-"     Version : 0.99 - 2011.07.08
-"     Link    : http://www.vim.org/scripts/script.php?script_id=1950
-"
-" 5 - Name    : ColorSamplerPack
-"     Version : 8.01 - 2010.01.25
-"     Link    : http://www.vim.org/scripts/script.php?script_id=625
-"
-"===============================================================================
-" 3.2 - Plugins Settings
+" 3.1 - Plugins Settings
 "===============================================================================
 
 "===============================================================================
-" 3.2.1 - Vundle
+" 3.1.1 - Vundle
 "===============================================================================
 " Configured in the beginning of the file
 
 "===============================================================================
-" 3.2.2 - genutils
+" 3.1.2 - genutils
+"         http://www.vim.org/scripts/script.php?script_id=197
 "===============================================================================
 "
 "
 "===============================================================================
-" 3.2.3 - SelectBuf
+" 3.1.3 - SelectBuf
+"         http://www.vim.org/scripts/script.php?script_id=107
 "===============================================================================
 nmap <silent> <F3> <Plug>SelectBuf
 let g:selBufDefaultSortOrder  = "name"
@@ -456,7 +419,7 @@ let g:selBufAlwaysShowDetails = 1
 
 
 "===============================================================================
-" 3.2.4 - vimexplorer
+" 3.1.4 - vimexplorer
 "===============================================================================
 nnoremap <silent> <F7> :VE ~<CR>
 let g:VEConf_treePanelWidth = 40           " Width of tree panel. Default: 30
@@ -473,11 +436,12 @@ elseif has('win32' || 'win64')
 endif
 
 "===============================================================================
-" 3.2.5 - ColorSamplerPack
+" 3.1.5 - ColorSamplerPack
+"         http://www.vim.org/scripts/script.php?script_id=625
 "===============================================================================
 
 "===============================================================================
-" 3.2.6 - Tagbar
+" 3.1.6 - Tagbar
 "===============================================================================
 
 nnoremap <silent> <F8> :TagbarToggle<CR>
@@ -489,11 +453,10 @@ let g:tagbar_expand      = 0
 let g:tagbar_autoshowtag = 1
 
 "===============================================================================
-" 3.2.7 - Syntastic
+" 3.1.7 - Syntastic
 "===============================================================================
 
 let g:syntastic_auto_loc_list = 1
-"let g:easytags_updatetime_min
 
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['c', 'cpp','vim'],
@@ -504,17 +467,17 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 "===============================================================================
-" 3.2.8 - vim-colors-solarized
+" 3.1.8 - vim-colors-solarized
 "===============================================================================
 
 " Already configure on SetupGui()
 
 "===============================================================================
-" 3.2.9 - Tabular
+" 3.1.9 - Tabular
 "===============================================================================
 
 "===============================================================================
-" 3.2.10 - ctrlp
+" 3.1.10 - ctrlp
 "===============================================================================
 
 " TODO: not yet complete
@@ -532,7 +495,7 @@ let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_show_hidden         = 1
 
 "===============================================================================
-" 3.2.11 - nerdtree
+" 3.-2.11 - nerdtree
 "===============================================================================
 
 let NERDTreeCaseSensitiveSort = 1
@@ -541,20 +504,19 @@ let NERDTreeShowLineNumbers   = 0
 
 
 "===============================================================================
-" 3.2.12 - nerdtree-tabs
+" 3.1.12 - nerdtree-tabs
 "===============================================================================
 "
 " TODO: setup nerdtreewidth
 "
 map <F9>  :NERDTreeTabsToggle<CR>
-""map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 "===============================================================================
-" 3.2.13 - proj
+" 3.1.13 - proj
 "          http://www.vim.org/scripts/script.php?script_id=2719
 "          https://github.com/oinksoft/proj.vim
 "===============================================================================
@@ -562,19 +524,21 @@ let g:nerdtree_tabs_no_startup_for_diff     = 0
 let g:ProjFile = "~/projekte/rnp.vimproj"
 
 "===============================================================================
-" 3.2.14 - supertab
+" 3.1.14 - supertab
 "===============================================================================
 
 let g:SuperTabDefaultCompletionType = "context"
 
 "===============================================================================
-" 3.2.15 - numbers
+" 3.1.15 - numbers
 "===============================================================================
 
-nnoremap <A-F3> :NumbersToggle<CR>
-nnoremap <A-F4> :NumbersOnOff<CR>
+nnoremap <A-F1> :NumbersToggle<CR>
+nnoremap <A-F2> :NumbersOnOff<CR>
 
 "===============================================================================
-" 3.2.17 - clang_complete
+" 3.1.17 - clang_complete
 "          https://github.com/exclipy/clang_complete
 "===============================================================================
+" TODO: Configure this plugin
+"

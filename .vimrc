@@ -1,10 +1,10 @@
 "===============================================================================
 " Rafael do Nascimento Pereira (rnp) <rnp@25ghz.net>
-" OpenPGP key fingertip: 146D C355 A1BB 9A04 04F2 1C69 E371 BBBA 74B1 CAA3 
+" OpenPGP key fingerprint: 146D C355 A1BB 9A04 04F2 1C69 E371 BBBA 74B1 CAA3 
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.07.01 (Mo) 16:31:48
+" Last update:   2013.07.09 (Mo) 16:31:48
 "===============================================================================
 "
 "TODO:

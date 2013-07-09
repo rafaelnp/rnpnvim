@@ -4,17 +4,25 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
+<<<<<<< HEAD
 " Last update:   2013.07.09 (Mo) 16:31:48
+=======
+" Last update:   2013.07.05 (Fr) 16:41:07
+>>>>>>> 39d4e3cac33d111f8bfd8bcacf726a8ff7776ec8
 "===============================================================================
 "
 "TODO:
 "   fix tag generation
 "   install autocomplete funcionality 
 "   configure powerline
+<<<<<<< HEAD
 "   http://vim.spf13.com/
 "   configure clang_indexer/clang_complete
 "   Supertab
 "   c.vim
+=======
+"   configure clang_indexer/clang_complete
+>>>>>>> 39d4e3cac33d111f8bfd8bcacf726a8ff7776ec8
 "
 "===============================================================================
 " 1 - useful commands
@@ -180,7 +188,29 @@ set browsedir=buffer                    " defaults to the current file's directo
 if has("multi_byte_encoding")
 	set encoding=utf-8                  " charcter encoding used in vim
 else 
+<<<<<<< HEAD
 	set encoding=latin1                 " fallback   
+=======
+	set encoding=latin1
+endif
+
+" system dependent configuration
+if has('unix')
+	set termencoding=utf-8                 " terminal encoding
+	set fileformat=unix                    " unix rocks :)
+	set fileformats=unix                   " unix rocks :)
+
+	"
+	" TODO: set up a mapping for dictionary
+	"
+	set dictionary+=/usr/share/dict/ogerman
+	set dictionary+=/usr/share/dict/brazilian
+	set dictionary+=/usr/share/dict/british-english
+	set path+=~/projekte
+else
+	" write specific stuff for non-unix systems here
+	set fileformats=unix,dos                   " unix rocks :)
+>>>>>>> 39d4e3cac33d111f8bfd8bcacf726a8ff7776ec8
 endif
 
 "===============================================================================
@@ -206,6 +236,10 @@ if has('unix')
 	set dictionary+=/usr/share/dict/british-english
 	set path+=~/projekte
 else
+<<<<<<< HEAD
+=======
+    " write specific stuff for non-unix systems here
+>>>>>>> 39d4e3cac33d111f8bfd8bcacf726a8ff7776ec8
 	set fileformats=unix,dos                   " unix rocks :)
 endif
 set fo=tcrqn                      " See Help (:help fo-table)
@@ -213,6 +247,7 @@ set ai                            " autoindent
 set si                            " smartindent
 set cindent                       " do c-style indenting
 
+" Don't forget:
 " tabs are for indenting and aligning text.
 " spaces are for separating keywords.
 set tabstop=4                     " tab spacing (settings below are to unify it)
@@ -350,14 +385,7 @@ nmap <s-left>   <c-w>h
 nmap <s-right>  <c-w>l
 
 "===============================================================================
-" 2.6 - Colorscheme for defined filetypes
-"===============================================================================
-
-"autocmd FileType c   colorscheme wombat
-"autocmd FileType c++ colorscheme desert
-
-"===============================================================================
-" 2.7 - Unmap arrow keys in normal mode
+" 2.8 - Unmap arrow keys in normal mode
 "===============================================================================
 
 map <Left>  <Nop>
@@ -370,6 +398,14 @@ map <Down>  <Nop>
 "===============================================================================
 " Here can be found the plugins settings and other relevant informations
 " 
+<<<<<<< HEAD
+=======
+" TODO: Test/install/configure the following plugins:
+"
+" Supertab??
+" c.vim ??
+"
+>>>>>>> 39d4e3cac33d111f8bfd8bcacf726a8ff7776ec8
 "===============================================================================
 " 3.1 - Plugins Settings
 "===============================================================================
@@ -397,7 +433,10 @@ let g:selBufAlwaysShowDetails = 1
 
 "===============================================================================
 " 3.1.4 - vimexplorer
+<<<<<<< HEAD
 "         http://www.vim.org/scripts/script.php?script_id=1950
+=======
+>>>>>>> 39d4e3cac33d111f8bfd8bcacf726a8ff7776ec8
 "===============================================================================
 nnoremap <silent> <F7> :VE ~<CR>
 let g:VEConf_treePanelWidth = 40           " Width of tree panel. Default: 30
@@ -435,7 +474,6 @@ let g:tagbar_autoshowtag = 1
 "===============================================================================
 
 let g:syntastic_auto_loc_list = 1
-"let g:easytags_updatetime_min
 
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['c', 'cpp','vim'],
@@ -474,7 +512,11 @@ let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_show_hidden         = 1
 
 "===============================================================================
+<<<<<<< HEAD
 " 3.1.11 - nerdtree
+=======
+" 3.-2.11 - nerdtree
+>>>>>>> 39d4e3cac33d111f8bfd8bcacf726a8ff7776ec8
 "===============================================================================
 
 let NERDTreeCaseSensitiveSort = 1
@@ -512,6 +554,18 @@ let g:SuperTabDefaultCompletionType = "context"
 " 3.1.15 - numbers
 "===============================================================================
 
+<<<<<<< HEAD
 nnoremap <A-3> :NumbersToggle<CR>
 nnoremap <A-4> :NumbersOnOff<CR>
 
+=======
+nnoremap <A-F1> :NumbersToggle<CR>
+nnoremap <A-F2> :NumbersOnOff<CR>
+
+"===============================================================================
+" 3.1.17 - clang_complete
+"          https://github.com/exclipy/clang_complete
+"===============================================================================
+" TODO: Configure this plugin
+"
+>>>>>>> 39d4e3cac33d111f8bfd8bcacf726a8ff7776ec8

@@ -4,7 +4,7 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.07.09 (Mo) 16:31:48
+" Last update:   2013.07.14 (Mo) 14:21:48
 "===============================================================================
 "
 "TODO:
@@ -13,8 +13,6 @@
 "   configure powerline
 "   http://vim.spf13.com/
 "   configure clang_indexer/clang_complete
-"   Supertab
-"   c.vim
 "
 "===============================================================================
 " 1 - useful commands
@@ -352,7 +350,7 @@ nmap <s-left>   <c-w>h
 nmap <s-right>  <c-w>l
 
 "===============================================================================
-" 2.8 - Unmap arrow keys in normal mode
+" 2.6 - Unmap arrow keys in normal mode
 "===============================================================================
 
 map <Left>  <Nop>
@@ -488,7 +486,7 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 "===============================================================================
-" 3.1.13 - proj
+" 3.1.13 - proj.vim
 "          http://www.vim.org/scripts/script.php?script_id=2719
 "          https://github.com/oinksoft/proj.vim
 "===============================================================================

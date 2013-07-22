@@ -301,12 +301,20 @@ syntax enable                          " syntax highlight on and keep your setti
 "===============================================================================
 " 2.4 - mappings
 "===============================================================================
+" :nmap - Display normal mode maps
+" :imap - Display insert mode maps
+" :vmap - Display visual and select mode maps
+" :smap - Display select mode maps
+" :xmap - Display visual mode maps
+" :cmap - Display command-line mode maps
+" :omap - Display operator pending mode maps
 
-map <a-t> :tabnew<CR>                  " opens a new table
-map <a-n> :bn<CR>
-map <a-p> :bp<CR>
-nmap <C-s> :wa<CR>                     " save all buffers
-nmap ,d :call Reloadconfig()<CR>       " maps reload config
+nmap <a-r> :%s/\r//g<CR>            " removes carriage return
+map  <a-t> :tabnew<CR>              " opens a new table
+map  <a-n> :bn<CR>
+map  <a-p> :bp<CR>
+nmap <C-s> :wa<CR>                  " save all buffers
+nmap ,d    :call Reloadconfig()<CR> " maps reload config
 
 function! Reloadconfig()
 	wa
@@ -498,7 +506,7 @@ let g:ProjFile = "~/.vimproj"
 " 3.1.14 - supertab
 "===============================================================================
 
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
 
 "===============================================================================
 " 3.1.15 - numbers

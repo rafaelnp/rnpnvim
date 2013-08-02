@@ -1,15 +1,15 @@
 "===============================================================================
 " Rafael do Nascimento Pereira (rnp) <rnp@25ghz.net>
-" OpenPGP key fingerprint: 146D C355 A1BB 9A04 04F2 1C69 E371 BBBA 74B1 CAA3 
+" OpenPGP key fingerprint: 146D C355 A1BB 9A04 04F2 1C69 E371 BBBA 74B1 CAA3
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.07.14 (Mo) 14:21:48
+" Last update:   2013.08.02 (Mo) 14:21:48
 "===============================================================================
 "
 "TODO:
 "   fix tag generation
-"   install autocomplete funcionality 
+"   install autocomplete funcionality
 "   configure powerline
 "   http://vim.spf13.com/
 "   configure clang_indexer/clang_complete
@@ -26,8 +26,8 @@
 "    ^                       first character in current line
 "    w                       next word
 "    b                       preview word
-"    <C-o>                   jumps to previous location 
-"    <C-i>                   jumps to next location 
+"    <C-o>                   jumps to previous location
+"    <C-i>                   jumps to next location
 "    CTRL-]                  jump to link/tag under the cursor
 "    CTRL-T or CTRL-O        jump back to previous postion
 "    %                       match brackets open/closing
@@ -67,10 +67,10 @@
 "    ce                      change to end of word (a complete change command)
 "    C or c$                 change to end of wine
 "    s or cl                 erase character under the cursosr and enters in insert mode
-"    S or ^C                 erase the whole line 
+"    S or ^C                 erase the whole line
 "    I or ^i                 goes to the line begin and enters in insert mode
 "    A or $a                 goes to the line end and enters in edit mode
-"    o or A<CR>              adds new line bellow 
+"    o or A<CR>              adds new line bellow
 "    O or ko                 adds new line above
 "    c-w =                   makes windows have the same size
 "    Ctrl+a                  increment number under the cursor
@@ -79,7 +79,7 @@
 "    <C-a>                   increments the number under the cursor
 "    <C-x>                   decrements the number under the cursor
 "
-"   Mapping:
+"   Mappings:
 "
 "   Here is an overview of map commands and in which mode they work:
 "    :map                    Normal, Visual and Operator-pending
@@ -89,8 +89,10 @@
 "    :map!                   Insert and Command-line
 "    :imap                   Insert
 "    :cmap                   Command-line
+"    :verbose map            Lists which plugin uses all key
+"    :verbose map <key>      Lists which plugin uses the specified key
 "
-"    Search:  
+"    Search:
 "    /^\(.*pattern\)\@!.*$  for lines not containing pattern:
 "    or
 "    /\v^(.*Warning)@!.*$
@@ -107,7 +109,7 @@
 "    :help holy-grail
 "    :help!
 "    :help map-modes (see comment below the table about :nunmap)
-"    :help UserGettingBored 
+"    :help UserGettingBored
 
 "================================================================================
 " Vundle
@@ -125,7 +127,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'vundle'
 Bundle 'genutils'
 Bundle 'SelectBuf'
@@ -177,8 +179,8 @@ set browsedir=buffer                    " defaults to the current file's directo
 
 if has("multi_byte_encoding")
 	set encoding=utf-8                  " charcter encoding used in vim
-else 
-	set encoding=latin1                 " fallback   
+else
+	set encoding=latin1                 " fallback
 endif
 
 "===============================================================================
@@ -186,7 +188,7 @@ endif
 "===============================================================================
 
 syntax enable                     " syntax highlight on and keep your settings
-filetype on                       " enable file type detection 
+filetype on                       " enable file type detection
 filetype plugin on                " enable filetxype plugins
 filetype indent on
 
@@ -204,7 +206,7 @@ if has('unix')
 	set dictionary+=/usr/share/dict/british-english
 	set path+=~/projekte
 else
-    " write specific stuff for non-unix systems here
+	" write specific stuff for non-unix systems here
 	set fileformats=unix,dos                   " unix rocks :)
 endif
 set fo=tcrqn                      " See Help (:help fo-table)
@@ -218,14 +220,14 @@ set cindent                       " do c-style indenting
 set tabstop=4                     " tab spacing (settings below are to unify it)
 set softtabstop=4                 " unify
 set shiftwidth=4                  " unify
-set noexpandtab                   " just tabs please :) 
+set noexpandtab                   " just tabs please :)
 set showcmd                       " show command in last line of screen
 set nu                            " line numbers :)
 set hls                           " highlight search patern
 set wrapmargin=1                  " space after linebrake
 set textwidth=90                  " no fucking long lines
 set incsearch                     " incremental search
-set cpoptions=BceFs               " compatible options 
+set cpoptions=BceFs               " compatible options
 
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
@@ -237,7 +239,8 @@ let g:tex_flavor='latex'
 "===============================================================================
 
 set laststatus=2                       " statusline always visible
-set shortmess=atToO                    " see: help shortmess 
+set shortmess=atToO                    " see: help shortmess
+
 
 if has('mouse')
 	set mouse=a                        " enable mouse in all modes
@@ -258,18 +261,18 @@ function! SetupGUI()
 	if has('unix')
 		set guifont=Monospace\ 9
 		" Other good fonts:
-		"set guifont=Anonymous\ Pro\ Minus\ 11      
-		"set guifont=Anonymous\ Pro\ 11             
-		"set guifont=Inconsolata\ 11                
-		"set guifont=DejaVu\ Sans\ Mono\ 9          
+		"set guifont=Anonymous\ Pro\ Minus\ 11
+		"set guifont=Anonymous\ Pro\ 11
+		"set guifont=Inconsolata\ 11
+		"set guifont=DejaVu\ Sans\ Mono\ 9
 	elseif has ('win32') || ('win64')
 		set guifont=Lucida_Sans_Typewriter:h9
 	endif
 
 	colorscheme vividchalk
-	set guioptions=aAgi                       " see: help guioptions 
+	set guioptions=aAgi                       " see: help guioptions
 
-	"Pop-up menu color setteings 
+	"Pop-up menu color setteings
 	highlight Pmenu guibg=brown gui=bold      "gui
 	highlight Pmenu ctermbg=238 gui=bold      "terminal
 	set mousemodel=popup
@@ -292,8 +295,8 @@ else
 	set statusline+=[ASCII=%03.3b,0x%02.2B]\  " ascii
 	set statusline+=[OFFSET=%o,0x%O]          " offset
 	set statusline+=[LN=%l,C=%v]              " line and column
-	set statusline+=[%p%%]\                   " percentage 
-	set statusline+=[LN=%L]                   " total lines 
+	set statusline+=[%p%%]\                   " percentage
+	set statusline+=[LN=%L]                   " total lines
 endif
 
 syntax enable                          " syntax highlight on and keep your settings
@@ -310,15 +313,23 @@ syntax enable                          " syntax highlight on and keep your setti
 " :omap - Display operator pending mode maps
 
 nmap <a-r> :%s/\r//g<CR>            " removes carriage return
-map  <a-t> :tabnew<CR>              " opens a new table
-map  <a-n> :bn<CR>
-map  <a-p> :bp<CR>
+nmap <a-t> :tabnew<CR>              " opens a new table
+nmap <a-n> :bn<CR>
+nmap <a-p> :bp<CR>
 nmap <C-s> :wa<CR>                  " save all buffers
 nmap ,d    :call Reloadconfig()<CR> " maps reload config
+nmap <silent> <a-d> :call DumpMaps()<CR>     " save all current mappings on a text file
 
 function! Reloadconfig()
 	wa
 	source $MYVIMRC
+endfunction
+
+function! DumpMaps()
+	redir! > ~/vim_maps.txt
+	map
+	map!
+	redir END
 endfunction
 
 " Insert current date and time
@@ -330,23 +341,23 @@ map <buffer> <a-m> :%s///g<CR>     " remove ^M in current file
 map <a-q> :ccl<CR>                " closes quickfix
 
 " CTRL+F1 to toggle the menu bar
-nmap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<cr><ESC>
+nmap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR><ESC>
 
 " CTRL+F2 to toggle the menu bar
-nmap <silent> <A-2> :if &guioptions=~'T' \| set guioptions-=T \| else \| set guioptions+=T \| endif<cr><ESC>
+nmap <silent> <A-2> :if &guioptions=~'T' \| set guioptions-=T \| else \| set guioptions+=T \| endif<CR><ESC>
 
 " CTRL+F3 to toggle the right scroll bars
-nmap <silent> <A-3> :if &guioptions=~'r' \| set guioptions-=r \| else \| set guioptions+=r \| endif<cr><ESC>
+nmap <silent> <A-3> :if &guioptions=~'r' \| set guioptions-=r \| else \| set guioptions+=r \| endif<CR><ESC>
 
 " CTRL+F4 to toggle left the scroll bars
-nmap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set guioptions+=l \| endif<cr><ESC>
+nmap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set guioptions+=l \| endif<CR><ESC>
 
 "===============================================================================
 " 2.5 - Mapping commands for window changing
 "===============================================================================
 "
 " Moving cursor to other windows
-" 
+"
 " shift down   : change window focus to lower one (cyclic)
 " shift up     : change window focus to upper one (cyclic)
 " shift left   : change window focus to one on left
@@ -367,10 +378,24 @@ map <Up>    <Nop>
 map <Down>  <Nop>
 
 "===============================================================================
+" 2.7 - Highlight unwanted spaces
+"       http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+"       http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
+"===============================================================================
+" Highlight redundant spaces (spaces at the end of the line, spaces before
+" or after tabs):
+highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
+call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
+ 
+" TODO:
+" mapping remove trailing spaces
+" mapping to remove spaces before and after tabs
+
+"===============================================================================
 " 3 - Plugins
 "===============================================================================
 " Here can be found the plugins settings and other relevant informations
-" 
+"
 "===============================================================================
 " 3.1 - Plugins Settings
 "===============================================================================

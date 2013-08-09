@@ -31,6 +31,7 @@ and execute:
 * numbers.vim
 * vim-nerdtree-tabs
 * nerdtree
+* snipMate
 
 
 ## Colorschemes

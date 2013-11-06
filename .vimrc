@@ -4,7 +4,7 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.08.02 (Mo) 14:21:48
+" Last update:   2013.11.06 (Fr) 17:37:28
 "===============================================================================
 "
 "TODO:
@@ -49,7 +49,7 @@
 "   Editing:
 "    VU                      uppercase the whole current line
 "    mark <n>                create a new mark `n`
-"    `<n>                    go to mark `n` 
+"    `<n>                    go to mark `n`
 "    ^E e ^Y                 less-like page navigation
 "    gg=G                    reidenta o codigo todo
 "    CTRL+D (insert mode)    retira um `tab` de identacao
@@ -123,12 +123,15 @@
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
+set nocompatible               " be iMproved
+filetype off                   " required!
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'vundle'
+Bundle 'gmarik/vundle'
 Bundle 'genutils'
 Bundle 'SelectBuf'
 Bundle 'VimExplorer'
@@ -140,10 +143,13 @@ Bundle 'https://github.com/godlygeek/tabular.git'
 Bundle 'ctrlp.vim'
 Bundle 'moria'
 Bundle 'https://github.com/oinksoft/proj.vim.git'
-Bundle 'https://github.com/myusuf3/numbers.vim.git'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
+Bundle 'snipMate'
+Bundle 'Valloric/YouCompleteMe'
+
 if has('gui_running')
 	Bundle 'Lokaltog/powerline'
 	set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -161,6 +167,7 @@ filetype plugin indent on     " required!
 set nocompatible                        " no vi-compatibility
 set autochdir                           " always switch to the current file directory
 set autowriteall                        " automatically save all buffers
+set nobackup                            " no backup files
 set backspace=indent,eol,start          " see :help bs
 set helplang=de,en                      " help language
 set history=100                         " command history
@@ -170,6 +177,7 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*~ " wildmenu: ignore these extensions
 set updatetime=4000                     " update every 4000 ms
 set visualbell t_vb=                    " disable the fucking annoyng visual
                                         " and sound bell :)
+set visualbell                          " don't beep
 set noerrorbells                        " no fucking noise
 tab all                                 " open a new tab instead of launching a new
                                         " vim instance
@@ -187,6 +195,7 @@ endif
 " 2.2 - Text Formatting/Layout
 "===============================================================================
 
+set number
 syntax enable                     " syntax highlight on and keep your settings
 filetype on                       " enable file type detection
 filetype plugin on                " enable filetxype plugins
@@ -227,6 +236,11 @@ set hls                           " highlight search patern
 set wrapmargin=1                  " space after linebrake
 set textwidth=90                  " no fucking long lines
 set incsearch                     " incremental search
+set ignorecase
+set smartcase                     " Override the 'ignorecase' option if the
+                                  " search pattern contains upper
+                                  "	case characters.  Only used when the search
+                                  "	pattern is typed and 'ignorecase' option is on
 set cpoptions=BceFs               " compatible options
 
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
@@ -259,11 +273,11 @@ function! SetupGUI()
 
 	" TODO: Which is the best font (proportional) for programming ??
 	if has('unix')
-		set guifont=Monospace\ 9
+		"set guifont=Monospace\ 9
 		" Other good fonts:
 		"set guifont=Anonymous\ Pro\ Minus\ 11
-		"set guifont=Anonymous\ Pro\ 11
-		"set guifont=Inconsolata\ 11
+		"set guifont=Anonymous\ Pro\ 9
+		set guifont=Inconsolata\ 9
 		"set guifont=DejaVu\ Sans\ Mono\ 9
 	elseif has ('win32') || ('win64')
 		set guifont=Lucida_Sans_Typewriter:h9
@@ -286,17 +300,17 @@ else
 	colorscheme vividchalk
 	if &term == 'xterm' || &term == 'screen'
 		set t_Co=256            " Enable 256 colors to stop the CSApprox warning
-		                        " and make xterm vim shine
+                                " and make xterm vim shine
 	endif
-	set term=builtin_ansi       " Make arrow and other keys work
-	set statusline=%t%m%r%h%w\                " options
-	set statusline+=[%{&ff}]\                 " system
-	set statusline+=%y\                       " file type
-	set statusline+=[ASCII=%03.3b,0x%02.2B]\  " ascii
-	set statusline+=[OFFSET=%o,0x%O]          " offset
-	set statusline+=[LN=%l,C=%v]              " line and column
-	set statusline+=[%p%%]\                   " percentage
-	set statusline+=[LN=%L]                   " total lines
+"	set term=builtin_ansi       " Make arrow and other keys work
+"	set statusline=%t%m%r%h%w\                " options
+"	set statusline+=[%{&ff}]\                 " system
+"	set statusline+=%y\                       " file type
+"	set statusline+=[ASCII=%03.3b,0x%02.2B]\  " ascii
+"	set statusline+=[OFFSET=%o,0x%O]          " offset
+"	set statusline+=[LN=%l,C=%v]              " line and column
+"	set statusline+=[%p%%]\                   " percentage
+"	set statusline+=[LN=%L]                   " total lines
 endif
 
 syntax enable                          " syntax highlight on and keep your settings
@@ -537,12 +551,17 @@ let g:ProjFile = "~/.vimproj"
 " 3.1.15 - numbers
 "===============================================================================
 
-nnoremap <A-3> :NumbersToggle<CR>
-nnoremap <A-4> :NumbersOnOff<CR>
+
+"nnoremap <A-3> :NumbersToggle<CR>
+"nnoremap <A-4> :NumbersOnOff<CR>
+
 
 "===============================================================================
-" 3.1.17 - clang_complete
-"          https://github.com/exclipy/clang_complete
+" 3.1.16 - YouCompleteMe
 "===============================================================================
-" TODO: Configure this plugin
-"
+
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_allow_changing_updatetime = 1
+"let g:ycm_extra_conf_vim_data = ['v:version']
+let g:ycm_autoclose_preview_window_after_completion = 1
+

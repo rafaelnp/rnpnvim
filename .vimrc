@@ -149,11 +149,9 @@ Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
 Bundle 'snipMate'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'Lokaltog/powerline'
 
-if has('gui_running')
-	Bundle 'Lokaltog/powerline'
-	set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-endif
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:vundle_default_git_proto = 'https'
 filetype plugin indent on     " required!
 
@@ -191,13 +189,16 @@ else
 	set encoding=latin1                 " fallback
 endif
 
+nnoremap <space> <Nop>
+let mapleader = " "
+
 "===============================================================================
 " 2.2 - Text Formatting/Layout
 "===============================================================================
 
 set number
 syntax enable                     " syntax highlight on and keep your settings
-filetype on                       " enable file type detection
+"filetype on                       " enable file type detection
 filetype plugin on                " enable filetxype plugins
 filetype indent on
 
@@ -226,10 +227,24 @@ set cindent                       " do c-style indenting
 " Don't forget:
 " tabs are for indenting and aligning text.
 " spaces are for separating keywords.
+"
+" tabstop = Set tabstop to tell vim how many columns a tab counts for.
+"			This is the only command here that will affect how existing
+"			text displays.
+" shiftwidth =  Set shiftwidth to control how many columns text is indented
+"				with the reindent operations (<< and >>) and automatic C-style
+"				indentation.
+" softtabstop = Set softtabstop to control how many columns vim uses when you
+"				hit Tab in insert mode
 set tabstop=4                     " tab spacing (settings below are to unify it)
 set softtabstop=4                 " unify
 set shiftwidth=4                  " unify
 set noexpandtab                   " just tabs please :)
+
+" different identation for C and C++
+autocmd FileType c   setlocal shiftwidth=8 tabstop=8 softtabstop=8
+autocmd FileType cpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
+
 set showcmd                       " show command in last line of screen
 set nu                            " line numbers :)
 set hls                           " highlight search patern

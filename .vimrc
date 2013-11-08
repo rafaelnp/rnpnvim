@@ -228,6 +228,14 @@ set cindent                       " do c-style indenting
 " tabs are for indenting and aligning text.
 " spaces are for separating keywords.
 "
+" For those that still insist to use spaces instead of tabs to ident code, here
+" are the meaning of space and tabulator keys:
+"
+" https://en.wikipedia.org/wiki/Space_bar
+" https://en.wikipedia.org/wiki/Tabulator_key
+"
+" Vim configuration 
+"
 " tabstop = Set tabstop to tell vim how many columns a tab counts for.
 "			This is the only command here that will affect how existing
 "			text displays.
@@ -572,6 +580,7 @@ let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 "
 
 let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_allow_changing_updatetime = 1
 "let g:ycm_extra_conf_vim_data = ['v:version']
 let g:ycm_autoclose_preview_window_after_completion = 1

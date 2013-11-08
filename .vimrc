@@ -1,11 +1,11 @@
-"===============================================================================
+"
 " Rafael do Nascimento Pereira (rnp) <rnp@25ghz.net>
 " OpenPGP key fingerprint: 146D C355 A1BB 9A04 04F2 1C69 E371 BBBA 74B1 CAA3
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
 " Last update:   2013.11.06 (Fr) 17:37:28
-"===============================================================================
+"
 "
 "TODO:
 "   fix tag generation
@@ -14,9 +14,9 @@
 "   http://vim.spf13.com/
 "   configure clang_indexer/clang_complete
 "
-"===============================================================================
+"
 " 1 - useful commands
-"===============================================================================
+"
 "
 "   Vim quick and advanced reference card
 "   http://tnerual.eriogerg.free.fr/vimqrc.html
@@ -111,9 +111,9 @@
 "    :help map-modes (see comment below the table about :nunmap)
 "    :help UserGettingBored
 
-"================================================================================
+"
 " Vundle
-"================================================================================
+"
 " Brief help
 " :BundleList          - list configured bundles
 " :BundleInstall(!)    - install(update) bundles
@@ -155,12 +155,12 @@ set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:vundle_default_git_proto = 'https'
 filetype plugin indent on     " required!
 
-"===============================================================================
+"
 " 2 - VIM setup and costumization
-"===============================================================================
-"===============================================================================
+"
+"
 " 2.1 - General Options
-"===============================================================================
+"
 
 set nocompatible                        " no vi-compatibility
 set autochdir                           " always switch to the current file directory
@@ -192,9 +192,9 @@ endif
 nnoremap <space> <Nop>
 let mapleader = " "
 
-"===============================================================================
+"
 " 2.2 - Text Formatting/Layout
-"===============================================================================
+"
 
 set number
 syntax enable                     " syntax highlight on and keep your settings
@@ -263,9 +263,9 @@ set cpoptions=BceFs               " compatible options
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
-"===============================================================================
+"
 " 2.3 - GUI Options
-"===============================================================================
+"
 
 set laststatus=2                       " statusline always visible
 set shortmess=atToO                    " see: help shortmess
@@ -330,9 +330,9 @@ endif
 
 syntax enable                          " syntax highlight on and keep your settings
 
-"===============================================================================
+"
 " 2.4 - mappings
-"===============================================================================
+"
 " :nmap - Display normal mode maps
 " :imap - Display insert mode maps
 " :vmap - Display visual and select mode maps
@@ -381,9 +381,9 @@ nmap <silent> <A-3> :if &guioptions=~'r' \| set guioptions-=r \| else \| set gui
 " CTRL+F4 to toggle left the scroll bars
 nmap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set guioptions+=l \| endif<CR><ESC>
 
-"===============================================================================
+"
 " 2.5 - Mapping commands for window changing
-"===============================================================================
+"
 "
 " Moving cursor to other windows
 "
@@ -397,20 +397,20 @@ nmap <s-up>     <c-w>W
 nmap <s-left>   <c-w>h
 nmap <s-right>  <c-w>l
 
-"===============================================================================
+"
 " 2.6 - Unmap arrow keys in normal mode
-"===============================================================================
+"
 
 map <Left>  <Nop>
 map <Right> <Nop>
 map <Up>    <Nop>
 map <Down>  <Nop>
 
-"===============================================================================
+"
 " 2.7 - Highlight unwanted spaces
 "       http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 "       http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
-"===============================================================================
+"
 " Highlight redundant spaces (spaces at the end of the line, spaces before
 " or after tabs):
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
@@ -420,40 +420,40 @@ call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 " mapping remove trailing spaces
 " mapping to remove spaces before and after tabs
 
-"===============================================================================
+"
 " 3 - Plugins
-"===============================================================================
+"
 " Here can be found the plugins settings and other relevant informations
 "
-"===============================================================================
+"
 " 3.1 - Plugins Settings
-"===============================================================================
+"
 
-"===============================================================================
+"
 " 3.1.1 - Vundle
-"===============================================================================
+"
 " Configured in the beginning of the file
 
-"===============================================================================
+"
 " 3.1.2 - genutils
 "         http://www.vim.org/scripts/script.php?script_id=197
-"===============================================================================
+"
 " genutils General utility functions
 "
-"===============================================================================
+"
 " 3.1.3 - SelectBuf
 "         http://www.vim.org/scripts/script.php?script_id=107
-"===============================================================================
+"
 nmap <silent> <F3> <Plug>SelectBuf
 let g:selBufDefaultSortOrder  = "name"
 let g:selBufDisableMRUlisting = 0
 let g:selBufAlwaysShowDetails = 1
 
 
-"===============================================================================
+"
 " 3.1.4 - vimexplorer
 "         http://www.vim.org/scripts/script.php?script_id=1950
-"===============================================================================
+"
 nnoremap <silent> <F7> :VE ~<CR>
 let g:VEConf_treePanelWidth = 40           " Width of tree panel. Default: 30
 
@@ -468,14 +468,14 @@ elseif has('win32' || 'win64')
 	let g:VEConf_systemEncoding   = 'utf-16'
 endif
 
-"===============================================================================
+"
 " 3.1.5 - ColorSamplerPack
 "         http://www.vim.org/scripts/script.php?script_id=625
-"===============================================================================
+"
 
-"===============================================================================
+"
 " 3.1.6 - Tagbar
-"===============================================================================
+"
 
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_autoclose   = 0
@@ -485,9 +485,9 @@ let g:tagbar_left        = 0
 let g:tagbar_expand      = 0
 let g:tagbar_autoshowtag = 1
 
-"===============================================================================
+"
 " 3.1.7 - Syntastic
-"===============================================================================
+"
 
 let g:syntastic_auto_loc_list = 1
 
@@ -499,19 +499,19 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-"===============================================================================
+"
 " 3.1.8 - vim-colors-solarized
-"===============================================================================
+"
 
 " Already configure on SetupGui()
 
-"===============================================================================
+"
 " 3.1.9 - Tabular
-"===============================================================================
+"
 
-"===============================================================================
+"
 " 3.1.10 - ctrlp
-"===============================================================================
+"
 
 " TODO: not yet complete
 
@@ -527,53 +527,49 @@ let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
 let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_show_hidden         = 1
 
-"===============================================================================
+"
 " 3.1.11 - nerdtree
-"===============================================================================
+"
 
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 0
 
-"===============================================================================
+"
 " 3.1.12 - nerdtree-tabs
-"===============================================================================
-"
-" TODO: setup nerdtreewidth
-"
+
 map <F9>  :NERDTreeTabsToggle<CR>
 
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
-"===============================================================================
+"
 " 3.1.13 - proj.vim
 "          http://www.vim.org/scripts/script.php?script_id=2719
 "          https://github.com/oinksoft/proj.vim
-"===============================================================================
 
 " change this variable to customize the project file
 let g:ProjFile = "~/.vimproj"
 
-"===============================================================================
+"
 " 3.1.14 - supertab
-"===============================================================================
+"
 
 "let g:SuperTabDefaultCompletionType = "context"
 
-"===============================================================================
+"
 " 3.1.15 - numbers
-"===============================================================================
+"
 
-
+let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 "nnoremap <A-3> :NumbersToggle<CR>
 "nnoremap <A-4> :NumbersOnOff<CR>
 
 
-"===============================================================================
+"
 " 3.1.16 - YouCompleteMe
-"===============================================================================
+"
 
 let g:ycm_min_num_of_chars_for_completion = 3
 let g:ycm_allow_changing_updatetime = 1

@@ -182,6 +182,7 @@ tab all                                 " open a new tab instead of launching a 
 set fileencodings=ucs-bom,utf-8,latin1  " Encodings
 set spelllang=de,pt_br,en,es
 set browsedir=buffer                    " defaults to the current file's directory
+set completeopt+=preview
 
 if has("multi_byte_encoding")
 	set encoding=utf-8                  " charcter encoding used in vim
@@ -579,9 +580,12 @@ let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 " 3.1.16 - YouCompleteMe
 "
 
-let g:ycm_min_num_of_chars_for_completion = 3
-let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_min_num_identifier_candidate_chars = 1
 let g:ycm_allow_changing_updatetime = 1
 "let g:ycm_extra_conf_vim_data = ['v:version']
-let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
 

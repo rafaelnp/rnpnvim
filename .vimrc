@@ -4,19 +4,14 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.11.06 (Fr) 17:37:28
+" Last update:   2013.11.12 (Di) 14:24:48
 "
 "
 "TODO:
-"   fix tag generation
-"   install autocomplete funcionality
 "   configure powerline
-"   http://vim.spf13.com/
-"   configure clang_indexer/clang_complete
-"
+
 "
 " 1 - useful commands
-"
 "
 "   Vim quick and advanced reference card
 "   http://tnerual.eriogerg.free.fr/vimqrc.html
@@ -250,10 +245,6 @@ set softtabstop=4                 " unify
 set shiftwidth=4                  " unify
 set noexpandtab                   " just tabs please :)
 
-" different identation for C and C++
-autocmd FileType c   setlocal shiftwidth=8 tabstop=8 softtabstop=8
-autocmd FileType cpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
-
 set showcmd                       " show command in last line of screen
 set nu                            " line numbers :)
 set hls                           " highlight search patern
@@ -322,25 +313,31 @@ else
 	set showmode
 	set bg=dark
 	colorscheme vividchalk
-	if &term == 'xterm' || &term == 'screen'
+	if &term == 'xterm' || &term == 'screen' || &term='terminator'
 		set t_Co=256            " Enable 256 colors to stop the CSApprox warning
                                 " and make xterm vim shine
 	endif
-"	set term=builtin_ansi       " Make arrow and other keys work
-"	set statusline=%t%m%r%h%w\                " options
-"	set statusline+=[%{&ff}]\                 " system
-"	set statusline+=%y\                       " file type
-"	set statusline+=[ASCII=%03.3b,0x%02.2B]\  " ascii
-"	set statusline+=[OFFSET=%o,0x%O]          " offset
-"	set statusline+=[LN=%l,C=%v]              " line and column
-"	set statusline+=[%p%%]\                   " percentage
-"	set statusline+=[LN=%L]                   " total lines
 endif
 
 syntax enable                          " syntax highlight on and keep your settings
 
+
 "
-" 2.4 - mappings
+" 2.5 - C/C++ stuff
+"
+set makeprg=scons
+
+if !filereadable(expand("%:p:h")."/SConstruct")
+    setlocal makeprg=gcc\ -Wall\ -Wextra\ -o\ %<\ %
+endif
+
+" different identation for C and C++
+autocmd FileType c   setlocal shiftwidth=8 tabstop=8 softtabstop=8
+autocmd FileType cpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
+
+
+"
+" 2.5 - mappings
 "
 " :nmap - Display normal mode maps
 " :imap - Display insert mode maps
@@ -391,7 +388,7 @@ nmap <silent> <A-3> :if &guioptions=~'r' \| set guioptions-=r \| else \| set gui
 nmap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set guioptions+=l \| endif<CR><ESC>
 
 "
-" 2.5 - Mapping commands for window changing
+" 2.6 - Mapping commands for window changing
 "
 "
 " Moving cursor to other windows
@@ -407,16 +404,15 @@ nmap <s-left>   <c-w>h
 nmap <s-right>  <c-w>l
 
 "
-" 2.6 - Unmap arrow keys in normal mode
+" Unmap arrow keys in normal mode
 "
-
 map <Left>  <Nop>
 map <Right> <Nop>
 map <Up>    <Nop>
 map <Down>  <Nop>
 
 "
-" 2.7 - Highlight unwanted spaces
+" 2.8 - Highlight unwanted spaces
 "       http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 "       http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
 "
@@ -425,9 +421,6 @@ map <Down>  <Nop>
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
  
-" TODO:
-" mapping remove trailing spaces
-" mapping to remove spaces before and after tabs
 
 "
 " 3 - Plugins
@@ -575,17 +568,36 @@ let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 "nnoremap <A-3> :NumbersToggle<CR>
 "nnoremap <A-4> :NumbersOnOff<CR>
 
-
 "
 " 3.1.16 - YouCompleteMe
 "
 
 let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_min_num_identifier_candidate_chars = 1
+"let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_allow_changing_updatetime = 1
+let g:ycm_seed_identifiers_with_syntax = 1
 "let g:ycm_extra_conf_vim_data = ['v:version']
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_global_ycm_extra_conf = '$HOME/.vim/.ycm_extra_conf.py'
+
+let g:ycm_filetype_whitelist = {
+			\'lua': 1,
+			\'verilog': 1,
+			\'vhdl': 1,
+			\'vim': 1,
+			\'python': 1,
+			\'c': 1,
+			\'cpp': 1,
+			\'matlab': 1,
+			\'maple': 1,
+			\'git': 1,
+			\'sh': 1,
+			\'zsh': 1,
+			\}
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
 

@@ -4,7 +4,7 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.11.12 (Di) 14:24:48
+" Last update:   2013.11.22 (Fr) 10:33:42
 "
 "
 "TODO:
@@ -133,16 +133,12 @@ Bundle 'VimExplorer'
 Bundle 'Color-Sampler-Pack'
 Bundle 'Tagbar'
 Bundle 'Syntastic'
-Bundle 'https://github.com/altercation/vim-colors-solarized'
 Bundle 'https://github.com/godlygeek/tabular.git'
 Bundle 'ctrlp.vim'
-Bundle 'moria'
-Bundle 'https://github.com/oinksoft/proj.vim.git'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
-Bundle 'snipMate'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Lokaltog/powerline'
 
@@ -151,7 +147,7 @@ let g:vundle_default_git_proto = 'https'
 filetype plugin indent on     " required!
 
 "
-" 2 - VIM setup and costumization
+" 2 - Setup and costumization
 "
 "
 " 2.1 - General Options
@@ -170,11 +166,12 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*~ " wildmenu: ignore these extensions
 set updatetime=4000                     " update every 4000 ms
 set visualbell t_vb=                    " disable the fucking annoyng visual
                                         " and sound bell :)
+set number                              " show line numbers
 set visualbell                          " don't beep
 set noerrorbells                        " no fucking noise
 tab all                                 " open a new tab instead of launching a new
                                         " vim instance
-set fileencodings=ucs-bom,utf-8,latin1  " Encodings
+set fileencodings=utf-8,latin1          " Encodings
 set spelllang=de,pt_br,en,es
 set browsedir=buffer                    " defaults to the current file's directory
 set completeopt+=preview
@@ -191,10 +188,7 @@ let mapleader = " "
 "
 " 2.2 - Text Formatting/Layout
 "
-
-set number
 syntax enable                     " syntax highlight on and keep your settings
-"filetype on                       " enable file type detection
 filetype plugin on                " enable filetxype plugins
 filetype indent on
 
@@ -288,6 +282,7 @@ function! SetupGUI()
 
 	" TODO: Which is the best font (proportional) for programming ??
 	if has('unix')
+		"Default font
 		"set guifont=Monospace\ 9
 		" Other good fonts:
 		"set guifont=Anonymous\ Pro\ Minus\ 11
@@ -296,6 +291,8 @@ function! SetupGUI()
 		"set guifont=DejaVu\ Sans\ Mono\ 9
 	elseif has ('win32') || ('win64')
 		set guifont=Lucida_Sans_Typewriter:h9
+	elseif has ('mac')
+		set guifont=Monospace\ 9
 	endif
 
 	colorscheme vividchalk
@@ -431,19 +428,14 @@ call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 "
 " 3 - Plugins
 "
-" Here can be found the plugins settings and other relevant informations
-"
-"
-" 3.1 - Plugins Settings
-"
 
 "
-" 3.1.1 - Vundle
+" 3.1 - Vundle
 "
 " Configured in the beginning of the file
 
 "
-" 3.1.2 - genutils
+" 3.1 - genutils
 "         http://www.vim.org/scripts/script.php?script_id=197
 "
 " genutils General utility functions
@@ -477,12 +469,12 @@ elseif has('win32' || 'win64')
 endif
 
 "
-" 3.1.5 - ColorSamplerPack
+" 3.5 - ColorSamplerPack
 "         http://www.vim.org/scripts/script.php?script_id=625
 "
 
 "
-" 3.1.6 - Tagbar
+" 3.6 - Tagbar
 "
 
 nnoremap <silent> <F8> :TagbarToggle<CR>
@@ -494,7 +486,7 @@ let g:tagbar_expand      = 0
 let g:tagbar_autoshowtag = 1
 
 "
-" 3.1.7 - Syntastic
+" 3.7 - Syntastic
 "
 
 let g:syntastic_auto_loc_list = 1
@@ -507,18 +499,14 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-"
-" 3.1.8 - vim-colors-solarized
-"
-
-" Already configure on SetupGui()
 
 "
-" 3.1.9 - Tabular
+" 3.8 - Tabular
 "
-
+" TODO: setup config
 "
-" 3.1.10 - ctrlp
+"
+" 3.8 - ctrlp
 "
 
 " TODO: not yet complete
@@ -536,7 +524,7 @@ let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_show_hidden         = 1
 
 "
-" 3.1.11 - nerdtree
+" 3.9 - nerdtree
 "
 
 let NERDTreeCaseSensitiveSort = 1
@@ -544,7 +532,7 @@ let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 0
 
 "
-" 3.1.12 - nerdtree-tabs
+" 3.10 - nerdtree-tabs
 
 map <F9>  :NERDTreeTabsToggle<CR>
 
@@ -552,37 +540,20 @@ let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
-"
-" 3.1.13 - proj.vim
-"          http://www.vim.org/scripts/script.php?script_id=2719
-"          https://github.com/oinksoft/proj.vim
-
-" change this variable to customize the project file
-let g:ProjFile = "~/.vimproj"
 
 "
-" 3.1.14 - supertab
-"
-
-"let g:SuperTabDefaultCompletionType = "context"
-
-"
-" 3.1.15 - numbers
+" 3.11 - numbers
 "
 
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
-"nnoremap <A-3> :NumbersToggle<CR>
-"nnoremap <A-4> :NumbersOnOff<CR>
 
 "
-" 3.1.16 - YouCompleteMe
+" 3.12 - YouCompleteMe
 "
 
 let g:ycm_min_num_of_chars_for_completion = 2
-"let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_allow_changing_updatetime = 1
 let g:ycm_seed_identifiers_with_syntax = 1
-"let g:ycm_extra_conf_vim_data = ['v:version']
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -605,4 +576,7 @@ let g:ycm_filetype_whitelist = {
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
+"
+" 3.13 - PowerLine
+"
 

@@ -313,7 +313,7 @@ else
 	set showmode
 	set bg=dark
 	colorscheme vividchalk
-	if &term == 'xterm' || &term == 'screen' || &term='terminator'
+	if &term == 'xterm' || &term == 'screen' || &term =='terminator'
 		set t_Co=256            " Enable 256 colors to stop the CSApprox warning
                                 " and make xterm vim shine
 	endif
@@ -420,7 +420,13 @@ map <Down>  <Nop>
 " or after tabs):
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
- 
+
+"
+" 2.9 - Removes trailing spaces
+"
+" TODO: Add a mapping for it
+"
+"%s/\s\+$//e
 
 "
 " 3 - Plugins
@@ -580,7 +586,6 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_global_ycm_extra_conf = '$HOME/.vim/.ycm_extra_conf.py'
 
 let g:ycm_filetype_whitelist = {
 			\'lua': 1,

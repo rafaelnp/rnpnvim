@@ -8,8 +8,17 @@ Last update: 2013.11.26 (Tu) 16:20:33
 1.Installation
 -------------------
 
-Get the rnpvim code:
-git clone https://github.com/rafaelnp/rnpvim.git rnpvim
+Open a terminal ang get the rnpvim code:
+
+`git clone https://github.com/rafaelnp/rnpvim.git rnpvim`
+
+backup your current Vim configuration:
+
+`cp ~/.vim ~/.vim.bak`
+
+`cp ~/.vimrc ~/.vimrc.bak`
+
+and create the symbolic links to the new configuration files:
 
 `ln -s your-path/rnpvim/.vim ~/.vim`
 
@@ -20,16 +29,6 @@ and execute:
 `vim +BundleInstall`
 
 and the plugins shall be synchronized with github
-
-
-'SelectBuf'
-'VimExplorer'
-'Color-Sampler-Pack'
-'Tagbar'
-'Syntastic'
-'ctrlp.vim'
-'https://github.com/scrooloose/nerdtree.git'
-'Valloric/YouCompleteMe'
 
 
 2.Vim configuration
@@ -69,18 +68,18 @@ Text formating configuration:
     syntax enable                     " syntax highlight on and keep your settings
     filetype plugin on                " enable filetype plugins
     filetype indent on
-    
+
     " system dependent configuration
     if has('unix') || has('macunix')
-    	set termencoding=utf-8                 " terminal encoding
-    	set fileformat=unix                    " unix rocks :)
-    	set fileformats=unix
+        set termencoding=utf-8                 " terminal encoding
+        set fileformat=unix                    " unix rocks :)
+        set fileformats=unix
     elseif has('mac')
-    	set fileformat=unix
-    	set fileformats=unix
-	else
-    	" write specific stuff for non-unix systems here
-    	set fileformats=unix                   " unix rocks :)
+        set fileformat=unix
+        set fileformats=unix
+    else
+        set fileformat=unix
+        set fileformats=unix                   " unix rocks :)
     endif
 
     set fo=tcrqn                      " See :help fo-table

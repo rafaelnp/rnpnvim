@@ -151,6 +151,7 @@ Bundle 'https://github.com/tpope/vim-vividchalk.git'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Lokaltog/powerline'
 Bundle 'https://github.com/jtratner/vim-flavored-markdown'
+Bundle 'https://github.com/nathanaelkane/vim-indent-guides'
 
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:vundle_default_git_proto = 'https'
@@ -304,7 +305,8 @@ function! SetupGUI()
 		set guifont=Monospace\ 9
 	endif
 
-	colorscheme vividchalk
+	colorscheme oceandeep
+	"colorscheme vividchalk
 	set guioptions=aAgi                       " see: help guioptions
 
 	"Pop-up menu color setteings
@@ -620,3 +622,11 @@ augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
+
+" 3.14 - Vim-indent-guides
+
+let g:indent_guides_color_change_percent = 10
+let g:indent_guides_indent_levels = 20
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_space_guides = 0          " spaces are not used for indentation
+let g:indent_guides_enable_on_vim_startup = 1

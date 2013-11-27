@@ -67,7 +67,7 @@
 "    A or $a                 goes to the line end and enters in edit mode
 "    o or A<CR>              adds new line bellow
 "    O or ko                 adds new line above
-"    c-w =                   makes windows have the same size
+"    <C-w> =                 makes windows have the same size
 "    Ctrl+a                  increment number under the cursor
 "    Ctrl+x                  decrement number under cursor
 "    bdi                     buffer delete
@@ -193,22 +193,18 @@ filetype plugin on                " enable filetxype plugins
 filetype indent on
 
 " system dependent configuration
-if has('unix')
+if has('unix') || has('macunix')
 	set termencoding=utf-8                 " terminal encoding
 	set fileformat=unix                    " unix rocks :)
-	set fileformats=unix                   " unix rocks :)
-
-	"
-	" TODO: set up a mapping for dictionary
-	"
-	set dictionary+=/usr/share/dict/ogerman
-	set dictionary+=/usr/share/dict/brazilian
-	set dictionary+=/usr/share/dict/british-english
-	set path+=~/projekte
+	set fileformats=unix
+elseif has('mac')
+	set fileformat=unix
+	set fileformats=unix
 else
-	" write specific stuff for non-unix systems here
-	set fileformats=unix,dos                   " unix rocks :)
+	set fileformat=unix
+	set fileformats=unix
 endif
+
 set fo=tcrqn                      " See Help (:help fo-table)
 set ai                            " autoindent
 set si                            " smartindent

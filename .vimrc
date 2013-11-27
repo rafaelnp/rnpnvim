@@ -6,6 +6,18 @@
 " Creation date: 1998.02.12
 " Last update:   2013.11.22 (Fr) 10:33:42
 "
+" Branch testplugin
+" Plugins and configs: under test:
+" https://github.com/mutewinter/dot_vim (Vim Configuration of Champions)
+" https://github.com/bling/vim-airline
+" https://github.com/nathanaelkane/vim-indent-guides
+" https://github.com/Rykka/colorv.vim (color)
+" https://github.com/mhinz/vim-signify (git, svn, etc)
+"
+"
+" COnfig:
+" https://github.com/gmarik/vimfiles/blob/1f4f26d42f54443f1158e0009746a56b9a28b053/vimrc#L136
+"
 
 " 1 - useful commands
 "

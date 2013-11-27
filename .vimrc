@@ -6,15 +6,14 @@
 " Creation date: 1998.02.12
 " Last update:   2013.11.22 (Fr) 10:33:42
 "
-"
-"TODO:
-"   configure powerline
 
-"
 " 1 - useful commands
 "
 "   Vim quick and advanced reference card
 "   http://tnerual.eriogerg.free.fr/vimqrc.html
+"
+"   Online github markdown editor:
+"   http://markdown-here.com/livedemo.html
 "
 "    Navigation:
 "    $                       end of line
@@ -68,8 +67,6 @@
 "    o or A<CR>              adds new line bellow
 "    O or ko                 adds new line above
 "    <C-w> =                 makes windows have the same size
-"    Ctrl+a                  increment number under the cursor
-"    Ctrl+x                  decrement number under cursor
 "    bdi                     buffer delete
 "    <C-a>                   increments the number under the cursor
 "    <C-x>                   decrements the number under the cursor
@@ -141,6 +138,7 @@ Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Lokaltog/powerline'
+Bundle 'https://github.com/jtratner/vim-flavored-markdown'
 
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:vundle_default_git_proto = 'https'
@@ -162,13 +160,13 @@ set helplang=de,en                      " help language
 set history=100                         " command history
 set printoptions=paper:a4               " printer options
 set ruler                               " Show cursor line and column number position
-set wildignore=*.o,*.obj,*.bak,*.exe,*~ " wildmenu: ignore these extensions
-set updatetime=4000                     " update every 4000 ms
+set number                              " show line numbers
+" wildmenu: ignore these extensions
+set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.f.s
 set visualbell t_vb=                    " disable the fucking annoyng visual
                                         " and sound bell :)
-set number                              " show line numbers
-set visualbell                          " don't beep
-set noerrorbells                        " no fucking noise
+set novisualbell
+set noerrorbells                        " no f***ing noise
 tab all                                 " open a new tab instead of launching a new
                                         " vim instance
 set fileencodings=utf-8,latin1          " Encodings
@@ -189,20 +187,23 @@ let mapleader = " "
 " 2.2 - Text Formatting/Layout
 "
 syntax enable                     " syntax highlight on and keep your settings
-filetype plugin on                " enable filetxype plugins
-filetype indent on
 
 " system dependent configuration
 if has('unix') || has('macunix')
-	set termencoding=utf-8                 " terminal encoding
-	set fileformat=unix                    " unix rocks :)
-	set fileformats=unix
+    set termencoding=utf-8
+    set encoding=utf-8
+    set fileformat=unix                    " unix rocks :)
+    set fileformats=unix
 elseif has('mac')
-	set fileformat=unix
-	set fileformats=unix
+    set termencoding=utf-8
+    set encoding=utf-8
+    set fileformat=unix
+    set fileformats=unix
 else
-	set fileformat=unix
-	set fileformats=unix
+    set termencoding=utf-8
+    set encoding=utf-8
+    set fileformat=unix
+    set fileformats=unix
 endif
 
 set fo=tcrqn                      " See Help (:help fo-table)
@@ -471,6 +472,8 @@ endif
 
 "
 " 3.6 - Tagbar
+"       https://github.com/majutsushi/tagbar
+"       http://majutsushi.github.io/tagbar/
 "
 
 nnoremap <silent> <F8> :TagbarToggle<CR>
@@ -480,6 +483,28 @@ let g:tagbar_autoshowtag = 1
 let g:tagbar_left        = 0
 let g:tagbar_expand      = 0
 let g:tagbar_autoshowtag = 1
+
+" more examples: https://github.com/majutsushi/tagbar/wiki
+let g:tagbar_type_vhdl = {
+    \ 'ctagstype': 'vhdl',
+    \ 'kinds' : [
+        \'d:prototypes',
+        \'b:package bodies',
+        \'e:entities',
+        \'a:architectures',
+        \'t:types',
+        \'p:processes',
+        \'f:functions',
+        \'r:procedures',
+        \'c:constants',
+        \'T:subtypes',
+        \'r:records',
+        \'C:components',
+        \'P:packages',
+        \'l:locals'
+    \]
+\}
+
 
 "
 " 3.7 - Syntastic
@@ -537,15 +562,15 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 
-"
+
 " 3.11 - numbers
-"
+
 
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
-"
+
 " 3.12 - YouCompleteMe
-"
+
 
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_allow_changing_updatetime = 1
@@ -572,7 +597,14 @@ let g:ycm_filetype_whitelist = {
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
-"
-" 3.13 - PowerLine
-"
 
+" 3.13 - PowerLine
+
+
+" 3.14 - Vim-flavoured.markdown
+" 'https://github.com/jtratner/vim-flavored-markdown'
+
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END

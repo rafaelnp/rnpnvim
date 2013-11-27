@@ -14,7 +14,7 @@ Open a terminal ang get the rnpvim code:
 
 backup your current Vim configuration:
 
-`cp ~/.vim ~/.vim.bak`
+`cp -R ~/.vim ~/.vim.bak`
 
 `cp ~/.vimrc ~/.vimrc.bak`
 
@@ -44,7 +44,7 @@ General Vim  configuration:
     set nocompatible                          " no vi-compatibility, we have vim :)
     set autochdir                             " always switch to the current file directory
     set autowriteall                          " automatically save all buffers
-    set nobackup                              " no backup files
+    set nobackup                              " no backup files, we have git
     set backspace=indent,eol,start            " see :help bs
     set helplang=de,en                        " help language
     set history=100                           " command history
@@ -87,11 +87,6 @@ Text formating configuration:
     set si                            " smartindent
     set cindent                       " do c-style indenting
 
-    set fo=tcrqn                      " formatoptions. See :help fo-table
-    set ai                            " autoindent
-    set si                            " smartindent
-    set cindent                       " do c-style indenting
-
 3.Plugins
 ----------
 
@@ -126,7 +121,7 @@ The following plugins are used in the current configuration:
   [12]:  https://github.com/gmarik/vundle                     "Vundle"
   [13]:  https://github.com/                                         "YouCompleteMe"
 
-4. Colorschemes
+4.Colorschemes
 ---------------
 
 * [vim-vividchalk][14]
@@ -134,7 +129,12 @@ The following plugins are used in the current configuration:
   [14]:   https://github.com/tpope/vim-vividchalk.git                    "vim-vividchalk"
 
 
-5.TODO
+5.Known problems
+---------------
+
+* The plugin snipMate does note work if the plugin YouCompleteMe is also installed.
+
+6.TODO
 ---------------
 
 This readme is still incomplete. It is being gradually expanded/improved.

@@ -34,6 +34,7 @@ Bundle 'https://github.com/tpope/vim-vividchalk.git'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Lokaltog/powerline'
 Bundle 'https://github.com/jtratner/vim-flavored-markdown'
+Bundle 'https://github.com/mhinz/vim-signify'
 
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:vundle_default_git_proto = 'https'

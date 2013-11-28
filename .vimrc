@@ -10,9 +10,10 @@
 " Plugins and configs: under test:
 " https://github.com/mutewinter/dot_vim (Vim Configuration of Champions)
 " https://github.com/bling/vim-airline
-" https://github.com/nathanaelkane/vim-indent-guides
+" https://github.com/nathanaelkane/vim-indent-guides (does not work with vividchalk)
 " https://github.com/Rykka/colorv.vim (color)
 " https://github.com/mhinz/vim-signify (git, svn, etc)
+" https://github.com/editorconfig/editorconfig-vim
 "
 "
 " COnfig:

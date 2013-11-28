@@ -6,8 +6,43 @@
 " 2.1 - General Options
 "
 
-set nocompatible                        " no vi-compatibility
-set autochdir                           " always switch to the current file directory
+" new stuff
+set showmatch
+set copyindent
+set pastetoggle=<F2>  "enables paste mode
+nnoremap , :         " shortcut for commands
+
+" Use Q for formatting the current paragraph (or selection)
+vmap Q gq
+nmap Q gqap
+
+
+"If you like long lines with line wrapping enabled, this solves the problem that 
+"pressing down jumpes your cursor “over” the current line to the next line.
+"It changes behaviour so that it j"umps to the next row in the editor (much more natural):
+
+nnoremap j gj
+nnoremap k gk
+
+" Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”? Use this
+nmap <silent> ,/ :nohlsearch<CR>
+
+
+"Minimal number of screen lines to keep above and below the cursor.
+set scrolloff=5
+
+set ttyfast
+
+set colorcolumn=90
+
+" disable <F1> 
+inoremap <F1> <nop>
+nnoremap <F1> <nop>
+vnoremap <F1> <nop>
+
+set hidden
+" end new stuff
+
 set autowriteall                        " automatically save all buffers
 set nobackup                            " no backup files
 set backspace=indent,eol,start          " see :help bs
@@ -16,6 +51,8 @@ set history=100                         " command history
 set printoptions=paper:a4               " printer options
 set ruler                               " Show cursor line and column number position
 set number                              " show line numbers
+set autochdir
+
 " wildmenu: ignore these extensions
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
 set visualbell t_vb=                    " disable the fucking annoyng visual
@@ -30,9 +67,25 @@ set browsedir=buffer                    " defaults to the current file's directo
 set completeopt+=preview
 
 if has("multi_byte_encoding")
-	set encoding=utf-8                  " charcter encoding used in vim
+	if has('unix') || has('macunix')
+		set termencoding=utf-8
+		set encoding=utf-8
+		set fileformat=unix                    " unix rocks :)
+		set fileformats=unix
+	elseif has('mac')
+		set termencoding=utf-8
+		set encoding=utf-8
+		set fileformat=unix
+		set fileformats=unix
+	else
+		set termencoding=utf-8
+		set encoding=utf-8
+		set fileformat=unix
+		set fileformats=unix
+	endif
 else
-	set encoding=latin1                 " fallback
+	set termencoding=latin1
+	set encoding=latin1
 endif
 
 nnoremap <space> <Nop>
@@ -42,24 +95,6 @@ let mapleader = " "
 " 2.2 - Text Formatting/Layout
 "
 syntax enable                     " syntax highlight on and keep your settings
-
-" system dependent configuration
-if has('unix') || has('macunix')
-    set termencoding=utf-8
-    set encoding=utf-8
-    set fileformat=unix                    " unix rocks :)
-    set fileformats=unix
-elseif has('mac')
-    set termencoding=utf-8
-    set encoding=utf-8
-    set fileformat=unix
-    set fileformats=unix
-else
-    set termencoding=utf-8
-    set encoding=utf-8
-    set fileformat=unix
-    set fileformats=unix
-endif
 
 set fo=tcrqn                      " See Help (:help fo-table)
 set ai                            " autoindent
@@ -92,7 +127,6 @@ set shiftwidth=4                  " unify
 set noexpandtab                   " just tabs please :)
 
 set showcmd                       " show command in last line of screen
-set nu                            " line numbers :)
 set hls                           " highlight search patern
 set wrapmargin=1                  " space after linebrake
 set textwidth=90                  " no fucking long lines

@@ -1,0 +1,187 @@
+
+"
+" 3 - Plugins
+"
+
+"
+" 3.1 - Vundle
+"
+" Configured in the beginning of the file
+
+"
+" 3.1 - genutils
+"         http://www.vim.org/scripts/script.php?script_id=197
+"
+" genutils General utility functions
+"
+"
+" 3.1.3 - SelectBuf
+"         http://www.vim.org/scripts/script.php?script_id=107
+"
+nmap <silent> <F3> <Plug>SelectBuf
+let g:selBufDefaultSortOrder  = "name"
+let g:selBufDisableMRUlisting = 0
+let g:selBufAlwaysShowDetails = 1
+
+
+"
+" 3.1.4 - vimexplorer
+"         http://www.vim.org/scripts/script.php?script_id=1950
+"
+nnoremap <silent> <F7> :VE ~<CR>
+let g:VEConf_treePanelWidth = 40           " Width of tree panel. Default: 30
+
+if has('unix')
+	let g:VEConf_externalExplorer = "dolphin"
+	let g:VEConf_showHiddenFiles  = 0
+	let g:VEConf_usingGnome       = 0
+	let g:VEConf_usingKDE         = 1
+	let g:VEConf_systemEncoding   = 'utf-8'
+elseif has('win32' || 'win64')
+	let g:VEConf_externalExplorer = "explorer.exe"
+	let g:VEConf_systemEncoding   = 'utf-16'
+endif
+
+"
+" 3.5 - ColorSamplerPack
+"         http://www.vim.org/scripts/script.php?script_id=625
+"
+
+"
+" 3.6 - Tagbar
+"       https://github.com/majutsushi/tagbar
+"       http://majutsushi.github.io/tagbar/
+"
+
+nnoremap <silent> <F8> :TagbarToggle<CR>
+let g:tagbar_autoclose   = 0
+let g:tagbar_autofocus   = 1
+let g:tagbar_autoshowtag = 1
+let g:tagbar_left        = 0
+let g:tagbar_expand      = 0
+let g:tagbar_autoshowtag = 1
+
+" more examples: https://github.com/majutsushi/tagbar/wiki
+let g:tagbar_type_vhdl = {
+    \ 'ctagstype': 'vhdl',
+    \ 'kinds' : [
+        \'d:prototypes',
+        \'b:package bodies',
+        \'e:entities',
+        \'a:architectures',
+        \'t:types',
+        \'p:processes',
+        \'f:functions',
+        \'r:procedures',
+        \'c:constants',
+        \'T:subtypes',
+        \'r:records',
+        \'C:components',
+        \'P:packages',
+        \'l:locals'
+    \]
+\}
+
+
+"
+" 3.7 - Syntastic
+"
+
+let g:syntastic_auto_loc_list = 1
+
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['c', 'cpp','vim'],
+                           \ 'passive_filetypes': [] }
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+
+"
+" 3.8 - Tabular
+"
+" TODO: setup config
+"
+"
+" 3.8 - ctrlp
+"
+
+" TODO: not yet complete
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+
+let g:ctrlp_match_window_bottom = 1
+let g:ctrlp_show_hidden         = 1
+
+"
+" 3.9 - nerdtree
+"
+
+let NERDTreeCaseSensitiveSort = 1
+let NERDTreeShowHidden        = 1
+let NERDTreeShowLineNumbers   = 0
+
+"
+" 3.10 - nerdtree-tabs
+
+map <F9>  :NERDTreeTabsToggle<CR>
+
+let g:nerdtree_tabs_open_on_gui_startup     = 0
+let g:nerdtree_tabs_open_on_console_startup = 0
+let g:nerdtree_tabs_no_startup_for_diff     = 0
+
+
+
+" 3.11 - numbers
+
+
+let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
+
+
+" 3.12 - YouCompleteMe
+
+
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_allow_changing_updatetime = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+let g:ycm_filetype_whitelist = {
+			\'lua': 1,
+			\'verilog': 1,
+			\'vhdl': 1,
+			\'vim': 1,
+			\'python': 1,
+			\'c': 1,
+			\'cpp': 1,
+			\'matlab': 1,
+			\'maple': 1,
+			\'git': 1,
+			\'sh': 1,
+			\'zsh': 1,
+			\}
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+
+
+" 3.13 - PowerLine
+
+
+" 3.14 - Vim-flavoured.markdown
+" 'https://github.com/jtratner/vim-flavored-markdown'
+
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END

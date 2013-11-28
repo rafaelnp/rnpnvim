@@ -83,14 +83,21 @@ let g:tagbar_type_vhdl = {
 \}
 
 
-"
 " 3.7 - Syntastic
-"
 
 let g:syntastic_auto_loc_list = 1
 
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['c', 'cpp','vim'],
+                           \ 'active_filetypes': ['c',
+                                                 \'cpp',
+                                                 \'vim',
+												 \'python',
+												 \'d',
+												 \'lua',
+												 \'matlab',
+												 \'vhdl',
+												 \'zsh',
+												 \'html'],
                            \ 'passive_filetypes': [] }
 
 set statusline+=%#warningmsg#
@@ -98,14 +105,12 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 
-"
 " 3.8 - Tabular
 "
 " TODO: setup config
-"
-"
-" 3.8 - ctrlp
-"
+
+
+" 3.9 - ctrlp
 
 " TODO: not yet complete
 
@@ -122,7 +127,7 @@ let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_show_hidden         = 1
 
 "
-" 3.9 - nerdtree
+" 3.10 - nerdtree
 "
 
 let NERDTreeCaseSensitiveSort = 1
@@ -130,7 +135,7 @@ let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 0
 
 "
-" 3.10 - nerdtree-tabs
+" 3.11 - nerdtree-tabs
 
 map <F9>  :NERDTreeTabsToggle<CR>
 
@@ -140,13 +145,13 @@ let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 
 
-" 3.11 - numbers
+" 3.12 - numbers
 
 
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
 
-" 3.12 - YouCompleteMe
+" 3.13 - YouCompleteMe
 
 
 let g:ycm_min_num_of_chars_for_completion = 2
@@ -175,7 +180,7 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
 
-" 3.13 - PowerLine
+" 3.15 - PowerLine
 
 
 " 3.14 - Vim-flavoured.markdown
@@ -185,3 +190,9 @@ augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
+
+" 3.15 - vim-signify
+"        https://github.com/mhinz/vim-signify
+
+
+let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]

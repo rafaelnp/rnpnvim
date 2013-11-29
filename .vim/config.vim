@@ -10,7 +10,7 @@
 set showmatch
 set copyindent
 set pastetoggle=<F2>  "enables paste mode
-nnoremap , :         " shortcut for commands
+nnoremap - :         " shortcut for commands
 
 " Use Q for formatting the current paragraph (or selection)
 vmap Q gq
@@ -42,7 +42,8 @@ vnoremap <F1> <nop>
 
 set hidden
 " end new stuff
-
+set nocompatible                        " no vi-compatibility
+set autochdir                           " always switch to the current file directory
 set autowriteall                        " automatically save all buffers
 set nobackup                            " no backup files
 set backspace=indent,eol,start          " see :help bs
@@ -51,8 +52,6 @@ set history=100                         " command history
 set printoptions=paper:a4               " printer options
 set ruler                               " Show cursor line and column number position
 set number                              " show line numbers
-set autochdir
-
 " wildmenu: ignore these extensions
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
 set visualbell t_vb=                    " disable the fucking annoyng visual

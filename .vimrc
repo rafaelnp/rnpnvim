@@ -119,16 +119,15 @@
 " Load all Vundle managed plugins
 source ~/.vim/vundle.vim
 
-" Platform (Windows, Mac, etc.) configuration.
-" source ~/.vim/platforms.vim
-
 " All of the Vim configuration.
 source ~/.vim/config.vim
 
-" New commands
-"source ~/.vim/commands.vim
+" functions
+source ~/.vim/functions.vim
+
 " All hotkeys, not dependant on plugins, are mapped here.
-"source ~/.vim/mappings.vim
+source ~/.vim/mappings.vim
+
 " Plugin-specific configuration.
 source ~/.vim/plugins.vim
 

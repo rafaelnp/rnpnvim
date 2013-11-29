@@ -1,10 +1,7 @@
-
 "
-" 2 - Setup and costumization
+" Setup and costumization
 "
-"
-" 2.1 - General Options
-"
+" General Options
 
 " new stuff
 set showmatch
@@ -17,7 +14,7 @@ vmap Q gq
 nmap Q gqap
 
 
-"If you like long lines with line wrapping enabled, this solves the problem that 
+"If you like long lines with line wrapping enabled, this solves the problem that
 "pressing down jumpes your cursor “over” the current line to the next line.
 "It changes behaviour so that it j"umps to the next row in the editor (much more natural):
 
@@ -35,7 +32,7 @@ set ttyfast
 
 set colorcolumn=90
 
-" disable <F1> 
+" disable <F1>
 inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
@@ -90,11 +87,8 @@ endif
 nnoremap <space> <Nop>
 let mapleader = " "
 
-"
-" 2.2 - Text Formatting/Layout
-"
+" Text Formatting/Layout
 syntax enable                     " syntax highlight on and keep your settings
-
 set fo=tcrqn                      " See Help (:help fo-table)
 set ai                            " autoindent
 set si                            " smartindent
@@ -110,7 +104,7 @@ set cindent                       " do c-style indenting
 " https://en.wikipedia.org/wiki/Space_bar
 " https://en.wikipedia.org/wiki/Tabulator_key
 "
-" Vim configuration 
+" Vim configuration
 "
 " tabstop = Set tabstop to tell vim how many columns a tab counts for.
 "			This is the only command here that will affect how existing
@@ -201,11 +195,8 @@ else
 	endif
 endif
 
-syntax enable                          " syntax highlight on and keep your settings
-
-
 "
-" 2.5 - C/C++ stuff
+" C/C++ stuff
 "
 set makeprg=scons
 
@@ -216,96 +207,3 @@ endif
 " different identation for C and C++
 autocmd FileType c   setlocal shiftwidth=8 tabstop=8 softtabstop=8
 autocmd FileType cpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
-
-
-"
-" 2.5 - mappings
-"
-" :nmap - Display normal mode maps
-" :imap - Display insert mode maps
-" :vmap - Display visual and select mode maps
-" :smap - Display select mode maps
-" :xmap - Display visual mode maps
-" :cmap - Display command-line mode maps
-" :omap - Display operator pending mode maps
-
-nmap <a-r> :%s/\r//g<CR>            " removes carriage return
-nmap <a-t> :tabnew<CR>              " opens a new table
-nmap <a-n> :bn<CR>
-nmap <a-p> :bp<CR>
-nmap <C-s> :wa<CR>                  " save all buffers
-nmap ,d    :call Reloadconfig()<CR> " maps reload config
-nmap <silent> <a-d> :call DumpMaps()<CR>     " save all current mappings on a text file
-
-function! Reloadconfig()
-	wa
-	source $MYVIMRC
-endfunction
-
-function! DumpMaps()
-	redir! > ~/vim_maps.txt
-	map
-	map!
-	redir END
-endfunction
-
-" Insert current date and time
-nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>P
-inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>
-
-"Very useful :)
-map <buffer> <a-m> :%s///g<CR>     " remove ^M in current file
-map <a-q> :ccl<CR>                " closes quickfix
-
-" CTRL+F1 to toggle the menu bar
-nmap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR><ESC>
-
-" CTRL+F2 to toggle the menu bar
-nmap <silent> <A-2> :if &guioptions=~'T' \| set guioptions-=T \| else \| set guioptions+=T \| endif<CR><ESC>
-
-" CTRL+F3 to toggle the right scroll bars
-nmap <silent> <A-3> :if &guioptions=~'r' \| set guioptions-=r \| else \| set guioptions+=r \| endif<CR><ESC>
-
-" CTRL+F4 to toggle left the scroll bars
-nmap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set guioptions+=l \| endif<CR><ESC>
-
-"
-" 2.6 - Mapping commands for window changing
-"
-"
-" Moving cursor to other windows
-"
-" shift down   : change window focus to lower one (cyclic)
-" shift up     : change window focus to upper one (cyclic)
-" shift left   : change window focus to one on left
-" shift right  : change window focus to one on right
-"
-nmap <s-down>   <c-w>w
-nmap <s-up>     <c-w>W
-nmap <s-left>   <c-w>h
-nmap <s-right>  <c-w>l
-
-"
-" Unmap arrow keys in normal mode
-"
-map <Left>  <Nop>
-map <Right> <Nop>
-map <Up>    <Nop>
-map <Down>  <Nop>
-
-"
-" 2.8 - Highlight unwanted spaces
-"       http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-"       http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
-"
-" Highlight redundant spaces (spaces at the end of the line, spaces before
-" or after tabs):
-highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
-call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
-
-"
-" 2.9 - Removes trailing spaces
-"
-" TODO: Add a mapping for it
-"
-"%s/\s\+$//e

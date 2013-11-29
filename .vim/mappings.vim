@@ -78,6 +78,29 @@ map <Down>  <Nop>
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 
-"
 " Removes trailing spaces
 nmap <a-x> :%s/\s\+$//e<CR>
+
+" enables paste mode
+set pastetoggle=<F2>
+
+" shortcut for commands
+nnoremap <silent> - :
+
+" Use Q for formatting the current paragraph (or selection)
+vmap Q gq
+nmap Q gqap
+
+" If long lines with line wrapping enabled, this solves the problem that pressing down
+" jumpes your cursor “over” the current line to the next line.  It changes behaviour so
+" that it jumps to the next row in the editor (much more natural).
+nnoremap j gj
+nnoremap k gk
+
+" Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”? Use this
+nmap <silent> <a-c> :nohlsearch<CR>
+
+" disable <F1>
+inoremap <F1> <nop>
+nnoremap <F1> <nop>
+vnoremap <F1> <nop>

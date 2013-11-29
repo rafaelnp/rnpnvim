@@ -1,29 +1,9 @@
 "
-" Setup and costumization
-"
 " General Options
 
 " new stuff
 set showmatch
 set copyindent
-set pastetoggle=<F2>  "enables paste mode
-nnoremap - :         " shortcut for commands
-
-" Use Q for formatting the current paragraph (or selection)
-vmap Q gq
-nmap Q gqap
-
-
-"If you like long lines with line wrapping enabled, this solves the problem that
-"pressing down jumpes your cursor “over” the current line to the next line.
-"It changes behaviour so that it j"umps to the next row in the editor (much more natural):
-
-nnoremap j gj
-nnoremap k gk
-
-" Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”? Use this
-nmap <silent> ,/ :nohlsearch<CR>
-
 
 "Minimal number of screen lines to keep above and below the cursor.
 set scrolloff=5
@@ -32,13 +12,9 @@ set ttyfast
 
 set colorcolumn=90
 
-" disable <F1>
-inoremap <F1> <nop>
-nnoremap <F1> <nop>
-vnoremap <F1> <nop>
-
 set hidden
 " end new stuff
+
 set nocompatible                        " no vi-compatibility
 set autochdir                           " always switch to the current file directory
 set autowriteall                        " automatically save all buffers
@@ -107,8 +83,8 @@ set cindent                       " do c-style indenting
 " Vim configuration
 "
 " tabstop = Set tabstop to tell vim how many columns a tab counts for.
-"			This is the only command here that will affect how existing
-"			text displays.
+"           this is the only command here that will affect how existing
+"           text displays.
 " shiftwidth =  Set shiftwidth to control how many columns text is indented
 "				with the reindent operations (<< and >>) and automatic C-style
 "				indentation.
@@ -139,10 +115,8 @@ let g:tex_flavor='latex'
 "
 " 2.3 - GUI Options
 "
-
 set laststatus=2                       " statusline always visible
 set shortmess=atToO                    " see: help shortmess
-
 
 if has('mouse')
 	set mouse=a                        " enable mouse in all modes

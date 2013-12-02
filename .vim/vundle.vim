@@ -36,6 +36,7 @@ Bundle 'https://github.com/jtratner/vim-flavored-markdown'
 Bundle 'https://github.com/mhinz/vim-signify'
 Bundle 'https://github.com/nathanaelkane/vim-indent-guides'
 Bundle 'https://github.com/bling/vim-airline'
+Bundle 'https://github.com/tpope/vim-fugitive'
 
 let g:vundle_default_git_proto = 'https'
 filetype plugin indent on     " required!

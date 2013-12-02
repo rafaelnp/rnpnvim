@@ -1,43 +1,48 @@
-"
-" General Options
+" Vim general Options (no plugins involved)
 
-" new stuff
+"===============================
+" new stuff - still being tested
+"===============================
 set showmatch
+set matchtime=2
 set copyindent
+set listchars=""
 
 "Minimal number of screen lines to keep above and below the cursor.
-set scrolloff=5
+set scrolloff=2
 
+" fast terminal connection
 set ttyfast
 
 set colorcolumn=90
 
+" don't discard buffers
 set hidden
-" end new stuff
 
-set nocompatible                        " no vi-compatibility
-set autochdir                           " always switch to the current file directory
-set autowriteall                        " automatically save all buffers
-set nobackup                            " no backup files
-set backspace=indent,eol,start          " see :help bs
-set helplang=de,en                      " help language
-set history=100                         " command history
-set printoptions=paper:a4               " printer options
-set ruler                               " Show cursor line and column number position
-set number                              " show line numbers
+"==============
+" end new stuff
+"==============
+
+set nocompatible                   " no vi-compatibility
+set autochdir                      " always switch to the current file directory
+set autowriteall                   " automatically save all buffers
+set nobackup                       " no backup files
+set backspace=indent,eol,start     " see :help bs
+set helplang=de,en                 " help language
+set history=100                    " command history
+set printoptions=paper:a4          " printer options
+set t_vb=                          " disable the  annoyng visual and sound bell :)
+set novisualbell
+set noerrorbells                   " no noise
+tab all                            " open a new tab instead of a new vim instance
+set fileencodings=utf-8,latin1     " Encodings
+set spelllang=de,pt_br,en,es       " set your favorite language here
+set browsedir=buffer               " defaults to the current file's directory
+set completeopt+=preview
 " wildmenu: ignore these extensions
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
-set visualbell t_vb=                    " disable the fucking annoyng visual
-                                        " and sound bell :)
-set novisualbell
-set noerrorbells                        " no f***ing noise
-tab all                                 " open a new tab instead of launching a new
-                                        " vim instance
-set fileencodings=utf-8,latin1          " Encodings
-set spelllang=de,pt_br,en,es
-set browsedir=buffer                    " defaults to the current file's directory
-set completeopt+=preview
 
+" Force utf-8. Fallback latin1
 if has("multi_byte_encoding")
 	if has('unix') || has('macunix')
 		set termencoding=utf-8
@@ -71,41 +76,40 @@ set si                            " smartindent
 set cindent                       " do c-style indenting
 
 " Don't forget:
-" tabs are for indenting and aligning text.
-" spaces are for separating keywords.
+" tabs are for indenting and aligning code and data.
+" spaces are for separating words in text and comments.
 "
-" For those that still insist to use spaces instead of tabs to ident code, here
-" are the meaning of space and tabulator keys:
+" Here are the space and tabulator keys definition:
 "
 " https://en.wikipedia.org/wiki/Space_bar
 " https://en.wikipedia.org/wiki/Tabulator_key
 "
-" Vim configuration
+" Vim tabs configuration
 "
 " tabstop = Set tabstop to tell vim how many columns a tab counts for.
 "           this is the only command here that will affect how existing
 "           text displays.
-" shiftwidth =  Set shiftwidth to control how many columns text is indented
-"				with the reindent operations (<< and >>) and automatic C-style
-"				indentation.
+" shiftwidth = Set shiftwidth to control how many columns text is indented
+"              with the reindent operations (<< and >>) and automatic C-style
+"              indentation.
 " softtabstop = Set softtabstop to control how many columns vim uses when you
 "				hit Tab in insert mode
-set tabstop=4                     " tab spacing (settings below are to unify it)
-set softtabstop=4                 " unify
-set shiftwidth=4                  " unify
-set noexpandtab                   " just tabs please :)
+set tabstop=4          " tab spacing (settings below are to unify it)
+set softtabstop=4      " unify
+set shiftwidth=4       " unify
+set noexpandtab        " just tabs please :)
 
-set showcmd                       " show command in last line of screen
-set hls                           " highlight search patern
-set wrapmargin=1                  " space after linebrake
-set textwidth=90                  " no fucking long lines
-set incsearch                     " incremental search
+set hls                " highlight search patern
+set wrapmargin=1       " space after linebrake
+set textwidth=90       " no fucking long lines
+set incsearch          " incremental search
 set ignorecase
-set smartcase                     " Override the 'ignorecase' option if the
-                                  " search pattern contains upper
-                                  "	case characters.  Only used when the search
-                                  "	pattern is typed and 'ignorecase' option is on
-set cpoptions=BceFs               " compatible options
+set smartcase          " Override the 'ignorecase' option if the
+                       " search pattern contains upper
+                       "	case characters.  Only used when the search
+                       "	pattern is typed and 'ignorecase' option is on
+
+set cpoptions=BceFs    " compatible options
 
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
@@ -115,47 +119,16 @@ let g:tex_flavor='latex'
 "
 " 2.3 - GUI Options
 "
-set laststatus=2                       " statusline always visible
-set shortmess=atToO                    " see: help shortmess
+set showcmd            " show command in last line of screen
+set laststatus=2       " statusline always visible
+set shortmess=atToO    " see: help shortmess
+set ruler              " Show cursor line and column number position
+set number             " show line numbers
 
 if has('mouse')
-	set mouse=a                        " enable mouse in all modes
-	set mousehide                      " hides the mouse while typing
+	set mouse=a        " enable mouse in all modes
+	set mousehide      " hides the mouse while typing
 endif
-
-function! SetupGUI()
-	set ea                             " make all windows the same size when
-                                       " adding/removing windows
-	set ead=both                       "set in which direction 'equalalways'
-                                       " works: "ver", "hor" or "both"
-	set wildmenu                       "
-	set noshowmode                       " display current mode
-	set cursorline                     " sets cursor line highlight. cool :)
-	set display=uhex
-
-	" TODO: Which is the best font (proportional) for programming ??
-	if has('unix')
-		"Default font
-		"set guifont=Monospace\ 9
-		" Other good fonts:
-		"set guifont=Anonymous\ Pro\ Minus\ 11
-		"set guifont=Anonymous\ Pro\ 9
-		set guifont=Inconsolata\ 9
-		"set guifont=DejaVu\ Sans\ Mono\ 9
-	elseif has ('win32') || ('win64')
-		set guifont=Lucida_Sans_Typewriter:h9
-	elseif has ('mac')
-		set guifont=Monospace\ 9
-	endif
-
-	colorscheme vividchalk
-	set guioptions=aAgi                       " see: help guioptions
-
-	"Pop-up menu color setteings
-	highlight Pmenu guibg=brown gui=bold      "gui
-	highlight Pmenu ctermbg=238 gui=bold      "terminal
-	set mousemodel=popup
-endfunction
 
 if has('gui_running')
 	:call SetupGUI()
@@ -164,14 +137,13 @@ else
 	set bg=dark
 	colorscheme vividchalk
 	if &term == 'xterm' || &term == 'screen' || &term =='terminator'
-		set t_Co=256            " Enable 256 colors to stop the CSApprox warning
-                                " and make xterm vim shine
+		set t_Co=256            " Enable 256 colors in terminal
 	endif
 endif
 
-"
+"============
 " C/C++ stuff
-"
+"============
 set makeprg=scons
 
 if !filereadable(expand("%:p:h")."/SConstruct")
@@ -180,4 +152,3 @@ endif
 
 " different identation for C and C++
 autocmd FileType c   setlocal shiftwidth=8 tabstop=8 softtabstop=8
-autocmd FileType cpp setlocal shiftwidth=8 tabstop=8 softtabstop=8

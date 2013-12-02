@@ -119,11 +119,11 @@
 " Load all Vundle managed plugins
 source ~/.vim/vundle.vim
 
-" All of the Vim configuration.
-source ~/.vim/config.vim
-
 " functions
 source ~/.vim/functions.vim
+
+" All of the Vim configuration.
+source ~/.vim/config.vim
 
 " All hotkeys, not dependant on plugins, are mapped here.
 source ~/.vim/mappings.vim

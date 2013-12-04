@@ -8,6 +8,10 @@
 " :cmap - Display command-line mode maps
 " :omap - Display operator pending mode maps
 
+" remap leader
+nnoremap <space> <Nop>
+let mapleader = " "
+
 " removes carriage return
 nmap <a-r> :%s/\r//g<CR>
 

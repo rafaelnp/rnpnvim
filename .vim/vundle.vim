@@ -32,10 +32,12 @@ Bundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'Lokaltog/powerline'
 Bundle 'https://github.com/jtratner/vim-flavored-markdown'
+Bundle 'https://github.com/mhinz/vim-signify'
+Bundle 'https://github.com/nathanaelkane/vim-indent-guides'
+Bundle 'https://github.com/bling/vim-airline'
+Bundle 'https://github.com/tpope/vim-fugitive'
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:vundle_default_git_proto = 'https'
 filetype plugin indent on     " required!
 

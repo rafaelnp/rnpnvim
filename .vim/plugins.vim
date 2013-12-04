@@ -1,36 +1,27 @@
+" Plugins
+
+" 1 - Vundle
+" Configured in the vundle.vim file
 
 "
-" 3 - Plugins
-"
-
-"
-" 3.1 - Vundle
-"
-" Configured in the beginning of the file
-
-"
-" 3.1 - genutils
-"         http://www.vim.org/scripts/script.php?script_id=197
+" 2 - genutils
+"     http://www.vim.org/scripts/script.php?script_id=197
 "
 " genutils General utility functions
 "
 "
-" 3.1.3 - SelectBuf
-"         http://www.vim.org/scripts/script.php?script_id=107
-"
+" 3 - SelectBuf
+"     http://www.vim.org/scripts/script.php?script_id=107
 nmap <silent> <F3> <Plug>SelectBuf
 let g:selBufDefaultSortOrder  = "name"
 let g:selBufDisableMRUlisting = 0
 let g:selBufAlwaysShowDetails = 1
 
-
-"
-" 3.1.4 - vimexplorer
-"         http://www.vim.org/scripts/script.php?script_id=1950
+" 4 - vimexplorer
+"     http://www.vim.org/scripts/script.php?script_id=1950
 "
 nnoremap <silent> <F7> :VE ~<CR>
-let g:VEConf_treePanelWidth = 40           " Width of tree panel. Default: 30
-
+let g:VEConf_treePanelWidth = 40
 if has('unix')
 	let g:VEConf_externalExplorer = "dolphin"
 	let g:VEConf_showHiddenFiles  = 0
@@ -42,17 +33,12 @@ elseif has('win32' || 'win64')
 	let g:VEConf_systemEncoding   = 'utf-16'
 endif
 
-"
-" 3.5 - ColorSamplerPack
-"         http://www.vim.org/scripts/script.php?script_id=625
-"
+" 5 - ColorSamplerPack
+"     http://www.vim.org/scripts/script.php?script_id=625
 
-"
-" 3.6 - Tagbar
-"       https://github.com/majutsushi/tagbar
-"       http://majutsushi.github.io/tagbar/
-"
-
+" 6 - Tagbar
+"     https://github.com/majutsushi/tagbar
+"     http://majutsushi.github.io/tagbar/
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_autoclose   = 0
 let g:tagbar_autofocus   = 1
@@ -83,29 +69,32 @@ let g:tagbar_type_vhdl = {
 \}
 
 
-"
-" 3.7 - Syntastic
-"
+" 7 - Syntastic
 
 let g:syntastic_auto_loc_list = 1
-
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['c', 'cpp','vim'],
+                           \ 'active_filetypes':['c',
+                                                \'cpp',
+                                                \'vim',
+												\'python',
+												\'d',
+												\'lua',
+												\'matlab',
+												\'vhdl',
+												\'zsh',
+												\'html'],
                            \ 'passive_filetypes': [] }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-
-"
-" 3.8 - Tabular
+" 8 - Tabular
 "
 " TODO: setup config
-"
-"
-" 3.8 - ctrlp
-"
+
+
+" 9 - ctrlp
 
 " TODO: not yet complete
 
@@ -121,41 +110,30 @@ let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
 let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_show_hidden         = 1
 
-"
-" 3.9 - nerdtree
-"
+" 10 - numbers
+let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
-let NERDTreeCaseSensitiveSort = 1
-let NERDTreeShowHidden        = 1
-let NERDTreeShowLineNumbers   = 0
-
-"
-" 3.10 - nerdtree-tabs
-
+" 11 - nerdtree-tabs
 map <F9>  :NERDTreeTabsToggle<CR>
-
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
+" 12 - nerdtree
+let NERDTreeCaseSensitiveSort = 1
+let NERDTreeShowHidden        = 1
+let NERDTreeShowLineNumbers   = 0
+
+" 13 - Vividchalk
 
 
-" 3.11 - numbers
-
-
-let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
-
-
-" 3.12 - YouCompleteMe
-
-
+" 14 - YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_allow_changing_updatetime = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-
 let g:ycm_filetype_whitelist = {
 			\'lua': 1,
 			\'verilog': 1,
@@ -174,14 +152,57 @@ let g:ycm_filetype_whitelist = {
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
-
-" 3.13 - PowerLine
-
-
-" 3.14 - Vim-flavoured.markdown
-" 'https://github.com/jtratner/vim-flavored-markdown'
-
+" 15 - Vim-flavoured.markdown
+"      https://github.com/jtratner/vim-flavored-markdown
 augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
+
+" 16 - vim-signify
+"      https://github.com/mhinz/vim-signify
+let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
+let g:signify_update_on_bufenter = 1
+
+" 17 - vim-airline
+"      https://github.com/bling/vim-airline
+" The powerline symbols need the powerline fonts:
+" https://github.com/Lokaltog/powerline-fonts
+"
+" check whether a dictionary if it exists
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" fix messed up symbols
+let g:airline_symbols.space = "\ua0"
+
+" enable/disable enhanced tabline.
+let g:airline#extensions#tabline#enabled = 1
+
+" enable/disable displaying buffers with a single tab.
+let g:airline#extensions#tabline#show_buffers = 1
+
+" configure how numbers are calculated in tab mode.
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+
+" enable paste detection
+let g:airline_detect_paste=1
+
+" enable/disable automatic population of the `g:airline_symbols` dictionary
+" with powerline symbols.
+let g:airline_powerline_fonts=1
+
+" enable/disable fugitive/lawrencium integration
+let g:airline#extensions#branch#enabled=1
+
+" change the text for when no branch is detected
+let g:airline#extensions#branch#empty_message = ''
+
+" enable/disable eclim integration, which works well with the
+" |airline-syntastic| extension. >
+let g:airline#extensions#eclim#enabled = 0
+
+" 18 - fugitive
+"      https://github.com/tpope/vim-fugitive
+" TODO: COnfigure fugitive

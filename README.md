@@ -1,9 +1,19 @@
 rnpvim: Rafael Pereira's vim config files
 ==============================
 
-Last update: 2013.11.27 (Wed) 11:06:28
+Last update: 2013.12.04 (Wed) 13:06:28
 
-1. Installation
+This Vim setup is focused on C/C++ and HDL development. This is still under development.
+
+1. Requirements
+-------------------
+
+* [exuberant ctags](http://ctags.sourceforge.net/)
+* [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
+* [clang](http://clang.llvm.org/)(To compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
+* [cmake](http://www.cmake.org/)(To compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
+
+2. Installation
 -------------------
 
 At the moment there is no automatic installation, only the manual one. Then
@@ -27,15 +37,17 @@ and execute:
 
 `vim +BundleInstall`
 
-and the plugins shall be synchronized with github
+and the plugins shall be synchronized with github.
 
 
-2. Vim configuration
+3. Vim configuration
 -------------------------
 
-This configuration was tested on the Vim 7.4.x version (where x is the patch number) and Linux. To configuration option there is a short explanation. For experienced Vim users it may be boring or repetitive, but i think useful for beginners or also for a quick reference.
+This configuration was tested on the Vim 7.4.x version (where x is the patch number) and Linux.
+To configuration option there is a short explanation. For experienced Vim users it may be boring
+or repetitive, but i think useful for beginners or also for a quick reference.
 
-2.1 General
+3.1 General
 ----------------
 
 **compatible (cp) / nocompatible (nocp)**
@@ -65,6 +77,14 @@ Saves the file contents when switching/opening/creating buffers/files/windows.
 
 ```vim
 set autowriteall
+```
+
+**autoread**
+
+Load file modified outside vim and not modified in Vim
+
+```vim
+set autoread
 ```
 
 **backup options**
@@ -145,7 +165,7 @@ I did not find it in the Vim help. FIXME
 tab all                                   " open a new tab instead of launching a new
 ```
 
-2.2 Formating
+3.2 Formating
 ----------------
 
 Text formating configuration:
@@ -165,7 +185,7 @@ Vim supports the 3 most used [line terminations](https://en.wikipedia.org/wiki/N
     if has('unix') || has('macunix')
         set termencoding=utf-8
         set encoding=utf-8
-        set fileformat=unix                    " unix rocks :)
+        set fileformat=unix
         set fileformats=unix
     elseif has('mac')
         set termencoding=utf-8
@@ -184,7 +204,7 @@ Vim supports the 3 most used [line terminations](https://en.wikipedia.org/wiki/N
 
 The [fo-table](http://vimdoc.sourceforge.net/htmldoc/change.html#fo-table) tells how Vim should format the text. The following options are used:
 
-| Option   | Description | 
+| Option   | Description |
 |:----------:|:--------------:|
 |  t	| Auto-wrap text using textwidth |
 |  c	| Auto-wrap comments using textwidth, inserting the current comment leader automatically |
@@ -206,7 +226,7 @@ set si                            " smartindent
 set cindent                       " do c-style indenting
 ```
 
-3. Plugins
+4. Plugins
 ----------
 
 The following plugins are used in the current configuration:
@@ -226,26 +246,27 @@ The following plugins are used in the current configuration:
 1. [Vundle](https://github.com/gmarik/vundle)(Plugins manager)
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
-4. Mappings
+5. Mappings
 ---------------
 FIXME
 
-5. Colorschemes
+6. Colorschemes
 ---------------
 
 Available colorscheme:
 
-* [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)
+* [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
+* [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)(currently used)
 
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
 
-6. Known problems
+7. Known problems
 ---------------
 
 * The plugin snipMate does note work if the plugin YouCompleteMe is also installed.
 
-7. TODO
+8. TODO
 ---------------
 
 This README is still incomplete. It is being gradually expanded/improved.
@@ -255,4 +276,4 @@ For new and experimental stuff, take a look at the [labs](https://github.com/raf
 * Plugins configuration
 * FAQ
 * Mappings
-
+* HDL(Verilog/VHDL) Plugins

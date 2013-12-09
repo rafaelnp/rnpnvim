@@ -1,7 +1,7 @@
 rnpvim: Rafael Pereira's vim config files
 ==============================
 
-Last update: 2013.12.09 (Mo) 11:19:04
+Last update: 2013.12.09 (Mon) 14:25:47
 
 This Vim setup is focused on C/C++, Assembly and HDL development. This is a work still under development.
 
@@ -282,6 +282,7 @@ The following plugins are used in the current configuration:
 7. [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
 8. [Tabular](https://github.com/godlygeek/tabular.git) (Texttabulator)
 9. [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
+1. [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (display indent levels visually)
 1. [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 1. [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
 1. [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)

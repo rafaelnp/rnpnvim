@@ -41,12 +41,14 @@ endif
 "     https://github.com/majutsushi/tagbar
 "     http://majutsushi.github.io/tagbar/
 nnoremap <silent> <F8> :TagbarToggle<CR>
-let g:tagbar_autoclose   = 0
+let g:tagbar_autoclose   = 1
 let g:tagbar_autofocus   = 1
 let g:tagbar_autoshowtag = 1
 let g:tagbar_left        = 0
 let g:tagbar_expand      = 0
 let g:tagbar_autoshowtag = 1
+let g:tagbar_sort        = 0
+let g:tagbar_iconchars   = ['▾', '▸']
 
 " more examples: https://github.com/majutsushi/tagbar/wiki
 let g:tagbar_type_vhdl = {

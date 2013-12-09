@@ -1,9 +1,9 @@
 rnpvim: Rafael Pereira's vim config files
 ==============================
 
-Last update: 2013.12.04 (Wed) 13:06:28
+Last update: 2013.12.09 (Mo) 11:19:04
 
-This Vim setup is focused on C/C++ and HDL development. This is still under development.
+This Vim setup is focused on C/C++, Assembly and HDL development. This is a work still under development.
 
 1. Requirements
 -------------------
@@ -43,20 +43,22 @@ and the plugins shall be synchronized with github.
 3. Vim configuration
 -------------------------
 
-This configuration was tested on the Vim 7.4.x version (where x is the patch number) and Linux.
-To configuration option there is a short explanation. For experienced Vim users it may be boring
-or repetitive, but i think useful for beginners or also for a quick reference.
+This configuration was tested on the Vim 7.4.x version on Linux.
+The main configuration option there is a short explanation. For experienced Vim users it may
+be boring or repetitive, but i think useful for beginners and also for a quick reference.
 
 3.1 General
 ----------------
 
 **compatible (cp) / nocompatible (nocp)**
 
-It turns on/off the Vi-compatible mode. We turn off here the compatibility mode, so we can the full Vim capabilities
+It turns on/off the Vi-compatible mode. We turn off here the compatibility mode, so we can
+the full Vim capabilities
 
 ```vim
 set nocompatible
 ```
+
  or
 
 ```vim
@@ -89,15 +91,17 @@ set autoread
 
 **backup options**
 
-The file backup is not used, because i use heavily use git in my workflow, making this option unnecessary. Deactivating this option makes also the **writebackup, backupdir, backupcopy** unnecessary too.
+The file backup is not used, because i use heavily use git in my workflow, making this option
+unnecessary. Deactivating this option makes also the **writebackup**, **backupdir**, **backupcopy**
+unnecessary too.
 
 ```vim
-set nobackup            " no backup files, we have git
+set nobackup
 ```
 
 **backspace**
 
-Configure the backspace behaviour over indenting, 
+Configure the backspace behaviour over indenting, eol and when starting the inserting mode
 
 ```vim
  set backspace=indent,eol,start
@@ -105,38 +109,31 @@ Configure the backspace behaviour over indenting,
 
 **helplang**
 
-Comma separated list of languages.  Vim will use the first language for which the desired help can be found.  The English help will always be used as a last resort.
+Comma separated list of languages.  Vim will use the first language for which the desired
+help can be found.  The English help will always be used as a last resort.
 
 ```vim
 set helplang=de,en
 ```
 
-**history**
-
-Sets how many typed commands are stored.
-
-```vim
-set history=100
-```
-
-**printoptions**
-
-List of items that control the print format of the  [hardcopy]() output.
-
-```vim
-set printoptions=paper:a4
-```
 
 **ruler**
 
+Show the cursor position (line and column number).Each window has its own ruler
+
 ```vim
-set ruler                                 " Show cursor line and column number position
+set ruler
 ```
 
 **numbers**
-Show the current buffer line numbers. This option is mandatory if you are using the [numbers.vim](https://github.com/myusuf3/numbers.vim) plugin.
 
+Show the current buffer line numbers. This option is mandatory if you are using the
+[numbers.vim](https://github.com/myusuf3/numbers.vim) plugin.
+
+
+```vim
     set number
+```
 
 **Wildignore**
 
@@ -146,40 +143,12 @@ List of files to be ignored when performing different actions (autocomplete, exp
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
 ```
 
-**visualbell**
-
-Disables the beep and visual bell (flash). It is really annoying.
-
-```vim
-set visualbell t_vb=                      " disable the f***ing annoying visual
-                                          " and sound bell :)
-set novisuallbell
-set noerrorbells                         " no f***ing noise
-```
-
-**tab**
-
-I did not find it in the Vim help. FIXME
-
-```vim
-tab all                                   " open a new tab instead of launching a new
-```
-
-3.2 Formating
-----------------
-
-Text formating configuration:
-
-**syntax**
-Enables the syntax highlighting engine. It highlight different parts of the text (specific keywords or text matching a pattern)  with different colours
-
-```vim
-syntax enable                     " syntax highlight on and keep your settings
-```
 
 **Encoding and line termination**
 
-Vim supports the 3 most used [line terminations](https://en.wikipedia.org/wiki/Newline) (unix, mac, dos) and the corresponding operating systems as well. To unify it and the text encoding, the following configuration is used:
+Vim supports the 3 most used [line terminations](https://en.wikipedia.org/wiki/Newline)
+(unix, mac, dos) and the corresponding operating systems as well. To unify it and the text
+encoding, the following configuration is used:
 
 ```vim
     if has('unix') || has('macunix')
@@ -200,9 +169,34 @@ Vim supports the 3 most used [line terminations](https://en.wikipedia.org/wiki/N
     endif
 ```
 
+**Sound and visual feedback**
+
+The following optiona Disable the beep and visual bell (flash). It is really annoying.
+
+```vim
+set visualbell t_vb=
+set novisuallbell
+set noerrorbells
+```
+
+3.2 Formating
+----------------
+
+Text formating configuration:
+
+**syntax**
+
+Enables the syntax highlighting engine. It highlight different parts of the text (specific
+keywords or text matching a pattern)  with different colours
+
+```vim
+syntax enable
+```
+
 **Formatoptions table**
 
-The [fo-table](http://vimdoc.sourceforge.net/htmldoc/change.html#fo-table) tells how Vim should format the text. The following options are used:
+The [fo-table](http://vimdoc.sourceforge.net/htmldoc/change.html#fo-table) tells how Vim
+should format the text. The following options are used:
 
 | Option   | Description |
 |:----------:|:--------------:|
@@ -212,19 +206,67 @@ The [fo-table](http://vimdoc.sourceforge.net/htmldoc/change.html#fo-table) tells
 |  q	| Allow formatting of comments with "[gq](http://vimdoc.sourceforge.net/htmldoc/change.html#gq)" |
 |  n	|When formatting text, recognize numbered lists |
 
-```vimscript
-set fo=tcrqn                      " See :help fo-table
+For more details type `:help fo-table`.
+
+```vim
+set fo=tcrqn
 ```
 
 **Indentation options**
 
-FIXME
+TODO: Add description
 
 ```vim
-set ai                            " autoindent
-set si                            " smartindent
-set cindent                       " do c-style indenting
+set ai
+set si
+set cindent
+set copyindent
 ```
+
+**Line width and margin**
+
+```vim
+set textwidth=90    " no fucking long lines
+set wrapmargin=2    " space after linebrake
+set cpoptions=BceFs " compatible options
+```
+
+**TABs or spaces?**
+
+TODO: Add description
+
+```vim
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+```
+
+3.3 Searching
+---------------
+
+TODO: Add description
+
+```vim
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+```
+
+3.4 GUI Options
+---------------
+
+**tab (not related to indentation)**
+
+Open a new tab instead of launching a new Vim process
+
+```vim
+tab all
+```
+
+TODO: Add description and contents
+
 
 4. Plugins
 ----------
@@ -246,6 +288,8 @@ The following plugins are used in the current configuration:
 1. [Vundle](https://github.com/gmarik/vundle)(Plugins manager)
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
+Each plugin documentation can be reached by typing `:help <plugin-name>`
+
 5. Mappings
 ---------------
 FIXME
@@ -256,10 +300,9 @@ FIXME
 Available colorscheme:
 
 * [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
-* [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)(currently used)
+* [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)(currently used see picture bellow)
 
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
-
 
 7. Known problems
 ---------------
@@ -277,3 +320,10 @@ For new and experimental stuff, take a look at the [labs](https://github.com/raf
 * FAQ
 * Mappings
 * HDL(Verilog/VHDL) Plugins
+* Filetype support for Assembly (x86, ARM)
+
+9. Acknowledgements
+--------------------
+I'd like to thank all Vim and plugin developers and the community for the very powerful
+and useful editor we can use on our daily workflow. :)
+

@@ -288,7 +288,7 @@ The following plugins are used in the current configuration:
 1. [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 1. [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
 1. [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually) 
-1. [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in VCS(http://en.wikipedia.org/wiki/Revision_control) managed files)
+1. [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 1. [Vundle](https://github.com/gmarik/vundle)(Plugins manager)
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 

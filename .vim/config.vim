@@ -1,79 +1,3 @@
-<<<<<<< Temporary merge branch 1
-
-"
-" 2 - Setup and costumization
-"
-"
-" 2.1 - General Options
-"
-
-set nocompatible                        " no vi-compatibility
-set autochdir                           " always switch to the current file directory
-set autowriteall                        " automatically save all buffers
-set nobackup                            " no backup files
-set backspace=indent,eol,start          " see :help bs
-set helplang=de,en                      " help language
-set history=100                         " command history
-set printoptions=paper:a4               " printer options
-set ruler                               " Show cursor line and column number position
-set number                              " show line numbers
-" wildmenu: ignore these extensions
-set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
-set visualbell t_vb=                    " disable the fucking annoyng visual
-                                        " and sound bell :)
-set novisualbell
-set noerrorbells                        " no f***ing noise
-tab all                                 " open a new tab instead of launching a new
-                                        " vim instance
-set fileencodings=utf-8,latin1          " Encodings
-set spelllang=de,pt_br,en,es
-set browsedir=buffer                    " defaults to the current file's directory
-set completeopt+=preview
-
-if has("multi_byte_encoding")
-	set encoding=utf-8                  " charcter encoding used in vim
-else
-	set encoding=latin1                 " fallback
-endif
-
-nnoremap <space> <Nop>
-let mapleader = " "
-
-"
-" 2.2 - Text Formatting/Layout
-"
-syntax enable                     " syntax highlight on and keep your settings
-
-" system dependent configuration
-if has('unix') || has('macunix')
-    set termencoding=utf-8
-    set encoding=utf-8
-    set fileformat=unix                    " unix rocks :)
-    set fileformats=unix
-elseif has('mac')
-    set termencoding=utf-8
-    set encoding=utf-8
-    set fileformat=unix
-    set fileformats=unix
-else
-    set termencoding=utf-8
-    set encoding=utf-8
-    set fileformat=unix
-    set fileformats=unix
-endif
-
-set fo=tcrqn                      " See Help (:help fo-table)
-set ai                            " autoindent
-set si                            " smartindent
-set cindent                       " do c-style indenting
-
-" Don't forget:
-" tabs are for indenting and aligning text.
-" spaces are for separating keywords.
-"
-" For those that still insist to use spaces instead of tabs to ident code, here
-" are the meaning of space and tabulator keys:
-=======
 " Vim Options (no plugins involved)
 
 "========
@@ -147,7 +71,6 @@ set cpoptions=BceFs " compatible options
 " tabs are for indenting and aligning code and data.
 " spaces are for separating words in text and comments.
 " Here are the space and tabulator keys definition:
->>>>>>> Temporary merge branch 2
 "
 " https://en.wikipedia.org/wiki/Space_bar
 " https://en.wikipedia.org/wiki/Tabulator_key

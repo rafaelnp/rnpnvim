@@ -99,13 +99,13 @@ set statusline+=%*
 " TODO: not yet complete
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+							\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+							\ 'file': '\v\.(exe|so|dll)$',
+							\ 'link': 'some_bad_symbolic_links',
+							\ }
 
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+							\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
 
 let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_show_hidden         = 1
@@ -135,19 +135,19 @@ let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_filetype_whitelist = {
-			\'lua': 1,
-			\'verilog': 1,
-			\'vhdl': 1,
-			\'vim': 1,
-			\'python': 1,
-			\'c': 1,
-			\'cpp': 1,
-			\'matlab': 1,
-			\'maple': 1,
-			\'git': 1,
-			\'sh': 1,
-			\'zsh': 1,
-			\}
+								\'lua': 1,
+								\'verilog': 1,
+								\'vhdl': 1,
+								\'vim': 1,
+								\'python': 1,
+								\'c': 1,
+								\'cpp': 1,
+								\'matlab': 1,
+								\'maple': 1,
+								\'git': 1,
+								\'sh': 1,
+								\'zsh': 1,
+								\}
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
@@ -159,19 +159,29 @@ augroup markdown
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
-" 16 - vim-signify
+" 16 - vim-indent-guides
+"      https://github.com/nathanaelkane/vim-indent-guides
+" don't consider spaces as indentation
+let g:indent_guides_space_guides = 0
+
+" enable at startup
+let g:indent_guides_enable_on_vim_startup = 1
+
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
+
+" 17 - vim-signify
 "      https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
 let g:signify_update_on_bufenter = 1
 
-" 17 - vim-airline
+" 18 - vim-airline
 "      https://github.com/bling/vim-airline
 " The powerline symbols need the powerline fonts:
 " https://github.com/Lokaltog/powerline-fonts
 "
 " check whether a dictionary if it exists
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+	let g:airline_symbols = {}
 endif
 
 " fix messed up symbols
@@ -203,6 +213,6 @@ let g:airline#extensions#branch#empty_message = ''
 " |airline-syntastic| extension. >
 let g:airline#extensions#eclim#enabled = 0
 
-" 18 - fugitive
+" 19 - fugitive
 "      https://github.com/tpope/vim-fugitive
 " TODO: COnfigure fugitive

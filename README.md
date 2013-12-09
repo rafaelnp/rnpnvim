@@ -3,7 +3,7 @@ rnpvim: Rafael Pereira's vim config files
 
 Last update: 2013.12.09 (Mo) 11:19:04
 
-This Vim setup is focused on C/C++, Assembly and HDL development. This is a work still under development.
+This Vim setup is focused on C/C++, Assembly and HDL development. This is still a work under development.
 
 1. Requirements
 -------------------

@@ -273,26 +273,32 @@ TODO: Add description and contents
 
 The following plugins are used in the current configuration:
 
-1. [ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy text search)
-1. [genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
-3. [nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
-4. [numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
-5. [powerline](https://github.com/Lokaltog/powerline) (Status bar)
+1. [Ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy text search)
+1. [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
+3. [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
+4. [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
+5. [Powerline](https://github.com/Lokaltog/powerline) (Status bar)
 6. [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
 7. [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
 8. [Tabular](https://github.com/godlygeek/tabular.git) (Texttabulator)
 9. [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
-1. [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
+1. [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
+1. [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 1. [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
 1. [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
+1. [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
+1. [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually) 
+1. [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in VCS(http://en.wikipedia.org/wiki/Revision_control) managed files)
 1. [Vundle](https://github.com/gmarik/vundle)(Plugins manager)
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 Each plugin documentation can be reached by typing `:help <plugin-name>`
 
+
 5. Mappings
 ---------------
 FIXME
+
 
 6. Colorschemes
 ---------------

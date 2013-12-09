@@ -8,7 +8,7 @@ set nocompatible                   " no vi-compatibility
 set autochdir                      " always switch to the current file directory
 set autowriteall                   " automatically save all buffers
 set autoread                       " load file modified outside vim
-set nobackup                       " no backup files
+set nobackup                       " no backup files, we have git :)
 set nowritebackup
 set backspace=indent,eol,start     " see :help bs
 set helplang=de,en                 " help language
@@ -64,7 +64,7 @@ set si              " smartindent
 set cindent         " do c-style indenting
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
 set textwidth=90    " no fucking long lines
-set wrapmargin=1    " space after linebrake
+set wrapmargin=2    " space after linebrake
 set cpoptions=BceFs " compatible options
 
 " Don't forget:

@@ -1,4 +1,3 @@
-
 " Plugins
 
 " 1 - Vundle
@@ -6,27 +5,23 @@
 
 "
 " 2 - genutils
-"         http://www.vim.org/scripts/script.php?script_id=197
+"     http://www.vim.org/scripts/script.php?script_id=197
 "
 " genutils General utility functions
 "
 "
 " 3 - SelectBuf
-"       http://www.vim.org/scripts/script.php?script_id=107
-"
+"     http://www.vim.org/scripts/script.php?script_id=107
 nmap <silent> <F3> <Plug>SelectBuf
 let g:selBufDefaultSortOrder  = "name"
 let g:selBufDisableMRUlisting = 0
 let g:selBufAlwaysShowDetails = 1
 
-
-"
 " 4 - vimexplorer
 "     http://www.vim.org/scripts/script.php?script_id=1950
 "
 nnoremap <silent> <F7> :VE ~<CR>
 let g:VEConf_treePanelWidth = 40
-
 if has('unix')
 	let g:VEConf_externalExplorer = "dolphin"
 	let g:VEConf_showHiddenFiles  = 0
@@ -77,24 +72,22 @@ let g:tagbar_type_vhdl = {
 " 7 - Syntastic
 
 let g:syntastic_auto_loc_list = 1
-
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['c',
-                                                 \'cpp',
-                                                 \'vim',
-												 \'python',
-												 \'d',
-												 \'lua',
-												 \'matlab',
-												 \'vhdl',
-												 \'zsh',
-												 \'html'],
+                           \ 'active_filetypes':['c',
+                                                \'cpp',
+                                                \'vim',
+												\'python',
+												\'d',
+												\'lua',
+												\'matlab',
+												\'vhdl',
+												\'zsh',
+												\'html'],
                            \ 'passive_filetypes': [] }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 
 " 8 - Tabular
 "
@@ -187,13 +180,13 @@ let g:airline_symbols.space = "\ua0"
 " enable/disable enhanced tabline.
 let g:airline#extensions#tabline#enabled = 1
 
-" enable/disable displaying buffers with a single tab. 
+" enable/disable displaying buffers with a single tab.
 let g:airline#extensions#tabline#show_buffers = 1
 
-" configure how numbers are calculated in tab mode. 
+" configure how numbers are calculated in tab mode.
 let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 
-" enable paste detection 
+" enable paste detection
 let g:airline_detect_paste=1
 
 " enable/disable automatic population of the `g:airline_symbols` dictionary
@@ -213,4 +206,3 @@ let g:airline#extensions#eclim#enabled = 0
 " 18 - fugitive
 "      https://github.com/tpope/vim-fugitive
 " TODO: COnfigure fugitive
-

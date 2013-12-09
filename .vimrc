@@ -6,6 +6,15 @@
 " Creation date: 1998.02.12
 " Last update:   2013.11.22 (Fr) 10:33:42
 "
+" Branch testplugin
+" Plugins and configs: under test:
+" https://github.com/mutewinter/dot_vim (Vim Configuration of Champions)
+" https://github.com/bling/vim-airline
+" https://github.com/nathanaelkane/vim-indent-guides (does not work with vividchalk)
+" https://github.com/Rykka/colorv.vim (color)
+" https://github.com/mhinz/vim-signify (git, svn, etc)
+" https://github.com/editorconfig/editorconfig-vim
+"
 
 " 1 - useful commands
 "
@@ -106,15 +115,15 @@
 " Load all Vundle managed plugins
 source ~/.vim/vundle.vim
 
-" Platform (Windows, Mac, etc.) configuration.
-" source ~/.vim/platforms.vim
+" functions
+source ~/.vim/functions.vim
 
 " All of the Vim configuration.
 source ~/.vim/config.vim
-" New commands
-"source ~/.vim/commands.vim
+
 " All hotkeys, not dependant on plugins, are mapped here.
-"source ~/.vim/mappings.vim
+source ~/.vim/mappings.vim
+
 " Plugin-specific configuration.
 source ~/.vim/plugins.vim
 

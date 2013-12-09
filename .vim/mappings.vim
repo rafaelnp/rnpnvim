@@ -10,7 +10,7 @@
 
 " remap leader
 nnoremap <space> <Nop>
-let mapleader = " "
+let mapleader = ","
 
 " removes carriage return
 nmap <a-r> :%s/\r//g<CR>
@@ -57,10 +57,10 @@ nmap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set gui
 
 " Moving cursor to other windows
 "
-" shift down   : change window focus to lower one (cyclic)
-" shift up     : change window focus to upper one (cyclic)
-" shift left   : change window focus to one on left
-" shift right  : change window focus to one on right
+" shift down : change window focus to lower one (cyclic)
+" shift up   : change window focus to upper one (cyclic)
+" shift left : change window focus to one on left
+" shift right: change window focus to one on right
 nmap <s-down>   <c-w>w
 nmap <s-up>     <c-w>W
 nmap <s-left>   <c-w>h
@@ -72,13 +72,12 @@ map <Right> <Nop>
 map <Up>    <Nop>
 map <Down>  <Nop>
 
+" Highlight unwanted spaces
+" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+" http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
 "
-"  Highlight unwanted spaces
-"  http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-"  http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
-"
-"  Highlight redundant spaces (spaces at the end of the line, spaces before
-"  or after tabs):
+" Highlight redundant spaces (spaces at the end of the line, spaces before
+" or after tabs):
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 

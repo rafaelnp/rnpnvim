@@ -49,33 +49,32 @@ let g:tagbar_autoshowtag = 1
 
 " more examples: https://github.com/majutsushi/tagbar/wiki
 let g:tagbar_type_vhdl = {
-    \ 'ctagstype': 'vhdl',
-    \ 'kinds' : [
-        \'d:prototypes',
-        \'b:package bodies',
-        \'e:entities',
-        \'a:architectures',
-        \'t:types',
-        \'p:processes',
-        \'f:functions',
-        \'r:procedures',
-        \'c:constants',
-        \'T:subtypes',
-        \'r:records',
-        \'C:components',
-        \'P:packages',
-        \'l:locals'
-    \]
-\}
-
+						\ 'ctagstype': 'vhdl',
+						\ 'kinds' : [
+						\'d:prototypes',
+						\'b:package bodies',
+						\'e:entities',
+						\'a:architectures',
+						\'t:types',
+						\'p:processes',
+						\'f:functions',
+						\'r:procedures',
+						\'c:constants',
+						\'T:subtypes',
+						\'r:records',
+						\'C:components',
+						\'P:packages',
+						\'l:locals'
+						\]
+						\}
 
 " 7 - Syntastic
 
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes':['c',
-                                                \'cpp',
-                                                \'vim',
+							\ 'active_filetypes':['c',
+												\'cpp',
+												\'vim',
 												\'python',
 												\'d',
 												\'lua',
@@ -83,21 +82,18 @@ let g:syntastic_mode_map = { 'mode': 'active',
 												\'vhdl',
 												\'zsh',
 												\'html'],
-                           \ 'passive_filetypes': [] }
+							\ 'passive_filetypes': [] }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " 8 - Tabular
-"
 " TODO: setup config
-
 
 " 9 - ctrlp
 
 " TODO: not yet complete
-
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
@@ -105,7 +101,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+							\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
 
 let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_show_hidden         = 1
@@ -114,7 +110,7 @@ let g:ctrlp_show_hidden         = 1
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
 " 11 - nerdtree-tabs
-map <F9>  :NERDTreeTabsToggle<CR>
+map <F9> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
@@ -135,19 +131,19 @@ let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_filetype_whitelist = {
-			\'lua': 1,
-			\'verilog': 1,
-			\'vhdl': 1,
-			\'vim': 1,
-			\'python': 1,
-			\'c': 1,
-			\'cpp': 1,
-			\'matlab': 1,
-			\'maple': 1,
-			\'git': 1,
-			\'sh': 1,
-			\'zsh': 1,
-			\}
+								\'lua': 1,
+								\'verilog': 1,
+								\'vhdl': 1,
+								\'vim': 1,
+								\'python': 1,
+								\'c': 1,
+								\'cpp': 1,
+								\'matlab': 1,
+								\'maple': 1,
+								\'git': 1,
+								\'sh': 1,
+								\'zsh': 1,
+								\}
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
@@ -155,8 +151,8 @@ nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 " 15 - Vim-flavoured.markdown
 "      https://github.com/jtratner/vim-flavored-markdown
 augroup markdown
-    au!
-    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+	au!
+	au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
 " 16 - vim-signify
@@ -166,12 +162,12 @@ let g:signify_update_on_bufenter = 1
 
 " 17 - vim-airline
 "      https://github.com/bling/vim-airline
-" The powerline symbols need the powerline fonts:
-" https://github.com/Lokaltog/powerline-fonts
+"      The powerline symbols need the powerline fonts:
+"      https://github.com/Lokaltog/powerline-fonts
 "
 " check whether a dictionary if it exists
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+	let g:airline_symbols = {}
 endif
 
 " fix messed up symbols

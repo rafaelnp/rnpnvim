@@ -93,12 +93,12 @@ set noexpandtab        " just tabs please :)
 "==========
 " Searching
 "==========
-set hlsearch           " highlight search patern
-set incsearch          " incremental search
+set hlsearch      " highlight search patern
+set incsearch     " incremental search
 set ignorecase
-set smartcase          " Override the 'ignorecase' option if the
-                       " search pattern contains upper case characters.  Only used when
-                       " the search pattern is typed and 'ignorecase' option is on
+set smartcase     " Override the 'ignorecase' option if the
+                  " search pattern contains upper case characters. Only used when
+                  " the search pattern is typed and 'ignorecase' option is on
 
 " wildmenu: ignore these extensions
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
@@ -148,8 +148,8 @@ if has('gui_running')
 	endif
 
 	"Pop-up menu color setteings
-	highlight Pmenu guibg=brown gui=bold      "gui
-	highlight Pmenu ctermbg=238 gui=bold      "terminal
+	highlight Pmenu guibg=brown gui=bold
+	highlight Pmenu ctermbg=238 gui=bold
 	set mousemodel=popup
 else
 	set bg=dark
@@ -165,7 +165,7 @@ endif
 set makeprg=scons
 
 if !filereadable(expand("%:p:h")."/SConstruct")
-    setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
+	setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
 endif
 
 " different indentation for C and C++

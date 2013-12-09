@@ -4,17 +4,14 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2013.11.22 (Fr) 10:33:42
+" Last update:   2013.12.09 (Mo) 14:38:48
 "
-" Branch testplugin
+" Branch labs
 " Plugins and configs: under test:
 " https://github.com/mutewinter/dot_vim (Vim Configuration of Champions)
-" https://github.com/bling/vim-airline
 " https://github.com/nathanaelkane/vim-indent-guides (does not work with vividchalk)
 " https://github.com/Rykka/colorv.vim (color)
-" https://github.com/mhinz/vim-signify (git, svn, etc)
 " https://github.com/editorconfig/editorconfig-vim
-"
 
 " 1 - useful commands
 "
@@ -44,10 +41,8 @@
 "                            (Ex:  vim -S session.vim)
 "
 "   Completion:
-"    CTRL-P                 completes a parcially typed word searching
-"                           backward
-"    CTRL-N                 completes a parcially typed word searching
-"                           forward
+"    CTRL-P                 completes a parcially typed word searching backward
+"    CTRL-N                 completes a parcially typed word searching forward
 "
 "   Editing:
 "    VU                      uppercase the whole current line

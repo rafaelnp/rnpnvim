@@ -1,0 +1,33 @@
+Options to test:
+
+
+.vimrc to test:
+
+http://learnvimscriptthehardway.stevelosh.com/
+https://github.com/terryma/dotfiles/blob/master/.vimrc
+https://github.com/bling/dotvim
+https://github.com/gmarik/vimfiles/blob/master/vimrc
+
+Plugins to test:
+
+https://github.com/Rykka/colorv.vim (color)
+https://github.com/editorconfig/editorconfig-vim
+https://github.com/Yggdroot/indentLine (visual indentation marker)
+https://github.com/terryma/vim-multiple-cursors (multiple cursors)
+https://github.com/Shougo/neobundle.vim (plugin management)
+Unite:
+	https://github.com/Shougo/unite.vim
+	http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/
+https://github.com/Shougo/vimshell.vim
+Vim-table-mode:
+	http://dhruvasagar.com/2013/03/17/vim-table-mode
+	https://github.com/dhruvasagar/vim-table-mode/
+https://github.com/benmills/vimux
+https://github.com/Raimondi/delimitMate
+https://github.com/ervandew/supertab
+Verilog:
+	https://github.com/search?p=2&q=vim+verilog&ref=searchresults&type=Repositories
+	https://github.com/sychen/systemverilog.vim
+ARM Assembly:
+	https://gist.github.com/iori-yja/1615430
+	ttps://github.com/mbbill/undotree

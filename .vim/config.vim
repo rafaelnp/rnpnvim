@@ -22,6 +22,7 @@ endif
 set completeopt=menu,preview       " menu completion options
 set ttyfast                        " fast terminal connection
 set hidden                         " don't discard buffers
+set ttimeoutlen=50                 " timeout for a key sequence complete
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has("multi_byte_encoding")

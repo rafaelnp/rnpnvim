@@ -3,7 +3,6 @@
 " 1 - Vundle
 " Configured in the vundle.vim file
 
-"
 " 2 - genutils
 "     http://www.vim.org/scripts/script.php?script_id=197
 "
@@ -16,6 +15,7 @@ nmap <silent> <F3> <Plug>SelectBuf
 let g:selBufDefaultSortOrder  = "name"
 let g:selBufDisableMRUlisting = 0
 let g:selBufAlwaysShowDetails = 1
+let g:selBufAlwaysShowHidden  = 1
 
 " 4 - vimexplorer
 "     http://www.vim.org/scripts/script.php?script_id=1950
@@ -40,32 +40,34 @@ endif
 "     https://github.com/majutsushi/tagbar
 "     http://majutsushi.github.io/tagbar/
 nnoremap <silent> <F8> :TagbarToggle<CR>
-let g:tagbar_autoclose   = 0
+let g:tagbar_autoclose   = 1
 let g:tagbar_autofocus   = 1
 let g:tagbar_autoshowtag = 1
 let g:tagbar_left        = 0
 let g:tagbar_expand      = 0
 let g:tagbar_autoshowtag = 1
+let g:tagbar_sort        = 0
+let g:tagbar_iconchars   = ['▾', '▸']
 
 " more examples: https://github.com/majutsushi/tagbar/wiki
 let g:tagbar_type_vhdl = {
-						\ 'ctagstype': 'vhdl',
-						\ 'kinds' : [
-						\'d:prototypes',
-						\'b:package bodies',
-						\'e:entities',
-						\'a:architectures',
-						\'t:types',
-						\'p:processes',
-						\'f:functions',
-						\'r:procedures',
-						\'c:constants',
-						\'T:subtypes',
-						\'r:records',
-						\'C:components',
-						\'P:packages',
-						\'l:locals'
-						\]
+							\ 'ctagstype': 'vhdl',
+							\ 'kinds' : [
+							\'d:prototypes',
+							\'b:package bodies',
+							\'e:entities',
+							\'a:architectures',
+							\'t:types',
+							\'p:processes',
+							\'f:functions',
+							\'r:procedures',
+							\'c:constants',
+							\'T:subtypes',
+							\'r:records',
+							\'C:components',
+							\'P:packages',
+							\'l:locals'
+							\]
 						\}
 
 " 7 - Syntastic
@@ -92,19 +94,19 @@ set statusline+=%*
 " TODO: setup config
 
 " 9 - ctrlp
-
-" TODO: not yet complete
+let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
-
+							\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+							\ 'file': '\v\.(exe|so|dll)$',
+							\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+							\ }
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
 							\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
-
 let g:ctrlp_match_window_bottom = 1
-let g:ctrlp_show_hidden         = 1
+let g:ctrlp_user_command = 'find %s -type f'
+" open a new file on a tab
+let g:ctrlp_open_new_file = 't'
 
 " 10 - numbers
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
@@ -155,15 +157,25 @@ augroup markdown
 	au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
-" 16 - vim-signify
+" 16 - vim-indent-guides
+"      https://github.com/nathanaelkane/vim-indent-guides
+" don't consider spaces as indentation
+let g:indent_guides_space_guides = 0
+
+" enable at startup
+let g:indent_guides_enable_on_vim_startup = 1
+
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
+
+" 17 - vim-signify
 "      https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
 let g:signify_update_on_bufenter = 1
 
-" 17 - vim-airline
+" 18 - vim-airline
 "      https://github.com/bling/vim-airline
-"      The powerline symbols need the powerline fonts:
-"      https://github.com/Lokaltog/powerline-fonts
+" The powerline symbols need the powerline fonts:
+" https://github.com/Lokaltog/powerline-fonts
 "
 " check whether a dictionary if it exists
 if !exists('g:airline_symbols')
@@ -199,6 +211,6 @@ let g:airline#extensions#branch#empty_message = ''
 " |airline-syntastic| extension. >
 let g:airline#extensions#eclim#enabled = 0
 
-" 18 - fugitive
+" 19 - fugitive
 "      https://github.com/tpope/vim-fugitive
 " TODO: COnfigure fugitive

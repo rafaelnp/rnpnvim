@@ -118,6 +118,9 @@ set shortmess=atToO    " see: help shortmess
 set ruler              " Show cursor line and column number position
 set number             " show line numbers
 set scrolloff=2        " number of screen lines to keep above and below the cursor.
+set splitright         " Always splits to the right and below
+set splitbelow
+set showbreak=↳
 set colorcolumn=+1     " highlight column after 'textwidth'
 colorscheme vividchalk
 set noshowmode         " Don't show the mode, Powerline shows it
@@ -144,7 +147,8 @@ if has('gui_running')
 		"set guifont=Anonymous\ Pro\ Minus\ 11
 		"set guifont=Anonymous\ Pro\ 9
 		"set guifont=DejaVu\ Sans\ Mono\ 9
-		set guifont=Inconsolata\ for\ Powerline\ 9
+		"set guifont=Inconsolata\ for\ Powerline\ 9
+		set guifont=Liberation\ Mono\ for\ Powerline\ 8
 	elseif has ('mac')
 		set guifont=Monospace\ 9
 	elseif has ('win32') || ('win64')

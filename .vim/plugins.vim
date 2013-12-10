@@ -3,7 +3,6 @@
 " 1 - Vundle
 " Configured in the vundle.vim file
 
-"
 " 2 - genutils
 "     http://www.vim.org/scripts/script.php?script_id=197
 "
@@ -98,20 +97,19 @@ set statusline+=%*
 
 
 " 9 - ctrlp
-
-" TODO: not yet complete
-
+let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
 							\ 'dir':  '\v[\/]\.(git|hg|svn)$',
 							\ 'file': '\v\.(exe|so|dll)$',
-							\ 'link': 'some_bad_symbolic_links',
+							\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 							\ }
-
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
 							\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
-
 let g:ctrlp_match_window_bottom = 1
-let g:ctrlp_show_hidden         = 1
+let g:ctrlp_user_command = 'find %s -type f'
+" open a new file on a tab
+let g:ctrlp_open_new_file = 't'
 
 " 10 - numbers
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']

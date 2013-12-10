@@ -102,7 +102,11 @@ set smartcase          " Override the 'ignorecase' option if the
 
 " wildmenu: ignore these extensions
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
-
+if has('unix')
+	set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+else
+	set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*
+endif
 
 "============
 " GUI Options

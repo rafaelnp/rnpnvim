@@ -23,6 +23,8 @@ set completeopt=menu,preview       " menu completion options
 set ttyfast                        " fast terminal connection
 set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
+set pastetoggle=<F2>               " enables paste mode
+
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has("multi_byte_encoding")
@@ -121,7 +123,7 @@ set number             " show line numbers
 set scrolloff=2        " number of screen lines to keep above and below the cursor.
 set splitright         " Always splits to the right and below
 set splitbelow
-set showbreak=↳
+set showbreak=↳        " Show the linebreak for a long line
 set colorcolumn=+1     " highlight column after 'textwidth'
 colorscheme vividchalk
 set noshowmode         " Don't show the mode, Powerline shows it

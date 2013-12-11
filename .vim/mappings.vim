@@ -13,19 +13,19 @@ nnoremap <space> <Nop>
 let mapleader = ","
 
 " removes carriage return
-nmap <a-r> :%s/\r//g<CR>
+nnoremap <a-r> :%s/\r//g<CR>
 
 " opens a new table
-nmap <a-t> :tabnew<CR>
+nnoremap <a-t> :tabnew<CR>
 
 " go to next buffer
-nmap <a-n> :bn<CR>
+nnoremap <a-n> :bn<CR>
 
 " go to previous buffer
-nmap <a-p> :bp<CR>
+nnoremap <a-p> :bp<CR>
 
 " saves all buffers
-nmap <a-s> :wa<CR>
+nnoremap <a-s> :wa<CR>
 
 " maps reload config
 nnoremap ,d    :call Reloadconfig()<CR>
@@ -107,3 +107,18 @@ vnoremap <F1> <nop>
 
 " opens .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+
+"==============
+" Abbreviations
+"==============
+
+" global
+
+iabbrev Rnp   Rafael do Nascimento Pereira  " name
+iabbrev rnp@  rnp@25ghz.net                 " e-mail
+
+" english
+iabbrev adn  and
+iabbrev waht what
+

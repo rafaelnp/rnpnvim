@@ -171,6 +171,16 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
 "      https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
 let g:signify_update_on_bufenter = 1
+let g:signify_sign_change = '~'
+let g:signify_sign_delete_first_line = '*'
+
+highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=green
+highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=red
+highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=blue
+
+highlight SignifySignAdd    gui=bold guibg=Black  guifg=green
+highlight SignifySignDelete gui=bold guibg=Black  guifg=red
+highlight SignifySignChange gui=bold guibg=Black  guifg=darkorange
 
 " 18 - vim-airline
 "      https://github.com/bling/vim-airline

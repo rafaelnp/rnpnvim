@@ -1,9 +1,15 @@
+
+Documents to read:
+
+http://learnvimscriptthehardway.stevelosh.com/
+http://stevelosh.com/blog/2011/09/writing-vim-plugins/
+http://blog.edmondcote.com/2011/05/vim-setup-for-systemverilog.html
+
 Options to test:
 
 
 .vimrc to test:
 
-http://learnvimscriptthehardway.stevelosh.com/
 https://github.com/terryma/dotfiles/blob/master/.vimrc
 https://github.com/bling/dotvim
 https://github.com/gmarik/vimfiles/blob/master/vimrc

@@ -156,7 +156,6 @@ Show the current buffer line numbers. This option is mandatory if you are using 
 
 **Wildignore**
 
-
 ```vimscript
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
 if has('unix')
@@ -255,6 +254,7 @@ set copyindent
 
 TODO: Add description
 
+
 **Line width and margin**
 
 ```vim
@@ -264,8 +264,8 @@ set wrapmargin=2    " space after linebrake
 
 TODO: Add description
 
-**cpoptions**
 
+**cpoptions**
 
 ```vim
 set cpoptions=BceFs " compatible options
@@ -309,6 +309,16 @@ tab all
 
 TODO: Add description and contents
 
+**guioptions**
+
+| Option   | Description |
+|:--------:|:--------------:|
+|  a	   | Enables copy and paste in visual mode |
+|  A       | Autoselect for the modeless selection |
+|  g       | Make menu items that are not active grey |
+|  i       |  Use a Vim icon on Vim's Window |
+
+TODO: Review all guioption in Vim help
 
 4. Plugins
 ----------
@@ -333,6 +343,7 @@ The following plugins are used in the current configuration:
 1. [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 1. [Vundle](https://github.com/gmarik/vundle)(Plugins manager)
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+
 
 Each plugin documentation can be reached by typing `:help <plugin-name>`
 

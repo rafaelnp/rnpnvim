@@ -108,15 +108,16 @@ vnoremap <F1> <nop>
 " opens .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
-
 "==============
 " Abbreviations
 "==============
 
 " global
 
-iabbrev Rnp   Rafael do Nascimento Pereira  " name
-iabbrev rnp@  rnp@25ghz.net                 " e-mail
+" name
+iabbrev Rnp   Rafael do Nascimento Pereira
+"e-mail
+iabbrev rnp@  rnp@25ghz.net
 
 " english
 iabbrev adn  and

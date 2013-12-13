@@ -299,17 +299,37 @@ set smartcase
 3.4 GUI Options
 ---------------
 
-**tab (not related to indentation)**
+**Short messages**
 
-Open a new tab instead of launching a new Vim process
+TODO: Add description
+
+**Window split**
 
 ```vim
-tab all
+set splitbellow
+set splitright
 ```
 
-TODO: Add description and contents
+Tells how vim should split windows. If you have different preference comment this/these
+line(s).
+
+**Status bar**
+
+TODO: Add decription
+
+**Scrolloff**
+
+TODO: Add decription
+
+**colorcolumn**
+
+**mouse**
+
 
 **guioptions**
+
+Here a minimalistic gui is configured, without menus, scrollbas and toolbars. There are
+configured mapppings to toggle the menu and toolbar. Take a look at mappings section.
 
 | Option   | Description |
 |:--------:|:--------------:|
@@ -318,7 +338,6 @@ TODO: Add description and contents
 |  g       | Make menu items that are not active grey |
 |  i       |  Use a Vim icon on Vim's Window |
 
-TODO: Review all guioption in Vim help
 
 4. Plugins
 ----------

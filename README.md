@@ -268,14 +268,21 @@ TODO: Add description
 **cpoptions**
 
 ```vim
-set cpoptions=BceFs " compatible options
+set cpoptions=BceF
 ```
 
-TODO: Add description
+| Option   | Description |
+|:--------:|:-----------:|
+|  B       | backslash has no special meaning in mappings, abbreviations |
+|  c       | limits the search at any match at the cursor position |
+|  e       | Add a <CR> the the end of line when excuting a register |
+|  F       | Name a buffer when saving, if it does not have a file name yet |
+
 
 **TABs or spaces?**
 
-TODO: Add description
+I use TABs for indentation with a unified configuration. If you want to use spaces, remove
+`noexpandtab`and replace it with `expandtab`.
 
 ```vim
 set tabstop=4
@@ -284,10 +291,12 @@ set shiftwidth=4
 set noexpandtab
 ```
 
+For a detailed information, there is a good [video](http://vimcasts.org/episodes/tabs-and-spaces/)
+about the theme on the vimcast website.
+
+
 3.3 Searching
 ---------------
-
-TODO: Add description
 
 ```vim
 set hlsearch
@@ -296,10 +305,22 @@ set ignorecase
 set smartcase
 ```
 
+The Vim search lines above set up:
+
+* highlight search
+* incremental search (search as you type)
+* case insensitive search
+* smartcase: case sensitive only if 
+
+
 3.4 GUI Options
 ---------------
 
 **Short messages**
+
+```vim
+set shortmess=atToO
+```
 
 TODO: Add description
 
@@ -323,7 +344,11 @@ TODO: Add decription
 
 **colorcolumn**
 
+TODO: Add decription
+
 **mouse**
+
+TODO: Add decription
 
 
 **guioptions**
@@ -333,7 +358,7 @@ configured mapppings to toggle the menu and toolbar. Take a look at mappings sec
 
 | Option   | Description |
 |:--------:|:--------------:|
-|  a	   | Enables copy and paste in visual mode |
+|  a       | Enables copy and paste in visual mode |
 |  A       | Autoselect for the modeless selection |
 |  g       | Make menu items that are not active grey |
 |  i       |  Use a Vim icon on Vim's Window |
@@ -400,7 +425,16 @@ For new and experimental stuff, take a look at the [labs](https://github.com/raf
 * HDL(Verilog/VHDL) Plugins
 * Filetype support for Assembly (x86, ARM)
 
-9. Acknowledgements
+9. References
+
+Useful material about VIm i recommend:
+
+1. [Vim Casts](http://vimcasts.org/)
+2. [Learn Vim Script the hard way](http://learnvimscriptthehardway.stevelosh.com/)
+3. [Writing Vim Scripts](http://stevelosh.com/blog/2011/09/writing-vim-plugins/)
+
+
+10. Acknowledgements
 --------------------
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)

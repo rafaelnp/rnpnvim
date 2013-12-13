@@ -22,6 +22,9 @@ endif
 set completeopt=menu,preview       " menu completion options
 set ttyfast                        " fast terminal connection
 set hidden                         " don't discard buffers
+set ttimeoutlen=50                 " timeout for a key sequence complete
+set pastetoggle=<F2>               " enables paste mode
+
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has("multi_byte_encoding")
@@ -65,12 +68,11 @@ set cindent         " do c-style indenting
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
 set textwidth=90    " no fucking long lines
 set wrapmargin=2    " space after linebrake
-set cpoptions=BceFs " compatible options
+set cpoptions=BceF  " compatible options
 
-" Don't forget:
+" Here are the space and tabulator keys definition:
 " tabs are for indenting and aligning code and data.
 " spaces are for separating words in text and comments.
-" Here are the space and tabulator keys definition:
 "
 " https://en.wikipedia.org/wiki/Space_bar
 " https://en.wikipedia.org/wiki/Tabulator_key
@@ -93,16 +95,20 @@ set noexpandtab        " just tabs please :)
 "==========
 " Searching
 "==========
-set hlsearch           " highlight search patern
-set incsearch          " incremental search
+set hlsearch      " highlight search patern
+set incsearch     " incremental search
 set ignorecase
-set smartcase          " Override the 'ignorecase' option if the
-                       " search pattern contains upper case characters.  Only used when
-                       " the search pattern is typed and 'ignorecase' option is on
+set smartcase     " Override the 'ignorecase' option if the
+                  " search pattern contains upper case characters. Only used when
+                  " the search pattern is typed and 'ignorecase' option is on
 
 " wildmenu: ignore these extensions
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
-
+if has('unix')
+	set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+else
+	set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*
+endif
 
 "============
 " GUI Options
@@ -114,6 +120,9 @@ set shortmess=atToO    " see: help shortmess
 set ruler              " Show cursor line and column number position
 set number             " show line numbers
 set scrolloff=2        " number of screen lines to keep above and below the cursor.
+set splitright         " Always splits to the right and below
+set splitbelow
+set showbreak=↳        " Show the linebreak for a long line
 set colorcolumn=+1     " highlight column after 'textwidth'
 colorscheme vividchalk
 set noshowmode         " Don't show the mode, Powerline shows it
@@ -140,7 +149,8 @@ if has('gui_running')
 		"set guifont=Anonymous\ Pro\ Minus\ 11
 		"set guifont=Anonymous\ Pro\ 9
 		"set guifont=DejaVu\ Sans\ Mono\ 9
-		set guifont=Inconsolata\ for\ Powerline\ 9
+		"set guifont=Inconsolata\ for\ Powerline\ 9
+		set guifont=Liberation\ Mono\ for\ Powerline\ 8
 	elseif has ('mac')
 		set guifont=Monospace\ 9
 	elseif has ('win32') || ('win64')
@@ -148,8 +158,8 @@ if has('gui_running')
 	endif
 
 	"Pop-up menu color setteings
-	highlight Pmenu guibg=brown gui=bold      "gui
-	highlight Pmenu ctermbg=238 gui=bold      "terminal
+	highlight Pmenu guibg=brown gui=bold
+	highlight Pmenu ctermbg=238 gui=bold
 	set mousemodel=popup
 else
 	set bg=dark
@@ -165,7 +175,7 @@ endif
 set makeprg=scons
 
 if !filereadable(expand("%:p:h")."/SConstruct")
-    setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
+	setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
 endif
 
 " different indentation for C and C++

@@ -1,7 +1,7 @@
 rnpvim: Rafael Pereira's vim config files
 =========================================
 
-Last update: 2013.12.12 (Thu) 07:29:56
+Last update: 2013.12.13 (Fri) 14:47:18
 
 This Vim setup is focused on C/C++, Assembly and HDL development. This is still a work under development.
 
@@ -10,8 +10,8 @@ This Vim setup is focused on C/C++, Assembly and HDL development. This is still 
 
 * [exuberant ctags](http://ctags.sourceforge.net/)
 * [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
-* [clang](http://clang.llvm.org/)(To compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
-* [cmake](http://www.cmake.org/)(To compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
+* [clang](http://clang.llvm.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
+* [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
 * Python 2.7.x or newer
 
 2. Installation
@@ -24,9 +24,11 @@ open a terminal ang get the rnpvim code:
 
 backup your current Vim configuration:
 
-`cp -R ~/.vim ~/.vim.bak`
+```sh
+cp -R ~/.vim ~/.vim.bak
 
-`cp ~/.vimrc ~/.vimrc.bak`
+cp ~/.vimrc ~/.vimrc.bak
+```
 
 and create the symbolic links to the new configuration files:
 
@@ -40,8 +42,8 @@ and execute:
 
 and the plugins shall be synchronized with github.
 
-It is still necessary to compile the YouCompleteMe external libraries. To do it, follow
-the steps bellow:
+If you want C/C++ autocompletion support, it is still necessary to compile the YouCompleteMe
+external libraries. To do it, follow the steps bellow:
 
 ```sh
 
@@ -50,8 +52,8 @@ cp your-path/rnpvim/.vim/bundle/YouCOmpleteMe
 ./install.sh --clang-completer
 ```
 
-And to use the nice symbols on the statusline, the powerfonts are needed.
-Type the following commands in a shell:
+And to use the nice symbols (skip this if you don't want) on the statusline, the powerfonts
+are needed.  Type the following commands in a shell:
 
 ```sh
 cd ~/.fonts
@@ -72,7 +74,7 @@ may be boring or repetitive, but i think useful for beginners and also for a qui
 3.1 General
 ----------------
 
-**compatible (cp) / nocompatible (nocp)**
+**nocompatible**
 
 ```vim
 set nocompatible
@@ -324,6 +326,7 @@ set shortmess=atToO
 
 TODO: Add description
 
+
 **Window split**
 
 ```vim
@@ -352,6 +355,10 @@ TODO: Add decription
 
 
 **guioptions**
+
+```vim
+set guioptions=aAgi
+```
 
 Here a minimalistic gui is configured, without menus, scrollbas and toolbars. There are
 configured mapppings to toggle the menu and toolbar. Take a look at mappings section.
@@ -394,13 +401,14 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 5. Mappings
 ---------------
-FIXME
+
+TODO: Add description
 
 
 6. Colorschemes
 ---------------
 
-Available colorscheme:
+Available colorschemes:
 
 * [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
 * [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)(currently used see picture bellow)
@@ -408,7 +416,7 @@ Available colorscheme:
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
 7. Known problems
----------------
+-----------------
 
 * The plugin snipMate does note work if the plugin YouCompleteMe is also installed.
 
@@ -426,8 +434,9 @@ For new and experimental stuff, take a look at the [labs](https://github.com/raf
 * Filetype support for Assembly (x86, ARM)
 
 9. References
+--------------
 
-Useful material about VIm i recommend:
+Useful material about Vim i recommend:
 
 1. [Vim Casts](http://vimcasts.org/)
 2. [Learn Vim Script the hard way](http://learnvimscriptthehardway.stevelosh.com/)
@@ -436,6 +445,7 @@ Useful material about VIm i recommend:
 
 10. Acknowledgements
 --------------------
+
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)
 

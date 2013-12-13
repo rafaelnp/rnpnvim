@@ -68,12 +68,11 @@ set cindent         " do c-style indenting
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
 set textwidth=90    " no fucking long lines
 set wrapmargin=2    " space after linebrake
-set cpoptions=BceFs " compatible options
+set cpoptions=BceF  " compatible options
 
-" Don't forget:
+" Here are the space and tabulator keys definition:
 " tabs are for indenting and aligning code and data.
 " spaces are for separating words in text and comments.
-" Here are the space and tabulator keys definition:
 "
 " https://en.wikipedia.org/wiki/Space_bar
 " https://en.wikipedia.org/wiki/Tabulator_key

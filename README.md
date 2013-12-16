@@ -12,7 +12,8 @@ This Vim setup is focused on C/C++, Assembly and HDL development. This is still 
 * [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 * [clang](http://clang.llvm.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
 * [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
-* Python 2.7.x or newer
+* [Python](http://www.python.org) 2.7.x or newer
+
 
 2. Installation
 -------------------
@@ -71,6 +72,7 @@ This configuration was tested in the Vim 7.4.x version on Linux.
 The main configuration option there is a short explanation. For experienced Vim users it
 may be boring or repetitive, but i think useful for beginners and also for a quick reference.
 
+
 3.1 General
 ----------------
 
@@ -92,6 +94,7 @@ set autochdir
 
 Always switch to the current file directory when you open, switch, close a file/buffer/window
 
+
 **autowriteall**
 
 ```vim
@@ -100,6 +103,7 @@ set autowriteall
 
 Saves the file contents when switching/opening/creating buffers/files/windows. Useful to
 avoid data loss.
+
 
 **autoread**
 
@@ -128,6 +132,7 @@ option unnecessary. Deactivating this option makes also the **writebackup**, **b
 
 Configure the backspace behaviour over indenting, eol and when starting the inserting mode
 
+
 **helplang**
 
 ```vim
@@ -146,6 +151,7 @@ set ruler
 
 Show the cursor position (line and column number).Each window has its own ruler
 
+
 **numbers**
 
 ```vim
@@ -154,6 +160,7 @@ set number
 
 Show the current buffer line numbers. This option is mandatory if you are using the
 [numbers.vim](https://github.com/myusuf3/numbers.vim) plugin.
+
 
 
 **Wildignore**
@@ -208,6 +215,7 @@ set noerrorbells
 ```
 
 The options above disable the beep and visual bell (flash). It is really annoying.
+
 
 
 3.2 Formating
@@ -420,6 +428,7 @@ Available colorschemes:
 
 * The plugin snipMate does note work if the plugin YouCompleteMe is also installed.
 
+
 8. TODO
 ---------------
 
@@ -432,6 +441,7 @@ For new and experimental stuff, take a look at the [labs](https://github.com/raf
 * Mappings
 * HDL(Verilog/VHDL) Plugins
 * Filetype support for Assembly (x86, ARM)
+
 
 9. References
 --------------
@@ -448,4 +458,5 @@ Useful material about Vim i recommend:
 
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)
+
 

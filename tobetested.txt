@@ -37,3 +37,6 @@ Verilog:
 ARM Assembly:
 	https://gist.github.com/iori-yja/1615430
 	ttps://github.com/mbbill/undotree
+https://github.com/scrooloose/snipmate-snippets
+https://github.com/msanders/snipmate.vim
+https://github.com/Lokaltog/vim-easymotion

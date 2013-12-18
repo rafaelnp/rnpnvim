@@ -101,7 +101,8 @@
 "    :help UserGettingBored
 
 " Load all Vundle managed plugins
-source ~/.vim/vundle.vim
+" source ~/.vim/vundle.vim
+source ~/.vim/neobundle.vim
 
 " Functions
 source ~/.vim/functions.vim

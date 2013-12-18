@@ -5,7 +5,7 @@
 "========
 
 set nocompatible                   " no vi-compatibility
-set autochdir                      " always switch to the current file directory
+set noautochdir                    " disabled because of vimshell plugin
 set autowriteall                   " automatically save all buffers
 set autoread                       " load file modified outside vim
 set nobackup                       " no backup files, we have git :)
@@ -24,7 +24,6 @@ set ttyfast                        " fast terminal connection
 set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
-
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has("multi_byte_encoding")
@@ -126,6 +125,13 @@ set showbreak=↳        " Show the linebreak for a long line
 set colorcolumn=+1     " highlight column after 'textwidth'
 colorscheme vividchalk
 set noshowmode         " Don't show the mode, Powerline shows it
+set showmatch          " When a bracket is inserted, briefly jump to the matching one.
+set matchtime=2        " Tenths of a second to show the matching parten
+set ead=both           " set in which direction 'equalalways' works (ver, hor, both)
+set wildmenu           " use autocompletion on command line
+set cursorline         " sets cursor line highlight. cool :)
+set display=uhex       " show unprintable characters hexadecimal
+set listchars=eol:$,tab:>\ 
 
 if has('mouse')
 	set mouse=a        " enable mouse in all modes
@@ -133,13 +139,6 @@ if has('mouse')
 endif
 
 if has('gui_running')
-	set ea               " make all windows the same size when adding/removing windows
-	set ead=both         " set in which direction 'equalalways' works: "ver", "hor" or "both"
-	set wildmenu         " use autocompletion on command line
-	set showmatch
-	set matchtime=2
-	set cursorline       " sets cursor line highlight. cool :)
-	set display=uhex     " show unprintable characters hexadecimal
 	set guioptions=aAgi  " see: help guioptions
 
 	if has('unix')

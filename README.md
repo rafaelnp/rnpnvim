@@ -1,27 +1,32 @@
-rnpvim: Rafael Pereira's vim config files
-=========================================
+# rnpvim: Rafael Pereira's vim config files
 
-Last update: 2013.12.13 (Fri) 14:47:18
+Last update: 2013.12.18 (Mi) 17:18:38 CET (UTC +1 hour)
 
 This Vim setup is focused on C/C++, Assembly and HDL development. This is still a work under development.
 
-1. Requirements
--------------------
+## 1. Requirements
 
 * [exuberant ctags](http://ctags.sourceforge.net/)
 * [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 * [clang](http://clang.llvm.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
-* [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
-* [Python](http://www.python.org) 2.7.x or newer
+* [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
+* Python 2.7.x or newer
 
+## 2. Installation
 
-2. Installation
--------------------
+### 2.1 Manuall
 
 At the moment there is no automatic installation, only the manual one. Then
 open a terminal ang get the rnpvim code:
 
-`git clone https://github.com/rafaelnp/rnpvim.git rnpvim`
+```sh
+cd ~/src
+
+git clone https://github.com/rafaelnp/rnpvim.git rnpvim
+```
+
+The `~/src` directory was used here as example, but you can change it to any directory you
+want.
 
 backup your current Vim configuration:
 
@@ -33,28 +38,35 @@ cp ~/.vimrc ~/.vimrc.bak
 
 and create the symbolic links to the new configuration files:
 
-`ln -s your-path/rnpvim/.vim ~/.vim`
+```sh
+ln -s ~/src/rnpvim/.vim ~/.vim
 
-`ln -s your-path/rnpvim/.vimrc ~/.vimrc`
+ln -s ~/src/rnpvim/.vimrc ~/.vimrc
+```
 
 and execute:
 
-`vim +BundleInstall`
+```sh
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
+vim +NeoBundleInstall
+```
 
 and the plugins shall be synchronized with github.
 
-If you want C/C++ autocompletion support, it is still necessary to compile the YouCompleteMe
-external libraries. To do it, follow the steps bellow:
+It is still necessary to compile the YouCompleteMe external libraries. To do it, follow the
+steps bellow:
 
 ```sh
-
-cp your-path/rnpvim/.vim/bundle/YouCOmpleteMe
+cp ~/.vim/bundle/YouCOmpleteMe
 
 ./install.sh --clang-completer
 ```
 
-And to use the nice symbols (skip this if you don't want) on the statusline, the powerfonts
-are needed.  Type the following commands in a shell:
+Remove the `--clang-completer` if you don't want the semantic support for C-family languages.
+
+And to use the nice symbols (skip this if you don't want to use them) on the statusline, the
+powerfonts are needed. Type the following commands in a shell:
 
 ```sh
 cd ~/.fonts
@@ -64,17 +76,18 @@ git clone https://github.com/Lokaltog/powerline-fonts
 fc-cache -v ~/.fonts
 ```
 
+### 2. Automatic
 
-3. Vim configuration
---------------------
+Currently under development
+
+## 3. Vim configuration
 
 This configuration was tested in the Vim 7.4.x version on Linux.
 The main configuration option there is a short explanation. For experienced Vim users it
 may be boring or repetitive, but i think useful for beginners and also for a quick reference.
 
 
-3.1 General
-----------------
+### 3.1 General
 
 **nocompatible**
 
@@ -94,7 +107,6 @@ set autochdir
 
 Always switch to the current file directory when you open, switch, close a file/buffer/window
 
-
 **autowriteall**
 
 ```vim
@@ -103,7 +115,6 @@ set autowriteall
 
 Saves the file contents when switching/opening/creating buffers/files/windows. Useful to
 avoid data loss.
-
 
 **autoread**
 
@@ -132,7 +143,6 @@ option unnecessary. Deactivating this option makes also the **writebackup**, **b
 
 Configure the backspace behaviour over indenting, eol and when starting the inserting mode
 
-
 **helplang**
 
 ```vim
@@ -151,7 +161,6 @@ set ruler
 
 Show the cursor position (line and column number).Each window has its own ruler
 
-
 **numbers**
 
 ```vim
@@ -160,7 +169,6 @@ set number
 
 Show the current buffer line numbers. This option is mandatory if you are using the
 [numbers.vim](https://github.com/myusuf3/numbers.vim) plugin.
-
 
 
 **Wildignore**
@@ -217,9 +225,7 @@ set noerrorbells
 The options above disable the beep and visual bell (flash). It is really annoying.
 
 
-
-3.2 Formating
-----------------
+### 3.2 Formating
 
 Text formating configuration:
 
@@ -305,8 +311,7 @@ For a detailed information, there is a good [video](http://vimcasts.org/episodes
 about the theme on the vimcast website.
 
 
-3.3 Searching
----------------
+### 3.3 Searching
 
 ```vim
 set hlsearch
@@ -323,8 +328,7 @@ The Vim search lines above set up:
 * smartcase: case sensitive only if 
 
 
-3.4 GUI Options
----------------
+### 3.4 Visual/GUI Options
 
 **Short messages**
 
@@ -333,7 +337,6 @@ set shortmess=atToO
 ```
 
 TODO: Add description
-
 
 **Window split**
 
@@ -379,8 +382,7 @@ configured mapppings to toggle the menu and toolbar. Take a look at mappings sec
 |  i       |  Use a Vim icon on Vim's Window |
 
 
-4. Plugins
-----------
+## 4. Plugins
 
 The following plugins are used in the current configuration:
 
@@ -388,33 +390,36 @@ The following plugins are used in the current configuration:
 1. [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
 3. [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 4. [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
-5. [Powerline](https://github.com/Lokaltog/powerline) (Status bar)
-6. [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
-7. [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
-8. [Tabular](https://github.com/godlygeek/tabular.git) (Texttabulator)
-9. [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
+5. [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
+6. [Powerline](https://github.com/Lokaltog/powerline) (Status bar)
+7. [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
+8. [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
+9. [Tabular](https://github.com/godlygeek/tabular.git) (Texttabulator)
+1. [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
 1. [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
 1. [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 1. [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
 1. [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 1. [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
-1. [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually) 
+1. [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
 1. [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
-1. [Vundle](https://github.com/gmarik/vundle)(Plugins manager)
+1. [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
+
+![alt text](https://f.cloud.github.com/assets/980000/982716/eb45a994-0817-11e3-806e-ce6e731b86ef.png)
+
+
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 
 Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 
-5. Mappings
----------------
+## 5. Mappings
 
 TODO: Add description
 
 
-6. Colorschemes
----------------
+## 6. Colorschemes
 
 Available colorschemes:
 
@@ -423,14 +428,11 @@ Available colorschemes:
 
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
-7. Known problems
------------------
+## 7. Known problems
 
 * The plugin snipMate does note work if the plugin YouCompleteMe is also installed.
 
-
-8. TODO
----------------
+## 8. TODO
 
 This README is still incomplete. It is being gradually expanded/improved.
 For new and experimental stuff, take a look at the [labs](https://github.com/rafaelnp/rnpvim/tree/labs) branch.
@@ -443,8 +445,7 @@ For new and experimental stuff, take a look at the [labs](https://github.com/raf
 * Filetype support for Assembly (x86, ARM)
 
 
-9. References
---------------
+## 9. References
 
 Useful material about Vim i recommend:
 
@@ -453,10 +454,8 @@ Useful material about Vim i recommend:
 3. [Writing Vim Scripts](http://stevelosh.com/blog/2011/09/writing-vim-plugins/)
 
 
-10. Acknowledgements
---------------------
+# 10. Acknowledgements
 
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)
-
 

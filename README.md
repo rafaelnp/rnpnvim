@@ -1,12 +1,10 @@
-rnpvim: Rafael Pereira's vim config files
-=========================================
+# rnpvim: Rafael Pereira's vim config files
 
-Last update: 2013.12.13 (Fri) 14:47:18
+Last update: 2013.12.18 (Wed) 16:54:39 CEST (UTC +2 hours)
 
 This Vim setup is focused on C/C++, Assembly and HDL development. This is still a work under development.
 
-1. Requirements
--------------------
+## 1. Requirements
 
 * [exuberant ctags](http://ctags.sourceforge.net/)
 * [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
@@ -14,11 +12,10 @@ This Vim setup is focused on C/C++, Assembly and HDL development. This is still 
 * [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
 * Python 2.7.x or newer
 
-2. Installation
----------------
+## 2. Installation
 
-2.1 Manuall
------------
+### 2.1 Manuall
+
 At the moment there is no automatic installation, only the manual one. Then
 open a terminal ang get the rnpvim code:
 
@@ -80,16 +77,17 @@ git clone https://github.com/Lokaltog/powerline-fonts
 fc-cache -v ~/.fonts
 ```
 
+### 2. Automatic
 
-3. Vim configuration
---------------------
+Currently under development
+
+## 3. Vim configuration
 
 This configuration was tested in the Vim 7.4.x version on Linux.
 The main configuration option there is a short explanation. For experienced Vim users it
 may be boring or repetitive, but i think useful for beginners and also for a quick reference.
 
-3.1 General
-----------------
+### 3.1 General
 
 **nocompatible**
 
@@ -227,8 +225,7 @@ set noerrorbells
 The options above disable the beep and visual bell (flash). It is really annoying.
 
 
-3.2 Formating
-----------------
+### 3.2 Formating
 
 Text formating configuration:
 
@@ -314,8 +311,7 @@ For a detailed information, there is a good [video](http://vimcasts.org/episodes
 about the theme on the vimcast website.
 
 
-3.3 Searching
----------------
+### 3.3 Searching
 
 ```vim
 set hlsearch
@@ -332,8 +328,7 @@ The Vim search lines above set up:
 * smartcase: case sensitive only if 
 
 
-3.4 GUI Options
----------------
+### 3.4 Visual/GUI Options
 
 **Short messages**
 
@@ -388,8 +383,7 @@ configured mapppings to toggle the menu and toolbar. Take a look at mappings sec
 |  i       |  Use a Vim icon on Vim's Window |
 
 
-4. Plugins
-----------
+## 4. Plugins
 
 The following plugins are used in the current configuration:
 
@@ -408,22 +402,25 @@ The following plugins are used in the current configuration:
 1. [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
 1. [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 1. [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
-1. [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually) 
+1. [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
 1. [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+1. [vimshell.vim](https://github.com/Shougo/vimshell.vim)
+
+![alt text](https://f.cloud.github.com/assets/980000/982716/eb45a994-0817-11e3-806e-ce6e731b86ef.png)
+
+
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 
 Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 
-5. Mappings
----------------
+## 5. Mappings
 
 TODO: Add description
 
 
-6. Colorschemes
----------------
+## 6. Colorschemes
 
 Available colorschemes:
 
@@ -432,13 +429,11 @@ Available colorschemes:
 
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
-7. Known problems
------------------
+## 7. Known problems
 
 * The plugin snipMate does note work if the plugin YouCompleteMe is also installed.
 
-8. TODO
----------------
+## 8. TODO
 
 This README is still incomplete. It is being gradually expanded/improved.
 For new and experimental stuff, take a look at the [labs](https://github.com/rafaelnp/rnpvim/tree/labs) branch.
@@ -450,8 +445,7 @@ For new and experimental stuff, take a look at the [labs](https://github.com/raf
 * HDL(Verilog/VHDL) Plugins
 * Filetype support for Assembly (x86, ARM)
 
-9. References
---------------
+## 9. References
 
 Useful material about Vim i recommend:
 
@@ -460,8 +454,7 @@ Useful material about Vim i recommend:
 3. [Writing Vim Scripts](http://stevelosh.com/blog/2011/09/writing-vim-plugins/)
 
 
-10. Acknowledgements
---------------------
+# 10. Acknowledgements
 
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)

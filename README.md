@@ -11,16 +11,25 @@ This Vim setup is focused on C/C++, Assembly and HDL development. This is still 
 * [exuberant ctags](http://ctags.sourceforge.net/)
 * [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 * [clang](http://clang.llvm.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
-* [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
+* [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
 * Python 2.7.x or newer
 
 2. Installation
--------------------
+---------------
 
+2.1 Manuall
+-----------
 At the moment there is no automatic installation, only the manual one. Then
 open a terminal ang get the rnpvim code:
 
-`git clone https://github.com/rafaelnp/rnpvim.git rnpvim`
+```sh
+cd ~/src
+
+git clone https://github.com/rafaelnp/rnpvim.git rnpvim
+```
+
+The `~/src` directory was used here as example, but you can change it to any directory you
+want.
 
 backup your current Vim configuration:
 
@@ -32,28 +41,36 @@ cp ~/.vimrc ~/.vimrc.bak
 
 and create the symbolic links to the new configuration files:
 
-`ln -s your-path/rnpvim/.vim ~/.vim`
+```sh
+ln -s ~/src/rnpvim/.vim ~/.vim
 
-`ln -s your-path/rnpvim/.vimrc ~/.vimrc`
+ln -s ~/src/rnpvim/.vimrc ~/.vimrc
+```
 
 and execute:
 
-`vim +BundleInstall`
+```sh
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
+vim +NeoBundleInstall
+```
 
 and the plugins shall be synchronized with github.
 
-If you want C/C++ autocompletion support, it is still necessary to compile the YouCompleteMe
-external libraries. To do it, follow the steps bellow:
+It is still necessary to compile the YouCompleteMe external libraries. To do it, follow the
+steps bellow:
 
 ```sh
 
-cp your-path/rnpvim/.vim/bundle/YouCOmpleteMe
+cp ~/.vim/bundle/YouCOmpleteMe
 
 ./install.sh --clang-completer
 ```
 
-And to use the nice symbols (skip this if you don't want) on the statusline, the powerfonts
-are needed.  Type the following commands in a shell:
+Remove the `--clang-completer` if you don't want the semantic support for C-family languages.
+
+And to use the nice symbols (skip this if you don't want to use them) on the statusline, the
+powerfonts are needed. Type the following commands in a shell:
 
 ```sh
 cd ~/.fonts

@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2013.12.18 (Wed) 16:54:39 CEST (UTC +2 hours)
+Last update: 2013.12.18 (Mi) 17:18:38 CET (UTC +1 hour)
 
 This Vim setup is focused on C/C++, Assembly and HDL development. This is still a work under development.
 
@@ -404,7 +404,7 @@ The following plugins are used in the current configuration:
 1. [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
 1. [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
 1. [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
-1. [vimshell.vim](https://github.com/Shougo/vimshell.vim)
+1. [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
 
 ![alt text](https://f.cloud.github.com/assets/980000/982716/eb45a994-0817-11e3-806e-ce6e731b86ef.png)
 

@@ -119,6 +119,14 @@ iabbrev Rnp   Rafael do Nascimento Pereira
 "e-mail
 iabbrev rnp@  rnp@25ghz.net
 
+" command line
+cabbrev help    tab help
+cabbrev mapping ~/.vim/mappings.vim
+cabbrev bundle  ~/.vim/neobundle.vim
+cabbrev plugin  ~/.vim/plugins.vim
+cabbrev config  ~/.vim/config.vim
+cabbrev func    ~/.vim/functions.vim
+
 " english
 iabbrev adn  and
 iabbrev waht what

@@ -5,9 +5,9 @@
 #
 # rnpvim installation script
 #
-# Last update: 2013.12.19 (Do) 17:20:40 CET (UTC +1)
+# Last update: 2013.12.19 (Do) 23:03:46 CET (UTC +1)
 
-basedir="$HOME/src/rnpvimtest"
+basedir="$HOME/src/rnpvim"
 vimdir="$HOME/.vim"
 vimdirbak="$HOME/.vim.bak"
 vimfile="$HOME/.vimrc"
@@ -65,7 +65,7 @@ mkdir ycm_build
 cd ycm_build
 # We use the clang already installed on the system
 cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON . ~/.vim/bundle/YouCompleteMe/cpp
-make -j2
+make
 
 echo "(7) cloning powerline fonts"
 

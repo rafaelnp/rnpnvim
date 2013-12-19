@@ -20,9 +20,9 @@ At the moment there is no automatic installation, only the manual one.
 Open a  terminal and make a back up from the current Vim settings:
 
 ```sh
-cp -R ~/.vim ~/.vim.bak
+mv ~/.vim ~/.vim.bak
 
-cp ~/.vimrc ~/.vimrc.bak
+mv ~/.vimrc ~/.vimrc.bak
 ```
 
 Then get the rnpvim code from Github:

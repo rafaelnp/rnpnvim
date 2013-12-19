@@ -16,24 +16,21 @@ This Vim setup is focused on C/C++, Assembly and HDL development. This is still 
 
 ### 2.1 Manuall
 
-At the moment there is no automatic installation, only the manual one. Then
-open a terminal ang get the rnpvim code:
-
-```sh
-cd ~/src
-
-git clone https://github.com/rafaelnp/rnpvim.git rnpvim
-```
-
-The `~/src` directory was used here as example, but you can change it to any directory you
-want.
-
-backup your current Vim configuration:
+At the moment there is no automatic installation, only the manual one.
+Open a  terminal and make a back up from the current Vim settings:
 
 ```sh
 cp -R ~/.vim ~/.vim.bak
 
 cp ~/.vimrc ~/.vimrc.bak
+```
+
+Then get the rnpvim code from Github:
+
+```sh
+cd ~/src
+
+git clone https://github.com/rafaelnp/rnpvim.git rnpvim
 ```
 
 and create the symbolic links to the new configuration files:
@@ -44,15 +41,16 @@ ln -s ~/src/rnpvim/.vim ~/.vim
 ln -s ~/src/rnpvim/.vimrc ~/.vimrc
 ```
 
-and execute:
+The `~/src/rnpvim` directory was used here as example, but you can change it to any directory
+you want.
+
+and execute following command to synchronize the plugins with github:
 
 ```sh
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 vim +NeoBundleInstall
 ```
-
-and the plugins shall be synchronized with github.
 
 It is still necessary to compile the YouCompleteMe external libraries. To do it, follow the
 steps bellow:

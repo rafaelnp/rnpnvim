@@ -27,7 +27,6 @@ may be a good option for you. It includes:
 
 * [Vim](http://www.vim.org) 7.4 or newer
 * [exuberant ctags](http://ctags.sourceforge.net/)
-* [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 * [clang](http://clang.llvm.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
 * [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
 * [Python](http://www.python.org) 2.7 or newer
@@ -440,6 +439,8 @@ The following plugins are used in the current configuration:
 
 
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+
+![alt_text](http://i.imgur.com/0OP4ood.gif)
 
 
 Each plugin documentation can be reached by typing `:help <plugin-name>`

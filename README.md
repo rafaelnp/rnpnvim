@@ -1,39 +1,56 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2013.12.18 (Mi) 17:18:38 CET (UTC +1 hour)
+Last update: 2013.12.19 (Thu) 18:02:03 CET (UTC +1 hour)
 
-This Vim setup is focused on C/C++, Assembly and HDL development. This is still a work under development.
+This Vim setup is focused on C/C++, Assembly and HDL (Verilog, VDHL). This is still a work
+under development.
 
-## 1. Requirements
+## 1. Why rnpvim ?
 
+Have a Vim configuration on git (in this case Github) makes easier to use the same
+configuration across different computers, keep a history of what you have done and if you
+do something wrong you can revert it on a sane way.
+
+If you use vim and your workflow includes C, C++, LaTeX and HDL(Verilog,HDL), then rnpvim
+may be a good option for you. It includes:
+
+* Static syntax check
+* Opensource VCSs integration
+* File browsing
+* Buffer browsing
+* Shell integration
+* Visual indentation guide
+* Git full integration
+
+
+## 2. Requirements
+
+* [Vim](http://www.vim.org) 7.4 or newer
 * [exuberant ctags](http://ctags.sourceforge.net/)
-* [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 * [clang](http://clang.llvm.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
 * [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
-* Python 2.7.x or newer
+* [Python](http://www.python.org) 2.7 or newer
 
-## 2. Installation
 
-### 2.1 Manuall
+## 3. Installation
 
-At the moment there is no automatic installation, only the manual one. Then
-open a terminal ang get the rnpvim code:
+### 3.1 Manuall
+
+At the moment there is no automatic installation, only the manual one.
+Open a  terminal and make a back up from the current Vim settings:
+
+```sh
+mv ~/.vim ~/.vim.bak
+
+mv ~/.vimrc ~/.vimrc.bak
+```
+
+Then get the rnpvim code from Github:
 
 ```sh
 cd ~/src
 
 git clone https://github.com/rafaelnp/rnpvim.git rnpvim
-```
-
-The `~/src` directory was used here as example, but you can change it to any directory you
-want.
-
-backup your current Vim configuration:
-
-```sh
-cp -R ~/.vim ~/.vim.bak
-
-cp ~/.vimrc ~/.vimrc.bak
 ```
 
 and create the symbolic links to the new configuration files:
@@ -44,7 +61,10 @@ ln -s ~/src/rnpvim/.vim ~/.vim
 ln -s ~/src/rnpvim/.vimrc ~/.vimrc
 ```
 
-and execute:
+The `~/src/rnpvim` directory was used here as example, but you can change it to any directory
+you want.
+
+and execute following command to synchronize the plugins with github:
 
 ```sh
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
@@ -52,18 +72,19 @@ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 vim +NeoBundleInstall
 ```
 
-and the plugins shall be synchronized with github.
-
 It is still necessary to compile the YouCompleteMe external libraries. To do it, follow the
 steps bellow:
 
 ```sh
-cp ~/.vim/bundle/YouCOmpleteMe
-
-./install.sh --clang-completer
+cd ~/.vim/bundle/YouCompleteMe
+mkdir ycm_build
+cd ycm_build
+cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON . ~/.vim/bundle/YouCompleteMe/cpp
+make
 ```
 
-Remove the `--clang-completer` if you don't want the semantic support for C-family languages.
+Remove the `-DUSE_SYSTEM_LIBCLANG=ON` if you don't want the semantic support for C-family
+languages.
 
 And to use the nice symbols (skip this if you don't want to use them) on the statusline, the
 powerfonts are needed. Type the following commands in a shell:
@@ -76,18 +97,26 @@ git clone https://github.com/Lokaltog/powerline-fonts
 fc-cache -v ~/.fonts
 ```
 
-### 2. Automatic
+### 3.2 Automatic
 
-Currently under development
+You can download the installation script:
 
-## 3. Vim configuration
+```sh
+wget https://github.com/rafaelnp/rnpvim/tree/labs/install.sh
+./install.sh
+```
+
+It does the same described as described in the manuall installation, saving some time and
+typing.
+
+
+## 4. Vim configuration
 
 This configuration was tested in the Vim 7.4.x version on Linux.
 The main configuration option there is a short explanation. For experienced Vim users it
 may be boring or repetitive, but i think useful for beginners and also for a quick reference.
 
-
-### 3.1 General
+### 4.1 General
 
 **nocompatible**
 
@@ -225,7 +254,7 @@ set noerrorbells
 The options above disable the beep and visual bell (flash). It is really annoying.
 
 
-### 3.2 Formating
+### 4.2 Formating
 
 Text formating configuration:
 
@@ -311,7 +340,7 @@ For a detailed information, there is a good [video](http://vimcasts.org/episodes
 about the theme on the vimcast website.
 
 
-### 3.3 Searching
+### 4.3 Searching
 
 ```vim
 set hlsearch
@@ -328,7 +357,7 @@ The Vim search lines above set up:
 * smartcase: case sensitive only if 
 
 
-### 3.4 Visual/GUI Options
+### 4.4 Visual/GUI Options
 
 **Short messages**
 
@@ -337,6 +366,7 @@ set shortmess=atToO
 ```
 
 TODO: Add description
+
 
 **Window split**
 
@@ -382,7 +412,7 @@ configured mapppings to toggle the menu and toolbar. Take a look at mappings sec
 |  i       |  Use a Vim icon on Vim's Window |
 
 
-## 4. Plugins
+## 5. Plugins
 
 The following plugins are used in the current configuration:
 
@@ -410,16 +440,18 @@ The following plugins are used in the current configuration:
 
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
+![alt_text](http://i.imgur.com/0OP4ood.gif)
+
 
 Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 
-## 5. Mappings
+## 6. Mappings
 
 TODO: Add description
 
 
-## 6. Colorschemes
+## 7. Colorschemes
 
 Available colorschemes:
 
@@ -428,33 +460,33 @@ Available colorschemes:
 
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
-## 7. Known problems
+## 8. Known problems
 
 * The plugin snipMate does note work if the plugin YouCompleteMe is also installed.
 
-## 8. TODO
+## 9. TODO
 
 This README is still incomplete. It is being gradually expanded/improved.
 For new and experimental stuff, take a look at the [labs](https://github.com/rafaelnp/rnpvim/tree/labs) branch.
 
-* Vim configuration explained
+* Vim configuration explained (parcially complete)
 * Plugins configuration
 * FAQ
-* Mappings
+* Mappings documentation
 * HDL(Verilog/VHDL) Plugins
 * Filetype support for Assembly (x86, ARM)
+* Spellcheck
 
+## 10. References
 
-## 9. References
-
-Useful material about Vim i recommend:
+Useful documentation about Vim:
 
 1. [Vim Casts](http://vimcasts.org/)
 2. [Learn Vim Script the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 3. [Writing Vim Scripts](http://stevelosh.com/blog/2011/09/writing-vim-plugins/)
 
 
-# 10. Acknowledgements
+# 11. Acknowledgements
 
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)

@@ -16,25 +16,40 @@ https://github.com/gmarik/vimfiles/blob/master/vimrc
 
 Plugins to test:
 
-https://github.com/Rykka/colorv.vim (color)
+Snippet
+https://github.com/Shougo/neosnippet.vim/
+
+Color
+	https://github.com/Rykka/colorv.vim (color)
+	https://github.com/mattn/webapi-vim
+	https://github.com/Rykka/galaxy.vim
+
 https://github.com/editorconfig/editorconfig-vim
-https://github.com/Yggdroot/indentLine (visual indentation marker)
 https://github.com/terryma/vim-multiple-cursors (multiple cursors)
+
 Unite:
 	https://github.com/Shougo/unite.vim
 	http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/
+
 Vim-table-mode:
 	http://dhruvasagar.com/2013/03/17/vim-table-mode
 	https://github.com/dhruvasagar/vim-table-mode/
+
 https://github.com/benmills/vimux
 https://github.com/Raimondi/delimitMate
 https://github.com/ervandew/supertab
+
 Verilog:
 	https://github.com/search?p=2&q=vim+verilog&ref=searchresults&type=Repositories
 	https://github.com/sychen/systemverilog.vim
+
 ARM Assembly:
 	https://gist.github.com/iori-yja/1615430
 	ttps://github.com/mbbill/undotree
-https://github.com/scrooloose/snipmate-snippets
-https://github.com/msanders/snipmate.vim
+
 https://github.com/Lokaltog/vim-easymotion
+https://github.com/junegunn/vader.vim
+https://github.com/junegunn/vim-easy-align
+https://github.com/Shougo/neosnippet.vim/
+https://github.com/scrooloose/snipmate-snippets
+https://github.com/sk1418/HowMuch

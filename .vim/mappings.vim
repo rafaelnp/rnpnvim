@@ -81,6 +81,10 @@ noremap <Down>  <Nop>
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 
+" highlight the firstcolumn greater than textwidth
+highlight ColorColumn ctermbg=magenta guibg=lightgrey
+call matchadd('ColorColumn', '\%81v', 100)
+
 " Removes trailing spaces
 nnoremap <a-x> :%s/\s\+$//e<CR>
 

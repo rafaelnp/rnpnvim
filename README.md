@@ -354,7 +354,7 @@ The Vim search lines above set up:
 * highlight search
 * incremental search (search as you type)
 * case insensitive search
-* smartcase: case sensitive only if 
+* smartcase: case sensitive only if a capital letter is typed
 
 
 ### 4.4 Visual/GUI Options
@@ -410,6 +410,151 @@ configured mapppings to toggle the menu and toolbar. Take a look at mappings sec
 |  A       | Autoselect for the modeless selection |
 |  g       | Make menu items that are not active grey |
 |  i       |  Use a Vim icon on Vim's Window |
+
+
+## 4.5 Mappings
+
+**Remapping the leader key**
+
+```vim
+let mapleader=","
+```
+
+The leader key is a way to have more mappings available to your use. The line
+above maps the leaderkey to comma.
+
+
+```vim
+nnoremap <space> <nop>
+```
+
+Remap space key to nothing
+
+
+```vim
+nnoremap <a-r> :%s/\r//g<CR>
+```
+
+Remove carriage return from line end
+
+```vim
+nnoremap <a-t> :tabnew<CR>
+```
+
+Open a new tab.
+
+
+```vim
+nnoremap <a-n> :bn<CR>
+nnoremap <a-p> :bp<CR>
+```
+
+Go to next and previous buffer respectively
+
+
+```vim
+nnoremap <a-s> :wa<CR>
+```
+
+Save all buffers
+
+
+```vim
+nnoremap ,d    :call Reloadconfig()<CR>
+```
+
+Reloads Vim config.
+
+
+```vim
+nnoremap <silent> <a-d> :call DumpMaps()<CR>
+```
+
+Dumps all mappings in a file.
+
+```vim
+nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>
+inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>
+```
+
+Added current date and time
+
+```vim
+noremap <buffer> <a-m> :%s///g<CR>
+```
+
+Removes CR from the line end.
+
+```vim
+noremap <a-q> :ccl<CR>
+```
+
+Closes the quickfix window
+
+```vim
+nnoremap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR><ESC>
+
+nnoremap <silent> <A-2> :if &guioptions=~'T' \| set guioptions-=T \| else \| set guioptions+=T \| endif<CR><ESC>
+
+nnoremap <silent> <A-3> :if &guioptions=~'r' \| set guioptions-=r \| else \| set guioptions+=r \| endif<CR><ESC>
+
+nnoremap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set guioptions+=l \| endif<CR><ESC>
+```
+
+Toggle the toolbar and scroll bars visibility.
+
+
+```vim
+nnoremap <s-down>   <c-w>w
+nnoremap <s-up>     <c-w>W
+nnoremap <s-left>   <c-w>h
+nnoremap <s-right>  <c-w>l
+```
+
+Window movements
+
+```vim
+noremap <Left>  <Nop>
+noremap <Right> <Nop>
+noremap <Up>    <Nop>
+noremap <Down>  <Nop>
+```
+
+Disable arrow keys in normal mode.
+
+
+```vim
+highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
+call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
+```
+
+Highlight redundant spaces (spaces at the end of the line, spaces before or after tabs):
+
+```vim
+highlight ColorColumn ctermbg=magenta guibg=lightgrey
+call matchadd('ColorColumn', '\%81v', 100)
+```
+
+highlight the firstcolumn greater than textwidth
+
+```VimL
+nnoremap <a-x> :%s/\s\+$//e<CR>
+```
+
+Removes trailing spaces
+
+```vim
+nnoremap <silent> - :
+```
+
+Map colon to dash.
+
+```VimL
+vnoremap Q gq
+nnoremap Q gqap
+```
+
+Use Q for formatting the current paragraph (or selection).
 
 
 ## 5. Plugins

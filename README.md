@@ -557,6 +557,36 @@ nnoremap Q gqap
 Use Q for formatting the current paragraph (or selection).
 
 
+```VimL
+nnoremap j gj
+nnoremap k gk
+```
+
+If long lines with line wrapping enabled, this solves the problem that pressing
+down jumpes your cursor “over” the current line to the next line.  It changes
+behaviour so that it jumps to the next row in the editor (much more natural).
+
+
+```VimL
+nnoremap <silent> <a-c> :nohlsearch<CR>
+```
+
+Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”? Use this
+
+```VimL
+inoremap <F1> <nop>
+nnoremap <F1> <nop>
+vnoremap <F1> <nop>
+```
+
+Disable <F1> key.
+
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+Opens the `~/.vimrc` file.
+
+
 ## 5. Plugins
 
 The following plugins are used in the current configuration:

@@ -122,7 +122,7 @@ set scrolloff=2        " number of screen lines to keep above and below the curs
 set splitright         " Always splits to the right and below
 set splitbelow
 set showbreak=↳        " Show the linebreak for a long line
-set colorcolumn=+1     " highlight column after 'textwidth'
+"set colorcolumn=+1     " highlight column after 'textwidth'
 colorscheme vividchalk
 set noshowmode         " Don't show the mode, Powerline shows it
 set showmatch          " When a bracket is inserted, briefly jump to the matching one.
@@ -131,7 +131,7 @@ set ead=both           " set in which direction 'equalalways' works (ver, hor, b
 set wildmenu           " use autocompletion on command line
 set cursorline         " sets cursor line highlight. cool :)
 set display=uhex       " show unprintable characters hexadecimal
-set listchars=eol:$,tab:>\ 
+set listchars=tab:▸\ ,eol:$,
 
 if has('mouse')
 	set mouse=a        " enable mouse in all modes

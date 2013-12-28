@@ -1,20 +1,33 @@
 
-Documents to read:
+1 - Documents to read:
 
 http://learnvimscriptthehardway.stevelosh.com/
 http://stevelosh.com/blog/2011/09/writing-vim-plugins/
 http://blog.edmondcote.com/2011/05/vim-setup-for-systemverilog.html
 
-Options to test:
+2 - Options to test:
 
 
-.vimrc to test:
+3 - .vimrc to test:
 
-https://github.com/terryma/dotfiles/blob/master/.vimrc
 https://github.com/bling/dotvim
 https://github.com/gmarik/vimfiles/blob/master/vimrc
 
-Plugins to test:
+4 - Plugins to test:
+
+4.1 - Higher priotity
+
+Verilog:
+	https://github.com/search?p=2&q=vim+verilog&ref=searchresults&type=Repositories
+	https://github.com/sychen/systemverilog.vim
+
+ARM Assembly:
+	https://gist.github.com/iori-yja/1615430
+
+https://github.com/Lokaltog/vim-easymotion
+https://github.com/junegunn/vim-easy-align
+
+4.2 - Lower priority
 
 Snippet
 https://github.com/Shougo/neosnippet.vim/
@@ -35,21 +48,12 @@ Vim-table-mode:
 	http://dhruvasagar.com/2013/03/17/vim-table-mode
 	https://github.com/dhruvasagar/vim-table-mode/
 
+https://github.com/mbbill/undotree
 https://github.com/benmills/vimux
 https://github.com/Raimondi/delimitMate
 https://github.com/ervandew/supertab
-
-Verilog:
-	https://github.com/search?p=2&q=vim+verilog&ref=searchresults&type=Repositories
-	https://github.com/sychen/systemverilog.vim
-
-ARM Assembly:
-	https://gist.github.com/iori-yja/1615430
-	ttps://github.com/mbbill/undotree
-
-https://github.com/Lokaltog/vim-easymotion
-https://github.com/junegunn/vader.vim
-https://github.com/junegunn/vim-easy-align
-https://github.com/Shougo/neosnippet.vim/
-https://github.com/scrooloose/snipmate-snippets
-https://github.com/sk1418/HowMuch
+https://github.com/junegunn/vader.vim (plugin tester)
+https://github.com/Shougo/neosnippet.vim/  (code snippets)
+https://github.com/scrooloose/snipmate-snippets  (code snippets)
+https://github.com/sk1418/HowMuch (calculator)
+https://github.com/szw/vim-ctrlspace (workspace management)

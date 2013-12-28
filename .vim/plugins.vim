@@ -1,7 +1,7 @@
 " Plugins
 
-" 1 - Vundle
-" Configured in the vundle.vim file
+" 1 - neobundle.vim
+" Configured in the bundle.vim file
 
 " 2 - genutils
 "     http://www.vim.org/scripts/script.php?script_id=197
@@ -129,7 +129,7 @@ let NERDTreeShowLineNumbers   = 0
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_allow_changing_updatetime = 1
 let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_filetype_whitelist = {
@@ -146,6 +146,10 @@ let g:ycm_filetype_whitelist = {
 								\'sh': 1,
 								\'zsh': 1,
 								\}
+
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_key_invoke_completion = '<C-Space>'
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
@@ -224,3 +228,10 @@ let g:airline#extensions#eclim#enabled = 0
 " 19 - fugitive
 "      https://github.com/tpope/vim-fugitive
 " TODO: COnfigure fugitive
+
+" 20 - ultisnips
+"      https://github.com/SirVer/ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"

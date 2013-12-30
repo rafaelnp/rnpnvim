@@ -103,6 +103,7 @@ You can download the installation script:
 
 ```sh
 wget https://github.com/rafaelnp/rnpvim/tree/labs/install.sh
+chmod u+x install.sh
 ./install.sh
 ```
 

@@ -121,7 +121,7 @@ may be boring or repetitive, but i think useful for beginners and also for a qui
 
 **nocompatible**
 
-```vim
+```VimL
 set nocompatible
 ```
 
@@ -131,7 +131,7 @@ the full Vim capabilities
 
 **autodir**
 
-```vim
+```VimL
 set autochdir
 ```
 
@@ -139,24 +139,26 @@ Always switch to the current file directory when you open, switch, close a file/
 
 **autowriteall**
 
-```vim
+```VimL
 set autowriteall
 ```
 
 Saves the file contents when switching/opening/creating buffers/files/windows. Useful to
 avoid data loss.
 
+
 **autoread**
 
-```vim
+```VimL
 set autoread
 ```
 
 Load file modified outside vim and not modified in Vim
 
+
 **backup options**
 
-```vim
+```VimL
 set nobackup
 ```
 
@@ -167,15 +169,16 @@ option unnecessary. Deactivating this option makes also the **writebackup**, **b
 
 **backspace**
 
-```vim
+```VimL
  set backspace=indent,eol,start
 ```
 
 Configure the backspace behaviour over indenting, eol and when starting the inserting mode
 
+
 **helplang**
 
-```vim
+```VimL
 set helplang=de,en
 ```
 
@@ -183,17 +186,9 @@ Comma separated list of languages.  Vim will use the first language for which th
 help can be found.  The English help will always be used as a last resort.
 
 
-**ruler**
-
-```vim
-set ruler
-```
-
-Show the cursor position (line and column number).Each window has its own ruler
-
 **numbers**
 
-```vim
+```VimL
 set number
 ```
 
@@ -222,7 +217,7 @@ Vim supports the 3 most used [line terminations](https://en.wikipedia.org/wiki/N
 (unix, mac, dos) and the corresponding operating systems as well. To unify it and the text
 encoding, the following configuration is used:
 
-```vim
+```VimL
     if has('unix') || has('macunix')
         set termencoding=utf-8
         set encoding=utf-8
@@ -246,7 +241,7 @@ Here the use of UTF-8 and unix is inforced. This can be changed here to suit you
 
 **Sound and visual feedback**
 
-```vim
+```VimL
 set visualbell t_vb=
 set novisuallbell
 set noerrorbells
@@ -261,7 +256,7 @@ Text formating configuration:
 
 **syntax**
 
-```vim
+```VimL
 syntax enable
 ```
 
@@ -271,7 +266,7 @@ keywords or text matching a pattern)  with different colours
 
 **Formatoptions table**
 
-```vim
+```VimL
 set fo=tcrqn
 ```
 
@@ -291,7 +286,7 @@ For more details type `:help fo-table`.
 
 **Indentation options**
 
-```vim
+```VimL
 set autoindent
 set smartindent
 set cindent
@@ -301,19 +296,19 @@ set copyindent
 TODO: Add description
 
 
-**Line width and margin**
+**Line width**
 
-```vim
-set textwidth=90    " no fucking long lines
-set wrapmargin=2    " space after linebrake
+```VimL
+set textwidth=80
 ```
 
-TODO: Add description
+Used to limit and avoid long lines. Some people prefer them, so you can change it
+here if necessary.
 
 
 **cpoptions**
 
-```vim
+```VimL
 set cpoptions=BceF
 ```
 
@@ -330,7 +325,7 @@ set cpoptions=BceF
 I use TABs for indentation with a unified configuration. If you want to use spaces, remove
 `noexpandtab`and replace it with `expandtab`.
 
-```vim
+```VimL
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -343,7 +338,7 @@ about the theme on the vimcast website.
 
 ### 4.3 Searching
 
-```vim
+```VimL
 set hlsearch
 set incsearch
 set ignorecase
@@ -360,10 +355,65 @@ The Vim search lines above set up:
 
 ### 4.4 Visual/GUI Options
 
+**showcmd**
+
+```VimL
+set showcmd
+```
+
+Show Command line in the last line of the screen.
+
+
+**Statusline**
+
+```VimL
+set laststatus=2
+```
+
+Always shows status line.
+
+
 **Short messages**
 
-```vim
-set shortmess=atToO
+```VimL
+set shortmess=aToO
+```
+
+This option sets the file operation messages to avoid hitting ENTER when this messages
+come up. The table bellow lists the options used:
+
+| Option   | Description |
+|:--------:|:-----------:|
+|    a     | Includes f, i, l, m, n, r, w, x abbreviation options |
+|    T     | Truncates file messages in the middle |
+|    o     | Overwrite message when writing a file with a reading file message |
+|    O     | Overwrite previous message when reading a file |
+
+For a complete reference, see `:help shortmess`
+
+
+**ruler**
+
+```VimL
+set ruler
+```
+
+Show the cursor position (line and column number).Each window has its own ruler
+
+
+**number**
+
+```VimL
+set number
+```
+
+Shows line numbering.
+
+
+**scrolloff**
+
+```VimL
+set scrolloff=2
 ```
 
 TODO: Add description
@@ -371,7 +421,7 @@ TODO: Add description
 
 **Window split**
 
-```vim
+```VimL
 set splitbellow
 set splitright
 ```
@@ -379,26 +429,110 @@ set splitright
 Tells how vim should split windows. If you have different preference comment this/these
 line(s).
 
-**Status bar**
+
+**showbreak**
+
+```VimL
+set showbreak=↳
+```
+
+Show a visual line break symbol.
+
+
+**colorscheme**
+
+```VimL
+colorscheme vividchalk
+```
+
+TODO: Add description
+
+
+**noshowmode**
+
+```VimL
+set noshowmode
+```
+
+TODO: Add description
+
+
+**showmatch**
+
+```VimL
+set showmatch
+```
+
+TODO: Add description
+
+
+**matchtime**
+
+```VimL
+set matchtime=2
+```
+
+TODO: Add description
+
+
+```VimL
+set ead=both
+```
+
+TODO: Add description
+
+
+**wildmenu**
+
+```VimL
+set wildmenu
+```
+
+TODO: Add description
+
+
+**cursorline**
+
+```VimL
+set cursorline
+```
+
+TODO: Add description
+
+
+**display**
+
+```VimL
+set display=uhex
+```
+
+TODO: Add description
+
+
+**listchar**
+
+```VimL
+set listchars=tab:▸\ ,eol:$,
+```
 
 TODO: Add decription
 
-**Scrolloff**
-
-TODO: Add decription
-
-**colorcolumn**
-
-TODO: Add decription
 
 **mouse**
+
+```VimL
+if has('mouse')
+	set mouse=a        " enable mouse in all modes
+	set mousehide      " hides the mouse while typing
+endif
+```
 
 TODO: Add decription
 
 
 **guioptions**
 
-```vim
+```VimL
 set guioptions=aAgi
 ```
 
@@ -413,11 +547,47 @@ configured mapppings to toggle the menu and toolbar. Take a look at mappings sec
 |  i       |  Use a Vim icon on Vim's Window |
 
 
+```VimL
+"Default font
+set guifont=Liberation\ Mono\ for\ Powerline\ 8
+```
+
+TODO: Add decription
+
+```VimL
+highlight Pmenu guibg=brown gui=bold
+highlight Pmenu ctermbg=238 gui=bold
+```
+
+Pop-up menu color setteings
+
+
+**mousemodel**
+
+```VimL
+	set mousemodel=popup
+```
+
+TODO: Add decription
+
+
+**Terminal/CLI**
+
+```VimL
+	set bg=dark
+	" Enable 256 colors in terminal
+	if &term == 'xterm' || &term == 'screen' || &term =='terminator'
+		set t_Co=256
+	endif
+endif
+```
+
+
 ## 4.5 Mappings
 
 **Remapping the leader key**
 
-```vim
+```VimL
 let mapleader=","
 ```
 
@@ -425,27 +595,27 @@ The leader key is a way to have more mappings available to your use. The line
 above maps the leaderkey to comma.
 
 
-```vim
+```VimL
 nnoremap <space> <nop>
 ```
 
 Remap space key to nothing
 
 
-```vim
+```VimL
 nnoremap <a-r> :%s/\r//g<CR>
 ```
 
 Remove carriage return from line end
 
-```vim
+```VimL
 nnoremap <a-t> :tabnew<CR>
 ```
 
 Open a new tab.
 
 
-```vim
+```VimL
 nnoremap <a-n> :bn<CR>
 nnoremap <a-p> :bp<CR>
 ```
@@ -453,46 +623,47 @@ nnoremap <a-p> :bp<CR>
 Go to next and previous buffer respectively
 
 
-```vim
+```VimL
 nnoremap <a-s> :wa<CR>
 ```
 
 Save all buffers
 
 
-```vim
+```VimL
 nnoremap ,d    :call Reloadconfig()<CR>
 ```
 
 Reloads Vim config.
 
 
-```vim
+```VimL
 nnoremap <silent> <a-d> :call DumpMaps()<CR>
 ```
 
 Dumps all mappings in a file.
 
-```vim
-nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>
-inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>
+```VimL
+nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
+vnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
+inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>
 ```
 
 Added current date and time
 
-```vim
+```VimL
 noremap <buffer> <a-m> :%s///g<CR>
 ```
 
 Removes CR from the line end.
 
-```vim
+```VimL
 noremap <a-q> :ccl<CR>
 ```
 
 Closes the quickfix window
 
-```vim
+```VimL
 nnoremap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR><ESC>
 
 nnoremap <silent> <A-2> :if &guioptions=~'T' \| set guioptions-=T \| else \| set guioptions+=T \| endif<CR><ESC>
@@ -505,7 +676,7 @@ nnoremap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set
 Toggle the toolbar and scroll bars visibility.
 
 
-```vim
+```VimL
 nnoremap <s-down>   <c-w>w
 nnoremap <s-up>     <c-w>W
 nnoremap <s-left>   <c-w>h
@@ -514,7 +685,7 @@ nnoremap <s-right>  <c-w>l
 
 Window movements
 
-```vim
+```VimL
 noremap <Left>  <Nop>
 noremap <Right> <Nop>
 noremap <Up>    <Nop>
@@ -524,14 +695,14 @@ noremap <Down>  <Nop>
 Disable arrow keys in normal mode.
 
 
-```vim
+```VimL
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 ```
 
 Highlight redundant spaces (spaces at the end of the line, spaces before or after tabs):
 
-```vim
+```VimL
 highlight ColorColumn ctermbg=magenta guibg=lightgrey
 call matchadd('ColorColumn', '\%81v', 100)
 ```

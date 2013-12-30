@@ -65,8 +65,7 @@ set ai              " autoindent
 set si              " smartindent
 set cindent         " do c-style indenting
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
-set textwidth=90    " no fucking long lines
-set wrapmargin=2    " space after linebrake
+set textwidth=80    " no fucking long lines
 set cpoptions=BceF  " compatible options
 
 " Here are the space and tabulator keys definition:
@@ -112,25 +111,24 @@ endif
 "============
 " GUI Options
 "============
-tab all                " open a new tab instead of a new vim instance
-set showcmd            " show command in last line of screen
-set laststatus=2       " statusline always visible
-set shortmess=atToO    " see: help shortmess
-set ruler              " Show cursor line and column number position
-set number             " show line numbers
-set scrolloff=2        " number of screen lines to keep above and below the cursor.
-set splitright         " Always splits to the right and below
+tab all                      " open a new tab instead of a new vim instance
+set showcmd                  " show command in last line of screen
+set laststatus=2             " statusline always visible
+set shortmess=aToO           " see: help shortmess
+set ruler                    " Show cursor line and column number position
+set number                   " show line numbers
+set scrolloff=2              " number of screen lines to keep above and below the cursor.
+set splitright               " Always splits to the right and below
 set splitbelow
-set showbreak=↳        " Show the linebreak for a long line
-"set colorcolumn=+1     " highlight column after 'textwidth'
+set showbreak=↳              " Show the linebreak for a long line
 colorscheme vividchalk
-set noshowmode         " Don't show the mode, Powerline shows it
-set showmatch          " When a bracket is inserted, briefly jump to the matching one.
-set matchtime=2        " Tenths of a second to show the matching parten
-set ead=both           " set in which direction 'equalalways' works (ver, hor, both)
-set wildmenu           " use autocompletion on command line
-set cursorline         " sets cursor line highlight. cool :)
-set display=uhex       " show unprintable characters hexadecimal
+set noshowmode               " Don't show the mode, Powerline shows it
+set showmatch                " When a bracket is inserted, briefly jump to the matching one.
+set matchtime=2              " Tenths of a second to show the matching parten
+set ead=both                 " set in which direction 'equalalways' works (ver, hor, both)
+set wildmenu                 " use autocompletion on command line
+set cursorline               " sets cursor line highlight. cool :)
+set display=uhex             " show unprintable characters hexadecimal
 set listchars=tab:▸\ ,eol:$,
 
 if has('mouse')

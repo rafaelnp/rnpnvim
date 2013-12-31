@@ -34,8 +34,9 @@ nnoremap ,d    :call Reloadconfig()<CR>
 nnoremap <silent> <a-d> :call DumpMaps()<CR>
 
 " Insert current date and time
-nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>
-inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S")<CR>
+nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
+vnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
+inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>
 
 " remove ^M in current file
 noremap <buffer> <a-m> :%s///g<CR>
@@ -81,6 +82,10 @@ noremap <Down>  <Nop>
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 
+" highlight the firstcolumn greater than textwidth
+highlight ColorColumn ctermbg=magenta guibg=lightred
+call matchadd('ColorColumn', '\%81v', 100)
+
 " Removes trailing spaces
 nnoremap <a-x> :%s/\s\+$//e<CR>
 
@@ -107,27 +112,4 @@ vnoremap <F1> <nop>
 
 " opens .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-
-"==============
-" Abbreviations
-"==============
-
-" global
-
-" name
-iabbrev Rnp   Rafael do Nascimento Pereira
-"e-mail
-iabbrev rnp@  rnp@25ghz.net
-
-" command line
-cabbrev help    tab help
-cabbrev mapping ~/.vim/mappings.vim
-cabbrev bundle  ~/.vim/neobundle.vim
-cabbrev plugin  ~/.vim/plugins.vim
-cabbrev config  ~/.vim/config.vim
-cabbrev func    ~/.vim/functions.vim
-
-" english
-iabbrev adn  and
-iabbrev waht what
 

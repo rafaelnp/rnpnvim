@@ -115,3 +115,6 @@ source ~/.vim/mappings.vim
 
 " Plugin-specific configuration.
 source ~/.vim/plugins.vim
+
+" Abbreviations
+sourc ~/.vim/abbrev.vim

@@ -10,7 +10,6 @@ http://blog.edmondcote.com/2011/05/vim-setup-for-systemverilog.html
 
 3 - .vimrc to test:
 
-https://github.com/bling/dotvim
 https://github.com/gmarik/vimfiles/blob/master/vimrc
 
 4 - Plugins to test:
@@ -19,7 +18,6 @@ https://github.com/gmarik/vimfiles/blob/master/vimrc
 
 Verilog:
 	https://github.com/search?p=2&q=vim+verilog&ref=searchresults&type=Repositories
-	https://github.com/sychen/systemverilog.vim
 
 ARM Assembly:
 	https://gist.github.com/iori-yja/1615430
@@ -31,6 +29,7 @@ https://github.com/junegunn/vim-easy-align
 
 Snippet
 https://github.com/Shougo/neosnippet.vim/
+https://github.com/scrooloose/snipmate-snippets  (code snippets)
 
 Color
 	https://github.com/Rykka/colorv.vim (color)
@@ -53,7 +52,5 @@ https://github.com/benmills/vimux
 https://github.com/Raimondi/delimitMate
 https://github.com/ervandew/supertab
 https://github.com/junegunn/vader.vim (plugin tester)
-https://github.com/Shougo/neosnippet.vim/  (code snippets)
-https://github.com/scrooloose/snipmate-snippets  (code snippets)
 https://github.com/sk1418/HowMuch (calculator)
 https://github.com/szw/vim-ctrlspace (workspace management)

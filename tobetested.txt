@@ -10,7 +10,6 @@ http://blog.edmondcote.com/2011/05/vim-setup-for-systemverilog.html
 
 3 - .vimrc to test:
 
-https://github.com/gmarik/vimfiles/blob/master/vimrc
 
 4 - Plugins to test:
 

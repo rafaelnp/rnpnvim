@@ -117,7 +117,6 @@ let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
-
 " 12 - nerdtree
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeShowHidden        = 1
@@ -250,11 +249,26 @@ let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
 let g:vimshell_force_overwrite_statusline = 0
 
 " 23 - Calender.vim
-"      https://github.com/itchyny/calendar.vim'
+"      https://github.com/itchyny/calendar.vim
+" TODO: FInish configuration
 
 " 24 - vim-SystemVerilog
-"      https://github.com/WeiChungWu/vim-SystemVerilog'
+"      https://github.com/WeiChungWu/vim-SystemVerilog
+" TODO: FInish configuration
 
 " 25 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
+" TODO: FInish configuration
+
+" 26 - vim-easy-align
+"      https://github.com/junegunn/vim-easy-align
+" TODO: FInish configuration
+
+" 27 - vim-latex
+"      https://github.com/jcf/vim-latex
+" TODO: FInish configuration
+
+" 28 - vim-easymotion
+"      thub.com/Lokaltog/vim-easymotion
+" TODO: FInish configuration
 

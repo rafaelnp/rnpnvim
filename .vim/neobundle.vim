@@ -20,7 +20,6 @@ NeoBundle 'Shougo/vimproc', {
  \ }
 
 
-" NeoBundle 'gmarik/vundle'
 NeoBundle 'genutils'
 NeoBundle 'SelectBuf'
 NeoBundle 'VimExplorer'
@@ -40,7 +39,11 @@ NeoBundle 'https://github.com/nathanaelkane/vim-indent-guides'
 NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'https://github.com/tpope/vim-fugitive'
 NeoBundle 'https://github.com/Shougo/vimshell.vim'
+NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog'
+
+" Under test
 NeoBundle 'https://github.com/SirVer/ultisnips'
+NeoBundle 'https://github.com/itchyny/calendar.vim'
 
 let g:neobundle#types#git#default_protocol = "https"
 filetype plugin indent on     " required!

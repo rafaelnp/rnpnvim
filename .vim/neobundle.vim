@@ -40,6 +40,7 @@ NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'https://github.com/tpope/vim-fugitive'
 NeoBundle 'https://github.com/Shougo/vimshell.vim'
 NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog'
+NeoBundle 'https://github.com/Cognoscan/vim-vhdl'
 
 " Under test
 NeoBundle 'https://github.com/SirVer/ultisnips'

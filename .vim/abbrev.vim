@@ -18,12 +18,23 @@ cabbrev config  ~/.vim/config.vim
 cabbrev func    ~/.vim/functions.vim
 cabbrev abbrev  ~/.vim/abbrev.vim
 cabbrev vimrc   ~/.vimrc
+cabbrev vshell  VimShellTab
+" Open vimshell in a new small window
+cabbrev vshellp VimShellPop
 
-" english
-iabbrev adn  and
-iabbrev waht what
+" Dutch
+iabbrev Belgie   België
+iabbrev Brazilie Brazilië
 
-" german
+" English
+iabbrev tehn   then
+iabbrev adn    and
+iabbrev waht   what
+iabbrev itll   it'll
+iabbrev youre  you're
+iabbrev theyre they're
+
+" German
 iabbrev mfg Mit freundlichen Grüßen,
 iabbrev Mfg Mit freundlichen Grüßen,
 iabbrev MFG Mit freundlichen Grüßen,
@@ -31,7 +42,9 @@ iabbrev MFG Mit freundlichen Grüßen,
 iabbrev Gruesse Grüße
 iabbrev Strasse Straße
 
-" Dutch
-iabbrev Belgie België
-iabbrev Brazilie Brazilië
+" Portuguese
+iabbrev att         atenciosamente
+iabbrev Att         Atenciosamente
+iabbrev instalacao  coração
+iabbrev instalacoes corações
 

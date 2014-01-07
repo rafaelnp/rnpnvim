@@ -1,7 +1,7 @@
 " Plugins
 
 " 1 - neobundle.vim
-" Configured in the bundle.vim file
+" Configured in the ~/.vim/bundle.vim file
 
 " 2 - genutils
 "     http://www.vim.org/scripts/script.php?script_id=197
@@ -111,11 +111,12 @@ let g:ctrlp_open_new_file = 't'
 " 10 - numbers
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
-" 11 - nerdtree-tabs
+" 11 - vim-nerdtree-tabs
 map <F9> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
+
 
 " 12 - nerdtree
 let NERDTreeCaseSensitiveSort = 1
@@ -158,7 +159,7 @@ nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 "      https://github.com/jtratner/vim-flavored-markdown
 augroup markdown
 	au!
-	au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+	au BufNewFile,BufRead,BufReadPost,FileReadPost *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
 " 16 - vim-indent-guides
@@ -227,11 +228,33 @@ let g:airline#extensions#eclim#enabled = 0
 
 " 19 - fugitive
 "      https://github.com/tpope/vim-fugitive
-" TODO: COnfigure fugitive
+" TODO: Configure fugitive
 
 " 20 - ultisnips
 "      https://github.com/SirVer/ultisnips
+" TODO: FInish configuration
+
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
+
+" 21 - Vimproc
+"      https://github.com/Shougo/vimproc.vim
+"      Configured in ~/.vim/bundle.vim
+
+" 22 - vimshell.vim
+"      https://github.com/Shougo/vimshell.vim
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
+let g:vimshell_force_overwrite_statusline = 0
+
+" 23 - Calender.vim
+"      https://github.com/itchyny/calendar.vim'
+
+" 24 - vim-SystemVerilog
+"      https://github.com/WeiChungWu/vim-SystemVerilog'
+
+" 25 - vim-vhdl
+"      https://github.com/Cognoscan/vim-vhdl
+

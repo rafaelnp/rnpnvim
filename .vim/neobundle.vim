@@ -45,6 +45,13 @@ NeoBundle 'https://github.com/Cognoscan/vim-vhdl'
 " Under test
 NeoBundle 'https://github.com/SirVer/ultisnips'
 NeoBundle 'https://github.com/itchyny/calendar.vim'
+NeoBundle 'https://github.com/junegunn/vim-easy-align'
+NeoBundle 'https://github.com/vim-scripts/armasm'
+"NeoBundle 'https://github.com/vim-scripts/verilog_systemverilog.vim'
+"NeoBundle 'https://github.com/salinasv/vim-vhdl'
+NeoBundle 'https://github.com/jcf/vim-latex'
+NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
+
 
 let g:neobundle#types#git#default_protocol = "https"
 filetype plugin indent on     " required!

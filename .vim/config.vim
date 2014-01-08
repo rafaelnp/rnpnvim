@@ -125,6 +125,7 @@ colorscheme vividchalk
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
 set matchtime=2              " Tenths of a second to show the matching parten
+set equalalways
 set ead=both                 " set in which direction 'equalalways' works (ver, hor, both)
 set wildmenu                 " use autocompletion on command line
 set cursorline               " sets cursor line highlight. cool :)

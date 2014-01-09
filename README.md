@@ -1,29 +1,34 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2013.12.19 (Thu) 18:02:03 CET (UTC +1 hour)
+Last update: 2014.01.08 (Wed) 13:23:50 (UTC +0100 CET)
 
-This Vim setup is focused on C/C++, Assembly and HDL (Verilog, VDHL). This is still a work
-under development.
+This Vim setup is based on my daily workflow at work/home, where is normaly use
+C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
+Suggestions, corrections are welcome :-)
 
 ## 1. Why rnpvim ?
 
 Have a Vim configuration on git (in this case Github) makes easier to use the same
-configuration across different computers, keep a history of what you have done and if you
-do something wrong you can revert it on a sane way.
+configuration across different computers, keep a history of what you have done and
+if you do something wrong you can revert it on a sane way.
 
-If you use vim and your workflow includes C, C++, LaTeX and HDL(Verilog,HDL), then rnpvim
-may be a good option for you. It includes:
+If you use vim and your workflow includes Assembly, C, C++, LaTeX and HDL(Verilog,HDL),
+then rnpvim may be a good option for you. It includes:
 
-* Static syntax check
+* Syntax check
 * Opensource VCSs integration
 * File browsing
 * Buffer browsing
 * Shell integration
 * Visual indentation guide
 * Git full integration
+* Enhanced Vim motion
+* Autocompletion
 
 
 ## 2. Requirements
+
+This Vim setup has the following requirements/dependencies:
 
 * [Vim](http://www.vim.org) 7.4 or newer
 * [exuberant ctags](http://ctags.sourceforge.net/)
@@ -36,8 +41,10 @@ may be a good option for you. It includes:
 
 ### 3.1 Manuall
 
-At the moment there is no automatic installation, only the manual one.
-Open a  terminal and make a back up from the current Vim settings:
+This section describes the manual installation step by step. You can skip it if
+you prefer the [automatic one](https://github.com/rafaelnp/rnpvim#32-automatic).
+
+Start by opening a terminal and make a back up from the current Vim settings:
 
 ```sh
 mv ~/.vim ~/.vim.bak
@@ -126,7 +133,7 @@ set nocompatible
 ```
 
 It turns on/off the Vi-compatible mode. We turn off here the compatibility mode, so we can
-the full Vim capabilities
+the full Vim capabilities.
 
 
 **autodir**
@@ -135,7 +142,7 @@ the full Vim capabilities
 set autochdir
 ```
 
-Always switch to the current file directory when you open, switch, close a file/buffer/window
+Always switch to the current file directory when you open, switch, close a file/buffer/window.
 
 **autowriteall**
 
@@ -143,8 +150,8 @@ Always switch to the current file directory when you open, switch, close a file/
 set autowriteall
 ```
 
-Saves the file contents when switching/opening/creating buffers/files/windows. Useful to
-avoid data loss.
+Saves the file contents when switching/opening/creating buffers/files/windows. Useful
+to avoid data loss.
 
 
 **autoread**
@@ -153,7 +160,7 @@ avoid data loss.
 set autoread
 ```
 
-Load file modified outside vim and not modified in Vim
+Load file modified outside vim and not modified in Vim.
 
 
 **backup options**
@@ -173,7 +180,7 @@ option unnecessary. Deactivating this option makes also the **writebackup**, **b
  set backspace=indent,eol,start
 ```
 
-Configure the backspace behaviour over indenting, eol and when starting the inserting mode
+Configure the backspace behaviour over indenting, eol and when starting the inserting mode.
 
 
 **helplang**
@@ -182,8 +189,8 @@ Configure the backspace behaviour over indenting, eol and when starting the inse
 set helplang=de,en
 ```
 
-Comma separated list of languages.  Vim will use the first language for which the desired
-help can be found.  The English help will always be used as a last resort.
+Comma separated list of languages.  Vim will use the first language for which the
+desired help can be found.  The English help will always be used as a last resort.
 
 
 **numbers**
@@ -208,7 +215,7 @@ endif
 ```
 
 List of files to be ignored when performing different actions (autocomplete, expansions,
-and so on). Add here the files you want to ignore.
+and so on). Add here the files you want to ignore. It can be expanded to suit your needs.
 
 
 **Encoding and line termination**
@@ -260,8 +267,8 @@ Text formating configuration:
 syntax enable
 ```
 
-Enables the syntax highlighting engine. It highlight different parts of the text (specific
-keywords or text matching a pattern)  with different colours
+Enables the syntax highlighting engine. It highlight different parts of the text
+(specific keywords or text matching a pattern) with different colours.
 
 
 **Formatoptions table**
@@ -275,11 +282,11 @@ should format the text. The following options are used:
 
 | Option   | Description |
 |:----------:|:--------------:|
-|  t	| Auto-wrap text using textwidth |
-|  c	| Auto-wrap comments using textwidth, inserting the current comment leader automatically |
-|  r	| Automatically insert the current comment leader after hitting |
-|  q	| Allow formatting of comments with "[gq](http://vimdoc.sourceforge.net/htmldoc/change.html#gq)" |
-|  n	|When formatting text, recognize numbered lists |
+|    t       | Auto-wrap text using textwidth |
+|    c       | Auto-wrap comments using textwidth, inserting the current comment leader automatically |
+|    r       | Automatically insert the current comment leader after hitting |
+|    q       | Allow formatting of comments with "[gq](http://vimdoc.sourceforge.net/htmldoc/change.html#gq)" |
+|    n       |When formatting text, recognize numbered lists |
 
 For more details type `:help fo-table`.
 
@@ -293,7 +300,7 @@ set cindent
 set copyindent
 ```
 
-TODO: Add description
+Indentation setup. See `:help indent` for more details.
 
 
 **Line width**
@@ -389,7 +396,7 @@ come up. The table bellow lists the options used:
 |    o     | Overwrite message when writing a file with a reading file message |
 |    O     | Overwrite previous message when reading a file |
 
-For a complete reference, see `:help shortmess`
+For a complete reference, see `:help shortmess`.
 
 
 **ruler**
@@ -398,7 +405,7 @@ For a complete reference, see `:help shortmess`
 set ruler
 ```
 
-Show the cursor position (line and column number).Each window has its own ruler
+Show the cursor position (line and column number).Each window has its own ruler.
 
 
 **number**
@@ -416,7 +423,8 @@ Shows line numbering.
 set scrolloff=2
 ```
 
-TODO: Add description
+Minimal number of screen lines to keep above and below the cursor. This will make
+some context visible around where you are working. Specially useful when programming.
 
 
 **Window split**
@@ -436,7 +444,7 @@ line(s).
 set showbreak=↳
 ```
 
-Show a visual line break symbol.
+Show a visual line break symbol. Useful when opening files with long lines.
 
 
 **colorscheme**
@@ -445,7 +453,7 @@ Show a visual line break symbol.
 colorscheme vividchalk
 ```
 
-TODO: Add description
+This is (so far) my favorite colorscheme. You can set up here your favorite one.
 
 
 **noshowmode**
@@ -454,7 +462,7 @@ TODO: Add description
 set noshowmode
 ```
 
-TODO: Add description
+Disable showmode on the statusline. For this purpose we use the vim-airline plugin.
 
 
 **showmatch**
@@ -463,7 +471,7 @@ TODO: Add description
 set showmatch
 ```
 
-TODO: Add description
+Show matching bracket.
 
 
 **matchtime**
@@ -472,15 +480,24 @@ TODO: Add description
 set matchtime=2
 ```
 
-TODO: Add description
+Time in tenths of a second to show the matching bracket.
 
+
+**Window size**
 
 ```VimL
+set equalalways
 set ead=both
 ```
 
-TODO: Add description
+Define when the option `equalalways` is used:
 
+* Vertically
+* Horizontaly
+* Both
+
+Where `equalalways` is boolean and defines the window size behaviour when a
+window is splited or destroyed.
 
 **wildmenu**
 
@@ -488,7 +505,9 @@ TODO: Add description
 set wildmenu
 ```
 
-TODO: Add description
+When 'wildmenu' is on, command-line completion operates in an enhanced mode.
+On pressing 'wildchar' (usually <Tab>) to invoke completion, the possible 
+matches are shown just above the command line, with the first match highlighted.
 
 
 **cursorline**
@@ -497,7 +516,8 @@ TODO: Add description
 set cursorline
 ```
 
-TODO: Add description
+Highlight the screen line of the cursor with a configurable color. Useful to
+easily spot the cursor.
 
 
 **display**
@@ -506,7 +526,7 @@ TODO: Add description
 set display=uhex
 ```
 
-TODO: Add description
+Display nonprintable characters in hexadecimal.
 
 
 **listchar**
@@ -515,19 +535,19 @@ TODO: Add description
 set listchars=tab:▸\ ,eol:$,
 ```
 
-TODO: Add decription
+Strings to use in 'list' mode and for the ':list' command.
 
 
 **mouse**
 
 ```VimL
 if has('mouse')
-	set mouse=a        " enable mouse in all modes
-	set mousehide      " hides the mouse while typing
+	set mouse=a
+	set mousehide
 endif
 ```
 
-TODO: Add decription
+Configure the mouse to be enabled in all modes and hides it while typing.
 
 
 **guioptions**
@@ -552,7 +572,9 @@ configured mapppings to toggle the menu and toolbar. Take a look at mappings sec
 set guifont=Liberation\ Mono\ for\ Powerline\ 8
 ```
 
-TODO: Add decription
+Use a nice and bbeautiful monospaced font. If you have a different taste, you
+can set your favorite font here.
+
 
 ```VimL
 highlight Pmenu guibg=brown gui=bold
@@ -568,19 +590,20 @@ Pop-up menu color setteings
 	set mousemodel=popup
 ```
 
-TODO: Add decription
+Right mouse button pops up a menu. The shifted left mouse button extends a selection.
 
 
 **Terminal/CLI**
 
 ```VimL
 	set bg=dark
-	" Enable 256 colors in terminal
 	if &term == 'xterm' || &term == 'screen' || &term =='terminator'
 		set t_Co=256
 	endif
 endif
 ```
+
+Enable 256 colours in terminal.
 
 
 ## 4.5 Mappings
@@ -649,7 +672,8 @@ vnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
 inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>
 ```
 
-Added current date and time
+Added current date and time in normal, visual and insert modes respectively.
+
 
 ```VimL
 noremap <buffer> <a-m> :%s///g<CR>
@@ -661,7 +685,8 @@ Removes CR from the line end.
 noremap <a-q> :ccl<CR>
 ```
 
-Closes the quickfix window
+Closes the quickfix window.
+
 
 ```VimL
 nnoremap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR><ESC>
@@ -683,7 +708,7 @@ nnoremap <s-left>   <c-w>h
 nnoremap <s-right>  <c-w>l
 ```
 
-Window movements
+Window movements made easy.
 
 ```VimL
 noremap <Left>  <Nop>
@@ -692,7 +717,7 @@ noremap <Up>    <Nop>
 noremap <Down>  <Nop>
 ```
 
-Disable arrow keys in normal mode.
+Disable arrow keys in normal mode, use `hjkl` (the Vim way) instead :)
 
 
 ```VimL
@@ -707,26 +732,26 @@ highlight ColorColumn ctermbg=magenta guibg=lightgrey
 call matchadd('ColorColumn', '\%81v', 100)
 ```
 
-highlight the firstcolumn greater than textwidth
+highlight the firstcolumn greater than textwidth, default to `80` characters.
 
 ```VimL
 nnoremap <a-x> :%s/\s\+$//e<CR>
 ```
 
-Removes trailing spaces
+Removes trailing spaces along the file.
 
 ```vim
 nnoremap <silent> - :
 ```
 
-Map colon to dash.
+Map colon to dash, save the shifts. :)
 
 ```VimL
 vnoremap Q gq
 nnoremap Q gqap
 ```
 
-Use Q for formatting the current paragraph (or selection).
+Use Q for formatting the current paragraph (or visual selection).
 
 
 ```VimL
@@ -744,6 +769,7 @@ nnoremap <silent> <a-c> :nohlsearch<CR>
 ```
 
 Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”? Use this
+to clear the search pattern.
 
 ```VimL
 inoremap <F1> <nop>
@@ -751,10 +777,12 @@ nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 ```
 
-Disable <F1> key.
+Disable `<F1>` key, use `help` or `thelp` (open help on a new tab) instead.
 
 
+```VimL
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+```
 
 Opens the `~/.vimrc` file.
 
@@ -763,9 +791,37 @@ Opens the `~/.vimrc` file.
 
 The following plugins are used in the current configuration:
 
-1. [Ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy text search)
-1. [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
+1. [Ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy search)
+
+```VimL
+	let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
+	let g:ctrlp_show_hidden = 1
+	let g:ctrlp_custom_ignore = {
+								\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+								\ 'file': '\v\.(exe|so|dll)$',
+								\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+								\ }
+	let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+								\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+	let g:ctrlp_match_window_bottom = 1
+	let g:ctrlp_user_command = 'find %s -type f'
+	" open a new file on a tab
+	let g:ctrlp_open_new_file = 't'
+```
+
+2. [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
+
+   This script provides functions that are mostly useful to script developers, but
+   some of the functions can be easily converted to good utilities.
+
 3. [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
+
+```VimL
+	let NERDTreeCaseSensitiveSort = 1
+	let NERDTreeShowHidden        = 1
+	let NERDTreeShowLineNumbers   = 1
+```
+
 4. [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
 5. [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
 6. [Powerline](https://github.com/Lokaltog/powerline) (Status bar)
@@ -780,6 +836,8 @@ The following plugins are used in the current configuration:
 1. [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
 1. [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
 1. [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+1. [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
+1. [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
 1. [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
 
 ![alt text](https://f.cloud.github.com/assets/980000/982716/eb45a994-0817-11e3-806e-ce6e731b86ef.png)
@@ -793,30 +851,24 @@ The following plugins are used in the current configuration:
 Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 
-## 6. Mappings
-
-TODO: Add description
-
-
-## 7. Colorschemes
+## 6. Colorschemes
 
 Available colorschemes:
 
 * [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
-* [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)(currently used see picture bellow)
+* [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)(currently used, see picture bellow)
 
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
-## 8. Known problems
+## 7. Known problems
 
-* The plugin snipMate does note work if the plugin YouCompleteMe is also installed.
+No known problems at the moment :)
 
-## 9. TODO
+## 8. TODO
 
 This README is still incomplete. It is being gradually expanded/improved.
 For new and experimental stuff, take a look at the [labs](https://github.com/rafaelnp/rnpvim/tree/labs) branch.
 
-* Vim configuration explained (parcially complete)
 * Plugins configuration
 * FAQ
 * Mappings documentation
@@ -824,16 +876,17 @@ For new and experimental stuff, take a look at the [labs](https://github.com/raf
 * Filetype support for Assembly (x86, ARM)
 * Spellcheck
 
-## 10. References
+## 9. References
 
 Useful documentation about Vim:
 
 1. [Vim Casts](http://vimcasts.org/)
 2. [Learn Vim Script the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 3. [Writing Vim Scripts](http://stevelosh.com/blog/2011/09/writing-vim-plugins/)
+4. [Use Vim](http://usevim.com)
 
 
-# 11. Acknowledgements
+# 10. Acknowledgements
 
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)

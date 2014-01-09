@@ -7,6 +7,9 @@
 " :xmap - Display visual mode maps
 " :cmap - Display command-line mode maps
 " :omap - Display operator pending mode maps
+"
+" Tipp: Always use no recursive mapping (noremap). It'll save you time and
+" annoyances.
 
 " remap leader
 nnoremap <space> <Nop>
@@ -82,23 +85,23 @@ noremap <Down>  <Nop>
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 
-" highlight the firstcolumn greater than textwidth
+" highlight the firstcolumn" greater than textwidth
 highlight ColorColumn ctermbg=magenta guibg=lightred
 call matchadd('ColorColumn', '\%81v', 100)
 
 " Removes trailing spaces
 nnoremap <a-x> :%s/\s\+$//e<CR>
 
-" shortcut for commands
+" shortcut for command line
 nnoremap <silent> - :
 
 " Use Q for formatting the current paragraph (or selection)
 vnoremap Q gq
 nnoremap Q gqap
 
-" If long lines with line wrapping enabled, this solves the problem that pressing down
-" jumpes your cursor “over” the current line to the next line.  It changes behaviour so
-" that it jumps to the next row in the editor (much more natural).
+" If long lines with line wrapping enabled, this solves the problem that pressing
+" down jumpes your cursor “over” the current line to the next line.It changes
+" behaviour so that it jumps to the next row in the editor (much more natural).
 nnoremap j gj
 nnoremap k gk
 

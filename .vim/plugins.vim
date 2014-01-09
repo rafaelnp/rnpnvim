@@ -1,7 +1,7 @@
 " Plugins
 
 " 1 - neobundle.vim
-" Configured in the bundle.vim file
+" Configured in the ~/.vim/bundle.vim file
 
 " 2 - genutils
 "     http://www.vim.org/scripts/script.php?script_id=197
@@ -111,7 +111,7 @@ let g:ctrlp_open_new_file = 't'
 " 10 - numbers
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
-" 11 - nerdtree-tabs
+" 11 - vim-nerdtree-tabs
 map <F9> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
@@ -120,18 +120,14 @@ let g:nerdtree_tabs_no_startup_for_diff     = 0
 " 12 - nerdtree
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeShowHidden        = 1
-let NERDTreeShowLineNumbers   = 0
+let NERDTreeShowLineNumbers   = 1
 
 " 13 - Vividchalk
 
 
 " 14 - YouCompleteMe
-let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_allow_changing_updatetime = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_filetype_whitelist = {
 								\'lua': 1,
 								\'verilog': 1,
@@ -144,12 +140,23 @@ let g:ycm_filetype_whitelist = {
 								\'maple': 1,
 								\'git': 1,
 								\'sh': 1,
+								\'tex': 1,
+								\'txt': 1,
 								\'zsh': 1,
 								\}
-
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:ycm_key_invoke_completion = '<C-Space>'
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'vimwiki' : 1,
+      \}
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
@@ -158,7 +165,7 @@ nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 "      https://github.com/jtratner/vim-flavored-markdown
 augroup markdown
 	au!
-	au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+	au BufNewFile,BufRead,BufReadPost,FileReadPost *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
 " 16 - vim-indent-guides
@@ -178,13 +185,13 @@ let g:signify_update_on_bufenter = 1
 let g:signify_sign_change = '~'
 let g:signify_sign_delete_first_line = '*'
 
-highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=green
-highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=red
-highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=blue
+highlight SignifySignAdd    cterm=bold ctermfg=green
+highlight SignifySignDelete cterm=bold ctermfg=red
+highlight SignifySignChange cterm=bold ctermfg=blue
 
-highlight SignifySignAdd    gui=bold guibg=Black  guifg=green
-highlight SignifySignDelete gui=bold guibg=Black  guifg=red
-highlight SignifySignChange gui=bold guibg=Black  guifg=darkorange
+highlight SignifySignAdd    gui=bold  guifg=green
+highlight SignifySignDelete gui=bold  guifg=red
+highlight SignifySignChange gui=bold  guifg=darkorange
 
 " 18 - vim-airline
 "      https://github.com/bling/vim-airline
@@ -227,11 +234,48 @@ let g:airline#extensions#eclim#enabled = 0
 
 " 19 - fugitive
 "      https://github.com/tpope/vim-fugitive
-" TODO: COnfigure fugitive
+" TODO: Configure fugitive
 
 " 20 - ultisnips
 "      https://github.com/SirVer/ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" TODO: FInish configuration
+
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
+
+" 21 - Vimproc
+"      https://github.com/Shougo/vimproc.vim
+"      Configured in ~/.vim/bundle.vim
+
+" 22 - vimshell.vim
+"      https://github.com/Shougo/vimshell.vim
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
+let g:vimshell_force_overwrite_statusline = 0
+
+" 23 - Calender.vim
+"      https://github.com/itchyny/calendar.vim
+" TODO: FInish configuration
+
+" 24 - vim-SystemVerilog
+"      https://github.com/WeiChungWu/vim-SystemVerilog
+" TODO: FInish configuration
+
+" 25 - vim-vhdl
+"      https://github.com/Cognoscan/vim-vhdl
+" TODO: FInish configuration
+
+" 26 - vim-easy-align
+"      https://github.com/junegunn/vim-easy-align
+" TODO: FInish configuration
+
+" 27 - vim-latex
+"      https://github.com/jcf/vim-latex
+" TODO: FInish configuration
+
+" 28 - vim-easymotion
+"      thub.com/Lokaltog/vim-easymotion
+" TODO: FInish configuration
+

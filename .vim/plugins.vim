@@ -120,18 +120,14 @@ let g:nerdtree_tabs_no_startup_for_diff     = 0
 " 12 - nerdtree
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeShowHidden        = 1
-let NERDTreeShowLineNumbers   = 0
+let NERDTreeShowLineNumbers   = 1
 
 " 13 - Vividchalk
 
 
 " 14 - YouCompleteMe
-let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_allow_changing_updatetime = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_filetype_whitelist = {
 								\'lua': 1,
 								\'verilog': 1,
@@ -144,12 +140,23 @@ let g:ycm_filetype_whitelist = {
 								\'maple': 1,
 								\'git': 1,
 								\'sh': 1,
+								\'tex': 1,
+								\'txt': 1,
 								\'zsh': 1,
 								\}
-
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:ycm_key_invoke_completion = '<C-Space>'
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'vimwiki' : 1,
+      \}
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
@@ -178,13 +185,13 @@ let g:signify_update_on_bufenter = 1
 let g:signify_sign_change = '~'
 let g:signify_sign_delete_first_line = '*'
 
-highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=green
-highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=red
-highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=blue
+highlight SignifySignAdd    cterm=bold ctermfg=green
+highlight SignifySignDelete cterm=bold ctermfg=red
+highlight SignifySignChange cterm=bold ctermfg=blue
 
-highlight SignifySignAdd    gui=bold guibg=Black  guifg=green
-highlight SignifySignDelete gui=bold guibg=Black  guifg=red
-highlight SignifySignChange gui=bold guibg=Black  guifg=darkorange
+highlight SignifySignAdd    gui=bold  guifg=green
+highlight SignifySignDelete gui=bold  guifg=red
+highlight SignifySignChange gui=bold  guifg=darkorange
 
 " 18 - vim-airline
 "      https://github.com/bling/vim-airline
@@ -233,9 +240,9 @@ let g:airline#extensions#eclim#enabled = 0
 "      https://github.com/SirVer/ultisnips
 " TODO: FInish configuration
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 
 " 21 - Vimproc

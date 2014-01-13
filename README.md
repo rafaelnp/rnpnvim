@@ -891,6 +891,9 @@ Useful documentation about Vim:
 2. [Learn Vim Script the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 3. [Writing Vim Scripts](http://stevelosh.com/blog/2011/09/writing-vim-plugins/)
 4. [Use Vim](http://usevim.com)
+5. [Vivify - Colorscheme editor for Vim](http://bytefluent.com/vivify/)
+6. [Vim Wiki at Wikia](http://vim.wikia.com/wiki/Vim_Tips_Wiki)
+7. [Vim Community at Google Plus](https://plus.google.com/u/0/communities/105049811056605918816)
 
 
 # 10. Acknowledgements

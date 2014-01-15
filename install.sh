@@ -58,14 +58,20 @@ echo "(5) cloning plugins from Github"
 #vim +NeoBundleInstall +qall
 . ~/.vim/bundle/neobundle.vim/bin/neoinstall > /dev/null
 
-echo "(6) compiling YouCompleteMe"
+echo "(6) compiling YouCompleteMe Clang autocomplete support"
 
+clangversion="llvm"  # Default: download from llvm.org
+#clangversion="local" Uncomment this line if you wanna use or local version
 cd ~/.vim/bundle/YouCompleteMe
-mkdir ycm_build
-cd ycm_build
-# We use the clang already installed on the system
-cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON . ~/.vim/bundle/YouCompleteMe/cpp
-make
+
+if [ "$clangversion" = "llvm" ]; then
+	./install.sh --clang-completer
+elif [ "$clangversion" = "local" ]; then
+	# We use the clang already installed on the system
+	./install.sh --clang-completer --system-libclang
+else
+	echo "  Error: Invalid option to compile YouCompleteMe Clang completion support"
+fi
 
 echo "(7) cloning powerline fonts"
 

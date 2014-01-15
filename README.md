@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.01.08 (Wed) 13:23:50 (UTC +0100 CET)
+Last update: 2014.01.15 (Wed) 11:32:39 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -84,14 +84,22 @@ steps bellow:
 
 ```sh
 cd ~/.vim/bundle/YouCompleteMe
-mkdir ycm_build
-cd ycm_build
-cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON . ~/.vim/bundle/YouCompleteMe/cpp
-make
+./install.sh --clang-completer
 ```
 
-Remove the `-DUSE_SYSTEM_LIBCLANG=ON` if you don't want the semantic support for C-family
+It shall use a downloaded version from [http://www.llvm.org](llvm.org). If you
+want to use your local clang version then execute:
+
+```sh
+./install.sh --clang-completer --system-libclang
+```
+
+Remove the `--clang-completer` if you don't want the semantic support for C-family
 languages.
+
+```sh
+./install.sh
+```
 
 And to use the nice symbols (skip this if you don't want to use them) on the statusline, the
 powerfonts are needed. Type the following commands in a shell:
@@ -106,10 +114,23 @@ fc-cache -v ~/.fonts
 
 ### 3.2 Automatic
 
-You can download the installation script:
+You can download the installation script with the following command:
 
 ```sh
 wget https://raw.github.com/rafaelnp/rnpvim/master/install.sh
+```
+
+By default the clang completion is compiled using the binary version from llvm.org
+project. If you want to use your local clang version, then you must open the script
+and uncomment:
+
+```sh
+clangversion="local"
+```
+
+And finally execute the script:
+
+```sh
 chmod u+x install.sh
 ./install.sh
 ```
@@ -876,7 +897,7 @@ No known problems at the moment :)
 This README is still incomplete. It is being gradually expanded/improved.
 For new and experimental stuff, take a look at the [labs](https://github.com/rafaelnp/rnpvim/tree/labs) branch.
 
-* Plugins configuration
+* Document plugins configuration
 * FAQ
 * Mappings documentation
 * HDL(Verilog/VHDL) Plugins

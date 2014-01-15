@@ -5,15 +5,21 @@
 #
 # rnpvim installation script
 #
-# Last update: 2013.12.19 (Do) 23:03:46 CET (UTC +1)
+# Last update: 2014.01.15 (Wed) 17:31:08 (UTC +0100 CET)
 
 basedir="$HOME/src/rnpvim"
 vimdir="$HOME/.vim"
 vimdirbak="$HOME/.vim.bak"
 vimfile="$HOME/.vimrc"
 vimfilebak="$HOME/.vimrc.bak"
+fontdir="$HOME/.font"
 
 echo "(1) backing up your current Vim congiguration"
+
+if [ -d "$basedir" ]; then
+	echo "  $basedir already exists. Exiting rnpvim instalation.."
+	exit
+fi
 
 if [ ! -e "$vimdir" ]; then
 	echo "    No $vimdir backup performed. Directory does not exist."
@@ -74,6 +80,11 @@ else
 fi
 
 echo "(7) cloning powerline fonts"
+
+if [ -d "$fontdir/powerline-fonts" ]; then
+	echo "  $fontdir/powerline-fonts already exists. Skipping porweline-fonts instalation.."
+	exit
+fi
 
 git clone https://github.com/Lokaltog/powerline-fonts $HOME/src/powerline-fonts
 ln -s $HOME/src/powerline-fonts $HOME/.fonts/powerline-fonts

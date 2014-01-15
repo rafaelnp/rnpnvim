@@ -254,6 +254,7 @@ let g:UltiSnipsEditSplit="vertical"
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
 let g:vimshell_force_overwrite_statusline = 0
+let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 
 " 23 - Calender.vim
 "      https://github.com/itchyny/calendar.vim

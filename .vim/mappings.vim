@@ -16,7 +16,7 @@ nnoremap <space> <Nop>
 let mapleader = ","
 
 " removes carriage return
-nnoremap <a-r> :%s/\r//g<CR>
+nnoremap <buffer> <a-r> :%s/\r//g<CR>
 
 " opens a new table
 nnoremap <a-t> :tabnew<CR>
@@ -50,7 +50,7 @@ noremap <a-q> :ccl<CR>
 " CTRL+F1 to toggle the menu bar
 nnoremap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR><ESC>
 
-" CTRL+F2 to toggle the menu bar
+" CTRL+F2 to toggle the toolbar
 nnoremap <silent> <A-2> :if &guioptions=~'T' \| set guioptions-=T \| else \| set guioptions+=T \| endif<CR><ESC>
 
 " CTRL+F3 to toggle the right scroll bars

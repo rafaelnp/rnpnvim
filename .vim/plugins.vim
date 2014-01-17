@@ -18,7 +18,7 @@ let g:selBufAlwaysShowDetails = 1
 let g:selBufAlwaysShowHidden  = 1
 
 " 4 - vimexplorer
-"     http://www.vim.org/scripts/script.php?script_id=1950
+"     https://github.com/mbbill/VimExplorer
 "
 nnoremap <silent> <F7> :VE ~<CR>
 let g:VEConf_treePanelWidth = 40
@@ -42,12 +42,9 @@ endif
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_autoclose   = 1
 let g:tagbar_autofocus   = 1
-let g:tagbar_autoshowtag = 1
-let g:tagbar_left        = 0
-let g:tagbar_expand      = 0
-let g:tagbar_autoshowtag = 1
 let g:tagbar_sort        = 0
 let g:tagbar_iconchars   = ['▾', '▸']
+let g:tagbar_autoshowtag = 1
 
 " more examples: https://github.com/majutsushi/tagbar/wiki
 let g:tagbar_type_vhdl = {

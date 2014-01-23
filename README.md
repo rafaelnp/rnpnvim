@@ -687,6 +687,7 @@ nnoremap <silent> <a-d> :call DumpMaps()<CR>
 
 Dumps all mappings in a file.
 
+
 ```VimL
 nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
 vnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
@@ -701,6 +702,7 @@ noremap <buffer> <a-m> :%s///g<CR>
 ```
 
 Removes CR from the line end.
+
 
 ```VimL
 noremap <a-q> :ccl<CR>
@@ -729,7 +731,8 @@ nnoremap <s-left>   <c-w>h
 nnoremap <s-right>  <c-w>l
 ```
 
-Window movements made easy.
+Movements between windows  made easy.
+
 
 ```VimL
 noremap <Left>  <Nop>
@@ -748,6 +751,7 @@ call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 
 Highlight redundant spaces (spaces at the end of the line, spaces before or after tabs):
 
+
 ```VimL
 highlight ColorColumn ctermbg=magenta guibg=lightgrey
 call matchadd('ColorColumn', '\%81v', 100)
@@ -755,11 +759,13 @@ call matchadd('ColorColumn', '\%81v', 100)
 
 highlight the firstcolumn greater than textwidth, default to `80` characters.
 
+
 ```VimL
 nnoremap <a-x> :%s/\s\+$//e<CR>
 ```
 
 Removes trailing spaces along the file.
+
 
 ```vim
 nnoremap <silent> - :
@@ -808,15 +814,27 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 Opens the `~/.vimrc` file.
 
 
-## 5. Plugins
+## 5 Plugins
 
-The following plugins are used in the current configuration:
+The following plugins are used and their current configuration. No comment is
+found where configuration is self-explainatory.
+Each plugin documentation can be reached by typing `:help <plugin-name>`
 
-1. [Ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy search)
+### 5.1 [Ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy search)
 
 ```VimL
 	let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
 	let g:ctrlp_show_hidden = 1
+```
+
+Shows hidden files and shows the ctrlp windows
+* on top
+* listed top to bottom
+* 2 lines minimum
+* 10 linus maximum
+
+
+```VimL
 	let g:ctrlp_custom_ignore = {
 								\ 'dir':  '\v[\/]\.(git|hg|svn)$',
 								\ 'file': '\v\.(exe|so|dll)$',
@@ -824,18 +842,25 @@ The following plugins are used in the current configuration:
 								\ }
 	let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
 								\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+```
+
+Added extra file patterns to be ignored and extension for advanced search.
+
+
+```VimL
 	let g:ctrlp_match_window_bottom = 1
 	let g:ctrlp_user_command = 'find %s -type f'
 	" open a new file on a tab
 	let g:ctrlp_open_new_file = 't'
 ```
 
-2. [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
+### 5.2 [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
 
-   This script provides functions that are mostly useful to script developers, but
-   some of the functions can be easily converted to good utilities.
+This script provides functions that are mostly useful to script developers, but
+some of the functions can be easily converted to good utilities.
 
-3. [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
+
+### 5.3 [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
 ```VimL
 	let NERDTreeCaseSensitiveSort = 1
@@ -843,33 +868,173 @@ The following plugins are used in the current configuration:
 	let NERDTreeShowLineNumbers   = 1
 ```
 
-4. [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
-5. [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
-6. [Powerline](https://github.com/Lokaltog/powerline) (Status bar)
-7. [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
-8. [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
-9. [Tabular](https://github.com/godlygeek/tabular.git) (Texttabulator)
-1. [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
-1. [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
-1. [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
-1. [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
-1. [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
-1. [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
-1. [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
-1. [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
-1. [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
-1. [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
-1. [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
+
+### 5.4 [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
+
+Using default config.
+
+
+### 5.5 [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
+
+Using default config as described [here](https://github.com/Shougo/neobundle.vim#quick-start).
+
+
+### 5.6 [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
+
+```VimL
+nmap <silent> <F3> <Plug>SelectBuf
+let g:selBufDefaultSortOrder  = "name"
+let g:selBufDisableMRUlisting = 0
+let g:selBufAlwaysShowDetails = 1
+let g:selBufAlwaysShowHidden  = 1
+```
+
+
+### 5.7 [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
+
+### 5.8 [Tabular](https://github.com/godlygeek/tabular.git) (Texttabulator)
+
+### 5.9 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
+
+```VimL
+nnoremap <silent> <F8> :TagbarToggle<CR>
+let g:tagbar_autoclose   = 1
+let g:tagbar_autofocus   = 1
+let g:tagbar_sort        = 0
+let g:tagbar_iconchars   = ['▾', '▸']
+let g:tagbar_autoshowtag = 1
+
+" more examples: https://github.com/majutsushi/tagbar/wiki
+let g:tagbar_type_vhdl = {
+							\ 'ctagstype': 'vhdl',
+							\ 'kinds' : [
+							\'d:prototypes',
+							\'b:package bodies',
+							\'e:entities',
+							\'a:architectures',
+							\'t:types',
+							\'p:processes',
+							\'f:functions',
+							\'r:procedures',
+							\'c:constants',
+							\'T:subtypes',
+							\'r:records',
+							\'C:components',
+							\'P:packages',
+							\'l:locals'
+							\]
+						\}
+```
+
+### 5.11 [ultisnips](https://github.com/SirVer/ultisnips) (Code snippets)
+
+```VimL
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsEditSplit="vertical"
+```
+
+
+### 5.12 [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
+
+### 5.13 [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
+
+```VimL
+map <F9> :NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_gui_startup     = 0
+let g:nerdtree_tabs_open_on_console_startup = 0
+let g:nerdtree_tabs_no_startup_for_diff     = 0
+```
+
+
+### 5.14 [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
+
+```VimL
+nnoremap <silent> <F7> :VE ~<CR>
+let g:VEConf_treePanelWidth = 40
+if has('unix')
+	let g:VEConf_externalExplorer = "dolphin"
+	let g:VEConf_showHiddenFiles  = 0
+	let g:VEConf_usingGnome       = 0
+	let g:VEConf_usingKDE         = 1
+	let g:VEConf_systemEncoding   = 'utf-8'
+elseif has('win32' || 'win64')
+	let g:VEConf_externalExplorer = "explorer.exe"
+	let g:VEConf_systemEncoding   = 'utf-16'
+endif
+```
+
+
+### 5.15 [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
+
+### 5.16 [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
+
+### 5.17 [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
+
+### 5.18 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+
+### 5.19 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
+
+### 5.20 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+
+### 5.21 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+
+Configured in `~/.vim/bundle.vim`.
+
+
+### 5.22 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
 
 ![alt text](https://f.cloud.github.com/assets/980000/982716/eb45a994-0817-11e3-806e-ce6e731b86ef.png)
 
+```VimL
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
+let g:vimshell_force_overwrite_statusline = 0
+let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
+```
 
-1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 5.22 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 ![alt_text](http://i.imgur.com/0OP4ood.gif)
 
+```VimL
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_filetype_whitelist = {
+								\'lua': 1,
+								\'verilog': 1,
+								\'vhdl': 1,
+								\'vim': 1,
+								\'python': 1,
+								\'c': 1,
+								\'cpp': 1,
+								\'matlab': 1,
+								\'maple': 1,
+								\'git': 1,
+								\'sh': 1,
+								\'tex': 1,
+								\'txt': 1,
+								\'zsh': 1,
+								\}
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'vimwiki' : 1,
+      \}
 
-Each plugin documentation can be reached by typing `:help <plugin-name>`
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+```
 
 
 ## 6. Colorschemes

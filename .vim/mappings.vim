@@ -76,19 +76,6 @@ noremap <Right> <Nop>
 noremap <Up>    <Nop>
 noremap <Down>  <Nop>
 
-" Highlight unwanted spaces
-" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-" http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
-"
-" Highlight redundant spaces (spaces at the end of the line, spaces before
-" or after tabs):
-highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
-call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
-
-" highlight the firstcolumn" greater than textwidth
-highlight ColorColumn ctermbg=magenta guibg=lightred
-call matchadd('ColorColumn', '\%81v', 100)
-
 " Removes trailing spaces
 nnoremap <a-x> :%s/\s\+$//e<CR>
 

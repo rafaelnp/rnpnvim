@@ -167,15 +167,3 @@ else
 	endif
 endif
 
-"============
-" C/C++ stuff
-"============
-set makeprg=scons
-
-if !filereadable(expand("%:p:h")."/SConstruct")
-	setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
-endif
-
-" different indentation for C and C++
-autocmd FileType c   setlocal shiftwidth=8 tabstop=8 softtabstop=8
-autocmd FileType cpp setlocal shiftwidth=8 tabstop=8 softtabstop=8

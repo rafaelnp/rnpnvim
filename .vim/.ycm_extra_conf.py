@@ -71,9 +71,23 @@ flags = [
 '-I',
 '/usr/include',
 '-I',
+'/usr/include/arpa',
+'-I',
+'/usr/include/bits',
+'-I',
 '/usr/include/x86_64-linux-gnu',
 '-I',
+'/usr/include/linux',
+'-I',
 '/usr/include/net',
+'-I',
+'/usr/include/netinet',
+'-I',
+'/usr/include/pci',
+'-I',
+'/usr/include/proc',
+'-I',
+'/usr/include/sys',
 '-I',
 '/usr/include/linux',
 '-I',
@@ -139,10 +153,10 @@ def FlagsForFile( filename, **kwargs ):
     # NOTE: This is just for YouCompleteMe; it's highly likely that your project
     # does NOT need to remove the stdlib flag. DO NOT USE THIS IN YOUR
     # ycm_extra_conf IF YOU'RE NOT 100% YOU NEED IT.
-    #try:
-    #  final_flags.remove( '-stdlib=libc++' )
-    #except ValueError:
-    #  pass
+    try:
+      final_flags.remove( '-stdlib=libc++' )
+    except ValueError:
+      pass
   else:
     relative_to = DirectoryOfThisScript()
     final_flags = MakeRelativePathsInFlagsAbsolute( flags, relative_to )

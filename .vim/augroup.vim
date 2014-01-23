@@ -8,10 +8,20 @@
 highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 "call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 
+" highlight the firstcolumn" greater than textwidth
+ highlight ColorColumn ctermbg=magenta guibg=lightred
+" call matchadd('ColorColumn', '\%81v', 100)
+
 augroup redundant_whitespace
 	autocmd!
 	autocmd BufWinEnter * match RedundantSpaces '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!'
+	autocmd BufWinEnter * match ColorColumn '\%81v'
 	autocmd BufWinLeave * call clearmatches()
+augroup END
+
+augroup help
+	au!
+	autocmd BufWinEnter FileType help call clearmatches()
 augroup END
 
 " Highlight trailing whitespace (but not in insert mode).

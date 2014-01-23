@@ -76,10 +76,6 @@ noremap <Right> <Nop>
 noremap <Up>    <Nop>
 noremap <Down>  <Nop>
 
-" highlight the firstcolumn" greater than textwidth
-highlight ColorColumn ctermbg=magenta guibg=lightred
-call matchadd('ColorColumn', '\%81v', 100)
-
 " Removes trailing spaces
 nnoremap <a-x> :%s/\s\+$//e<CR>
 

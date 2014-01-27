@@ -1,4 +1,4 @@
-" Highlight unwanted spaces
+:" Highlight unwanted spaces
 " Reference:
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 " http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
@@ -9,7 +9,7 @@ highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
 "call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
 
 " highlight the firstcolumn" greater than textwidth
- highlight ColorColumn ctermbg=magenta guibg=lightred
+highlight ColorColumn ctermbg=magenta guibg=lightred
 " call matchadd('ColorColumn', '\%81v', 100)
 
 augroup redundant_whitespace
@@ -38,36 +38,36 @@ augroup END
 
 augroup c
 	au!
-	autocmd FileType c   setlocal shiftwidth=8 tabstop=8 softtabstop=8
-	autocmd FileType c   setlocal listchars=tab:▸\ ,
-	autocmd FileType c   setlocal list
-	autocmd FileType c   setlocal noexpandtab
-	autocmd FileType c   setlocal makeprg=scons
+	autocmd BufWinEnter *.c   setlocal shiftwidth=8 tabstop=8 softtabstop=8
+	autocmd BufWinEnter *.c   setlocal listchars=tab:▸\ ,
+	autocmd BufWinEnter *.c   setlocal list
+	autocmd BufWinEnter *.c   setlocal noexpandtab
+	autocmd BufWinEnter *.c   setlocal makeprg=scons
 	if !filereadable(expand("%:p:h")."/SConstruct")
 		autocmd FileType c setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
 	endif
-	autocmd FileType c   match RedundantSpaces /^\t*\zs \+/
+	"autocmd BufWinEnter *.c   match RedundantSpaces /^\t*\zs \+/
 augroup END
 
 augroup cpp
 	au!
-	autocmd FileType cpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
-	autocmd FileType cpp setlocal listchars=tab:▸\ ,
-	autocmd FileType cpp setlocal list
-	autocmd FileType cpp setlocal noexpandtab
-	autocmd FileType cpp match    RedundantSpaces /^\t*\zs \+/
+	autocmd BufWinEnter *.cpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
+	autocmd BufWinEnter *.cpp setlocal listchars=tab:▸\ ,
+	autocmd BufWinEnter *.cpp setlocal list
+	autocmd BufWinEnter *.cpp setlocal noexpandtab
+	"autocmd BufWinEnter *.cpp match    RedundantSpaces /^\t*\zs \+/
 augroup END
 
 augroup python
-	autocmd FileType python setlocal listchars=tab:▸\ ,
-	autocmd FileType python setlocal list
-	autocmd FileType python setlocal noexpandtab
-	autocmd FileType python match    RedundantSpaces /^\t*\zs \+/
+	autocmd BufWinEnter *.py setlocal listchars=tab:▸\ ,
+	autocmd BufWinEnter *.py setlocal list
+	autocmd BufWinEnter *.py setlocal noexpandtab
+	"autocmd BufWinEnter *.py match    RedundantSpaces /^\t*\zs \+/
 augroup END
 
 augroup sh
-	autocmd FileType sh setlocal listchars=tab:▸\ ,
-	autocmd FileType sh setlocal list
-	autocmd FileType sh setlocal noexpandtab
-	autocmd FileType sh match    RedundantSpaces /^\t*\zs \+/
+	autocmd BufWinEnter *.sh setlocal listchars=tab:▸\ ,
+	autocmd BufWinEnter *.sh setlocal list
+	autocmd BufWinEnter *.sh setlocal noexpandtab
+	"autocmd BufWinEnter *.sh match    RedundantSpaces /^\t*\zs \+/
 augroup END

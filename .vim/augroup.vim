@@ -1,31 +1,24 @@
-:" Highlight unwanted spaces
+" Highlight unwanted spaces
 " Reference:
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 " http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
 "
-" Highlight redundant spaces (spaces at the end of the line, spaces before
-" or after tabs):
-highlight RedundantSpaces term=standout ctermbg=Grey guibg=#ffddcc
-highlight TrailingSpaces  term=standout ctermbg=Grey guibg=#5fddcc
-highlight LeadingSpaces   term=standout ctermbg=Grey guibg=#ffddcc
-
-call matchadd('RedundantSpaces', '\(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!')
-call matchadd('TrailingSpaces', '/^\t*\zs \+/')
-call matchadd('LeadingSpaces', '/^ \+/')
-" match ExtraWhitespace /\s\+$/
+" The '\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!' highlights:
+" 1 - trailing spaces
+" 2 - leading spaces
+" 3 - spaces before tabs
+" 4 - spaces after tabs
+highlight ExtraSpaces term=standout ctermbg=Grey guibg=#8fddcc
 
 " highlight the firstcolumn" greater than textwidth
 highlight ColorColumn ctermbg=magenta guibg=lightred
-call matchadd('ColorColumn', '\%81v', 100)
 
-"augroup redundant_whitespace
-"	autocmd!
-"	autocmd BufWinEnter * match RedundantSpaces \(\s\+$\| \+\ze\t\|\t\zs \+\)\(\%#\)\@!
-"	autocmd BufWinEnter * match ColorColumn '\%81v'
-"	autocmd BufWinLeave * call clearmatches()
-"	autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-"	autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-"augroup END
+augroup redundant_whitespace
+	au!
+	autocmd BufWinEnter * call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+	autocmd BufWinEnter * call matchadd('ColorColumn','\%81v')
+	autocmd BufWinLeave * call clearmatches()
+augroup END
 
 augroup help
 	au!

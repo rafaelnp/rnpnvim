@@ -28,13 +28,13 @@ augroup END
 
 augroup ccpp
 	au!
-	autocmd BufWinEnter *.c,*.cpp,*.h all matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
-	autocmd BufWinEnter *.c,*.cpp,*.h etlocal shiftwidth=8 tabstop=8 softtabstop=8
-	autocmd BufWinEnter *.c,*.cpp,*.h etlocal listchars=tab:▸\ ,
-	autocmd BufWinEnter *.c,*.cpp,*.h etlocal list
-	autocmd BufWinEnter *.c,*.cpp,*.h etlocal noexpandtab
-	autocmd BufWinEnter *.c,*.cpp,*.h etlocal cindent
-	autocmd BufWinEnter *.c,*.cpp,*.h etlocal makeprg=scons
+	autocmd BufWinEnter *.c,*.cpp,*.h call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+	autocmd BufWinEnter *.c,*.cpp,*.h setlocal shiftwidth=8 tabstop=8 softtabstop=8
+	autocmd BufWinEnter *.c,*.cpp,*.h setlocal listchars=tab:▸\ ,
+	autocmd BufWinEnter *.c,*.cpp,*.h setlocal list
+	autocmd BufWinEnter *.c,*.cpp,*.h setlocal noexpandtab
+	autocmd BufWinEnter *.c,*.cpp,*.h setlocal cindent
+	autocmd BufWinEnter *.c,*.cpp,*.h setlocal makeprg=scons
 	if !filereadable(expand("%:p:h")."/SConstruct")
 		autocmd FileType c setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
 	endif

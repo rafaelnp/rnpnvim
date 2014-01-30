@@ -1080,6 +1080,7 @@ Useful documentation about Vim:
 5. [Vivify - Colorscheme editor for Vim](http://bytefluent.com/vivify/)
 6. [Vim Wiki at Wikia](http://vim.wikia.com/wiki/Vim_Tips_Wiki)
 7. [Vim Community at Google Plus](https://plus.google.com/u/0/communities/105049811056605918816)
+8. [Learn Vim progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively)
 
 
 # 10. Acknowledgements

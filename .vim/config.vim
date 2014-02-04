@@ -63,7 +63,6 @@ syntax enable       " syntax highlight on and keep your settings
 set fo=tcrqn        " See Help (:help fo-table)
 set ai              " autoindent
 set si              " smartindent
-set cindent         " do c-style indenting
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
 set textwidth=80    " no fucking long lines
 set cpoptions=BceF  " compatible options

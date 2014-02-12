@@ -17,7 +17,7 @@ cabbrev plugin  ~/.vim/plugins.vim
 cabbrev config  ~/.vim/config.vim
 cabbrev func    ~/.vim/functions.vim
 cabbrev abbrev  ~/.vim/abbrev.vim
-cabbrev autocmd ~/.vim/augroup.vim
+cabbrev aucmd   ~/.vim/augroup.vim
 cabbrev vimrc   ~/.vimrc
 cabbrev vshell  VimShellTab
 " Open vimshell in a new small window

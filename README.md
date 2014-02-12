@@ -1,10 +1,11 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.01.15 (Wed) 11:32:39 (UTC +0100 CET)
+Last update: 2014.02.12 (Mi) 11:10:09 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
 Suggestions, corrections are welcome :-)
+
 
 ## 1. Why rnpvim ?
 
@@ -12,18 +13,72 @@ Have a Vim configuration on git (in this case Github) makes easier to use the sa
 configuration across different computers, keep a history of what you have done and
 if you do something wrong you can revert it on a sane way.
 
-If you use vim and your workflow includes Assembly, C, C++, LaTeX and HDL(Verilog,HDL),
-then rnpvim may be a good option for you. It includes:
+If you use vim and your workflow includes Assembly, C, C++, LaTeX and HDL(Verilog,VHDL),
+then rnpvim may be a good option for you. 
+
+
+### 1.1 Main features:
+
+Here are listed the main rnpvim 's features, provided by additional plugins. Those
+plugins are managed by [Neobundle](https://github.com/rafaelnp/rnpvim#32-automatic),
+which is also an Vim plugin, that make the Vim users life much easier.
+
+* Buffer browsing
+
+* Code/text autocompletion
+
+![YouCompleteMe](http://i.imgur.com/0OP4ood.gif)
+
+* Calender integration
+
+![calender.vim](https://raw.github.com/wiki/itchyny/calendar.vim/image/image2.png)
+
+* Extensible status/tagline
+
+![alt_text](https://github.com/bling/vim-airline/wiki/screenshots/demo.gif)
+
+* Enhanced Vim motion
+
+![Vim-easymotin](https://f.cloud.github.com/assets/3797062/2039359/a8e938d6-899f-11e3-8789-60025ea83656.gif)
+
+* File browsing
+
+![VimExplorer](https://sites.google.com/site/mbbill/VE1.PNG)
+
+![Nerdtree](http://lh6.ggpht.com/_ZzOZmj1dP0c/Sl3XVwnZOwI/AAAAAAAAAlc/aRIYBuE5Jhc/s800/vim.png)
+
+* Git full integration
+![alt_text](http://www.gregsexton.org/images/gitk-vim.jpg)
+
+* LaTeX integration
+
+* Opensource VCSs integration
+
+![Signify](https://github.com/mhinz/vim-signify/raw/master/signify.gif)
+
+![alt_text](https://f.cloud.github.com/assets/306502/995185/73fc7054-09b9-11e3-9d45-618406c6ed98.png)
+
+* Plugins management
+
+* Fuzzy search
+
+![ctrlp](https://github-camo.global.ssl.fastly.net/0a0b4c0d24a44d381cbad420ecb285abc2aaa4cb/687474703a2f2f692e696d6775722e636f6d2f7949796e722e706e67)
+
+* Shell integration
+
+![alt text](https://f.cloud.github.com/assets/980000/982716/eb45a994-0817-11e3-806e-ce6e731b86ef.png)
 
 * Syntax check
-* Opensource VCSs integration
-* File browsing
-* Buffer browsing
-* Shell integration
+
+![Syntastic](https://github.com/scrooloose/syntastic/raw/master/_assets/screenshot_1.png)
+
+* Tag browser
+
+![Tagbar](http://majutsushi.github.io/tagbar/tagbar3.png)
+
 * Visual indentation guide
-* Git full integration
-* Enhanced Vim motion
-* Autocompletion
+
+![Visual-indent-guides](https://github-camo.global.ssl.fastly.net/646b1ee420877d59b9f44fa46bb52c351b35db47/687474703a2f2f692e696d6775722e636f6d2f68487170322e706e67)
 
 
 ## 2. Requirements
@@ -35,6 +90,7 @@ This Vim setup has the following requirements/dependencies:
 * [clang](http://clang.llvm.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
 * [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
 * [Python](http://www.python.org) 2.7 or newer
+* [Git](http://www.git-scm.com/) 1.7. or newer
 
 
 ## 3. Installation
@@ -42,7 +98,7 @@ This Vim setup has the following requirements/dependencies:
 ### 3.1 Manuall
 
 This section describes the manual installation step by step. You can skip it if
-you prefer the [automatic one](https://github.com/rafaelnp/rnpvim#32-automatic).
+you prefer the [automatic one](https://github.com/rafaelnp/rnpvim#57-NeoBundle.vim).
 
 Start by opening a terminal and make a back up from the current Vim settings:
 
@@ -820,7 +876,11 @@ The following plugins are used and their current configuration. No comment is
 found where configuration is self-explainatory.
 Each plugin documentation can be reached by typing `:help <plugin-name>`
 
-### 5.1 [Ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy search)
+### 5.1 [armasm](https://github.com/vim-scripts/armasm) (ARM assembly syntax highlight)
+
+### 5.2 [calendar.vim](https://github.com/itchyny/calendar.vim) (Integrasted calender)
+
+### 5.3 [Ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy search)
 
 ```VimL
 	let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
@@ -854,13 +914,13 @@ Added extra file patterns to be ignored and extension for advanced search.
 	let g:ctrlp_open_new_file = 't'
 ```
 
-### 5.2 [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
+### 5.4 [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
 
 This script provides functions that are mostly useful to script developers, but
 some of the functions can be easily converted to good utilities.
 
 
-### 5.3 [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
+### 5.5 [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
 ```VimL
 	let NERDTreeCaseSensitiveSort = 1
@@ -869,17 +929,17 @@ some of the functions can be easily converted to good utilities.
 ```
 
 
-### 5.4 [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
+### 5.6 [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
 
 Using default config.
 
 
-### 5.5 [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
+### 5.7 [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
 
 Using default config as described [here](https://github.com/Shougo/neobundle.vim#quick-start).
 
 
-### 5.6 [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
+### 5.8 [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
 
 ```VimL
 nmap <silent> <F3> <Plug>SelectBuf
@@ -890,11 +950,9 @@ let g:selBufAlwaysShowHidden  = 1
 ```
 
 
-### 5.7 [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
+### 5.9 [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
 
-### 5.8 [Tabular](https://github.com/godlygeek/tabular.git) (Texttabulator)
-
-### 5.9 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
+### 5.10 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
 
 ```VimL
 nnoremap <silent> <F8> :TagbarToggle<CR>
@@ -904,7 +962,6 @@ let g:tagbar_sort        = 0
 let g:tagbar_iconchars   = ['▾', '▸']
 let g:tagbar_autoshowtag = 1
 
-" more examples: https://github.com/majutsushi/tagbar/wiki
 let g:tagbar_type_vhdl = {
 							\ 'ctagstype': 'vhdl',
 							\ 'kinds' : [
@@ -947,8 +1004,11 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 ```
 
+### 5.14 [Vim-easy-align](https://github.com/junegunn/vim-easy-align) (Text alignment made easy)
 
-### 5.14 [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
+### 5.15 [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
+
+### 5.16 [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
 
 ```VimL
 nnoremap <silent> <F7> :VE ~<CR>
@@ -966,26 +1026,24 @@ endif
 ```
 
 
-### 5.15 [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
+### 5.17 [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 
-### 5.16 [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
+### 5.18 [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
 
-### 5.17 [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
+### 5.19 [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
 
-### 5.18 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+### 5.20 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
-### 5.19 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
+### 5.21 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
 
-### 5.20 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+### 5.22 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
 
-### 5.21 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+### 5.23 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
 Configured in `~/.vim/bundle.vim`.
 
 
-### 5.22 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
-
-![alt text](https://f.cloud.github.com/assets/980000/982716/eb45a994-0817-11e3-806e-ce6e731b86ef.png)
+### 5.24 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
 
 ```VimL
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
@@ -994,9 +1052,7 @@ let g:vimshell_force_overwrite_statusline = 0
 let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 ```
 
-### 5.22 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
-
-![alt_text](http://i.imgur.com/0OP4ood.gif)
+### 5.25 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 ```VimL
 let g:ycm_min_num_of_chars_for_completion = 3
@@ -1053,14 +1109,15 @@ Available colorschemes:
 
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
+
 ## 7. Known problems
 
-No known problems at the moment :)
+See the project [issues page](https://github.com/rafaelnp/rnpvim/issues?state=open).
 
 ## 8. TODO
 
 This README is still incomplete. It is being gradually expanded/improved.
-For new and experimental stuff, take a look at the [labs](https://github.com/rafaelnp/rnpvim/tree/labs) branch.
+For new and experimental stuff, take a look at the [next](https://github.com/rafaelnp/rnpvim/tree/next) branch.
 
 * Document plugins configuration
 * FAQ
@@ -1068,6 +1125,7 @@ For new and experimental stuff, take a look at the [labs](https://github.com/raf
 * HDL(Verilog/VHDL) Plugins
 * Filetype support for Assembly (x86, ARM)
 * Spellcheck
+
 
 ## 9. References
 
@@ -1080,10 +1138,10 @@ Useful documentation about Vim:
 5. [Vivify - Colorscheme editor for Vim](http://bytefluent.com/vivify/)
 6. [Vim Wiki at Wikia](http://vim.wikia.com/wiki/Vim_Tips_Wiki)
 7. [Vim Community at Google Plus](https://plus.google.com/u/0/communities/105049811056605918816)
+8. [Learn Vim progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively)
 
 
 # 10. Acknowledgements
 
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)
-

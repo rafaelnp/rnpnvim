@@ -1,10 +1,11 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.02.12 (Mi) 09:49:42 (UTC +0100 CET)
+Last update: 2014.02.12 (Mi) 11:10:09 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
 Suggestions, corrections are welcome :-)
+
 
 ## 1. Why rnpvim ?
 
@@ -18,21 +19,30 @@ then rnpvim may be a good option for you.
 
 ### 1.1 Main features:
 
+Here are listed the main rnpvim 's features, provided by additional plugins. Those
+plugins are managed by [Neobundle](https://github.com/rafaelnp/rnpvim#32-automatic),
+which is also an Vim plugin, that make the Vim users life much easier.
+
 * Buffer browsing
 
 * Code/text autocompletion
+
 ![YouCompleteMe](http://i.imgur.com/0OP4ood.gif)
 
 * Calender integration
+
 ![calender.vim](https://raw.github.com/wiki/itchyny/calendar.vim/image/image2.png)
 
-* Extensible status/tanline
+* Extensible status/tagline
+
 ![alt_text](https://github.com/bling/vim-airline/wiki/screenshots/demo.gif)
 
 * Enhanced Vim motion
+
 ![Vim-easymotin](https://f.cloud.github.com/assets/3797062/2039359/a8e938d6-899f-11e3-8789-60025ea83656.gif)
 
 * File browsing
+
 ![VimExplorer](https://sites.google.com/site/mbbill/VE1.PNG)
 
 ![Nerdtree](http://lh6.ggpht.com/_ZzOZmj1dP0c/Sl3XVwnZOwI/AAAAAAAAAlc/aRIYBuE5Jhc/s800/vim.png)
@@ -43,6 +53,7 @@ then rnpvim may be a good option for you.
 * LaTeX integration
 
 * Opensource VCSs integration
+
 ![Signify](https://github.com/mhinz/vim-signify/raw/master/signify.gif)
 
 ![alt_text](https://f.cloud.github.com/assets/306502/995185/73fc7054-09b9-11e3-9d45-618406c6ed98.png)
@@ -50,18 +61,23 @@ then rnpvim may be a good option for you.
 * Plugins management
 
 * Fuzzy search
+
 ![ctrlp](https://github-camo.global.ssl.fastly.net/0a0b4c0d24a44d381cbad420ecb285abc2aaa4cb/687474703a2f2f692e696d6775722e636f6d2f7949796e722e706e67)
 
 * Shell integration
+
 ![alt text](https://f.cloud.github.com/assets/980000/982716/eb45a994-0817-11e3-806e-ce6e731b86ef.png)
 
 * Syntax check
+
 ![Syntastic](https://github.com/scrooloose/syntastic/raw/master/_assets/screenshot_1.png)
 
 * Tag browser
+
 ![Tagbar](http://majutsushi.github.io/tagbar/tagbar3.png)
 
 * Visual indentation guide
+
 ![Visual-indent-guides](https://github-camo.global.ssl.fastly.net/646b1ee420877d59b9f44fa46bb52c351b35db47/687474703a2f2f692e696d6775722e636f6d2f68487170322e706e67)
 
 
@@ -82,7 +98,7 @@ This Vim setup has the following requirements/dependencies:
 ### 3.1 Manuall
 
 This section describes the manual installation step by step. You can skip it if
-you prefer the [automatic one](https://github.com/rafaelnp/rnpvim#32-automatic).
+you prefer the [automatic one](https://github.com/rafaelnp/rnpvim#57-NeoBundle.vim).
 
 Start by opening a terminal and make a back up from the current Vim settings:
 
@@ -946,7 +962,6 @@ let g:tagbar_sort        = 0
 let g:tagbar_iconchars   = ['▾', '▸']
 let g:tagbar_autoshowtag = 1
 
-" more examples: https://github.com/majutsushi/tagbar/wiki
 let g:tagbar_type_vhdl = {
 							\ 'ctagstype': 'vhdl',
 							\ 'kinds' : [
@@ -1094,9 +1109,10 @@ Available colorschemes:
 
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
+
 ## 7. Known problems
 
-No known problems at the moment :)
+See the project [issues page](https://github.com/rafaelnp/rnpvim/issues?state=open).
 
 ## 8. TODO
 
@@ -1109,6 +1125,7 @@ For new and experimental stuff, take a look at the [next](https://github.com/raf
 * HDL(Verilog/VHDL) Plugins
 * Filetype support for Assembly (x86, ARM)
 * Spellcheck
+
 
 ## 9. References
 

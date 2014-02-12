@@ -20,7 +20,7 @@ then rnpvim may be a good option for you.
 ### 1.1 Main features:
 
 Here are listed the main rnpvim 's features, provided by additional plugins. Those
-plugins are managed by [Neobundle](https://github.com/rafaelnp/rnpvim#57-NeoBundle.vim),
+plugins are managed by [Neobundle](https://github.com/rafaelnp/rnpvim#57-neobundlevimplugin-manager),
 which is also an Vim plugin, that make the Vim users life much easier.
 
 * Buffer browsing

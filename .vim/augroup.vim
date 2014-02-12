@@ -44,6 +44,11 @@ if has("autocmd")
 		endif
 	augroup END
 
+	augroup markdown
+		au!
+		autocmd BufWinEnter *.md setlocal textwidth=0
+	augroup END
+
 	augroup python
 		autocmd BufWinEnter *.py call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
 		autocmd BufWinEnter *.py setlocal listchars=tab:▸\ ,
@@ -52,6 +57,7 @@ if has("autocmd")
 	augroup END
 
 	augroup sh
+		au!
 		autocmd BufWinEnter *.sh call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
 		autocmd BufWinEnter *.sh setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.sh setlocal list
@@ -59,6 +65,7 @@ if has("autocmd")
 	augroup END
 
 	augroup vim
+		au!
 		autocmd BufWinEnter *.vim call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
 		autocmd BufWinEnter *.vim setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.vim setlocal list

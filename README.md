@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.02.12 (Mi) 11:10:09 (UTC +0100 CET)
+Last update: 2014.02.12 (Mi) 11:42:12 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -20,7 +20,7 @@ then rnpvim may be a good option for you.
 ### 1.1 Main features:
 
 Here are listed the main rnpvim 's features, provided by additional plugins. Those
-plugins are managed by [Neobundle](https://github.com/rafaelnp/rnpvim#32-automatic),
+plugins are managed by [Neobundle](https://github.com/rafaelnp/rnpvim#57-NeoBundle.vim),
 which is also an Vim plugin, that make the Vim users life much easier.
 
 * Buffer browsing
@@ -98,7 +98,7 @@ This Vim setup has the following requirements/dependencies:
 ### 3.1 Manuall
 
 This section describes the manual installation step by step. You can skip it if
-you prefer the [automatic one](https://github.com/rafaelnp/rnpvim#57-NeoBundle.vim).
+you prefer the [automatic one](https://github.com/rafaelnp/rnpvim#32-automatic).
 
 Start by opening a terminal and make a back up from the current Vim settings:
 

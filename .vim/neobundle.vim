@@ -49,12 +49,12 @@ NeoBundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 NeoBundle 'https://github.com/itchyny/calendar.vim'
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
+NeoBundle 'https://github.com/Shougo/vinarise.vim'
 
 " Under test
 NeoBundle 'https://github.com/junegunn/vim-easy-align'
 NeoBundle 'https://github.com/vim-scripts/armasm'
 NeoBundle 'https://github.com/jcf/vim-latex'
-NeoBundle 'https://github.com/Shougo/vinarise.vim'
 
 " To remove
 NeoBundle 'https://github.com/godlygeek/tabular.git'

@@ -281,3 +281,9 @@ let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 "      thub.com/Lokaltog/vim-easymotion
 " TODO: FInish configuration
 
+" 29 - Vinarise
+"      https://github.com/Shougo/vinarise.vim
+let g:vinarise_detect_large_file_size = 1000000
+cabbrev vimhex  Vinarise -split<CR>
+
+

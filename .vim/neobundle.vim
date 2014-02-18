@@ -40,7 +40,6 @@ NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog'
 NeoBundle 'https://github.com/Cognoscan/vim-vhdl'
 NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'https://github.com/jtratner/vim-flavored-markdown'
-NeoBundle 'ctrlp.vim'
 NeoBundle 'genutils'
 NeoBundle 'SelectBuf'
 NeoBundle 'VimExplorer'
@@ -57,7 +56,7 @@ NeoBundle 'https://github.com/vim-scripts/armasm'
 NeoBundle 'https://github.com/jcf/vim-latex'
 
 " To remove
-NeoBundle 'https://github.com/godlygeek/tabular.git'
+NeoBundle 'ctrlp.vim'
 
 let g:neobundle#types#git#default_protocol = "https"
 filetype plugin indent on     " required!

@@ -87,42 +87,39 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" 8 - Tabular
-" TODO: setup config
-
-" 9 - ctrlp
-let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = {
-							\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-							\ 'file': '\v\.(exe|so|dll)$',
-							\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-							\ }
-let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-							\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
-let g:ctrlp_match_window_bottom = 1
-let g:ctrlp_user_command = 'find %s -type f'
+" 8 - ctrlp
+" let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
+" let g:ctrlp_show_hidden = 1
+" let g:ctrlp_custom_ignore = {
+" 							\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+" 							\ 'file': '\v\.(exe|so|dll)$',
+" 							\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+" 							\ }
+" let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+" 							\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+" let g:ctrlp_match_window_bottom = 1
+" let g:ctrlp_user_command = 'find %s -type f'
 " open a new file on a tab
-let g:ctrlp_open_new_file = 't'
+" let g:ctrlp_open_new_file = 't'
 
-" 10 - numbers
+" 8 - numbers
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
-" 11 - vim-nerdtree-tabs
+" 9 - vim-nerdtree-tabs
 map <F9> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
-" 12 - nerdtree
+" 10 - nerdtree
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
 
-" 13 - Vividchalk
+" 11 - Vividchalk
 
 
-" 14 - YouCompleteMe
+" 12 - YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 3
 let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_filetype_whitelist = {
@@ -160,7 +157,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
-" 15 - Vim-flavoured.markdown
+" 13 - Vim-flavoured.markdown
 "      https://github.com/jtratner/vim-flavored-markdown
 if has("autocmd")
 	augroup markdown
@@ -169,7 +166,7 @@ if has("autocmd")
 	augroup END
 endif
 
-" 16 - vim-indent-guides
+" 14 - vim-indent-guides
 "      https://github.com/nathanaelkane/vim-indent-guides
 " don't consider spaces as indentation
 let g:indent_guides_space_guides = 0
@@ -179,7 +176,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
 
-" 17 - vim-signify
+" 15 - vim-signify
 "      https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
 let g:signify_update_on_bufenter = 1
@@ -194,7 +191,7 @@ highlight SignifySignAdd    gui=bold  guifg=green
 highlight SignifySignDelete gui=bold  guifg=red
 highlight SignifySignChange gui=bold  guifg=darkorange
 
-" 18 - vim-airline
+" 16 - vim-airline
 "      https://github.com/bling/vim-airline
 " The powerline symbols need the powerline fonts:
 " https://github.com/Lokaltog/powerline-fonts
@@ -233,11 +230,11 @@ let g:airline#extensions#branch#empty_message = ''
 " |airline-syntastic| extension. >
 let g:airline#extensions#eclim#enabled = 0
 
-" 19 - fugitive
+" 17 - fugitive
 "      https://github.com/tpope/vim-fugitive
 " TODO: Configure fugitive
 
-" 20 - ultisnips
+" 18 - ultisnips
 "      https://github.com/SirVer/ultisnips
 " TODO: FInish configuration
 
@@ -246,44 +243,50 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 
-" 21 - Vimproc
+" 19 - Vimproc
 "      https://github.com/Shougo/vimproc.vim
 "      Configured in ~/.vim/bundle.vim
 
-" 22 - vimshell.vim
+" 20 - vimshell.vim
 "      https://github.com/Shougo/vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
 let g:vimshell_force_overwrite_statusline = 0
 let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 
-" 23 - Calender.vim
+" 21 - Calender.vim
 "      https://github.com/itchyny/calendar.vim
 " TODO: FInish configuration
 
-" 24 - vim-SystemVerilog
+" 22 - vim-SystemVerilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog
 " TODO: FInish configuration
 
-" 25 - vim-vhdl
+" 23 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
 " TODO: FInish configuration
 
-" 26 - vim-easy-align
+" 24 - vim-easy-align
 "      https://github.com/junegunn/vim-easy-align
 " TODO: FInish configuration
 
-" 27 - vim-latex
+" 25 - vim-latex
 "      https://github.com/jcf/vim-latex
 " TODO: FInish configuration
 
-" 28 - vim-easymotion
+" 26 - vim-easymotion
 "      thub.com/Lokaltog/vim-easymotion
 " TODO: FInish configuration
 
-" 29 - Vinarise
+" 27 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 let g:vinarise_detect_large_file_size = 1000000
 cabbrev vimhex  Vinarise -split<CR>
 
-
+" 28 - Unite
+"      https://github.com/Shougo/unite.vim
+nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <Leader>/ :Unite grep:.<cr>
+let g:unite_source_history_yank_enable = 1
+nnoremap <Leader>y :Unite history/yank<cr>
+nnoremap <Leader>s :Unite -quick-match -auto-preview buffer<cr>

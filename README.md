@@ -1139,6 +1139,7 @@ Useful documentation about Vim:
 6. [Vim Wiki at Wikia](http://vim.wikia.com/wiki/Vim_Tips_Wiki)
 7. [Vim Community at Google Plus](https://plus.google.com/u/0/communities/105049811056605918816)
 8. [Learn Vim progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively)
+9. [Vimregex](http://vimregex.com/)
 
 
 # 10. Acknowledgements

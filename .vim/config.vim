@@ -5,7 +5,7 @@
 "========
 
 set nocompatible                   " no vi-compatibility
-set noautochdir                    " disabled because of vimshell plugin
+set autochdir                    " disabled because of vimshell plugin
 set autowriteall                   " automatically save all buffers
 set autoread                       " load file modified outside vim
 set nobackup                       " no backup files, we have git :)

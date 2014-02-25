@@ -286,4 +286,11 @@ let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 let g:vinarise_detect_large_file_size = 1000000
 cabbrev vimhex  Vinarise -split<CR>
 
+" 30  - Rainbow Parenthesis Improved
+"       https://github.com/oblitum/rainbow
+au FileType c,cpp,objc,objcpp call rainbow#load()
+let g:rainbow_active = 1
+
+" C -> OK
+" TODO: Test with vim, python
 

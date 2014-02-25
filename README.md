@@ -58,6 +58,9 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 ![alt_text](https://f.cloud.github.com/assets/306502/995185/73fc7054-09b9-11e3-9d45-618406c6ed98.png)
 
+* Different parentheses level coloured
+![parentheses_coloured](http://i.imgur.com/j4g6L92.png)
+
 * Plugins management
 
 * Fuzzy search
@@ -939,7 +942,12 @@ Using default config.
 Using default config as described [here](https://github.com/Shougo/neobundle.vim#quick-start).
 
 
-### 5.8 [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
+### 5.8 [Rainbow parentheses improved](https://github.com/oblitum/rainbow)
+
+Using default config.
+
+
+### 5.9 [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
 
 ```VimL
 nmap <silent> <F3> <Plug>SelectBuf
@@ -950,9 +958,9 @@ let g:selBufAlwaysShowHidden  = 1
 ```
 
 
-### 5.9 [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
+### 5.10 [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
 
-### 5.10 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
+### 5.11 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
 
 ```VimL
 nnoremap <silent> <F8> :TagbarToggle<CR>
@@ -983,7 +991,7 @@ let g:tagbar_type_vhdl = {
 						\}
 ```
 
-### 5.11 [ultisnips](https://github.com/SirVer/ultisnips) (Code snippets)
+### 5.12 [ultisnips](https://github.com/SirVer/ultisnips) (Code snippets)
 
 ```VimL
 let g:UltiSnipsExpandTrigger="<c-l>"
@@ -993,9 +1001,9 @@ let g:UltiSnipsEditSplit="vertical"
 ```
 
 
-### 5.12 [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
+### 5.13 [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
 
-### 5.13 [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
+### 5.14 [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 
 ```VimL
 map <F9> :NERDTreeTabsToggle<CR>
@@ -1004,11 +1012,11 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 ```
 
-### 5.14 [Vim-easy-align](https://github.com/junegunn/vim-easy-align) (Text alignment made easy)
+### 5.15 [Vim-easy-align](https://github.com/junegunn/vim-easy-align) (Text alignment made easy)
 
-### 5.15 [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
+### 5.16 [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
 
-### 5.16 [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
+### 5.17 [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
 
 ```VimL
 nnoremap <silent> <F7> :VE ~<CR>
@@ -1026,24 +1034,24 @@ endif
 ```
 
 
-### 5.17 [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
+### 5.18 [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 
-### 5.18 [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
+### 5.19 [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
 
-### 5.19 [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
+### 5.20 [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
 
-### 5.20 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+### 5.21 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
-### 5.21 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
+### 5.22 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
 
-### 5.22 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+### 5.23 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
 
-### 5.23 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+### 5.24 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
 Configured in `~/.vim/bundle.vim`.
 
 
-### 5.24 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
+### 5.25 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
 
 ```VimL
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
@@ -1052,7 +1060,7 @@ let g:vimshell_force_overwrite_statusline = 0
 let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 ```
 
-### 5.25 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 5.26 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 ```VimL
 let g:ycm_min_num_of_chars_for_completion = 3

@@ -33,6 +33,7 @@ NeoBundle 'https://github.com/mhinz/vim-signify'
 NeoBundle 'https://github.com/nathanaelkane/vim-indent-guides'
 NeoBundle 'https://github.com/tpope/vim-fugitive'
 NeoBundle 'https://github.com/SirVer/ultisnips'
+NeoBundle 'https://github.com/oblitum/rainbow'
 
 " not yet classified
 NeoBundle 'https://github.com/Shougo/vimshell.vim'

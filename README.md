@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.02.12 (Mi) 11:42:12 (UTC +0100 CET)
+Last update: 2014.03.03 (Mo) 09:53:37 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -79,9 +79,6 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 ![Tagbar](http://majutsushi.github.io/tagbar/tagbar3.png)
 
-* Visual indentation guide
-
-![Visual-indent-guides](https://github-camo.global.ssl.fastly.net/646b1ee420877d59b9f44fa46bb52c351b35db47/687474703a2f2f692e696d6775722e636f6d2f68487170322e706e67)
 
 
 ## 2. Requirements
@@ -1038,20 +1035,18 @@ endif
 
 ### 5.19 [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
 
-### 5.20 [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
+### 5.20 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
-### 5.21 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+### 5.21 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
 
-### 5.22 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
+### 5.22 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
 
-### 5.23 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
-
-### 5.24 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+### 5.23 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
 Configured in `~/.vim/bundle.vim`.
 
 
-### 5.25 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
+### 5.24 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
 
 ```VimL
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
@@ -1060,7 +1055,7 @@ let g:vimshell_force_overwrite_statusline = 0
 let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 ```
 
-### 5.26 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 5.25 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 ```VimL
 let g:ycm_min_num_of_chars_for_completion = 3

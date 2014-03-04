@@ -1143,6 +1143,7 @@ Useful documentation about Vim:
 7. [Vim Community at Google Plus](https://plus.google.com/u/0/communities/105049811056605918816)
 8. [Learn Vim progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively)
 9. [Vimregex](http://vimregex.com/)
+10. [Why certain text editors make you more productive](http://www.terminally-incoherent.com/blog/2012/04/04/why-certain-text-editors-make-you-more-productive/)
 
 
 # 10. Acknowledgements

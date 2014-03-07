@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.02.12 (Mi) 11:42:12 (UTC +0100 CET)
+Last update: 2014.03.07 (Fr) 13:54:10 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -58,6 +58,9 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 ![alt_text](https://f.cloud.github.com/assets/306502/995185/73fc7054-09b9-11e3-9d45-618406c6ed98.png)
 
+* Different parentheses level coloured
+![parentheses_coloured](http://i.imgur.com/j4g6L92.png)
+
 * Plugins management
 
 * Fuzzy search
@@ -76,9 +79,6 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 ![Tagbar](http://majutsushi.github.io/tagbar/tagbar3.png)
 
-* Visual indentation guide
-
-![Visual-indent-guides](https://github-camo.global.ssl.fastly.net/646b1ee420877d59b9f44fa46bb52c351b35db47/687474703a2f2f692e696d6775722e636f6d2f68487170322e706e67)
 
 
 ## 2. Requirements
@@ -880,47 +880,14 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 5.2 [calendar.vim](https://github.com/itchyny/calendar.vim) (Integrasted calender)
 
-### 5.3 [Ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy search)
 
-```VimL
-	let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
-	let g:ctrlp_show_hidden = 1
-```
-
-Shows hidden files and shows the ctrlp windows
-* on top
-* listed top to bottom
-* 2 lines minimum
-* 10 linus maximum
-
-
-```VimL
-	let g:ctrlp_custom_ignore = {
-								\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-								\ 'file': '\v\.(exe|so|dll)$',
-								\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-								\ }
-	let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-								\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
-```
-
-Added extra file patterns to be ignored and extension for advanced search.
-
-
-```VimL
-	let g:ctrlp_match_window_bottom = 1
-	let g:ctrlp_user_command = 'find %s -type f'
-	" open a new file on a tab
-	let g:ctrlp_open_new_file = 't'
-```
-
-### 5.4 [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
+### 5.3 [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
 
 This script provides functions that are mostly useful to script developers, but
 some of the functions can be easily converted to good utilities.
 
 
-### 5.5 [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
+### 5.4 [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
 ```VimL
 	let NERDTreeCaseSensitiveSort = 1
@@ -929,14 +896,19 @@ some of the functions can be easily converted to good utilities.
 ```
 
 
-### 5.6 [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
+### 5.5 [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
 
 Using default config.
 
 
-### 5.7 [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
+### 5.6 [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
 
 Using default config as described [here](https://github.com/Shougo/neobundle.vim#quick-start).
+
+
+### 5.7 [Rainbow parentheses improved](https://github.com/oblitum/rainbow)
+
+Using default config.
 
 
 ### 5.8 [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
@@ -992,10 +964,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 ```
 
+### 5.12 [unite](https://github.com/Shougo/unite.vim) (Fuzzy search and expand VIm capabilities)
 
-### 5.12 [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
+### 5.13 [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
 
-### 5.13 [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
+### 5.14 [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 
 ```VimL
 map <F9> :NERDTreeTabsToggle<CR>
@@ -1004,11 +977,11 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 ```
 
-### 5.14 [Vim-easy-align](https://github.com/junegunn/vim-easy-align) (Text alignment made easy)
+### 5.15 [Vim-easy-align](https://github.com/junegunn/vim-easy-align) (Text alignment made easy)
 
-### 5.15 [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
+### 5.16 [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
 
-### 5.16 [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
+### 5.17 [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
 
 ```VimL
 nnoremap <silent> <F7> :VE ~<CR>
@@ -1026,11 +999,9 @@ endif
 ```
 
 
-### 5.17 [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
+### 5.18 [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 
-### 5.18 [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
-
-### 5.19 [Vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Show indentation levels visually)
+### 5.19 [Vim-fugitive](https://github.com/tpope/vim-fugitive) (Git integration with Vim)
 
 ### 5.20 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
@@ -1139,6 +1110,8 @@ Useful documentation about Vim:
 6. [Vim Wiki at Wikia](http://vim.wikia.com/wiki/Vim_Tips_Wiki)
 7. [Vim Community at Google Plus](https://plus.google.com/u/0/communities/105049811056605918816)
 8. [Learn Vim progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively)
+9. [Vimregex](http://vimregex.com/)
+10. [Why certain text editors make you more productive](http://www.terminally-incoherent.com/blog/2012/04/04/why-certain-text-editors-make-you-more-productive/)
 
 
 # 10. Acknowledgements

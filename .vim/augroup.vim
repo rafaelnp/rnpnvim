@@ -26,6 +26,7 @@ if has("autocmd")
 	augroup help
 		au!
 		autocmd BufWinEnter FileType help call clearmatches()
+		autocmd FileType help match none
 	augroup END
 
 	augroup ccpp
@@ -50,10 +51,12 @@ if has("autocmd")
 	augroup END
 
 	augroup python
-		autocmd BufWinEnter *.py call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
-		autocmd BufWinEnter *.py setlocal listchars=tab:▸\ ,
-		autocmd BufWinEnter *.py setlocal list
-		autocmd BufWinEnter *.py setlocal noexpandtab
+		au!
+		autocmd BufWinEnter *.py,SConstruct setlocal shiftwidth=4 tabstop=4 softtabstop=4
+		autocmd BufWinEnter *.py,SConstruct call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+		autocmd BufWinEnter *.py,SConstruct setlocal listchars=tab:▸\ ,
+		autocmd BufWinEnter *.py,SConstruct setlocal list
+		autocmd BufWinEnter *.py,SConstruct setlocal noexpandtab
 	augroup END
 
 	augroup sh
@@ -70,5 +73,10 @@ if has("autocmd")
 		autocmd BufWinEnter *.vim setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.vim setlocal list
 		autocmd BufWinEnter *.vim setlocal noexpandtab
+	augroup end
+
+	augroup unite
+		au!
+		autocmd BufWinEnter * call clearmatches()
 	augroup end
 endif

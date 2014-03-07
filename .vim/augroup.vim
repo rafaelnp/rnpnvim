@@ -74,9 +74,9 @@ if has("autocmd")
 		autocmd BufWinEnter *.vim setlocal list
 		autocmd BufWinEnter *.vim setlocal noexpandtab
 	augroup end
-	
+
 	augroup unite
-		au! 
-		autocmd FileType unite match none
+		au!
+		autocmd BufWinEnter * call clearmatches()
 	augroup end
 endif

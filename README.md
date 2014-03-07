@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.03.03 (Mo) 09:53:37 (UTC +0100 CET)
+Last update: 2014.03.07 (Fr) 13:54:10 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -880,47 +880,14 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 5.2 [calendar.vim](https://github.com/itchyny/calendar.vim) (Integrasted calender)
 
-### 5.3 [Ctrlp.vim](https://github.com/kien/ctrlp.vim) (fuzzy search)
 
-```VimL
-	let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
-	let g:ctrlp_show_hidden = 1
-```
-
-Shows hidden files and shows the ctrlp windows
-* on top
-* listed top to bottom
-* 2 lines minimum
-* 10 linus maximum
-
-
-```VimL
-	let g:ctrlp_custom_ignore = {
-								\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-								\ 'file': '\v\.(exe|so|dll)$',
-								\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-								\ }
-	let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-								\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
-```
-
-Added extra file patterns to be ignored and extension for advanced search.
-
-
-```VimL
-	let g:ctrlp_match_window_bottom = 1
-	let g:ctrlp_user_command = 'find %s -type f'
-	" open a new file on a tab
-	let g:ctrlp_open_new_file = 't'
-```
-
-### 5.4 [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
+### 5.3 [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
 
 This script provides functions that are mostly useful to script developers, but
 some of the functions can be easily converted to good utilities.
 
 
-### 5.5 [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
+### 5.4 [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
 ```VimL
 	let NERDTreeCaseSensitiveSort = 1
@@ -929,22 +896,22 @@ some of the functions can be easily converted to good utilities.
 ```
 
 
-### 5.6 [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
+### 5.5 [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
 
 Using default config.
 
 
-### 5.7 [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
+### 5.6 [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
 
 Using default config as described [here](https://github.com/Shougo/neobundle.vim#quick-start).
 
 
-### 5.8 [Rainbow parentheses improved](https://github.com/oblitum/rainbow)
+### 5.7 [Rainbow parentheses improved](https://github.com/oblitum/rainbow)
 
 Using default config.
 
 
-### 5.9 [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
+### 5.8 [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
 
 ```VimL
 nmap <silent> <F3> <Plug>SelectBuf
@@ -955,9 +922,9 @@ let g:selBufAlwaysShowHidden  = 1
 ```
 
 
-### 5.10 [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
+### 5.9 [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
 
-### 5.11 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
+### 5.10 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
 
 ```VimL
 nnoremap <silent> <F8> :TagbarToggle<CR>
@@ -988,7 +955,7 @@ let g:tagbar_type_vhdl = {
 						\}
 ```
 
-### 5.12 [ultisnips](https://github.com/SirVer/ultisnips) (Code snippets)
+### 5.11 [ultisnips](https://github.com/SirVer/ultisnips) (Code snippets)
 
 ```VimL
 let g:UltiSnipsExpandTrigger="<c-l>"
@@ -997,6 +964,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 ```
 
+### 5.12 [unitw](https://github.com/Shougo/unite.vim) (Fuzzy search and expand VIm capabilities)
 
 ### 5.13 [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
 

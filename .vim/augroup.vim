@@ -26,6 +26,7 @@ if has("autocmd")
 	augroup help
 		au!
 		autocmd BufWinEnter FileType help call clearmatches()
+		autocmd FileType help match none
 	augroup END
 
 	augroup ccpp
@@ -72,5 +73,10 @@ if has("autocmd")
 		autocmd BufWinEnter *.vim setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.vim setlocal list
 		autocmd BufWinEnter *.vim setlocal noexpandtab
+	augroup end
+
+	augroup unite
+		au!
+		autocmd BufWinEnter * call clearmatches()
 	augroup end
 endif

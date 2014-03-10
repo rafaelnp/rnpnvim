@@ -27,7 +27,7 @@ NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
 
 " Programming
 NeoBundle 'Tagbar'
-NeoBundle 'Syntastic'
+"NeoBundle 'Syntastic'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'https://github.com/mhinz/vim-signify'
 NeoBundle 'https://github.com/tpope/vim-fugitive'

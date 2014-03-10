@@ -69,23 +69,23 @@ let g:tagbar_type_vhdl = {
 
 " 7 - Syntastic
 
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_mode_map = { 'mode': 'active',
-							\ 'active_filetypes':['c',
-												\'cpp',
-												\'vim',
-												\'python',
-												\'d',
-												\'lua',
-												\'matlab',
-												\'vhdl',
-												\'zsh',
-												\'html'],
-							\ 'passive_filetypes': [] }
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_mode_map = { 'mode': 'active',
+"							\ 'active_filetypes':['c',
+"												\'cpp',
+"												\'vim',
+"												\'python',
+"												\'d',
+"												\'lua',
+"												\'matlab',
+"												\'vhdl',
+"												\'zsh',
+"												\'html'],
+"							\ 'passive_filetypes': [] }
+"
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 " 8 - ctrlp
 " let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
@@ -146,11 +146,28 @@ let g:ycm_filetype_blacklist = {
       \ 'unite' : 1,
       \ 'vimwiki' : 1,
       \}
-let g:ycm_error_symbol = 'ee'
+let g:ycm_error_symbol = 'e>'
+let g:ycm_warning_symbol = 'w>'
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_open_loclist_on_ycm_diags = 1
+let g:ycm_key_detailed_diagnostics = '<leader>e'
+let g:ycm_extra_conf_globlist = ['/usr/include/*']
+
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.'],
+  \   'objc' : ['->', '.'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \   'latex' : ['\'],
+  \ }
 " Configured on .vim/augroup.vim
 " let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 

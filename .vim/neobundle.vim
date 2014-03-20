@@ -55,9 +55,10 @@ NeoBundle 'https://github.com/junegunn/vim-easy-align'
 NeoBundle 'https://github.com/vim-scripts/armasm'
 NeoBundle 'https://github.com/jcf/vim-latex'
 NeoBundle 'https://github.com/Shougo/unite.vim'
+NeoBundle 'https://github.com/jamessan/vim-gnupg'
 
 " To remove
-" NeoBundle 'ctrlp.vim'
 
 let g:neobundle#types#git#default_protocol = "https"
+
 filetype plugin indent on     " required!

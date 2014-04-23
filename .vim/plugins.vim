@@ -258,7 +258,15 @@ cabbrev vimhex  Vinarise -split<CR>
 " 28  - Rainbow Parenthesis Improved
 "       https://github.com/oblitum/rainbow
 au FileType c,cpp,objc,objcpp call rainbow#load()
-let g:rainbow_active = 1
+" let g:rainbow_active = 1
+
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.c' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
 
 " 29 - Unite
 "      https://github.com/Shougo/unite.vim

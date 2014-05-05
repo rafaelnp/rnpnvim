@@ -77,6 +77,8 @@ if has("autocmd")
 
 	augroup unite
 		au!
-		autocmd BufWinEnter * call clearmatches()
+		if &ft == 'Unite'
+			autocmd BufWinEnter * call clearmatches()
+		endif
 	augroup end
 endif

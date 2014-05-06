@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.03.07 (Fr) 13:54:10 (UTC +0100 CET)
+Last update: 2014.05.06 (Di) 11:00:55 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -14,7 +14,7 @@ configuration across different computers, keep a history of what you have done a
 if you do something wrong you can revert it on a sane way.
 
 If you use vim and your workflow includes Assembly, C, C++, LaTeX and HDL(Verilog,VHDL),
-then rnpvim may be a good option for you. 
+then rnpvim may be a good option for you.
 
 
 ### 1.1 Main features:
@@ -922,7 +922,48 @@ let g:selBufAlwaysShowHidden  = 1
 ```
 
 
-### 5.9 [Syntastic](https://github.com/scrooloose/syntas) (Static analysis checker)
+### 5.9 [Startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
+
+```VimL
+let g:startify_bookmarks = [
+			\'~/.vimrc',
+			\'~/.vim/abbrev.vim',
+			\'~/.vim/augroup.vim',
+			\'~/.vim/config.vim',
+			\'~/.vim/mappings.vim',
+			\'~/.vim/neobundle.vim',
+			\'~/.vim/plugins.vim'
+			\]
+
+let g:startify_custom_header = [
+			\'     __      ___             ______ _  _',
+			\'     \ \    / (_)           |____  | || |',
+			\'      \ \  / / _ _ __ ___       / /| || |_',
+			\'       \ \/ / | | `_ ` _ \     / / |__   _|',
+			\'        \  /  | | | | | | |   / / _   | |',
+			\'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
+			\ '',
+			\ ]
+
+let g:startify_custom_footer = [
+	\ '',
+	\'   “It is not that I am so smart ,it is just that I stay with problems longer.”',
+	\ '   Albert Einstein',
+	\ '',
+	\ ]
+
+highlight StartifyFooter  ctermfg=yellow
+highlight StartifyFooter  guifg=yellow
+highlight StartifyHeader  ctermfg=red
+highlight StartifyHeader  guifg=red
+
+let g:startify_skiplist = [
+		\ 'COMMIT_EDITMSG',
+		\ $VIMRUNTIME .'/doc',
+		\ 'bundle/.*/doc',
+		\ '\.DS_Store'
+		\ ]
+```
 
 ### 5.10 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
 

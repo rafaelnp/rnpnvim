@@ -1,7 +1,7 @@
 " Plugins
 
 " 1 - neobundle.vim
-" Configured in the ~/.vim/bundle.vim file
+"     Configured in the ~/.vim/bundle.vim file
 
 " 2 - genutils
 "     http://www.vim.org/scripts/script.php?script_id=197
@@ -113,12 +113,9 @@ let g:ycm_filetype_blacklist = {
       \}
 let g:ycm_error_symbol = 'e>'
 let g:ycm_warning_symbol = 'w>'
-let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_open_loclist_on_ycm_diags = 1
 let g:ycm_key_detailed_diagnostics = '<leader>e'
-let g:ycm_extra_conf_globlist = ['/usr/include/*']
 
 let g:ycm_semantic_triggers =  {
   \   'c' : ['->', '.'],
@@ -138,6 +135,7 @@ let g:ycm_semantic_triggers =  {
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+
 
 " 13 - Vim-flavoured.markdown
 "      https://github.com/jtratner/vim-flavored-markdown

@@ -38,8 +38,8 @@ if has("autocmd")
 		autocmd BufWinEnter *.c,*.cpp,*.h setlocal noexpandtab
 		autocmd BufWinEnter *.c,*.cpp,*.h setlocal cindent
 		autocmd BufWinEnter *.c,*.cpp,*.h setlocal makeprg=scons
-		autocmd BufWinEnter *.cpp,*.hpp   let g:ycm_global_ycm_extra_conf='~/.vim/c/.ycm_extra_conf.py'
-		autocmd BufWinEnter *.c,*.h       let g:ycm_global_ycm_extra_conf='~/.vim/cpp/.ycm_extra_conf.py'
+		"autocmd BufWinEnter *.cpp,*.hpp   let g:ycm_global_ycm_extra_conf='~/.vim/c/.ycm_extra_conf.py'
+		"autocmd BufWinEnter *.c,*.h       let g:ycm_global_ycm_extra_conf='~/.vim/cpp/.ycm_extra_conf.py'
 		if !filereadable(expand("%:p:h")."/SConstruct")
 			autocmd FileType c setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
 		endif

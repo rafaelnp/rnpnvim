@@ -12,8 +12,6 @@
 if has("autocmd")
 	highlight ExtraSpaces term=standout ctermbg=Grey guibg=#8fddcc
 	highlight TrailingSpaces term=standout ctermbg=Grey guibg=#8fddcc
-
-	" highlight the firstcolumn" greater than textwidth
 	highlight ColorColumn ctermbg=magenta guibg=lightred
 
 	augroup generalformating
@@ -43,6 +41,7 @@ if has("autocmd")
 		if !filereadable(expand("%:p:h")."/SConstruct")
 			autocmd FileType c setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
 		endif
+		autocmd BufWinLeave *.c,*.cpp,*.h call clearmatches()
 	augroup END
 
 	augroup markdown
@@ -57,6 +56,7 @@ if has("autocmd")
 		autocmd BufWinEnter *.py,SConstruct setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.py,SConstruct setlocal list
 		autocmd BufWinEnter *.py,SConstruct setlocal noexpandtab
+		autocmd BufWinLeave *.py,SConstruct call clearmatches()
 	augroup END
 
 	augroup sh
@@ -65,6 +65,7 @@ if has("autocmd")
 		autocmd BufWinEnter *.sh setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.sh setlocal list
 		autocmd BufWinEnter *.sh setlocal noexpandtab
+		autocmd BufWinLeave *.sh call clearmatches()
 	augroup END
 
 	augroup vim
@@ -73,12 +74,19 @@ if has("autocmd")
 		autocmd BufWinEnter *.vim setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.vim setlocal list
 		autocmd BufWinEnter *.vim setlocal noexpandtab
-	augroup end
+		autocmd BufWinLeave *.vim call clearmatches()
+	augroup END
 
+	" FIXME: Not working with unite. But trhe same config works with help
+	" filetype
 	augroup unite
 		au!
-		if &ft == 'Unite'
-			autocmd BufWinEnter * call clearmatches()
-		endif
-	augroup end
+		autocmd BufWinEnter FileType unite call clearmatches()
+		"autocmd BufWinEnter,BufRead,BufNewFile FileType unite call clearmatches()
+		autocmd FileType unite match none
+		"autocmd BufWinEnter FileType Unite call clearmatches()
+		"if &ft == 'Unite'
+		"	autocmd BufWinEnter * call clearmatches()
+		"endif
+	augroup END
 endif

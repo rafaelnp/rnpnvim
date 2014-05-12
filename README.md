@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.05.06 (Di) 11:00:55 (UTC +0200 CEST)
+Last update: 2014.05.12 (Mo) 10:33:29 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -79,6 +79,11 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 ![Tagbar](http://majutsushi.github.io/tagbar/tagbar3.png)
 
+* Integration with GnuPG for encrypted files
+
+* Customized startup message and recently edited files
+
+![Startify](https://github.com/mhinz/vim-startify/raw/master/startify.png)
 
 
 ## 2. Requirements
@@ -1064,7 +1069,10 @@ let g:vimshell_force_overwrite_statusline = 0
 let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 ```
 
-### 5.25 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 5.25 [Vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
+
+
+### 5.26 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 ```VimL
 let g:ycm_min_num_of_chars_for_completion = 3
@@ -1109,15 +1117,15 @@ nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
 Available colorschemes:
 
-* [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
+### 6.1 [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
 
   Tenths of different colorschemes.
 
-* [molokai](https://github.com/tomasr/molokai)
+### 6.2 [molokai](https://github.com/tomasr/molokai)
 
 ![alt_text](https://github-camo.global.ssl.fastly.net/47bf6f7773c282e9607fc692e3a0948ee9363b6e/687474703a2f2f7777772e77696e746572646f6d2e636f6d2f7765626c6f672f636f6e74656e742f62696e6172792f57696e646f77734c6976655772697465722f4d6f6c6f6b6169666f7256696d5f383630322f6d6f6c6f6b61695f6e6f726d616c5f736d616c6c5f332e706e67)
 
-* [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)(currently used, see picture bellow)
+### 6.3 [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)(currently used, see picture bellow)
 
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 

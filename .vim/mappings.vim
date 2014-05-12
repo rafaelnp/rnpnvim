@@ -80,7 +80,9 @@ noremap <Down>  <Nop>
 nnoremap <a-x> :%s/\s\+$//e<CR>
 
 " shortcut for command line
-nnoremap <silent> - :
+" Remapped becouse of vim-vinegar plugin
+nnoremap  <silent> <space> :
+"nnoremap <silent> - :
 
 " Use Q for formatting the current paragraph (or selection)
 vnoremap Q gq

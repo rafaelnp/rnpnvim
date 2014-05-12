@@ -57,6 +57,7 @@ NeoBundle 'https://github.com/vim-scripts/armasm'
 NeoBundle 'https://github.com/jcf/vim-latex'
 NeoBundle 'https://github.com/Shougo/unite.vim'
 NeoBundle 'https://github.com/jamessan/vim-gnupg'
+NeoBundle 'https://github.com/dhruvasagar/vim-vinegar'
 
 " To remove
 

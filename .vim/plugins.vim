@@ -1,7 +1,7 @@
 " Plugins
 
 " 1 - neobundle.vim
-" Configured in the ~/.vim/bundle.vim file
+"     Configured in the ~/.vim/bundle.vim file
 
 " 2 - genutils
 "     http://www.vim.org/scripts/script.php?script_id=197
@@ -67,41 +67,6 @@ let g:tagbar_type_vhdl = {
 							\]
 						\}
 
-" 7 - Syntastic
-
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_mode_map = { 'mode': 'active',
-							\ 'active_filetypes':['c',
-												\'cpp',
-												\'vim',
-												\'python',
-												\'d',
-												\'lua',
-												\'matlab',
-												\'vhdl',
-												\'zsh',
-												\'html'],
-							\ 'passive_filetypes': [] }
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" 8 - ctrlp
-" let g:ctrlp_match_window = 'top,order:ttb,min:2,max:10'
-" let g:ctrlp_show_hidden = 1
-" let g:ctrlp_custom_ignore = {
-" 							\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-" 							\ 'file': '\v\.(exe|so|dll)$',
-" 							\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-" 							\ }
-" let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-" 							\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
-" let g:ctrlp_match_window_bottom = 1
-" let g:ctrlp_user_command = 'find %s -type f'
-" open a new file on a tab
-" let g:ctrlp_open_new_file = 't'
-
 " 8 - numbers
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
@@ -146,16 +111,31 @@ let g:ycm_filetype_blacklist = {
       \ 'unite' : 1,
       \ 'vimwiki' : 1,
       \}
-let g:ycm_error_symbol = 'ee'
-let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_error_symbol = 'e>'
+let g:ycm_warning_symbol = 'w>'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_key_detailed_diagnostics = '<leader>e'
+
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.'],
+  \   'objc' : ['->', '.'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \   'latex' : ['\'],
+  \ }
 " Configured on .vim/augroup.vim
 " let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+
 
 " 13 - Vim-flavoured.markdown
 "      https://github.com/jtratner/vim-flavored-markdown
@@ -276,7 +256,15 @@ cabbrev vimhex  Vinarise -split<CR>
 " 28  - Rainbow Parenthesis Improved
 "       https://github.com/oblitum/rainbow
 au FileType c,cpp,objc,objcpp call rainbow#load()
-let g:rainbow_active = 1
+" let g:rainbow_active = 1
+
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.c' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
 
 " 29 - Unite
 "      https://github.com/Shougo/unite.vim
@@ -362,3 +350,47 @@ nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 "
 "let g:unite_cursor_line_highlight = 'TabLineSel'
 "let g:unite_abbr_highlight = 'TabLine'
+
+
+" 30 - Startify
+"      https://github.com/mhinz/vim-startify
+
+let g:startify_bookmarks = [
+			\'~/.vimrc',
+			\'~/.vim/abbrev.vim',
+			\'~/.vim/augroup.vim',
+			\'~/.vim/config.vim',
+			\'~/.vim/mappings.vim',
+			\'~/.vim/neobundle.vim',
+			\'~/.vim/plugins.vim'
+			\]
+
+let g:startify_custom_header = [
+			\'     __      ___             ______ _  _',
+			\'     \ \    / (_)           |____  | || |',
+			\'      \ \  / / _ _ __ ___       / /| || |_',
+			\'       \ \/ / | | `_ ` _ \     / / |__   _|',
+			\'        \  /  | | | | | | |   / / _   | |',
+			\'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
+			\ '',
+			\ ]
+
+let g:startify_custom_footer = [
+	\ '',
+	\'   “It is not that I am so smart ,it is just that I stay with problems longer.”',
+	\ '   Albert Einstein',
+	\ '',
+	\ ]
+
+highlight StartifyFooter  ctermfg=yellow
+highlight StartifyFooter  guifg=yellow
+highlight StartifyHeader  ctermfg=red
+highlight StartifyHeader  guifg=red
+
+let g:startify_skiplist = [
+		\ 'COMMIT_EDITMSG',
+		\ $VIMRUNTIME .'/doc',
+		\ 'bundle/.*/doc',
+		\ '\.DS_Store'
+		\ ]
+

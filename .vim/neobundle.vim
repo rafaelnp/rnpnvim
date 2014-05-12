@@ -27,7 +27,7 @@ NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
 
 " Programming
 NeoBundle 'Tagbar'
-NeoBundle 'Syntastic'
+"NeoBundle 'Syntastic'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'https://github.com/mhinz/vim-signify'
 NeoBundle 'https://github.com/tpope/vim-fugitive'
@@ -49,15 +49,18 @@ NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 NeoBundle 'https://github.com/itchyny/calendar.vim'
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 NeoBundle 'https://github.com/Shougo/vinarise.vim'
+NeoBundle 'https://github.com/mhinz/vim-startify.git'
 
 " Under test
 NeoBundle 'https://github.com/junegunn/vim-easy-align'
 NeoBundle 'https://github.com/vim-scripts/armasm'
 NeoBundle 'https://github.com/jcf/vim-latex'
 NeoBundle 'https://github.com/Shougo/unite.vim'
+NeoBundle 'https://github.com/jamessan/vim-gnupg'
+NeoBundle 'https://github.com/dhruvasagar/vim-vinegar'
 
 " To remove
-" NeoBundle 'ctrlp.vim'
 
 let g:neobundle#types#git#default_protocol = "https"
+
 filetype plugin indent on     " required!

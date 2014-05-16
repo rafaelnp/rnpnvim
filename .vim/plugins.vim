@@ -354,6 +354,7 @@ nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 
 " 30 - Startify
 "      https://github.com/mhinz/vim-startify
+let g:startify_files_number = 5
 
 let g:startify_bookmarks = [
 			\'~/.vimrc',

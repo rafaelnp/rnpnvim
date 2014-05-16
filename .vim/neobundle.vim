@@ -27,12 +27,12 @@ NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
 
 " Programming
 NeoBundle 'Tagbar'
-"NeoBundle 'Syntastic'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'https://github.com/mhinz/vim-signify'
 NeoBundle 'https://github.com/tpope/vim-fugitive'
 NeoBundle 'https://github.com/SirVer/ultisnips'
 NeoBundle 'https://github.com/oblitum/rainbow'
+NeoBundle 'honza/vim-snippets'
 
 " not yet classified
 NeoBundle 'https://github.com/Shougo/vimshell.vim'

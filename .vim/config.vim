@@ -110,6 +110,7 @@ endif
 "============
 " GUI Options
 "============
+call SetWindowSize()
 tab all                      " open a new tab instead of a new vim instance
 set showcmd                  " show command in last line of screen
 set laststatus=2             " statusline always visible

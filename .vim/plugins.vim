@@ -206,12 +206,14 @@ let g:airline#extensions#eclim#enabled = 0
 
 " 18 - ultisnips
 "      https://github.com/SirVer/ultisnips
-" TODO: FInish configuration
-
+" TODO: Finish configuration
 let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsListSnippets="<c-h>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
 " 19 - Vimproc
 "      https://github.com/Shougo/vimproc.vim
@@ -354,6 +356,7 @@ nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 
 " 30 - Startify
 "      https://github.com/mhinz/vim-startify
+let g:startify_files_number = 5
 
 let g:startify_bookmarks = [
 			\'~/.vimrc',
@@ -394,3 +397,4 @@ let g:startify_skiplist = [
 		\ '\.DS_Store'
 		\ ]
 
+call SetWindowSize()

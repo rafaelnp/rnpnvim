@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.05.12 (Mo) 10:33:29 (UTC +0200 CEST)
+Last update: 2014.05.16 (Fr) 12:50:10 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -1005,9 +1005,12 @@ let g:tagbar_type_vhdl = {
 
 ```VimL
 let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsListSnippets="<c-h>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 ```
 
 ### 5.12 [unite](https://github.com/Shougo/unite.vim) (Fuzzy search and expand VIm capabilities)
@@ -1051,16 +1054,18 @@ endif
 
 ### 5.20 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
-### 5.21 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
+### 5.21 [vim-snippets](https://github.com/honza/vim-snippets) (Code completting)
 
-### 5.22 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+### 5.22 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
 
-### 5.23 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+### 5.23 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+
+### 5.24 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
 Configured in `~/.vim/bundle.vim`.
 
 
-### 5.24 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
+### 5.25 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
 
 ```VimL
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
@@ -1069,10 +1074,10 @@ let g:vimshell_force_overwrite_statusline = 0
 let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 ```
 
-### 5.25 [Vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
+### 5.26 [Vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
 
 
-### 5.26 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 5.27 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 ```VimL
 let g:ycm_min_num_of_chars_for_completion = 3

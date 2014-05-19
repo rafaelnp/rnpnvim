@@ -8,21 +8,36 @@
 " :cmap - Display command-line mode maps
 " :omap - Display operator pending mode maps
 "
+" <a-x> = Alt + x
+" <c-x> = Ctrl + x
+" <s-x> = Shift + x
+" <CR>  = Enter
+"
 " Tipp: Always use no recursive mapping (noremap). It'll save you time and
 " annoyances.
 
+" 1 - Leader related mappings
 " remap leader
 nnoremap <space> <Nop>
 let mapleader = ","
 
+nnoremap <leader>d    :call Reloadconfig()<CR>
+
 " maps jumping tags
 nnoremap <leader>j  <c-]>
 
+" opens .vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" 2 - Alt related mappings
 " removes carriage return
 nnoremap <buffer> <a-r> :%s/\r//g<CR>
 
 " opens a new table
 nnoremap <a-t> :tabnew<CR>
+
+" Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”? Use this
+nnoremap <silent> <a-c> :nohlsearch<CR>
 
 " go to next buffer
 nnoremap <a-n> :bn<CR>
@@ -33,35 +48,33 @@ nnoremap <a-p> :bp<CR>
 " saves all buffers
 nnoremap <a-s> :wa<CR>
 
-" maps reload config
-nnoremap ,d    :call Reloadconfig()<CR>
-
 " save all current mappings on a text file
 nnoremap <silent> <a-d> :call DumpMaps()<CR>
-
-" Insert current date and time
-nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
-vnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
-inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>
-
-" remove ^M in current file
-noremap <buffer> <a-m> :%s///g<CR>
 
 " closes quickfix
 noremap <a-q> :ccl<CR>
 
+" remove ^M in current file
+noremap <buffer> <a-m> :%s///g<CR>
+
+" Removes trailing spaces
+nnoremap <a-x> :%s/\s\+$//e<CR>
+
 " CTRL+F1 to toggle the menu bar
-nnoremap <silent> <A-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR><ESC>
+nnoremap <silent> <a-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR><ESC>
 
 " CTRL+F2 to toggle the toolbar
-nnoremap <silent> <A-2> :if &guioptions=~'T' \| set guioptions-=T \| else \| set guioptions+=T \| endif<CR><ESC>
+nnoremap <silent> <a-2> :if &guioptions=~'T' \| set guioptions-=T \| else \| set guioptions+=T \| endif<CR><ESC>
 
 " CTRL+F3 to toggle the right scroll bars
-nnoremap <silent> <A-3> :if &guioptions=~'r' \| set guioptions-=r \| else \| set guioptions+=r \| endif<CR><ESC>
+nnoremap <silent> <a-3> :if &guioptions=~'r' \| set guioptions-=r \| else \| set guioptions+=r \| endif<CR><ESC>
 
 " CTRL+F4 to toggle left the scroll bars
-nnoremap <silent> <A-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set guioptions+=l \| endif<CR><ESC>
+nnoremap <silent> <a-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set guioptions+=l \| endif<CR><ESC>
 
+
+" 3 - Shift related mappings
+"
 " Moving cursor to other windows
 "
 " shift down : change window focus to lower one (cyclic)
@@ -73,14 +86,19 @@ nnoremap <s-up>     <c-w>W
 nnoremap <s-left>   <c-w>h
 nnoremap <s-right>  <c-w>l
 
+
+" 4 - Miscelaneous mappings
+
+" Insert current date and time
+nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
+vnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
+inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>
+
 " Disable arrow keys in normal mode
 noremap <Left>  <Nop>
 noremap <Right> <Nop>
 noremap <Up>    <Nop>
 noremap <Down>  <Nop>
-
-" Removes trailing spaces
-nnoremap <a-x> :%s/\s\+$//e<CR>
 
 " shortcut for command line
 " Remapped becouse of vim-vinegar plugin
@@ -97,14 +115,8 @@ nnoremap Q gqap
 nnoremap j gj
 nnoremap k gk
 
-" Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”? Use this
-nnoremap <silent> <a-c> :nohlsearch<CR>
-
 " disable <F1>
 inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
-
-" opens .vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 

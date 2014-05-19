@@ -1,16 +1,39 @@
-*rnpvim*  rnpvim: Vim config   Version: 0.3.1 
-          Last change: 2014.05.19 (Mo) 09:59:34 (UTC +0200 CEST)
+*rnpvim*  rnp's Vim config
+
+Version:     0.3.1 
+Author:      Rafael do Nascimento Pereira
+Last change: 2014.05.19 (Mo) 09:59:34 (UTC +0200 CEST)
+License:     GPLv
 
 ==============================================================================
 CONTENTS                                                     *rnpvim-contents*
 
 	Introduction............................ |rnpvim-introduction|
+	Structure............................... |rnpvim-struture|
+	Mappings ............................... |rnpvim-mappings|
+		General............................. |rnpvim-mappings-general|
+		Plugins............................. |rnpvim-mappings-plugins|
 
 ==============================================================================
-Introduction                                    *rnpvim* *rnpvim-introduction*
+Introduction                                             *rnpvim-introduction*
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
 Suggestions, corrections are welcome :-)
 ==============================================================================
-vim:tw=78:sw=4:ts=8:ft=help:norl:
+Structure                                                   *rnpvim-structure*
+
+==============================================================================
+Mappings                                                     *rnpvim-mappings*
+
+This section lists and describes the mappings used in the rnpvim's config,
+including the ones used in  the plugins.
+
+==============================================================================
+General                                              *rnpvim-mappings-general*
+
+==============================================================================
+Plugins                                              *rnpvim-mappings-plugins*
+
+==============================================================================
+vim:tw=78:sw=4:ts=4:ft=help:norl:

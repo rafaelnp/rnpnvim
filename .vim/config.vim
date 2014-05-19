@@ -19,7 +19,7 @@ set spelllang=de,pt_br,en,es       " set your favorite language here
 if has("browse")
 	set browsedir=buffer           " defaults to the current file's directory
 endif
-set completeopt=menu,preview       " menu completion options
+set completeopt=menu               " menu completion options
 set ttyfast                        " fast terminal connection
 set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete

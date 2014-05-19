@@ -85,8 +85,6 @@ let NERDTreeShowLineNumbers   = 1
 
 
 " 12 - YouCompleteMe
-let g:ycm_min_num_of_chars_for_completion = 3
-let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_filetype_whitelist = {
 								\'lua': 1,
 								\'verilog': 1,
@@ -111,12 +109,11 @@ let g:ycm_filetype_blacklist = {
       \ 'unite' : 1,
       \ 'vimwiki' : 1,
       \}
-let g:ycm_error_symbol = 'e>'
-let g:ycm_warning_symbol = 'w>'
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_key_detailed_diagnostics = '<leader>e'
-
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_open_loclist_on_ycm_diags = 0
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
+let g:ycm_confirm_extra_conf = 0
 let g:ycm_semantic_triggers =  {
   \   'c' : ['->', '.'],
   \   'objc' : ['->', '.'],
@@ -130,8 +127,6 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \   'latex' : ['\'],
   \ }
-" Configured on .vim/augroup.vim
-" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>

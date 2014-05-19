@@ -30,14 +30,15 @@ if has("autocmd")
 	augroup ccpp
 		au!
 		autocmd BufWinEnter *.c,*.cpp,*.h call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
-		autocmd BufWinEnter *.c,*.cpp,*.h setlocal shiftwidth=8 tabstop=8 softtabstop=8
-		autocmd BufWinEnter *.c,*.cpp,*.h setlocal listchars=tab:▸\ ,
-		autocmd BufWinEnter *.c,*.cpp,*.h setlocal list
-		autocmd BufWinEnter *.c,*.cpp,*.h setlocal noexpandtab
-		autocmd BufWinEnter *.c,*.cpp,*.h setlocal cindent
-		autocmd BufWinEnter *.c,*.cpp,*.h setlocal makeprg=scons
-		"autocmd BufWinEnter *.cpp,*.hpp   let g:ycm_global_ycm_extra_conf='~/.vim/c/.ycm_extra_conf.py'
-		"autocmd BufWinEnter *.c,*.h       let g:ycm_global_ycm_extra_conf='~/.vim/cpp/.ycm_extra_conf.py'
+		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
+		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal listchars=tab:▸\ ,
+		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal list
+		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal noexpandtab
+		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal cindent
+		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal makeprg=scons
+		"autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp let g:ycm_min_num_of_chars_for_completion = 99
+		autocmd BufWinEnter *.c,*.h if !Ycmconf_exist() | let g:ycm_global_ycm_extra_conf='~/.vim/c/.ycm_extra_conf.py' | endif
+		autocmd BufWinEnter *.cpp,*.hpp if !Ycmconf_exist() | let g:ycm_global_ycm_extra_conf='~/.vim/cpp/.ycm_extra_conf.py' | endif
 		if !filereadable(expand("%:p:h")."/SConstruct")
 			autocmd FileType c setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
 		endif

@@ -1,8 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-[TOC]
-
-Last update: 2014.05.16 (Fr) 12:50:10 (UTC +0200 CEST)
+Last update: 2014.05.19 (Mo) 10:29:40 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,

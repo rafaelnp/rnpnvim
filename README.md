@@ -1,5 +1,7 @@
 # rnpvim: Rafael Pereira's vim config files
 
+[TOC]
+
 Last update: 2014.05.16 (Fr) 12:50:10 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
@@ -7,7 +9,7 @@ C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
 Suggestions, corrections are welcome :-)
 
 
-## 1. Why rnpvim ?
+## 1 Why rnpvim ?
 
 Have a Vim configuration on git (in this case Github) makes easier to use the same
 configuration across different computers, keep a history of what you have done and
@@ -17,7 +19,7 @@ If you use vim and your workflow includes Assembly, C, C++, LaTeX and HDL(Verilo
 then rnpvim may be a good option for you.
 
 
-### 1.1 Main features:
+### 1.1 Main features
 
 Here are listed the main rnpvim 's features, provided by additional plugins. Those
 plugins are managed by [Neobundle](https://github.com/rafaelnp/rnpvim#57-neobundlevimplugin-manager),
@@ -86,7 +88,7 @@ which is also an Vim plugin, that make the Vim users life much easier.
 ![Startify](https://github.com/mhinz/vim-startify/raw/master/startify.png)
 
 
-## 2. Requirements
+## 2 Requirements
 
 This Vim setup has the following requirements/dependencies:
 
@@ -98,7 +100,7 @@ This Vim setup has the following requirements/dependencies:
 * [Git](http://www.git-scm.com/) 1.7. or newer
 
 
-## 3. Installation
+## 3 Installation
 
 ### 3.1 Manuall
 
@@ -200,7 +202,7 @@ It does the same described as described in the manuall installation, saving some
 typing.
 
 
-## 4. Vim configuration
+## 4 Vim configuration
 
 This configuration was tested in the Vim 7.4.x version on Linux.
 The main configuration option there is a short explanation. For experienced Vim users it
@@ -688,7 +690,7 @@ endif
 Enable 256 colours in terminal.
 
 
-## 4.5 Mappings
+### 4.5 Mappings
 
 **Remapping the leader key**
 
@@ -1118,7 +1120,7 @@ nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 ```
 
 
-## 6. Colorschemes
+## 6 Colorschemes
 
 Available colorschemes:
 
@@ -1135,11 +1137,11 @@ Available colorschemes:
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
 
-## 7. Known problems
+## 7 Known problems
 
 See the project [issues page](https://github.com/rafaelnp/rnpvim/issues?state=open).
 
-## 8. TODO
+## 8 TODO
 
 This README is still incomplete. It is being gradually expanded/improved.
 For new and experimental stuff, take a look at the [next](https://github.com/rafaelnp/rnpvim/tree/next) branch.
@@ -1152,7 +1154,7 @@ For new and experimental stuff, take a look at the [next](https://github.com/raf
 * Spellcheck
 
 
-## 9. References
+## 9 References
 
 Useful documentation about Vim:
 
@@ -1168,7 +1170,7 @@ Useful documentation about Vim:
 10. [Why certain text editors make you more productive](http://www.terminally-incoherent.com/blog/2012/04/04/why-certain-text-editors-make-you-more-productive/)
 
 
-# 10. Acknowledgements
+# 10 Acknowledgements
 
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)

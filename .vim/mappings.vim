@@ -15,6 +15,9 @@
 nnoremap <space> <Nop>
 let mapleader = ","
 
+" maps jumping tags
+nnoremap <leader>j  <c-]>
+
 " removes carriage return
 nnoremap <buffer> <a-r> :%s/\r//g<CR>
 

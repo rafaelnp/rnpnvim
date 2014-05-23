@@ -42,7 +42,8 @@ if has("autocmd")
 		if !filereadable(expand("%:p:h")."/SConstruct")
 			autocmd FileType c setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
 		endif
-		autocmd BufWinLeave *.c,*.cpp,*.h call clearmatches()
+		autocmd BufWinLeave *.c,*.cpp,*.h *.hpp call clearmatches()
+		autocmd BufWritePre *.c,*.cpp,*.h,*.hpp :%s/\s\+$//e
 	augroup END
 
 	augroup markdown

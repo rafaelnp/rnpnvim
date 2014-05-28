@@ -8,17 +8,32 @@
 " 2 - leading spaces
 " 3 - spaces before tabs
 " 4 - spaces after tabs
+highlight ExtraSpaces term=standout ctermbg=Grey guibg=#8fddcc
+highlight TrailingSpaces term=standout ctermbg=Grey guibg=#8fddcc
+highlight ColorColumn ctermbg=magenta guibg=lightred
+
+function! RmTrailSpaces()
+	:%s/\s\+$//e
+endfunction
+
+function! HLightTrailSpaces()
+	call matchadd('TrailingSpaces','\s\+$')
+endfunction
+
+function! HLightExtraSpaces()
+	call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+endfunction
+
+function! HLighteColorColumn()
+	call matchadd('ColorColumn','\%81v')
+endfunction
 
 if has("autocmd")
-	highlight ExtraSpaces term=standout ctermbg=Grey guibg=#8fddcc
-	highlight TrailingSpaces term=standout ctermbg=Grey guibg=#8fddcc
-	highlight ColorColumn ctermbg=magenta guibg=lightred
-
 	augroup generalformating
 		au!
-		autocmd BufWinEnter * call matchadd('TrailingSpaces','\s\+$')
-		autocmd BufWinEnter * call matchadd('ColorColumn','\%81v')
+		autocmd BufWinEnter * call HLightTrailSpaces()
 		autocmd BufWinLeave * call clearmatches()
+		autocmd BufWritePre * call RmTrailSpaces()
 	augroup END
 
 	augroup help
@@ -29,21 +44,19 @@ if has("autocmd")
 
 	augroup ccpp
 		au!
-		autocmd BufWinEnter *.c,*.cpp,*.h call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp call HLighteColorColumn()
+		autocmd BufWinEnter *.c,*.cpp,*.h *.hpp call HLightExtraSpaces()
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal list
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal noexpandtab
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal cindent
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal makeprg=scons
-		"autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp let g:ycm_min_num_of_chars_for_completion = 99
 		autocmd BufWinEnter *.c,*.h if !Ycmconf_exist() | let g:ycm_global_ycm_extra_conf='~/.vim/c/.ycm_extra_conf.py' | endif
 		autocmd BufWinEnter *.cpp,*.hpp if !Ycmconf_exist() | let g:ycm_global_ycm_extra_conf='~/.vim/cpp/.ycm_extra_conf.py' | endif
 		if !filereadable(expand("%:p:h")."/SConstruct")
 			autocmd FileType c setlocal makeprg=clang\ -Wall\ -Wextra\ -o\ %<\ %
 		endif
-		autocmd BufWinLeave *.c,*.cpp,*.h *.hpp call clearmatches()
-		autocmd BufWritePre *.c,*.cpp,*.h,*.hpp :%s/\s\+$//e
 	augroup END
 
 	augroup markdown
@@ -53,30 +66,30 @@ if has("autocmd")
 
 	augroup python
 		au!
+		autocmd BufWinEnter *.py,SConstruct call HLighteColorColumn()
 		autocmd BufWinEnter *.py,SConstruct setlocal shiftwidth=4 tabstop=4 softtabstop=4
-		autocmd BufWinEnter *.py,SConstruct call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+		autocmd BufWinEnter *.py,SConstruct call HLightExtraSpaces()
 		autocmd BufWinEnter *.py,SConstruct setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.py,SConstruct setlocal list
 		autocmd BufWinEnter *.py,SConstruct setlocal noexpandtab
-		autocmd BufWinLeave *.py,SConstruct call clearmatches()
 	augroup END
 
 	augroup sh
 		au!
-		autocmd BufWinEnter *.sh call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+		autocmd BufWinEnter *.sh call HLighteColorColumn()
+		autocmd BufWinEnter *.sh call HLightExtraSpaces()
 		autocmd BufWinEnter *.sh setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.sh setlocal list
 		autocmd BufWinEnter *.sh setlocal noexpandtab
-		autocmd BufWinLeave *.sh call clearmatches()
 	augroup END
 
 	augroup vim
 		au!
-		autocmd BufWinEnter *.vim call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+		autocmd BufWinEnter *.vim call HLighteColorColumn()
+		autocmd BufWinEnter *.vim call HLightExtraSpaces()
 		autocmd BufWinEnter *.vim setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.vim setlocal list
 		autocmd BufWinEnter *.vim setlocal noexpandtab
-		autocmd BufWinLeave *.vim call clearmatches()
 	augroup END
 
 	" FIXME: Not working with unite. But trhe same config works with help

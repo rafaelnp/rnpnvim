@@ -45,7 +45,7 @@ if has("autocmd")
 	augroup ccpp
 		au!
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp call HLighteColorColumn()
-		autocmd BufWinEnter *.c,*.cpp,*.h *.hpp call HLightExtraSpaces()
+		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp call HLightExtraSpaces()
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal listchars=tab:▸\ ,
 		autocmd BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal list

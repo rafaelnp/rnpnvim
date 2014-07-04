@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.07.04 (Fr) 10:47:34 (UTC +0200 CEST)
+Last update: 2014.07.04 (Fr) 11:43:06 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -1167,6 +1167,8 @@ Useful documentation about Vim:
 9. [Vimregex](http://vimregex.com/)
 10. [Why certain text editors make you more productive](http://www.terminally-incoherent.com/blog/2012/04/04/why-certain-text-editors-make-you-more-productive/)
 11. [Vimawesome](http://vimawesome.com/)
+12. [Today I learned Vim](http://tilvim.com/)
+13. [Vim Text Objects: The Definitive Guide](http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/)
 
 
 # 10 Acknowledgements

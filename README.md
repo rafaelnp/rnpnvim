@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.05.19 (Mo) 10:29:40 (UTC +0200 CEST)
+Last update: 2014.07.04 (Fr) 10:47:34 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -588,7 +588,7 @@ set wildmenu
 ```
 
 When 'wildmenu' is on, command-line completion operates in an enhanced mode.
-On pressing 'wildchar' (usually <Tab>) to invoke completion, the possible 
+On pressing 'wildchar' (usually <Tab>) to invoke completion, the possible
 matches are shown just above the command line, with the first match highlighted.
 
 
@@ -1166,6 +1166,7 @@ Useful documentation about Vim:
 8. [Learn Vim progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively)
 9. [Vimregex](http://vimregex.com/)
 10. [Why certain text editors make you more productive](http://www.terminally-incoherent.com/blog/2012/04/04/why-certain-text-editors-make-you-more-productive/)
+11. [Vimawesome](http://vimawesome.com/)
 
 
 # 10 Acknowledgements

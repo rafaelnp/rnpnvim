@@ -10,6 +10,7 @@ set autowriteall                   " automatically save all buffers
 set autoread                       " load file modified outside vim
 set nobackup                       " no backup files, we have git :)
 set nowritebackup
+set noswapfile                     " no swap file
 set backspace=indent,eol,start     " see :help bs
 set helplang=de,en                 " help language
 set history=200                    " command history

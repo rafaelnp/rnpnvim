@@ -43,8 +43,8 @@ NeoBundle 'https://github.com/mhinz/vim-signify'
 "NeoBundle 'https://github.com/Shougo/vimshell.vim'
 NeoBundle 'https://github.com/bling/vim-airline'
 "NeoBundle 'https://github.com/jtratner/vim-flavored-markdown'
-"NeoBundle 'genutils'
-"NeoBundle 'SelectBuf'
+NeoBundle 'genutils'    " Needed by SelectBuf
+NeoBundle 'SelectBuf'
 "NeoBundle 'VimExplorer'
 
 NeoBundle 'myusuf3/numbers.vim'

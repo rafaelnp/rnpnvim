@@ -12,10 +12,9 @@
 " 3 - SelectBuf
 "     http://www.vim.org/scripts/script.php?script_id=107
 "nmap <silent> <F3> <Plug>SelectBuf
-"let g:selBufDefaultSortOrder  = "name"
-"let g:selBufDisableMRUlisting = 0
-"let g:selBufAlwaysShowDetails = 1
-"let g:selBufAlwaysShowHidden  = 1
+nmap <silent> <unique> <F3> <Plug>SelectBuf
+let g:selBufAlwaysShowDetails = 1
+let g:selBufAlwaysShowHidden  = 1
 "
 " 4 - vimexplorer
 "     https://github.com/mbbill/VimExplorer

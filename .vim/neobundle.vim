@@ -24,9 +24,9 @@ NeoBundle 'Shougo/vimproc', {
 
 
 " Colorscheme
-"NeoBundle 'Color-Sampler-Pack'
-"NeoBundle 'https://github.com/tomasr/molokai'
-NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
+NeoBundleLazy 'Color-Sampler-Pack'
+NeoBundleLazy 'https://github.com/tomasr/molokai'
+NeoBundle     'https://github.com/tpope/vim-vividchalk.git'
 
 " Programming
 "NeoBundle 'Tagbar'

@@ -6,7 +6,8 @@ if has('vim_starting')
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle'))
+
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -45,6 +46,7 @@ NeoBundle 'https://github.com/bling/vim-airline'
 "NeoBundle 'genutils'
 "NeoBundle 'SelectBuf'
 "NeoBundle 'VimExplorer'
+
 NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
 "NeoBundle 'https://github.com/scrooloose/nerdtree.git'
@@ -64,8 +66,12 @@ NeoBundle 'myusuf3/numbers.vim'
 " To remove
 
 let g:neobundle#types#git#default_protocol = "https"
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+call neobundle#end()
+
 filetype plugin indent on     " required!
 
- " If there are uninstalled bundles found on startup,
- " this will conveniently prompt you to install them.
- NeoBundleCheck

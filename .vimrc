@@ -104,19 +104,19 @@
 source ~/.vim/neobundle.vim
 
 " Functions
-source ~/.vim/functions.vim
+" source ~/.vim/functions.vim
 
 " Vim basic configuration.
 source ~/.vim/config.vim
 
 " All hotkeys, not dependant on plugins, are mapped here.
-source ~/.vim/mappings.vim
+" source ~/.vim/mappings.vim
 
 " Plugin-specific configuration.
-source ~/.vim/plugins.vim
+ source ~/.vim/plugins.vim
 
 " Abbreviations
-source ~/.vim/abbrev.vim
+"source ~/.vim/abbrev.vim
 
 " Autogroup/autocmd
-source ~/.vim/augroup.vim
+" source ~/.vim/augroup.vim

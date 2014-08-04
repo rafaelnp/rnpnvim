@@ -11,27 +11,27 @@
 "
 " 3 - SelectBuf
 "     http://www.vim.org/scripts/script.php?script_id=107
-nmap <silent> <F3> <Plug>SelectBuf
-let g:selBufDefaultSortOrder  = "name"
-let g:selBufDisableMRUlisting = 0
-let g:selBufAlwaysShowDetails = 1
-let g:selBufAlwaysShowHidden  = 1
-
+"nmap <silent> <F3> <Plug>SelectBuf
+"let g:selBufDefaultSortOrder  = "name"
+"let g:selBufDisableMRUlisting = 0
+"let g:selBufAlwaysShowDetails = 1
+"let g:selBufAlwaysShowHidden  = 1
+"
 " 4 - vimexplorer
 "     https://github.com/mbbill/VimExplorer
 "
-nnoremap <silent> <F7> :VE ~<CR>
-let g:VEConf_treePanelWidth = 40
-if has('unix')
-	let g:VEConf_externalExplorer = "dolphin"
-	let g:VEConf_showHiddenFiles  = 0
-	let g:VEConf_usingGnome       = 0
-	let g:VEConf_usingKDE         = 1
-	let g:VEConf_systemEncoding   = 'utf-8'
-elseif has('win32' || 'win64')
-	let g:VEConf_externalExplorer = "explorer.exe"
-	let g:VEConf_systemEncoding   = 'utf-16'
-endif
+"nnoremap <silent> <F7> :VE ~<CR>
+"let g:VEConf_treePanelWidth = 40
+"if has('unix')
+"	let g:VEConf_externalExplorer = "dolphin"
+"	let g:VEConf_showHiddenFiles  = 0
+"	let g:VEConf_usingGnome       = 0
+"	let g:VEConf_usingKDE         = 1
+"	let g:VEConf_systemEncoding   = 'utf-8'
+"elseif has('win32' || 'win64')
+"	let g:VEConf_externalExplorer = "explorer.exe"
+"	let g:VEConf_systemEncoding   = 'utf-16'
+"endif
 
 " 5 - ColorSamplerPack
 "     http://www.vim.org/scripts/script.php?script_id=625
@@ -39,114 +39,128 @@ endif
 " 6 - Tagbar
 "     https://github.com/majutsushi/tagbar
 "     http://majutsushi.github.io/tagbar/
-nnoremap <silent> <F8> :TagbarToggle<CR>
-let g:tagbar_autoclose   = 1
-let g:tagbar_autofocus   = 1
-let g:tagbar_sort        = 0
-let g:tagbar_iconchars   = ['▾', '▸']
-let g:tagbar_autoshowtag = 1
+"nnoremap <silent> <F8> :TagbarToggle<CR>
+"let g:tagbar_autoclose   = 1
+"let g:tagbar_autofocus   = 1
+"let g:tagbar_sort        = 0
+"let g:tagbar_iconchars   = ['▾', '▸']
+"let g:tagbar_autoshowtag = 1
 
 " more examples: https://github.com/majutsushi/tagbar/wiki
-let g:tagbar_type_vhdl = {
-							\ 'ctagstype': 'vhdl',
-							\ 'kinds' : [
-							\'d:prototypes',
-							\'b:package bodies',
-							\'e:entities',
-							\'a:architectures',
-							\'t:types',
-							\'p:processes',
-							\'f:functions',
-							\'r:procedures',
-							\'c:constants',
-							\'T:subtypes',
-							\'r:records',
-							\'C:components',
-							\'P:packages',
-							\'l:locals'
-							\]
-						\}
+"let g:tagbar_type_vhdl = {
+"							\ 'ctagstype': 'vhdl',
+"							\ 'kinds' : [
+"							\'d:prototypes',
+"							\'b:package bodies',
+"							\'e:entities',
+"							\'a:architectures',
+"							\'t:types',
+"							\'p:processes',
+"							\'f:functions',
+"							\'r:procedures',
+"							\'c:constants',
+"							\'T:subtypes',
+"							\'r:records',
+"							\'C:components',
+"							\'P:packages',
+"							\'l:locals'
+"							\]
+"						\}
 
 " 8 - numbers
-let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
+"let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
 " 9 - vim-nerdtree-tabs
-map <F9> :NERDTreeTabsToggle<CR>
-let g:nerdtree_tabs_open_on_gui_startup     = 0
-let g:nerdtree_tabs_open_on_console_startup = 0
-let g:nerdtree_tabs_no_startup_for_diff     = 0
+"map <F9> :NERDTreeTabsToggle<CR>
+"let g:nerdtree_tabs_open_on_gui_startup     = 0
+"let g:nerdtree_tabs_open_on_console_startup = 0
+"let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 " 10 - nerdtree
-let NERDTreeCaseSensitiveSort = 1
-let NERDTreeShowHidden        = 1
-let NERDTreeShowLineNumbers   = 1
+"let NERDTreeCaseSensitiveSort = 1
+"let NERDTreeShowHidden        = 1
+"let NERDTreeShowLineNumbers   = 1
 
 " 11 - Vividchalk
 
 
 " 12 - YouCompleteMe
-let g:ycm_filetype_whitelist = {
-								\'lua': 1,
-								\'verilog': 1,
-								\'vhdl': 1,
-								\'vim': 1,
-								\'python': 1,
-								\'c': 1,
-								\'cpp': 1,
-								\'matlab': 1,
-								\'maple': 1,
-								\'git': 1,
-								\'sh': 1,
-								\'tex': 1,
-								\'txt': 1,
-								\'zsh': 1,
-								\}
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'unite' : 1,
-      \ 'vimwiki' : 1,
-      \}
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_open_loclist_on_ycm_diags = 0
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.'],
-  \   'objc' : ['->', '.'],
-  \   'ocaml' : ['.', '#'],
-  \   'cpp,objcpp' : ['->', '.', '::'],
-  \   'perl' : ['->'],
-  \   'php' : ['->', '::'],
-  \   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'ruby' : ['.', '::'],
-  \   'lua' : ['.', ':'],
-  \   'erlang' : [':'],
-  \   'latex' : ['\'],
-  \ }
+"let g:ycm_min_num_of_chars_for_completion = 3
+"let g:ycm_min_num_identifier_candidate_chars = 2
+"let g:ycm_filetype_whitelist = {
+"								\'lua': 1,
+"								\'verilog': 1,
+"								\'vhdl': 1,
+"								\'vim': 1,
+"								\'python': 1,
+"								\'c': 1,
+"								\'cpp': 1,
+"								\'matlab': 1,
+"								\'maple': 1,
+"								\'git': 1,
+"								\'sh': 1,
+"								\'tex': 1,
+"								\'txt': 1,
+"								\'zsh': 1,
+"								\}
+"let g:ycm_filetype_blacklist = {
+"      \ 'tagbar' : 1,
+"      \ 'qf' : 1,
+"      \ 'notes' : 1,
+"      \ 'markdown' : 1,
+"      \ 'unite' : 1,
+"      \ 'vimwiki' : 1,
+"      \}
 
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+"let g:ycm_enable_diagnostic_signs = 0
+"let g:ycm_open_loclist_on_ycm_diags = 0
+"let g:ycm_add_preview_to_completeopt = 0
+"let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
+"let g:ycm_confirm_extra_conf = 0
+"let g:ycm_semantic_triggers =  {
+"  \   'c' : ['->', '.'],
+"  \   'objc' : ['->', '.'],
+"  \   'ocaml' : ['.', '#'],
+"  \   'cpp,objcpp' : ['->', '.', '::'],
+"  \   'perl' : ['->'],
+"  \   'php' : ['->', '::'],
+"  \   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
+"  \   'ruby' : ['.', '::'],
+"  \   'lua' : ['.', ':'],
+"  \   'erlang' : [':'],
+"  \   'latex' : ['\'],
+"  \ }
 
+"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
 " 13 - Vim-flavoured.markdown
 "      https://github.com/jtratner/vim-flavored-markdown
-if has("autocmd")
-	augroup markdown
-		au!
-		au BufNewFile,BufRead,BufReadPost,FileReadPost *.md,*.markdown setlocal filetype=ghmarkdown
-	augroup END
-endif
+"if has("autocmd")
+"	augroup markdown
+"		au!
+"		au BufNewFile,BufRead,BufReadPost,FileReadPost *.md,*.markdown setlocal filetype=ghmarkdown
+"	augroup END
+"endif
 
+" 14 - vim-indent-guides
+""      https://github.com/nathanaelkane/vim-indent-guides
+"" don't consider spaces as indentation
+"let g:indent_guides_space_guides = 0
+"
+"" enable at startup
+"let g:indent_guides_enable_on_vim_startup = 1
+"
+"let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
+"
+"
 " 14 - vim-signify
 "      https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
 let g:signify_update_on_bufenter = 1
 let g:signify_sign_change = '~'
 let g:signify_sign_delete_first_line = '*'
+let g:signify_update_on_focusgained = 1
 
 highlight SignifySignAdd    cterm=bold ctermfg=green
 highlight SignifySignDelete cterm=bold ctermfg=red
@@ -202,13 +216,13 @@ let g:airline#extensions#eclim#enabled = 0
 " 18 - ultisnips
 "      https://github.com/SirVer/ultisnips
 " TODO: Finish configuration
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsListSnippets="<c-h>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
+"let g:UltiSnipsExpandTrigger="<c-l>"
+"let g:UltiSnipsListSnippets="<c-h>"
+"let g:UltiSnipsJumpForwardTrigger="<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+"let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
+"let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
 " 19 - Vimproc
 "      https://github.com/Shougo/vimproc.vim
@@ -216,10 +230,10 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
 " 20 - vimshell.vim
 "      https://github.com/Shougo/vimshell.vim
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
-let g:vimshell_force_overwrite_statusline = 0
-let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
+"let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+"let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
+"let g:vimshell_force_overwrite_statusline = 0
+"let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 
 " 21 - Calender.vim
 "      https://github.com/itchyny/calendar.vim
@@ -351,45 +365,45 @@ nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 
 " 30 - Startify
 "      https://github.com/mhinz/vim-startify
-let g:startify_files_number = 5
-
-let g:startify_bookmarks = [
-			\'~/.vimrc',
-			\'~/.vim/abbrev.vim',
-			\'~/.vim/augroup.vim',
-			\'~/.vim/config.vim',
-			\'~/.vim/mappings.vim',
-			\'~/.vim/neobundle.vim',
-			\'~/.vim/plugins.vim'
-			\]
-
-let g:startify_custom_header = [
-			\'     __      ___             ______ _  _',
-			\'     \ \    / (_)           |____  | || |',
-			\'      \ \  / / _ _ __ ___       / /| || |_',
-			\'       \ \/ / | | `_ ` _ \     / / |__   _|',
-			\'        \  /  | | | | | | |   / / _   | |',
-			\'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
-			\ '',
-			\ ]
-
-let g:startify_custom_footer = [
-	\ '',
-	\'   “It is not that I am so smart ,it is just that I stay with problems longer.”',
-	\ '   Albert Einstein',
-	\ '',
-	\ ]
-
-highlight StartifyFooter  ctermfg=yellow
-highlight StartifyFooter  guifg=yellow
-highlight StartifyHeader  ctermfg=red
-highlight StartifyHeader  guifg=red
-
-let g:startify_skiplist = [
-		\ 'COMMIT_EDITMSG',
-		\ $VIMRUNTIME .'/doc',
-		\ 'bundle/.*/doc',
-		\ '\.DS_Store'
-		\ ]
-
-call SetWindowSize()
+"let g:startify_files_number = 5
+"
+"let g:startify_bookmarks = [
+"			\'~/.vimrc',
+"			\'~/.vim/abbrev.vim',
+"			\'~/.vim/augroup.vim',
+"			\'~/.vim/config.vim',
+"			\'~/.vim/mappings.vim',
+"			\'~/.vim/neobundle.vim',
+"			\'~/.vim/plugins.vim'
+"			\]
+"
+"let g:startify_custom_header = [
+"			\'     __      ___             ______ _  _',
+"			\'     \ \    / (_)           |____  | || |',
+"			\'      \ \  / / _ _ __ ___       / /| || |_',
+"			\'       \ \/ / | | `_ ` _ \     / / |__   _|',
+"			\'        \  /  | | | | | | |   / / _   | |',
+"			\'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
+"			\ '',
+"			\ ]
+"
+"let g:startify_custom_footer = [
+"	\ '',
+"	\'   “It is not that I am so smart ,it is just that I stay with problems longer.”',
+"	\ '   Albert Einstein',
+"	\ '',
+"	\ ]
+"
+"highlight StartifyFooter  ctermfg=yellow
+"highlight StartifyFooter  guifg=yellow
+"highlight StartifyHeader  ctermfg=red
+"highlight StartifyHeader  guifg=red
+"
+"let g:startify_skiplist = [
+"		\ 'COMMIT_EDITMSG',
+"		\ $VIMRUNTIME .'/doc',
+"		\ 'bundle/.*/doc',
+"		\ '\.DS_Store'
+"		\ ]
+"
+"call SetWindowSize()

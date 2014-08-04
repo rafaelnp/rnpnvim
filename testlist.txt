@@ -6,4 +6,6 @@ The need before each release are listed bellow:
 - GUI interface is correctly draw on startup anf after resizing
 - CLI interface is correctly draw on startup anf after resizing
 - Startup time is not increased too much
+- SelectBuf: verify if buffers are remover correctly, either using SelectBuf or
+  using :bd
 

@@ -49,7 +49,7 @@ NeoBundle 'SelectBuf'
 
 NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
-"NeoBundle 'https://github.com/scrooloose/nerdtree.git'
+NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 "NeoBundle 'https://github.com/itchyny/calendar.vim'
 "NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 "NeoBundle 'https://github.com/Shougo/vinarise.vim'
@@ -61,7 +61,13 @@ NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'https://github.com/jcf/vim-latex'
 "NeoBundle 'https://github.com/Shougo/unite.vim'
 "NeoBundle 'https://github.com/jamessan/vim-gnupg'
-"NeoBundle 'https://github.com/dhruvasagar/vim-vinegar'
+NeoBundle 'https://github.com/dhruvasagar/vim-vinegar', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'mappings' : '-'
+\	}
+\}
+
 
 " To remove
 

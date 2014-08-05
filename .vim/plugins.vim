@@ -76,9 +76,9 @@ let g:selBufAlwaysShowHidden  = 1
 "let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 " 10 - nerdtree
-"let NERDTreeCaseSensitiveSort = 1
-"let NERDTreeShowHidden        = 1
-"let NERDTreeShowLineNumbers   = 1
+let NERDTreeCaseSensitiveSort = 1
+let NERDTreeShowHidden        = 1
+let NERDTreeShowLineNumbers   = 1
 
 " 11 - Vividchalk
 
@@ -406,3 +406,7 @@ nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 "		\ ]
 "
 "call SetWindowSize()
+
+" 31 - Vinegar
+"      https://github.com/dhruvasagar/vim-vinegar
+

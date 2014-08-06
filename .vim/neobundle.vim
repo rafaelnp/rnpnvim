@@ -81,17 +81,25 @@ NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 NeoBundle 'https://github.com/Shougo/vinarise.vim'
 NeoBundle 'https://github.com/mhinz/vim-startify.git'
-
-" Under test
-"NeoBundle 'https://github.com/junegunn/vim-easy-align'
-"NeoBundle 'https://github.com/vim-scripts/armasm'
-"NeoBundle 'https://github.com/jcf/vim-latex'
+NeoBundle 'https://github.com/jcf/vim-latex', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'filetypes' : [
+\			'tex',
+\			'latex',
+\		]
+\	}
+\}
 NeoBundle "Shougo/unite.vim", {
 \	'lazy' : 1,
 \   'autoload' : {
 \       'commands' : [ "Unite" ]
 \   }
 \}
+
+" Under test
+"NeoBundle 'https://github.com/junegunn/vim-easy-align'
+"NeoBundle 'https://github.com/vim-scripts/armasm'
 "NeoBundle 'https://github.com/jamessan/vim-gnupg'
 NeoBundle 'https://github.com/dhruvasagar/vim-vinegar', {
 \	'lazy' : 1,

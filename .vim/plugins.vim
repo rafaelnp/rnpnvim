@@ -261,8 +261,8 @@ let g:airline#extensions#eclim#enabled = 0
 
 " 27 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
-"let g:vinarise_detect_large_file_size = 1000000
-"cabbrev vimhex  Vinarise -split<CR>
+let g:vinarise_detect_large_file_size = 1000000
+cabbrev vimhex  Vinarise -split<CR>
 
 " 28  - Rainbow Parenthesis Improved
 "       https://github.com/oblitum/rainbow

@@ -52,7 +52,6 @@ NeoBundle 'https://github.com/mhinz/vim-signify'
 "NeoBundle 'https://github.com/Cognoscan/vim-vhdl'
 
 " not yet classified
-"NeoBundle 'https://github.com/Shougo/vimshell.vim'
 NeoBundle 'https://github.com/bling/vim-airline'
 "NeoBundle 'https://github.com/jtratner/vim-flavored-markdown'
 NeoBundle 'genutils'    " Needed by SelectBuf
@@ -64,7 +63,7 @@ NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 "NeoBundle 'https://github.com/itchyny/calendar.vim'
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
-"NeoBundle 'https://github.com/Shougo/vinarise.vim'
+NeoBundle 'https://github.com/Shougo/vinarise.vim'
 "NeoBundle 'https://github.com/mhinz/vim-startify.git'
 
 " Under test

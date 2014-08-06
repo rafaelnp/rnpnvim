@@ -63,7 +63,7 @@ NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 "NeoBundle 'https://github.com/itchyny/calendar.vim'
-"NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
+NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 "NeoBundle 'https://github.com/Shougo/vinarise.vim'
 "NeoBundle 'https://github.com/mhinz/vim-startify.git'
 
@@ -71,7 +71,6 @@ NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 "NeoBundle 'https://github.com/junegunn/vim-easy-align'
 "NeoBundle 'https://github.com/vim-scripts/armasm'
 "NeoBundle 'https://github.com/jcf/vim-latex'
-"NeoBundle 'https://github.com/Shougo/unite.vim'
 NeoBundle "Shougo/unite.vim", {
 \	'lazy' : 1,
 \   'autoload' : {

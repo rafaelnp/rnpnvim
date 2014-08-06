@@ -104,7 +104,7 @@
 source ~/.vim/neobundle.vim
 
 " Functions
- source ~/.vim/functions.vim
+source ~/.vim/functions.vim
 
 " Vim basic configuration.
 source ~/.vim/config.vim
@@ -119,4 +119,4 @@ source ~/.vim/mappings.vim
 source ~/.vim/abbrev.vim
 
 " Autogroup/autocmd
-" source ~/.vim/augroup.vim
+source ~/.vim/augroup.vim

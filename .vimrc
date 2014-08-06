@@ -116,7 +116,7 @@ source ~/.vim/mappings.vim
  source ~/.vim/plugins.vim
 
 " Abbreviations
-"source ~/.vim/abbrev.vim
+source ~/.vim/abbrev.vim
 
 " Autogroup/autocmd
 " source ~/.vim/augroup.vim

@@ -63,17 +63,17 @@ NeoBundle 'https://github.com/Cognoscan/vim-vhdl', {
 \	}
 \}
 
-
-"		NeoBundleLazy 'Rip-Rip/clang_complete'
-"		autocmd FileType c,cpp NeoBundleSource clang_complete
-
 " not yet classified
 NeoBundle 'https://github.com/bling/vim-airline'
-"NeoBundle 'https://github.com/jtratner/vim-flavored-markdown'
+NeoBundle 'https://github.com/jtratner/vim-flavored-markdown', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'filetypes' : "markdown"
+\	}
+\}
 NeoBundle 'genutils'    " Needed by SelectBuf
 NeoBundle 'SelectBuf'
 "NeoBundle 'VimExplorer'
-
 NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'
@@ -99,9 +99,6 @@ NeoBundle 'https://github.com/dhruvasagar/vim-vinegar', {
 \		'mappings' : '-'
 \	}
 \}
-
-
-" To remove
 
 let g:neobundle#types#git#default_protocol = "https"
 

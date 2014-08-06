@@ -60,6 +60,12 @@ NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 "NeoBundle 'https://github.com/vim-scripts/armasm'
 "NeoBundle 'https://github.com/jcf/vim-latex'
 "NeoBundle 'https://github.com/Shougo/unite.vim'
+NeoBundle "Shougo/unite.vim", {
+\	'lazy' : 1,
+\   'autoload' : {
+\       'commands' : [ "Unite" ]
+\   }
+\}
 "NeoBundle 'https://github.com/jamessan/vim-gnupg'
 NeoBundle 'https://github.com/dhruvasagar/vim-vinegar', {
 \	'lazy' : 1,

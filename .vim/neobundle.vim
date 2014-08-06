@@ -29,7 +29,19 @@ NeoBundleLazy 'https://github.com/tomasr/molokai'
 NeoBundle     'https://github.com/tpope/vim-vividchalk.git'
 
 " Programming
-"NeoBundle 'Tagbar'
+NeoBundle 'Tagbar', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'filetypes' : [
+\			'c',
+\			'cpp',
+\			'vim',
+\			'latex',
+\			'python',
+\			'sh',
+\		],
+\	},
+\}
 "NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'https://github.com/mhinz/vim-signify'
 "NeoBundle 'https://github.com/tpope/vim-fugitive'

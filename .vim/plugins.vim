@@ -38,33 +38,34 @@ let g:selBufAlwaysShowHidden  = 1
 " 6 - Tagbar
 "     https://github.com/majutsushi/tagbar
 "     http://majutsushi.github.io/tagbar/
-"nnoremap <silent> <F8> :TagbarToggle<CR>
-"let g:tagbar_autoclose   = 1
-"let g:tagbar_autofocus   = 1
-"let g:tagbar_sort        = 0
-"let g:tagbar_iconchars   = ['▾', '▸']
-"let g:tagbar_autoshowtag = 1
+
+nnoremap <silent> <F8> :TagbarToggle<CR>
+let g:tagbar_autoclose   = 1
+let g:tagbar_autofocus   = 1
+let g:tagbar_sort        = 0
+let g:tagbar_iconchars   = ['▾', '▸']
+let g:tagbar_autoshowtag = 1
 
 " more examples: https://github.com/majutsushi/tagbar/wiki
-"let g:tagbar_type_vhdl = {
-"							\ 'ctagstype': 'vhdl',
-"							\ 'kinds' : [
-"							\'d:prototypes',
-"							\'b:package bodies',
-"							\'e:entities',
-"							\'a:architectures',
-"							\'t:types',
-"							\'p:processes',
-"							\'f:functions',
-"							\'r:procedures',
-"							\'c:constants',
-"							\'T:subtypes',
-"							\'r:records',
-"							\'C:components',
-"							\'P:packages',
-"							\'l:locals'
-"							\]
-"						\}
+let g:tagbar_type_vhdl = {
+							\ 'ctagstype': 'vhdl',
+							\ 'kinds' : [
+							\'d:prototypes',
+							\'b:package bodies',
+							\'e:entities',
+							\'a:architectures',
+							\'t:types',
+							\'p:processes',
+							\'f:functions',
+							\'r:procedures',
+							\'c:constants',
+							\'T:subtypes',
+							\'r:records',
+							\'C:components',
+							\'P:packages',
+							\'l:locals'
+							\]
+						\}
 
 " 8 - numbers
 "let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']

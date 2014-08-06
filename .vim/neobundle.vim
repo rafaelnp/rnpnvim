@@ -64,7 +64,7 @@ NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 "NeoBundle 'https://github.com/itchyny/calendar.vim'
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 NeoBundle 'https://github.com/Shougo/vinarise.vim'
-"NeoBundle 'https://github.com/mhinz/vim-startify.git'
+NeoBundle 'https://github.com/mhinz/vim-startify.git'
 
 " Under test
 "NeoBundle 'https://github.com/junegunn/vim-easy-align'

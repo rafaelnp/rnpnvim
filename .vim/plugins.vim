@@ -365,48 +365,51 @@ nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 
 " 30 - Startify
 "      https://github.com/mhinz/vim-startify
-"let g:startify_files_number = 5
-"
-"let g:startify_bookmarks = [
-"			\'~/.vimrc',
-"			\'~/.vim/abbrev.vim',
-"			\'~/.vim/augroup.vim',
-"			\'~/.vim/config.vim',
-"			\'~/.vim/mappings.vim',
-"			\'~/.vim/neobundle.vim',
-"			\'~/.vim/plugins.vim'
-"			\]
-"
-"let g:startify_custom_header = [
-"			\'     __      ___             ______ _  _',
-"			\'     \ \    / (_)           |____  | || |',
-"			\'      \ \  / / _ _ __ ___       / /| || |_',
-"			\'       \ \/ / | | `_ ` _ \     / / |__   _|',
-"			\'        \  /  | | | | | | |   / / _   | |',
-"			\'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
-"			\ '',
-"			\ ]
-"
-"let g:startify_custom_footer = [
-"	\ '',
-"	\'   “It is not that I am so smart ,it is just that I stay with problems longer.”',
-"	\ '   Albert Einstein',
-"	\ '',
-"	\ ]
-"
-"highlight StartifyFooter  ctermfg=yellow
-"highlight StartifyFooter  guifg=yellow
-"highlight StartifyHeader  ctermfg=red
-"highlight StartifyHeader  guifg=red
-"
-"let g:startify_skiplist = [
-"		\ 'COMMIT_EDITMSG',
-"		\ $VIMRUNTIME .'/doc',
-"		\ 'bundle/.*/doc',
-"		\ '\.DS_Store'
-"		\ ]
-"
-"call SetWindowSize()
+
+let g:startify_files_number = 5
+
+let g:startify_bookmarks = [
+			\'~/.vimrc',
+			\'~/.vim/abbrev.vim',
+			\'~/.vim/augroup.vim',
+			\'~/.vim/config.vim',
+			\'~/.vim/mappings.vim',
+			\'~/.vim/neobundle.vim',
+			\'~/.vim/plugins.vim'
+			\]
+
+let g:startify_custom_header = [
+			\'     __      ___             ______ _  _',
+			\'     \ \    / (_)           |____  | || |',
+			\'      \ \  / / _ _ __ ___       / /| || |_',
+			\'       \ \/ / | | `_ ` _ \     / / |__   _|',
+			\'        \  /  | | | | | | |   / / _   | |',
+			\'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
+			\ '',
+			\ ]
+
+let g:startify_custom_footer = [
+	\ '',
+	\'   “It is not that I am so smart ,it is just that I stay with problems longer.”',
+	\ '   Albert Einstein',
+	\ '',
+	\ ]
+
+highlight StartifyFooter  ctermfg=yellow
+highlight StartifyFooter  guifg=yellow
+highlight StartifyHeader  ctermfg=red
+highlight StartifyHeader  guifg=red
+
+let g:startify_skiplist = [
+		\ 'COMMIT_EDITMSG',
+		\ $VIMRUNTIME .'/doc',
+		\ 'bundle/.*/doc',
+		\ '\.DS_Store'
+		\ ]
+
+if has('gui_running')
+	call SetWindowSize()
+endif
 
 " 31 - Vinegar
 "      https://github.com/dhruvasagar/vim-vinegar

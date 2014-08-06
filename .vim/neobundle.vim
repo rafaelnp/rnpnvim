@@ -39,6 +39,8 @@ NeoBundle 'Tagbar', {
 \			'latex',
 \			'python',
 \			'sh',
+\			'vhdl',
+\			'verilog',
 \		],
 \	},
 \}
@@ -48,8 +50,22 @@ NeoBundle 'https://github.com/mhinz/vim-signify'
 "NeoBundle 'https://github.com/SirVer/ultisnips'
 "NeoBundle 'https://github.com/oblitum/rainbow'
 "NeoBundle 'honza/vim-snippets'
-"NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog'
-"NeoBundle 'https://github.com/Cognoscan/vim-vhdl'
+NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'filetypes' : "verilog"
+\	}
+\}
+NeoBundle 'https://github.com/Cognoscan/vim-vhdl', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'filetypes' : "vhdl"
+\	}
+\}
+
+
+"		NeoBundleLazy 'Rip-Rip/clang_complete'
+"		autocmd FileType c,cpp NeoBundleSource clang_complete
 
 " not yet classified
 NeoBundle 'https://github.com/bling/vim-airline'

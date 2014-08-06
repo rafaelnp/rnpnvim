@@ -48,7 +48,17 @@ NeoBundle 'Tagbar', {
 NeoBundle 'https://github.com/mhinz/vim-signify'
 "NeoBundle 'https://github.com/tpope/vim-fugitive'
 "NeoBundle 'https://github.com/SirVer/ultisnips'
-"NeoBundle 'https://github.com/oblitum/rainbow'
+NeoBundle 'https://github.com/oblitum/rainbow', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'filetypes' : [
+\			'c',
+\			'cpp',
+\			'vim',
+\			'sh',
+\		],
+\	},
+\}
 "NeoBundle 'honza/vim-snippets'
 NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog', {
 \	'lazy' : 1,

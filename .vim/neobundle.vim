@@ -96,17 +96,18 @@ NeoBundle "Shougo/unite.vim", {
 \       'commands' : [ "Unite" ]
 \   }
 \}
-
-" Under test
-"NeoBundle 'https://github.com/junegunn/vim-easy-align'
-"NeoBundle 'https://github.com/vim-scripts/armasm'
-"NeoBundle 'https://github.com/jamessan/vim-gnupg'
 NeoBundle 'https://github.com/dhruvasagar/vim-vinegar', {
 \	'lazy' : 1,
 \   'autoload' : {
 \		'mappings' : '-'
 \	}
 \}
+
+" Under test
+"NeoBundle 'https://github.com/junegunn/vim-easy-align'
+"NeoBundle 'https://github.com/vim-scripts/armasm'
+"NeoBundle 'https://github.com/jamessan/vim-gnupg'
+"NeoBundle 'https://github.com/dhruvasagar/vim-table-mode/'
 
 let g:neobundle#types#git#default_protocol = "https"
 

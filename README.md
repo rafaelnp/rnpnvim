@@ -27,8 +27,6 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 * Code/text autocompletion
 
-![YouCompleteMe](http://i.imgur.com/0OP4ood.gif)
-
 * Calender integration
 
 ![calender.vim](https://raw.github.com/wiki/itchyny/calendar.vim/image/image2.png)
@@ -54,22 +52,11 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 * Opensource VCSs integration
 
-![Signify](https://github.com/mhinz/vim-signify/raw/master/signify.gif)
-
-![alt_text](https://f.cloud.github.com/assets/306502/995185/73fc7054-09b9-11e3-9d45-618406c6ed98.png)
-
-* Different parentheses level coloured
-![parentheses_coloured](http://i.imgur.com/j4g6L92.png)
+![signify](https://f.cloud.github.com/assets/306502/995185/73fc7054-09b9-11e3-9d45-618406c6ed98.png)
 
 * Plugins management
 
 * Fuzzy search
-
-![ctrlp](https://github-camo.global.ssl.fastly.net/0a0b4c0d24a44d381cbad420ecb285abc2aaa4cb/687474703a2f2f692e696d6775722e636f6d2f7949796e722e706e67)
-
-* Shell integration
-
-![alt text](https://f.cloud.github.com/assets/980000/982716/eb45a994-0817-11e3-806e-ce6e731b86ef.png)
 
 * Syntax check
 

@@ -44,7 +44,23 @@ NeoBundle 'Tagbar', {
 \		],
 \	},
 \}
-"NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'filetypes' : [
+\			'c',
+\			'cpp',
+\			'lua',
+\			'python',
+\			'sh',
+\			'tex',
+\			'verilog',
+\			'vhdl',
+\			'vim',
+\			'zsh',
+\		],
+\	},
+\}
 NeoBundle 'https://github.com/mhinz/vim-signify'
 "NeoBundle 'https://github.com/tpope/vim-fugitive'
 "NeoBundle 'https://github.com/SirVer/ultisnips'

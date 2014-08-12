@@ -112,11 +112,11 @@ let NERDTreeShowLineNumbers   = 1
 "      \ 'vimwiki' : 1,
 "      \}
 
-"let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_signs = 0
 "let g:ycm_open_loclist_on_ycm_diags = 0
 "let g:ycm_add_preview_to_completeopt = 0
 "let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
-"let g:ycm_confirm_extra_conf = 0
+let g:ycm_confirm_extra_conf = 0
 "let g:ycm_semantic_triggers =  {
 "  \   'c' : ['->', '.'],
 "  \   'objc' : ['->', '.'],

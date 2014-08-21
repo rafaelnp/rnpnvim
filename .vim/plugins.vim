@@ -143,16 +143,7 @@ let g:ycm_confirm_extra_conf = 0
 "	augroup END
 "endif
 
-" 14 - vim-indent-guides
-""      https://github.com/nathanaelkane/vim-indent-guides
-"" don't consider spaces as indentation
-"let g:indent_guides_space_guides = 0
-"
-"" enable at startup
-"let g:indent_guides_enable_on_vim_startup = 1
-"
-"let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
-"
+
 "
 " 14 - vim-signify
 "      https://github.com/mhinz/vim-signify

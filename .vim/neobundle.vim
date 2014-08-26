@@ -97,8 +97,9 @@ NeoBundle 'https://github.com/jtratner/vim-flavored-markdown', {
 \		'filetypes' : "markdown",
 \	},
 \}
-NeoBundle 'genutils'    " Needed by SelectBuf
-NeoBundle 'SelectBuf'
+NeoBundle 'SelectBuf', {
+\	'depends' : 'genutils'
+\}
 "NeoBundle 'VimExplorer'
 NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'https://github.com/jistr/vim-nerdtree-tabs.git'

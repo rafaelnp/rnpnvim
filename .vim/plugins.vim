@@ -71,10 +71,10 @@ let g:tagbar_type_vhdl = {
 "let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
 " 9 - vim-nerdtree-tabs
-"map <F9> :NERDTreeTabsToggle<CR>
-"let g:nerdtree_tabs_open_on_gui_startup     = 0
-"let g:nerdtree_tabs_open_on_console_startup = 0
-"let g:nerdtree_tabs_no_startup_for_diff     = 0
+nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_gui_startup     = 0
+let g:nerdtree_tabs_open_on_console_startup = 0
+let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 " 10 - nerdtree
 let NERDTreeCaseSensitiveSort = 1

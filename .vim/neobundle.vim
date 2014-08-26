@@ -108,8 +108,15 @@ NeoBundle 'VimExplorer', {
 \	},
 \}
 NeoBundle 'myusuf3/numbers.vim'
-"NeoBundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
-NeoBundle 'https://github.com/scrooloose/nerdtree.git'
+ " mapping does not work when set to 1
+NeoBundle 'jistr/vim-nerdtree-tabs', {
+\	'depends': 'https://github.com/scrooloose/nerdtree.git',
+\	'lazy' : 0,
+\   'autoload' : {
+\		'mappings' : 'F9',
+\		'commands' : 'NERDTreeTabsToggle',
+\	},
+\}
 "NeoBundle 'https://github.com/itchyny/calendar.vim'
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 NeoBundle 'https://github.com/Shougo/vinarise.vim'

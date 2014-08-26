@@ -148,10 +148,10 @@ let g:ycm_confirm_extra_conf = 0
 " 14 - vim-signify
 "      https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
-let g:signify_update_on_bufenter = 1
+let g:signify_update_on_bufenter = 0
 let g:signify_sign_change = '~'
 let g:signify_sign_delete_first_line = '*'
-let g:signify_update_on_focusgained = 1
+let g:signify_update_on_focusgained = 0
 
 highlight SignifySignAdd    cterm=bold ctermfg=green
 highlight SignifySignDelete cterm=bold ctermfg=red

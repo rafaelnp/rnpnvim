@@ -100,7 +100,13 @@ NeoBundle 'https://github.com/jtratner/vim-flavored-markdown', {
 NeoBundle 'SelectBuf', {
 \	'depends' : 'genutils'
 \}
-"NeoBundle 'VimExplorer'
+NeoBundle 'VimExplorer', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'mappings' : 'F7',
+\		'commands' : 'VE',
+\	},
+\}
 NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'

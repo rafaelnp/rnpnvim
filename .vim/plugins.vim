@@ -18,19 +18,19 @@ let g:selBufAlwaysShowHidden  = 1
 "
 " 4 - vimexplorer
 "     https://github.com/mbbill/VimExplorer
-"
-"nnoremap <silent> <F7> :VE ~<CR>
-"let g:VEConf_treePanelWidth = 40
-"if has('unix')
-"	let g:VEConf_externalExplorer = "dolphin"
-"	let g:VEConf_showHiddenFiles  = 0
-"	let g:VEConf_usingGnome       = 0
-"	let g:VEConf_usingKDE         = 1
-"	let g:VEConf_systemEncoding   = 'utf-8'
-"elseif has('win32' || 'win64')
-"	let g:VEConf_externalExplorer = "explorer.exe"
-"	let g:VEConf_systemEncoding   = 'utf-16'
-"endif
+
+nnoremap <silent> <F7> :VE ~<CR>
+let g:VEConf_treePanelWidth = 40
+if has('unix')
+	let g:VEConf_externalExplorer = "dolphin"
+	let g:VEConf_showHiddenFiles  = 0
+	let g:VEConf_usingGnome       = 0
+	let g:VEConf_usingKDE         = 1
+	let g:VEConf_systemEncoding   = 'utf-8'
+elseif has('win32' || 'win64')
+	let g:VEConf_externalExplorer = "explorer.exe"
+	let g:VEConf_systemEncoding   = 'utf-16'
+endif
 
 " 5 - ColorSamplerPack
 "     http://www.vim.org/scripts/script.php?script_id=625

@@ -79,14 +79,14 @@ NeoBundle 'https://github.com/oblitum/rainbow', {
 NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog', {
 \	'lazy' : 1,
 \   'autoload' : {
-\		'filetypes' : "verilog"
-\	}
+\		'filetypes' : "verilog",
+\	},
 \}
 NeoBundle 'https://github.com/Cognoscan/vim-vhdl', {
 \	'lazy' : 1,
 \   'autoload' : {
-\		'filetypes' : "vhdl"
-\	}
+\		'filetypes' : "vhdl",
+\	},
 \}
 
 " not yet classified
@@ -94,8 +94,8 @@ NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'https://github.com/jtratner/vim-flavored-markdown', {
 \	'lazy' : 1,
 \   'autoload' : {
-\		'filetypes' : "markdown"
-\	}
+\		'filetypes' : "markdown",
+\	},
 \}
 NeoBundle 'genutils'    " Needed by SelectBuf
 NeoBundle 'SelectBuf'

@@ -33,6 +33,7 @@ if has("autocmd")
 		au!
 		autocmd BufCreate,BufLeave,BufWinLeave * call clearmatches()
 		autocmd BufWritePre * call RmTrailSpaces()
+		autocmd VimResized  * wincmd =
 	augroup END
 
 "	augroup help

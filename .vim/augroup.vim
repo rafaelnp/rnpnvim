@@ -51,7 +51,7 @@ if has("autocmd")
 
 	augroup ccpp
 		au!
-"		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call HLighteColorColumn()
+		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call HLighteColorColumn()
 "		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call HLightExtraSpaces()
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal shiftwidth=8 tabstop=8 softtabstop=8
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call ShowTabs()
@@ -73,7 +73,7 @@ if has("autocmd")
 
 	augroup python
 		au!
-"		autocmd BufEnter,BufWinEnter *.py,SConstruct call HLighteColorColumn()
+		autocmd BufEnter,BufWinEnter *.py,SConstruct call HLighteColorColumn()
 "		autocmd BufEnter,BufWinEnter *.py,SConstruct setlocal shiftwidth=4 tabstop=4 softtabstop=4
 "		autocmd BufEnter,BufWinEnter *.py,SConstruct call HLightExtraSpaces()
 		autocmd BufEnter,BufWinEnter *.py,SConstruct call ShowTabs()
@@ -83,7 +83,7 @@ if has("autocmd")
 
 	augroup sh
 		au!
-"		autocmd BufEnter,BufWinEnter *.sh call HLighteColorColumn()
+		autocmd BufEnter,BufWinEnter *.sh call HLighteColorColumn()
 "		autocmd BufEnter,BufWinEnter *.sh call HLightExtraSpaces()
 		autocmd BufEnter,BufWinEnter *.sh call ShowTabs()
 "		autocmd BufEnter,BufWinEnter *.sh setlocal noexpandtab
@@ -92,7 +92,7 @@ if has("autocmd")
 
 	augroup vim
 		au!
-"		autocmd BufEnter,BufWinEnter *.vim call HLighteColorColumn()
+		autocmd BufEnter,BufWinEnter *.vim call HLighteColorColumn()
 "		autocmd BufEnter,BufWinEnter *.vim call HLightExtraSpaces()
 		autocmd BufEnter,BufWinEnter *.vim call ShowTabs()
 "		autocmd BufEnter,BufWinEnter *.vim setlocal noexpandtab

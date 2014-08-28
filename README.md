@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.08.08 (Fri) 7:26:31 (UTC +0200 CEST)
+Last update: 2014.08.28 (Th) 21:23:53 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -29,30 +29,17 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 * Calender integration
 
-![calender.vim](https://raw.github.com/wiki/itchyny/calendar.vim/image/image2.png)
-
 * Extensible status/tagline
-
-![alt_text](https://github.com/bling/vim-airline/wiki/screenshots/demo.gif)
 
 * Enhanced Vim motion
 
-![Vim-easymotin](https://f.cloud.github.com/assets/3797062/2039359/a8e938d6-899f-11e3-8789-60025ea83656.gif)
-
 * File browsing
 
-![VimExplorer](https://sites.google.com/site/mbbill/VE1.PNG)
-
-![Nerdtree](http://lh6.ggpht.com/_ZzOZmj1dP0c/Sl3XVwnZOwI/AAAAAAAAAlc/aRIYBuE5Jhc/s800/vim.png)
-
 * Git full integration
-![alt_text](http://www.gregsexton.org/images/gitk-vim.jpg)
 
 * LaTeX integration
 
 * Opensource VCSs integration
-
-![signify](https://f.cloud.github.com/assets/306502/995185/73fc7054-09b9-11e3-9d45-618406c6ed98.png)
 
 * Plugins management
 
@@ -60,18 +47,14 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 * Syntax check
 
-![Syntastic](https://github.com/scrooloose/syntastic/raw/master/_assets/screenshot_1.png)
-
 * Tag browser
-
-![Tagbar](http://majutsushi.github.io/tagbar/tagbar3.png)
 
 * Integration with GnuPG for encrypted files
 
 * Customized startup message and recently edited files
 
-![Startify](https://github.com/mhinz/vim-startify/raw/master/startify.png)
 
+Screenshots can be found [here](https://github.com/rafaelnp/rnpvim/wiki/Screenshots).
 
 ## 2 Requirements
 

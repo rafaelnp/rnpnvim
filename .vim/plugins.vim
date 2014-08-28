@@ -18,19 +18,19 @@ let g:selBufAlwaysShowHidden  = 1
 "
 " 4 - vimexplorer
 "     https://github.com/mbbill/VimExplorer
-"
-"nnoremap <silent> <F7> :VE ~<CR>
-"let g:VEConf_treePanelWidth = 40
-"if has('unix')
-"	let g:VEConf_externalExplorer = "dolphin"
-"	let g:VEConf_showHiddenFiles  = 0
-"	let g:VEConf_usingGnome       = 0
-"	let g:VEConf_usingKDE         = 1
-"	let g:VEConf_systemEncoding   = 'utf-8'
-"elseif has('win32' || 'win64')
-"	let g:VEConf_externalExplorer = "explorer.exe"
-"	let g:VEConf_systemEncoding   = 'utf-16'
-"endif
+
+nnoremap <silent> <F7> :VE ~<CR>
+let g:VEConf_treePanelWidth = 40
+if has('unix')
+	let g:VEConf_externalExplorer = "dolphin"
+	let g:VEConf_showHiddenFiles  = 0
+	let g:VEConf_usingGnome       = 0
+	let g:VEConf_usingKDE         = 1
+	let g:VEConf_systemEncoding   = 'utf-8'
+elseif has('win32' || 'win64')
+	let g:VEConf_externalExplorer = "explorer.exe"
+	let g:VEConf_systemEncoding   = 'utf-16'
+endif
 
 " 5 - ColorSamplerPack
 "     http://www.vim.org/scripts/script.php?script_id=625
@@ -71,10 +71,10 @@ let g:tagbar_type_vhdl = {
 "let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
 " 9 - vim-nerdtree-tabs
-"map <F9> :NERDTreeTabsToggle<CR>
-"let g:nerdtree_tabs_open_on_gui_startup     = 0
-"let g:nerdtree_tabs_open_on_console_startup = 0
-"let g:nerdtree_tabs_no_startup_for_diff     = 0
+nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_gui_startup     = 0
+let g:nerdtree_tabs_open_on_console_startup = 0
+let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 " 10 - nerdtree
 let NERDTreeCaseSensitiveSort = 1
@@ -112,11 +112,11 @@ let NERDTreeShowLineNumbers   = 1
 "      \ 'vimwiki' : 1,
 "      \}
 
-"let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_signs = 0
 "let g:ycm_open_loclist_on_ycm_diags = 0
 "let g:ycm_add_preview_to_completeopt = 0
 "let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
-"let g:ycm_confirm_extra_conf = 0
+let g:ycm_confirm_extra_conf = 0
 "let g:ycm_semantic_triggers =  {
 "  \   'c' : ['->', '.'],
 "  \   'objc' : ['->', '.'],
@@ -143,24 +143,15 @@ let NERDTreeShowLineNumbers   = 1
 "	augroup END
 "endif
 
-" 14 - vim-indent-guides
-""      https://github.com/nathanaelkane/vim-indent-guides
-"" don't consider spaces as indentation
-"let g:indent_guides_space_guides = 0
-"
-"" enable at startup
-"let g:indent_guides_enable_on_vim_startup = 1
-"
-"let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
-"
+
 "
 " 14 - vim-signify
 "      https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
-let g:signify_update_on_bufenter = 1
+let g:signify_update_on_bufenter = 0
 let g:signify_sign_change = '~'
 let g:signify_sign_delete_first_line = '*'
-let g:signify_update_on_focusgained = 1
+let g:signify_update_on_focusgained = 0
 
 highlight SignifySignAdd    cterm=bold ctermfg=green
 highlight SignifySignDelete cterm=bold ctermfg=red
@@ -270,7 +261,6 @@ au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
 
 let g:rainbow_load_separately = [
-    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
     \ [ '*.c' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
     \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
     \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],

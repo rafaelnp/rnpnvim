@@ -44,7 +44,23 @@ NeoBundle 'Tagbar', {
 \		],
 \	},
 \}
-"NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'filetypes' : [
+\			'c',
+\			'cpp',
+\			'lua',
+\			'python',
+\			'sh',
+\			'tex',
+\			'verilog',
+\			'vhdl',
+\			'vim',
+\			'zsh',
+\		],
+\	},
+\}
 NeoBundle 'https://github.com/mhinz/vim-signify'
 "NeoBundle 'https://github.com/tpope/vim-fugitive'
 "NeoBundle 'https://github.com/SirVer/ultisnips'
@@ -63,14 +79,14 @@ NeoBundle 'https://github.com/oblitum/rainbow', {
 NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog', {
 \	'lazy' : 1,
 \   'autoload' : {
-\		'filetypes' : "verilog"
-\	}
+\		'filetypes' : "verilog",
+\	},
 \}
 NeoBundle 'https://github.com/Cognoscan/vim-vhdl', {
 \	'lazy' : 1,
 \   'autoload' : {
-\		'filetypes' : "vhdl"
-\	}
+\		'filetypes' : "vhdl",
+\	},
 \}
 
 " not yet classified
@@ -78,15 +94,29 @@ NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'https://github.com/jtratner/vim-flavored-markdown', {
 \	'lazy' : 1,
 \   'autoload' : {
-\		'filetypes' : "markdown"
-\	}
+\		'filetypes' : "markdown",
+\	},
 \}
-NeoBundle 'genutils'    " Needed by SelectBuf
-NeoBundle 'SelectBuf'
-"NeoBundle 'VimExplorer'
+NeoBundle 'SelectBuf', {
+\	'depends' : 'genutils'
+\}
+NeoBundle 'VimExplorer', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'mappings' : 'F7',
+\		'commands' : 'VE',
+\	},
+\}
 NeoBundle 'myusuf3/numbers.vim'
-"NeoBundle 'https://github.com/jistr/vim-nerdtree-tabs.git'
-NeoBundle 'https://github.com/scrooloose/nerdtree.git'
+ " mapping does not work when set to 1
+NeoBundle 'jistr/vim-nerdtree-tabs', {
+\	'depends': 'https://github.com/scrooloose/nerdtree.git',
+\	'lazy' : 0,
+\   'autoload' : {
+\		'mappings' : 'F9',
+\		'commands' : 'NERDTreeTabsToggle',
+\	},
+\}
 "NeoBundle 'https://github.com/itchyny/calendar.vim'
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 NeoBundle 'https://github.com/Shougo/vinarise.vim'

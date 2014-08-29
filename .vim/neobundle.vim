@@ -117,7 +117,12 @@ NeoBundle 'jistr/vim-nerdtree-tabs', {
 \		'commands' : 'NERDTreeTabsToggle',
 \	},
 \}
-"NeoBundle 'https://github.com/itchyny/calendar.vim'
+NeoBundle 'https://github.com/itchyny/calendar.vim', {
+\	'lazy' : 1,
+\   'autoload' : {
+\       'commands' : 'Calendar',
+\   }
+\}
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 NeoBundle 'https://github.com/Shougo/vinarise.vim'
 NeoBundle 'https://github.com/mhinz/vim-startify.git'

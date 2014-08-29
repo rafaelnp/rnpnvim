@@ -226,9 +226,12 @@ let g:airline#extensions#eclim#enabled = 0
 "let g:vimshell_force_overwrite_statusline = 0
 "let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 
-" 21 - Calender.vim
+" 21 - Calendar.vim
 "      https://github.com/itchyny/calendar.vim
 " TODO: FInish configuration
+let g:calendar_date_endian = "big"
+let g:calendar_date_separator="."
+
 
 " 22 - vim-SystemVerilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog

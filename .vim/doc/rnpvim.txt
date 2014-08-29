@@ -1,14 +1,14 @@
 *rnpvim*  rnp's Vim config
-
-Version:     0.3.1 
+Version:     0.3.1
 Author:      Rafael do Nascimento Pereira
-Last change: 2014.05.19 (Mo) 09:59:34 (UTC +0200 CEST)
-License:     GPLv
+Last change: 2014.08.29 (Fr) 22:59:34 (UTC +0200 CEST)
+License:     GPLv3
 
 ==============================================================================
 CONTENTS                                                     *rnpvim-contents*
 
 	Introduction............................ |rnpvim-introduction|
+	Installed plugins....................... |rnpvim-plugins|
 	Structure............................... |rnpvim-struture|
 	Mappings ............................... |rnpvim-mappings|
 		General............................. |rnpvim-mappings-general|
@@ -20,6 +20,9 @@ Introduction                                             *rnpvim-introduction*
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
 Suggestions, corrections are welcome :-)
+==============================================================================
+Installed lugins                                              *rnpvim-plugins*
+
 ==============================================================================
 Structure                                                   *rnpvim-structure*
 

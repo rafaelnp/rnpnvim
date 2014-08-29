@@ -156,9 +156,6 @@ if has('gui_running')
 		set guifont=Lucida_Sans_Typewriter:h9
 	endif
 
-	"Pop-up menu color setteings
-	highlight Pmenu guibg=brown gui=bold
-	highlight Pmenu ctermbg=238 gui=bold
 	set mousemodel=popup
 else
 	set bg=dark

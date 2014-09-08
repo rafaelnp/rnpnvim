@@ -171,6 +171,9 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 
+" Set airline theme manually: auto detection did not work with summerfruit256
+let g:airline_theme="light"
+
 " fix messed up symbols
 let g:airline_symbols.space = "\ua0"
 

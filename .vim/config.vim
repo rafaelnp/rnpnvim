@@ -109,7 +109,7 @@ else
 endif
 
 "============
-" GUI Options
+" GUI/Visual Options
 "============
 "call SetWindowSize()
 tab all                      " open a new tab instead of a new vim instance
@@ -122,7 +122,7 @@ set scrolloff=2              " number of screen lines to keep above and below th
 set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
-colorscheme vividchalk
+colorscheme summerfruit256
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
 set matchtime=2              " Tenths of a second to show the matching parten

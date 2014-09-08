@@ -22,11 +22,10 @@ NeoBundle 'Shougo/vimproc', {
  \    },
  \ }
 
-
 " Colorscheme
-NeoBundleLazy 'Color-Sampler-Pack'
-NeoBundleLazy 'https://github.com/tomasr/molokai'
-NeoBundle     'https://github.com/tpope/vim-vividchalk.git'
+NeoBundle 'vim-scripts/Colour-Sampler-Pack'
+NeoBundle 'https://github.com/tomasr/molokai'
+NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
 
 " Programming
 NeoBundle 'Tagbar', {

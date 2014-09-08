@@ -390,8 +390,8 @@ let g:startify_custom_footer = [
 	\ '',
 	\ ]
 
-highlight StartifyFooter  ctermfg=yellow
-highlight StartifyFooter  guifg=yellow
+highlight StartifyFooter  ctermfg=green
+highlight StartifyFooter  guifg=green
 highlight StartifyHeader  ctermfg=red
 highlight StartifyHeader  guifg=red
 

@@ -87,6 +87,12 @@ NeoBundle 'https://github.com/Cognoscan/vim-vhdl', {
 \		'filetypes' : "vhdl",
 \	},
 \}
+NeoBundle 'kergoth/aftersyntaxc.vim', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'filetypes' : "c",
+\	},
+\}
 
 " not yet classified
 NeoBundle 'https://github.com/bling/vim-airline'

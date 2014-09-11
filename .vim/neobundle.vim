@@ -1,4 +1,7 @@
 
+"1 - Neobunble config
+"====================
+
 if has('vim_starting')
 	set nocompatible               " Be iMproved
 
@@ -7,7 +10,6 @@ if has('vim_starting')
 endif
 
 call neobundle#begin(expand('~/.vim/bundle'))
-
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -22,12 +24,14 @@ NeoBundle 'Shougo/vimproc', {
  \    },
  \ }
 
-" Colorscheme
+"2 - Colorscheme
+"===============
+
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'https://github.com/tomasr/molokai'
 NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
 
-" Programming
+"3 -  Programming
 NeoBundle 'Tagbar', {
 \	'lazy' : 1,
 \   'autoload' : {
@@ -87,8 +91,26 @@ NeoBundle 'https://github.com/Cognoscan/vim-vhdl', {
 \		'filetypes' : "vhdl",
 \	},
 \}
+NeoBundle 'kergoth/aftersyntaxc.vim', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'filetypes' : "c",
+\	},
+\}
 
-" not yet classified
+"4 - Unite
+"=========
+
+NeoBundle "Shougo/unite.vim", {
+\	'lazy' : 1,
+\   'autoload' : {
+\       'commands' : [ "Unite" ]
+\   }
+\}
+
+"5 - Miscelaneous
+"================
+
 NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'https://github.com/jtratner/vim-flavored-markdown', {
 \	'lazy' : 1,
@@ -134,25 +156,47 @@ NeoBundle 'https://github.com/jcf/vim-latex', {
 \		]
 \	}
 \}
-NeoBundle "Shougo/unite.vim", {
-\	'lazy' : 1,
-\   'autoload' : {
-\       'commands' : [ "Unite" ]
-\   }
-\}
 NeoBundle 'https://github.com/dhruvasagar/vim-vinegar', {
 \	'lazy' : 1,
 \   'autoload' : {
 \		'mappings' : '-'
 \	}
 \}
+NeoBundle 'tpope/vim-git', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'filetypes' : [
+\			'gitcommit',
+\			'gitconfig',
+\			'gitsendemail',
+\		]
+\	}
+\}
 
-" Under test
+"5 - Under test/to be tested
 "NeoBundle 'https://github.com/junegunn/vim-easy-align'
 "NeoBundle 'https://github.com/vim-scripts/armasm'
 "NeoBundle 'https://github.com/jamessan/vim-gnupg'
 "NeoBundle 'https://github.com/dhruvasagar/vim-table-mode/'
+"Issue 29:
+"NeoBundle 'https://github.com/chrisbra/csv.vim'
+"Issue 22:
+"NeoBundle 'https://github.com/sk1418/HowMuch'
+"Issue 18:
+"NeoBundle 'https://github.com/jiangmiao/auto-pairs'
+"NeoBundle 'https://github.com/Raimondi/delimitMate'
+"Issue 21:
+"NeoBundle 'https://github.com/Rykka/colorv.vim
+"NeoBundle 'https://github.com/Rykka/galaxy.vim
+"NeoBundle 'https://github.com/mbbill/undotree
+"NeoBundle 'https://github.com/benmills/vimux
+"NeoBundle 'https://github.com/terryma/vim-multiple-cursors (multiple cursors)
 
+"NeoBundle 'https://github.com/ujihisa/vim-rengbang'
+"NeoBundle 'https://github.com/Shougo/vimfiler.vim'
+"
+
+"6 - NeoBundle post config
 let g:neobundle#types#git#default_protocol = "https"
 
 " If there are uninstalled bundles found on startup,

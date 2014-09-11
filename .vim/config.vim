@@ -158,9 +158,9 @@ if has('gui_running')
 
 	set mousemodel=popup
 else
-	set bg=dark
+	set bg=light
 	" Enable 256 colors in terminal
-	if &term == 'xterm' || &term == 'screen' || &term =='terminator'
+	if &term == 'xterm' || &term == 'screen' || &term =='terminator' || &term == 'gnome-terminal'
 		set t_Co=256
 	endif
 endif

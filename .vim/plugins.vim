@@ -274,6 +274,8 @@ let g:rainbow_load_separately = [
 
 " 29 - Unite
 "      https://github.com/Shougo/unite.vim
+"      http://www.codeography.com/2013/06/17/replacing-all-the-things-with-unite-vim.html
+"
 nnoremap <C-p> :Unite file_rec/async<cr>
 nnoremap <Leader>/ :Unite grep:.<cr>
 let g:unite_source_history_yank_enable = 1

@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.08.28 (Th) 21:23:53 (UTC +0200 CEST)
+Last update: 2014.09.11 (Thu) 7:55:11 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -62,10 +62,10 @@ This Vim setup has the following requirements/dependencies:
 
 * [Vim](http://www.vim.org) 7.4 or newer
 * [exuberant ctags](http://ctags.sourceforge.net/)
-* [clang](http://clang.llvm.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
+* [clang](http://clang.llvm.org/) 3.3 or newer (to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
 * [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
 * [Python](http://www.python.org) 2.7 or newer
-* [Git](http://www.git-scm.com/) 1.7. or newer
+* [Git](http://www.git-scm.com/) 1.7 or newer
 
 
 ## 3 Installation
@@ -502,7 +502,7 @@ Show a visual line break symbol. Useful when opening files with long lines.
 **colorscheme**
 
 ```VimL
-colorscheme vividchalk
+colorscheme summerfruit256
 ```
 
 This is (so far) my favorite colorscheme. You can set up here your favorite one.
@@ -1094,14 +1094,14 @@ Available colorschemes:
 
 ### 6.1 [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
 
-  Tenths of different colorschemes.
+  Tenths of different colorschemes. The summerfruit256 theme is the one
+  currently used.
 
 ### 6.2 [molokai](https://github.com/tomasr/molokai)
 
 ![alt_text](https://github-camo.global.ssl.fastly.net/47bf6f7773c282e9607fc692e3a0948ee9363b6e/687474703a2f2f7777772e77696e746572646f6d2e636f6d2f7765626c6f672f636f6e74656e742f62696e6172792f57696e646f77734c6976655772697465722f4d6f6c6f6b6169666f7256696d5f383630322f6d6f6c6f6b61695f6e6f726d616c5f736d616c6c5f332e706e67)
 
-### 6.3 [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)(currently used, see picture bellow)
-
+### 6.3 [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
 

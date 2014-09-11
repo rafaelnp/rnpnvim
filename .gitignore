@@ -1,4 +1,5 @@
 *.sw*
-.vim/bundle/*
+.vim/bundle
+.vim/ultisnips
 *.pyc
 

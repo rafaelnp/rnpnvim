@@ -107,6 +107,14 @@ NeoBundle "Shougo/unite.vim", {
 \       'commands' : [ "Unite" ]
 \   }
 \}
+NeoBundle 'ujihisa/unite-colorscheme', {
+\	'lazy' : 1,
+\   'autoload' : {
+\       'commands' : [ "Unite" ]
+\   }
+\}
+" quickfix for unite
+" NeoBundle 'sgur/unite-qf', {
 
 "5 - Miscelaneous
 "================

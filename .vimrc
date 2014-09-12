@@ -103,11 +103,11 @@
 " Load all Vundle managed plugins
 source ~/.vim/neobundle.vim
 
-" Functions
-source ~/.vim/functions.vim
-
 " Vim basic configuration.
 source ~/.vim/config.vim
+
+" Functions
+source ~/.vim/functions.vim
 
 " All hotkeys, not dependant on plugins, are mapped here.
 source ~/.vim/mappings.vim

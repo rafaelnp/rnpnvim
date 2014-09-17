@@ -7,15 +7,15 @@
 "     http://www.vim.org/scripts/script.php?script_id=197
 "
 " genutils General utility functions
-"
-"
+
+
 " 3 - SelectBuf
 "     http://www.vim.org/scripts/script.php?script_id=107
 "nmap <silent> <F3> <Plug>SelectBuf
 nmap <silent> <unique> <F3> <Plug>SelectBuf
 let g:selBufAlwaysShowDetails = 1
 let g:selBufAlwaysShowHidden  = 1
-"
+
 " 4 - vimexplorer
 "     https://github.com/mbbill/VimExplorer
 
@@ -67,24 +67,24 @@ let g:tagbar_type_vhdl = {
 							\]
 						\}
 
-" 8 - numbers
+" 7 - numbers
 "let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
-" 9 - vim-nerdtree-tabs
+" 8 - vim-nerdtree-tabs
 nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
-" 10 - nerdtree
+" 9 - nerdtree
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
 
-" 11 - Vividchalk
+" 10 - Vividchalk
 
 
-" 12 - YouCompleteMe
+" 11 - YouCompleteMe
 "let g:ycm_min_num_of_chars_for_completion = 3
 "let g:ycm_min_num_identifier_candidate_chars = 2
 "let g:ycm_filetype_whitelist = {
@@ -134,7 +134,7 @@ let g:ycm_confirm_extra_conf = 0
 "nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
-" 13 - Vim-flavoured.markdown
+" 12 - Vim-flavoured.markdown
 "      https://github.com/jtratner/vim-flavored-markdown
 "if has("autocmd")
 "	augroup markdown
@@ -145,7 +145,7 @@ let g:ycm_confirm_extra_conf = 0
 
 
 "
-" 14 - vim-signify
+" 13 - vim-signify
 "      https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
 let g:signify_update_on_bufenter = 0
@@ -161,7 +161,7 @@ highlight SignifySignAdd    gui=bold  guifg=green
 highlight SignifySignDelete gui=bold  guifg=red
 highlight SignifySignChange gui=bold  guifg=darkorange
 
-" 16 - vim-airline
+" 14 - vim-airline
 "      https://github.com/bling/vim-airline
 " The powerline symbols need the powerline fonts:
 " https://github.com/Lokaltog/powerline-fonts
@@ -203,11 +203,11 @@ let g:airline#extensions#branch#empty_message = ''
 " |airline-syntastic| extension. >
 let g:airline#extensions#eclim#enabled = 0
 
-" 17 - fugitive
+" 15 - fugitive
 "      https://github.com/tpope/vim-fugitive
 " TODO: Configure fugitive
 
-" 18 - ultisnips
+" 16 - ultisnips
 "      https://github.com/SirVer/ultisnips
 " TODO: Finish configuration
 "let g:UltiSnipsExpandTrigger="<c-l>"
@@ -218,50 +218,50 @@ let g:airline#extensions#eclim#enabled = 0
 "let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
 "let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
-" 19 - Vimproc
+" 17 - Vimproc
 "      https://github.com/Shougo/vimproc.vim
 "      Configured in ~/.vim/bundle.vim
 
-" 20 - vimshell.vim
+" 18 - vimshell.vim
 "      https://github.com/Shougo/vimshell.vim
 "let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 "let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
 "let g:vimshell_force_overwrite_statusline = 0
 "let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
 
-" 21 - Calendar.vim
+" 19 - Calendar.vim
 "      https://github.com/itchyny/calendar.vim
 " TODO: FInish configuration
 let g:calendar_date_endian = "big"
 let g:calendar_date_separator="."
 
 
-" 22 - vim-SystemVerilog
+" 20 - vim-SystemVerilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog
 " TODO: FInish configuration
 
-" 23 - vim-vhdl
+" 21 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
 " TODO: FInish configuration
 
-" 24 - vim-easy-align
+" 22 - vim-easy-align
 "      https://github.com/junegunn/vim-easy-align
 " TODO: FInish configuration
 
-" 25 - vim-latex
+" 23 - vim-latex
 "      https://github.com/jcf/vim-latex
 " TODO: FInish configuration
 
-" 26 - vim-easymotion
+" 24 - vim-easymotion
 "      https://gitthub.com/Lokaltog/vim-easymotion
 " TODO: FInish configuration
 
-" 27 - Vinarise
+" 25 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 let g:vinarise_detect_large_file_size = 1000000
 cabbrev vimhex  Vinarise -split<CR>
 
-" 28  - Rainbow Parenthesis Improved
+" 26  - Rainbow Parenthesis Improved
 "       https://github.com/oblitum/rainbow
 au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
@@ -272,7 +272,7 @@ let g:rainbow_load_separately = [
     \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
     \ ]
 
-" 29 - Unite
+" 27 - Unite
 "      https://github.com/Shougo/unite.vim
 "      http://www.codeography.com/2013/06/17/replacing-all-the-things-with-unite-vim.html
 "
@@ -360,7 +360,7 @@ nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 "let g:unite_abbr_highlight = 'TabLine'
 
 
-" 30 - Startify
+" 28 - Startify
 "      https://github.com/mhinz/vim-startify
 
 let g:startify_files_number = 5
@@ -408,6 +408,13 @@ if has('gui_running')
 	call SetWindowSize()
 endif
 
-" 31 - Vinegar
+" 29 - Vinegar
 "      https://github.com/dhruvasagar/vim-vinegar
 
+" 30 - howmuch
+"      https://github.com/sk1418/HowMuch
+
+"The scale of the result:
+let g:HowMuch_scale = 2
+"the engine order for auto-calculation
+let g:HowMuch_auto_engines = ['bc', 'vim', 'py']

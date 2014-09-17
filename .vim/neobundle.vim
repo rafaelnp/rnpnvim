@@ -32,6 +32,7 @@ NeoBundle 'https://github.com/tomasr/molokai'
 NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
 
 "3 -  Programming
+"================
 NeoBundle 'Tagbar', {
 \	'lazy' : 1,
 \   'autoload' : {
@@ -97,6 +98,7 @@ NeoBundle 'kergoth/aftersyntaxc.vim', {
 \		'filetypes' : "c",
 \	},
 \}
+NeoBundle 'sk1418/HowMuch'
 
 "4 - Unite
 "=========

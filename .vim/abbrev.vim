@@ -24,6 +24,12 @@ cabbrev vshell  VimShellTab
 " Open vimshell in a new small window
 cabbrev vshellp VimShellPop
 
+" avoid annoying error messages
+cabbrev WQ wq
+cabbrev Wq wq
+cabbrev W  w
+cabbrev Q  q
+
 " Dutch
 iabbrev Belgie   België
 iabbrev Brazilie Brazilië

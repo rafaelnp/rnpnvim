@@ -119,8 +119,6 @@ NeoBundle 'ujihisa/unite-outline', {
 \		'commands' : [ "Unite" ],
 \	},
 \}
-" quickfix for unite
-" NeoBundle 'sgur/unite-qf', {
 
 "5 - Miscelaneous
 "================

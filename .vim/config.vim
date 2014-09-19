@@ -49,6 +49,13 @@ else
 	set encoding=latin1
 endif
 
+" centralize undo files
+" the directory must be created manually
+if has("persistent_undo")
+	set undodir=~/.vim/.undodir
+	set undofile
+endif
+
 "======
 " sound
 "======

@@ -174,6 +174,15 @@ NeoBundle 'tpope/vim-git', {
 \		]
 \	}
 \}
+"NeoBundle 'mbbill/undotree'
+NeoBundle 'mbbill/undotree', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'mappings' : 'F6',
+\		'commands' : 'UndotreeToggle',
+\	},
+\}
+
 
 "5 - Under test/to be tested
 "NeoBundle 'https://github.com/junegunn/vim-easy-align'
@@ -190,7 +199,6 @@ NeoBundle 'tpope/vim-git', {
 "Issue 21:
 "NeoBundle 'https://github.com/Rykka/colorv.vim
 "NeoBundle 'https://github.com/Rykka/galaxy.vim
-"NeoBundle 'https://github.com/mbbill/undotree
 "NeoBundle 'https://github.com/benmills/vimux
 "NeoBundle 'https://github.com/terryma/vim-multiple-cursors (multiple cursors)
 

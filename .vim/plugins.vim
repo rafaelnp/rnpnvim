@@ -418,3 +418,10 @@ endif
 let g:HowMuch_scale = 2
 "the engine order for auto-calculation
 let g:HowMuch_auto_engines = ['bc', 'vim', 'py']
+
+" 31 - undotree
+"      https://github.com/mbbill/undotree
+nnoremap <silent> <F6> :UndotreeToggle<CR>
+let g:undotree_WindowLayout = 2
+let g:undotree_SetFocusWhenToggle = 1
+

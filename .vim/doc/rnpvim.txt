@@ -1,7 +1,7 @@
 *rnpvim*  rnp's Vim config
 Version:     0.3.1
 Author:      Rafael do Nascimento Pereira
-Last change: 2014.08.29 (Fr) 22:59:34 (UTC +0200 CEST)
+Last change: 2014.09.22 (Fr) 22:59:34 (UTC +0200 CEST)
 License:     GPLv3
 
 ==============================================================================
@@ -22,6 +22,38 @@ C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
 Suggestions, corrections are welcome :-)
 ==============================================================================
 Installed lugins                                              *rnpvim-plugins*
+
+Colour-Sampler-Pack
+aftersyntaxc
+calendar
+genutils
+howmuch
+molokai
+neobundle
+nerdtree
+numbers
+rainbow
+selectbuf
+tagbar
+undotree
+unite
+vim-airline
+vim-easymotion
+vim-flavoured-markdown
+vim-git
+vim-latex
+vim-signify
+vim-startify.git
+vim-systemverilog
+vim-vhdl
+vim-vinegar
+vim-vividchalk.git
+vimexplorer
+vimnerdtreetabs
+vimproc
+vinarise.vim
+youcompleteme
+
 
 ==============================================================================
 Structure                                                   *rnpvim-structure*

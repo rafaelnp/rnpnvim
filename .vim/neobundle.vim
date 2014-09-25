@@ -15,13 +15,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
 NeoBundle 'Shougo/vimproc', {
- \ 'build' : {
- \     'windows' : 'make -f make_mingw32.mak',
- \     'cygwin' : 'make -f make_cygwin.mak',
- \     'mac' : 'make -f make_mac.mak',
- \     'unix' : 'make -f make_unix.mak',
- \    },
- \ }
+\	'build' : {
+\		'windows' : 'make -f make_mingw32.mak',
+\		'cygwin' : 'make -f make_cygwin.mak',
+\		'mac' : 'make -f make_mac.mak',
+\		'unix' : 'make -f make_unix.mak',
+\		},
+\	}
 
 "===============
 "2 - Colorscheme
@@ -37,7 +37,7 @@ NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
 
 NeoBundle 'Tagbar', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : [
 \			'c',
 \			'cpp',
@@ -52,7 +52,7 @@ NeoBundle 'Tagbar', {
 \}
 NeoBundle 'Valloric/YouCompleteMe', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : [
 \			'c',
 \			'cpp',
@@ -68,9 +68,11 @@ NeoBundle 'Valloric/YouCompleteMe', {
 \	},
 \}
 NeoBundle 'https://github.com/mhinz/vim-signify'
+"NeoBundle 'https://github.com/tpope/vim-fugitive'
+"NeoBundle 'https://github.com/SirVer/ultisnips'
 NeoBundle 'https://github.com/oblitum/rainbow', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : [
 \			'c',
 \			'cpp',
@@ -79,18 +81,29 @@ NeoBundle 'https://github.com/oblitum/rainbow', {
 \		],
 \	},
 \}
-"NeoBundle 'https://github.com/tpope/vim-fugitive'
-"NeoBundle 'https://github.com/SirVer/ultisnips'
 "NeoBundle 'honza/vim-snippets'
 
 "=========
 "4 - Unite
 "=========
+
 NeoBundle "Shougo/unite.vim", {
 \	'lazy' : 1,
-\   'autoload' : {
-\       'commands' : [ "Unite" ]
-\   }
+\	'autoload' : {
+\		'commands' : [ "Unite" ],
+\	},
+\}
+NeoBundle 'ujihisa/unite-colorscheme', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'commands' : [ "Unite" ],
+\	},
+\}
+NeoBundle 'ujihisa/unite-outline', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'commands' : [ "Unite" ],
+\	},
 \}
 
 "================
@@ -99,13 +112,13 @@ NeoBundle "Shougo/unite.vim", {
 
 NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : "verilog",
 \	},
 \}
 NeoBundle 'https://github.com/Cognoscan/vim-vhdl', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : "vhdl",
 \	},
 \}
@@ -142,7 +155,7 @@ NeoBundle 'SelectBuf', {
 \}
 NeoBundle 'VimExplorer', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'mappings' : 'F7',
 \		'commands' : 'VE',
 \	},
@@ -152,29 +165,29 @@ NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'jistr/vim-nerdtree-tabs', {
 \	'depends': 'https://github.com/scrooloose/nerdtree.git',
 \	'lazy' : 0,
-\   'autoload' : {
+\	'autoload' : {
 \		'mappings' : 'F9',
 \		'commands' : 'NERDTreeTabsToggle',
 \	},
 \}
 NeoBundle 'https://github.com/itchyny/calendar.vim', {
 \	'lazy' : 1,
-\   'autoload' : {
-\       'commands' : 'Calendar',
-\   }
+\	'autoload' : {
+\		'commands' : 'Calendar',
+\	}
 \}
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 NeoBundle 'https://github.com/Shougo/vinarise.vim'
 NeoBundle 'https://github.com/mhinz/vim-startify.git'
 NeoBundle 'https://github.com/dhruvasagar/vim-vinegar', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'mappings' : '-'
 \	}
 \}
 NeoBundle 'tpope/vim-git', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : [
 \			'gitcommit',
 \			'gitconfig',
@@ -222,5 +235,5 @@ NeoBundleCheck
 
 call neobundle#end()
 
-filetype plugin indent on     " required!
+filetype plugin indent on    " required!
 

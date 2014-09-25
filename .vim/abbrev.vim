@@ -21,6 +21,12 @@ cabbrev aucmd   ~/.vim/augroup.vim
 cabbrev vhelp   vertical help
 cabbrev vimrc   ~/.vimrc
 
+" avoid annoying error messages
+cabbrev WQ wq
+cabbrev Wq wq
+cabbrev W  w
+cabbrev Q  q
+
 " Dutch
 iabbrev Belgie   België
 iabbrev Brazilie Brazilië

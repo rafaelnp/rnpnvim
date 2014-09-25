@@ -174,6 +174,7 @@ let g:tagbar_type_vhdl = {
 nnoremap <silent> <F6> :UndotreeToggle<CR>
 let g:undotree_WindowLayout = 2
 let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_SplitWidth = 40
 
 "=========================================
 " 16 - Unite
@@ -264,10 +265,10 @@ nnoremap <Leader>m :Unite -quick-match colorscheme<CR>
 "let g:unite_abbr_highlight = 'TabLine'
 
 "
-"==========================================
+"===========================================
 " 17 - vimexplorer
-"     https://github.com/mbbill/VimExplorer
-"==========================================
+"      https://github.com/mbbill/VimExplorer
+"===========================================
 
 nnoremap <silent> <F7> :VE ~<CR>
 let g:VEConf_treePanelWidth = 40
@@ -295,6 +296,7 @@ endif
 
 "================================================
 " 20 - Vividchalk
+"      https://github.com/tpop/vim-vividchalk.git
 "================================================
 
 "==========================================
@@ -472,12 +474,16 @@ let g:ycm_confirm_extra_conf = 0
 " To be installed
 "================
 "
+"===========================================
 " 32 - fugitive
 "      https://github.com/tpope/vim-fugitive
+"===========================================
 " TODO: Configure fugitive
 
+"=========================================
 " 33 - ultisnips
 "      https://github.com/SirVer/ultisnips
+"=========================================
 " TODO: Finish configuration
 "let g:UltiSnipsExpandTrigger="<c-l>"
 "let g:UltiSnipsListSnippets="<c-h>"

@@ -136,13 +136,14 @@ NeoBundle 'https://github.com/jtratner/vim-flavored-markdown', {
 \}
 NeoBundle 'https://github.com/jcf/vim-latex', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : [
 \			'tex',
 \			'latex',
-\		]
-\	}
+\		],
+\	},
 \}
+NeoBundle 'jamessan/vim-gnupg'
 
 "================
 "6 - Miscelaneous

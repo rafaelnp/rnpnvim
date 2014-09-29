@@ -355,7 +355,12 @@ let g:airline#extensions#eclim#enabled = 0
 "endif
 
 "====================================================
-" 23 - vim-nerdtree-tabs
+" 23 - vim-gnupg
+"      https://github.com/jamessan/vim-gnupg
+"====================================================
+"
+"====================================================
+" 24 - vim-nerdtree-tabs
 "      https://github.com/jistr/vim-nerdtree-tabs.git
 "====================================================
 nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
@@ -365,7 +370,7 @@ let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 "
 "==========================================
-" 24 - vim-signify
+" 25 - vim-signify
 "      https://github.com/mhinz/vim-signify
 "==========================================
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
@@ -383,29 +388,29 @@ highlight SignifySignDelete gui=bold  guifg=red
 highlight SignifySignChange gui=bold  guifg=darkorange
 
 "=====================================================
-" 25 - vim-SystemVerilog
+" 26 - vim-SystemVerilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog
 "=====================================================
 
 "===========================================
-" 26 - vim-vhdl
+" 27 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
 "===========================================
 
 "======================================
-" 27 - vim-latex
+" 28 - vim-latex
 "      https://github.com/jcf/vim-latex
 "======================================
 " TODO: FInish configuration
 
 "=================================================
-" 28 - vim-easymotion
+" 29 - vim-easymotion
 "      https://gitthub.com/Lokaltog/vim-easymotion
 "=================================================
 " TODO: FInish configuration
 
 "============================================
-" 29 - Vinarise
+" 30 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 "============================================
 let g:vinarise_detect_large_file_size = 1000000
@@ -413,12 +418,12 @@ cabbrev vimhex  Vinarise -split<CR>
 
 
 "======================================
-" 30 - vim-git
+" 31 - vim-git
 "      https://github.com/tpope/vim-git
 "======================================
 
 "===============================================
-" 31 - YouCompleteMe
+" 32 - YouCompleteMe
 "      https://github.com/Valloric/YouCompleteMe
 "===============================================
 "let g:ycm_min_num_of_chars_for_completion = 3
@@ -475,13 +480,13 @@ let g:ycm_confirm_extra_conf = 0
 "================
 "
 "===========================================
-" 32 - fugitive
+" 33 - fugitive
 "      https://github.com/tpope/vim-fugitive
 "===========================================
 " TODO: Configure fugitive
 
 "=========================================
-" 33 - ultisnips
+" 34 - ultisnips
 "      https://github.com/SirVer/ultisnips
 "=========================================
 " TODO: Finish configuration

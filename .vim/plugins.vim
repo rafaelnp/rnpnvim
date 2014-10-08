@@ -413,6 +413,17 @@ highlight SignifySignChange gui=bold  guifg=darkorange
 "      https://gitthub.com/Lokaltog/vim-easymotion
 "=================================================
 " TODO: FInish configuration
+let g:EasyMotion_smartcase = 1
+
+map s <Plug>(easymotion-bd-w)
+
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+" JK motions: Line motions
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
+
 
 "============================================
 " 31 - Vinarise

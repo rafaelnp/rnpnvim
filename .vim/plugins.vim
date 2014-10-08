@@ -24,12 +24,17 @@ let g:calendar_date_separator="."
 "========================================================
 
 "========================================================
-" 5 - genutils
+" 5 - delimitmate
+"     https://github.com/blueyed/delimitMate
+"========================================================
+"
+"========================================================
+" 6 - genutils
 "     http://www.vim.org/scripts/script.php?script_id=197
 "========================================================
 "
 "======================================
-" 6 - howmuch
+" 7 - howmuch
 "     https://github.com/sk1418/HowMuch
 "======================================
 "The scale of the result:
@@ -38,18 +43,18 @@ let g:HowMuch_scale = 2
 let g:HowMuch_auto_engines = ['bc', 'vim', 'py']
 
 "======================================
-" 7 - molokai
+" 8 - molokai
 "     https://github.com/tomasr/molokai
 "======================================
 
 "============================================
-" 8 - neobundle.vim
+" 9 - neobundle.vim
 "     https://github.com/Shougo/neobundle.vim
 "============================================
 " Configured in the ~/.vim/bundle.vim file
 
 "===============================================
-" 9 - nerdtree
+" 10 - nerdtree
 "     https://github.com/scrooloose/nerdtree.git
 "===============================================
 let NERDTreeCaseSensitiveSort = 1
@@ -57,13 +62,13 @@ let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
 
 "============================================
-" 10 - numbers
+" 11 - numbers
 "      https://github.com/myusuf3/numbers.vim
 "============================================
 "let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
 
 "========================================
-" 11 - rainbow parenthesis improved
+" 12 - rainbow parenthesis improved
 "      https://github.com/oblitum/rainbow
 "========================================
 au FileType c,cpp,objc,objcpp call rainbow#load()
@@ -76,7 +81,7 @@ let g:rainbow_load_separately = [
     \ ]
 
 "===========================================
-" 12 - startify
+" 13 - startify
 "      https://github.com/mhinz/vim-startify
 "===========================================
 
@@ -126,7 +131,7 @@ if has('gui_running')
 endif
 
 "=========================================================
-" 13 - selectBuf
+" 14 - selectBuf
 "      http://www.vim.org/scripts/script.php?script_id=107
 "=========================================================
 nmap <silent> <unique> <F3> <Plug>SelectBuf
@@ -134,7 +139,7 @@ let g:selBufAlwaysShowDetails = 1
 let g:selBufAlwaysShowHidden  = 1
 
 "==========================================
-" 14 - tagbar
+" 15 - tagbar
 "      https://github.com/majutsushi/tagbar
 "      http://majutsushi.github.io/tagbar/
 "==========================================
@@ -168,7 +173,7 @@ let g:tagbar_type_vhdl = {
 						\}
 
 "========================================
-" 15 - undotree
+" 16 - undotree
 "      https://github.com/mbbill/undotree
 "========================================
 nnoremap <silent> <F6> :UndotreeToggle<CR>
@@ -177,7 +182,7 @@ let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_SplitWidth = 40
 
 "=========================================
-" 16 - Unite
+" 17 - Unite
 "      https://github.com/Shougo/unite.vim
 "=========================================
 nnoremap <C-p> :Unite file_rec/async<cr>
@@ -266,7 +271,7 @@ nnoremap <Leader>m :Unite -quick-match colorscheme<CR>
 
 "
 "===========================================
-" 17 - vimexplorer
+" 18 - vimexplorer
 "      https://github.com/mbbill/VimExplorer
 "===========================================
 
@@ -284,23 +289,23 @@ elseif has('win32' || 'win64')
 endif
 
 "===========================================
-" 18 - Vimproc
+" 19 - Vimproc
 "      https://github.com/Shougo/vimproc.vim
 "===========================================
 "      Configured in ~/.vim/bundle.vim
 
 "================================================
-" 19 - Vinegar
+" 20 - Vinegar
 "      https://github.com/dhruvasagar/vim-vinegar
 "================================================
 
 "================================================
-" 20 - Vividchalk
+" 21 - Vividchalk
 "      https://github.com/tpop/vim-vividchalk.git
 "================================================
 
 "==========================================
-" 21 - vim-airline
+" 22 - vim-airline
 "      https://github.com/bling/vim-airline
 "==========================================
 " The powerline symbols need the powerline fonts:
@@ -344,7 +349,7 @@ let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#eclim#enabled = 0
 
 "=======================================================
-" 22 - Vim-flavoured.markdown
+" 23 - Vim-flavoured.markdown
 "      https://github.com/jtratner/vim-flavored-markdown
 "=======================================================
 "if has("autocmd")
@@ -355,12 +360,12 @@ let g:airline#extensions#eclim#enabled = 0
 "endif
 
 "====================================================
-" 23 - vim-gnupg
+" 24 - vim-gnupg
 "      https://github.com/jamessan/vim-gnupg
 "====================================================
 "
 "====================================================
-" 24 - vim-nerdtree-tabs
+" 25 - vim-nerdtree-tabs
 "      https://github.com/jistr/vim-nerdtree-tabs.git
 "====================================================
 nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
@@ -370,7 +375,7 @@ let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 "
 "==========================================
-" 25 - vim-signify
+" 26 - vim-signify
 "      https://github.com/mhinz/vim-signify
 "==========================================
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
@@ -388,29 +393,29 @@ highlight SignifySignDelete gui=bold  guifg=red
 highlight SignifySignChange gui=bold  guifg=darkorange
 
 "=====================================================
-" 26 - vim-SystemVerilog
+" 27 - vim-SystemVerilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog
 "=====================================================
 
 "===========================================
-" 27 - vim-vhdl
+" 28 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
 "===========================================
 
 "======================================
-" 28 - vim-latex
+" 29 - vim-latex
 "      https://github.com/jcf/vim-latex
 "======================================
 " TODO: FInish configuration
 
 "=================================================
-" 29 - vim-easymotion
+" 30 - vim-easymotion
 "      https://gitthub.com/Lokaltog/vim-easymotion
 "=================================================
 " TODO: FInish configuration
 
 "============================================
-" 30 - Vinarise
+" 31 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 "============================================
 let g:vinarise_detect_large_file_size = 1000000
@@ -418,12 +423,12 @@ cabbrev vimhex  Vinarise -split<CR>
 
 
 "======================================
-" 31 - vim-git
+" 32 - vim-git
 "      https://github.com/tpope/vim-git
 "======================================
 
 "===============================================
-" 32 - YouCompleteMe
+" 33 - YouCompleteMe
 "      https://github.com/Valloric/YouCompleteMe
 "===============================================
 "let g:ycm_min_num_of_chars_for_completion = 3
@@ -480,13 +485,13 @@ let g:ycm_confirm_extra_conf = 0
 "================
 "
 "===========================================
-" 33 - fugitive
+" 34 - fugitive
 "      https://github.com/tpope/vim-fugitive
 "===========================================
 " TODO: Configure fugitive
 
 "=========================================
-" 34 - ultisnips
+" 35 - ultisnips
 "      https://github.com/SirVer/ultisnips
 "=========================================
 " TODO: Finish configuration

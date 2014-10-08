@@ -81,6 +81,21 @@ NeoBundle 'https://github.com/oblitum/rainbow', {
 \		],
 \	},
 \}
+NeoBundle 'https://github.com/Raimondi/delimitMate', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'filetypes' : [
+\			'c',
+\			'cpp',
+\			'vim',
+\			'latex',
+\			'python',
+\			'sh',
+\			'vhdl',
+\			'verilog',
+\		],
+\	},
+\}
 "NeoBundle 'honza/vim-snippets'
 
 "=========
@@ -216,7 +231,6 @@ NeoBundle 'mbbill/undotree', {
 "NeoBundle 'https://github.com/chrisbra/csv.vim'
 "Issue 18:
 "NeoBundle 'https://github.com/jiangmiao/auto-pairs'
-"NeoBundle 'https://github.com/Raimondi/delimitMate'
 "Issue 21:
 "NeoBundle 'https://github.com/Rykka/colorv.vim
 "NeoBundle 'https://github.com/Rykka/galaxy.vim

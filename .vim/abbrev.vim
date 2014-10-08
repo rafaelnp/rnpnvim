@@ -20,9 +20,12 @@ cabbrev abbrev  ~/.vim/abbrev.vim
 cabbrev aucmd   ~/.vim/augroup.vim
 cabbrev vhelp   vertical help
 cabbrev vimrc   ~/.vimrc
-cabbrev vshell  VimShellTab
-" Open vimshell in a new small window
-cabbrev vshellp VimShellPop
+
+" avoid annoying error messages
+cabbrev WQ wq
+cabbrev Wq wq
+cabbrev W  w
+cabbrev Q  q
 
 " Dutch
 iabbrev Belgie   België
@@ -56,4 +59,9 @@ iabbrev instalacoes instalações
 iabbrev coracao     coração
 iabbrev coracoes    corações
 iabbrev mae         mãe
+
+" Spanish
+iabbrev manana      mañana
+iabbrev espanol     español
+iabbrev Espanol     Español
 

@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.09.11 (Thu) 7:55:11 (UTC +0200 CEST)
+Last update: 2014.09.23 (Tu) 17:05:17 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -855,133 +855,23 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 5.2 [calendar.vim](https://github.com/itchyny/calendar.vim) (Integrasted calender)
 
-
 ### 5.3 [Genutils](https://github.com/vim-scripts/genutils) (Basic utilities function)
-
-This script provides functions that are mostly useful to script developers, but
-some of the functions can be easily converted to good utilities.
-
 
 ### 5.4 [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
-```VimL
-	let NERDTreeCaseSensitiveSort = 1
-	let NERDTreeShowHidden        = 1
-	let NERDTreeShowLineNumbers   = 1
-```
-
-
 ### 5.5 [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
-
-Using default config.
-
 
 ### 5.6 [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
 
-Using default config as described [here](https://github.com/Shougo/neobundle.vim#quick-start).
-
-
 ### 5.7 [Rainbow parentheses improved](https://github.com/oblitum/rainbow)
-
-Using default config.
-
 
 ### 5.8 [SelectBuf](https://github.com/vim-scripts/SelectBuf) (Buffer browser)
 
-```VimL
-nmap <silent> <F3> <Plug>SelectBuf
-let g:selBufDefaultSortOrder  = "name"
-let g:selBufDisableMRUlisting = 0
-let g:selBufAlwaysShowDetails = 1
-let g:selBufAlwaysShowHidden  = 1
-```
-
-
 ### 5.9 [Startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
-
-```VimL
-let g:startify_bookmarks = [
-			\'~/.vimrc',
-			\'~/.vim/abbrev.vim',
-			\'~/.vim/augroup.vim',
-			\'~/.vim/config.vim',
-			\'~/.vim/mappings.vim',
-			\'~/.vim/neobundle.vim',
-			\'~/.vim/plugins.vim'
-			\]
-
-let g:startify_custom_header = [
-			\'     __      ___             ______ _  _',
-			\'     \ \    / (_)           |____  | || |',
-			\'      \ \  / / _ _ __ ___       / /| || |_',
-			\'       \ \/ / | | `_ ` _ \     / / |__   _|',
-			\'        \  /  | | | | | | |   / / _   | |',
-			\'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
-			\ '',
-			\ ]
-
-let g:startify_custom_footer = [
-	\ '',
-	\'   “It is not that I am so smart ,it is just that I stay with problems longer.”',
-	\ '   Albert Einstein',
-	\ '',
-	\ ]
-
-highlight StartifyFooter  ctermfg=yellow
-highlight StartifyFooter  guifg=yellow
-highlight StartifyHeader  ctermfg=red
-highlight StartifyHeader  guifg=red
-
-let g:startify_skiplist = [
-		\ 'COMMIT_EDITMSG',
-		\ $VIMRUNTIME .'/doc',
-		\ 'bundle/.*/doc',
-		\ '\.DS_Store'
-		\ ]
-```
 
 ### 5.10 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
 
-```VimL
-nnoremap <silent> <F8> :TagbarToggle<CR>
-let g:tagbar_autoclose   = 1
-let g:tagbar_autofocus   = 1
-let g:tagbar_sort        = 0
-let g:tagbar_iconchars   = ['▾', '▸']
-let g:tagbar_autoshowtag = 1
-
-let g:tagbar_type_vhdl = {
-							\ 'ctagstype': 'vhdl',
-							\ 'kinds' : [
-							\'d:prototypes',
-							\'b:package bodies',
-							\'e:entities',
-							\'a:architectures',
-							\'t:types',
-							\'p:processes',
-							\'f:functions',
-							\'r:procedures',
-							\'c:constants',
-							\'T:subtypes',
-							\'r:records',
-							\'C:components',
-							\'P:packages',
-							\'l:locals'
-							\]
-						\}
-```
-
 ### 5.11 [ultisnips](https://github.com/SirVer/ultisnips) (Code snippets)
-
-```VimL
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsListSnippets="<c-h>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
-```
 
 ### 5.12 [unite](https://github.com/Shougo/unite.vim) (Fuzzy search and expand VIm capabilities)
 
@@ -989,34 +879,11 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
 ### 5.14 [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 
-```VimL
-map <F9> :NERDTreeTabsToggle<CR>
-let g:nerdtree_tabs_open_on_gui_startup     = 0
-let g:nerdtree_tabs_open_on_console_startup = 0
-let g:nerdtree_tabs_no_startup_for_diff     = 0
-```
-
 ### 5.15 [Vim-easy-align](https://github.com/junegunn/vim-easy-align) (Text alignment made easy)
 
 ### 5.16 [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
 
 ### 5.17 [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
-
-```VimL
-nnoremap <silent> <F7> :VE ~<CR>
-let g:VEConf_treePanelWidth = 40
-if has('unix')
-	let g:VEConf_externalExplorer = "dolphin"
-	let g:VEConf_showHiddenFiles  = 0
-	let g:VEConf_usingGnome       = 0
-	let g:VEConf_usingKDE         = 1
-	let g:VEConf_systemEncoding   = 'utf-8'
-elseif has('win32' || 'win64')
-	let g:VEConf_externalExplorer = "explorer.exe"
-	let g:VEConf_systemEncoding   = 'utf-16'
-endif
-```
-
 
 ### 5.18 [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 
@@ -1032,60 +899,9 @@ endif
 
 ### 5.24 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
-Configured in `~/.vim/bundle.vim`.
-
-
-### 5.25 [vimshell.vim](https://github.com/Shougo/vimshell.vim) (Shell inside Vim)
-
-```VimL
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_vimshrc_path = "expand('~/.vim/.vimshrc')"
-let g:vimshell_force_overwrite_statusline = 0
-let g:vimshell_temporary_directory = "expand('~/.vim/.vimshell')"
-```
-
 ### 5.26 [Vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
 
-
 ### 5.27 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
-
-```VimL
-let g:ycm_min_num_of_chars_for_completion = 3
-let g:ycm_min_num_identifier_candidate_chars = 2
-let g:ycm_filetype_whitelist = {
-								\'lua': 1,
-								\'verilog': 1,
-								\'vhdl': 1,
-								\'vim': 1,
-								\'python': 1,
-								\'c': 1,
-								\'cpp': 1,
-								\'matlab': 1,
-								\'maple': 1,
-								\'git': 1,
-								\'sh': 1,
-								\'tex': 1,
-								\'txt': 1,
-								\'zsh': 1,
-								\}
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'unite' : 1,
-      \ 'vimwiki' : 1,
-      \}
-
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
-```
 
 
 ## 6 Colorschemes
@@ -1141,7 +957,7 @@ Useful documentation about Vim:
 13. [Vim Text Objects: The Definitive Guide](http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/)
 
 
-# 10 Acknowledgements
+## 10 Acknowledgements
 
 I'd like to thank all Vim and plugin developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)

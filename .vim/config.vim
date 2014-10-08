@@ -5,7 +5,7 @@
 "========
 
 set nocompatible                   " no vi-compatibility
-set autochdir                    " disabled because of vimshell plugin
+set autochdir                      " disabled because of vimshell plugin
 set autowriteall                   " automatically save all buffers
 set autoread                       " load file modified outside vim
 set nobackup                       " no backup files, we have git :)
@@ -47,6 +47,13 @@ if has("multi_byte_encoding")
 else
 	set termencoding=latin1
 	set encoding=latin1
+endif
+
+" centralize undo files
+" the directory must be created manually
+if has("persistent_undo")
+	set undodir=~/.vim/.undodir
+	set undofile
 endif
 
 "======
@@ -108,10 +115,9 @@ else
 	set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*
 endif
 
-"============
+"===================
 " GUI/Visual Options
-"============
-"call SetWindowSize()
+"===================
 tab all                      " open a new tab instead of a new vim instance
 set showcmd                  " show command in last line of screen
 set laststatus=2             " statusline always visible
@@ -131,15 +137,15 @@ set ead=both                 " set in which direction 'equalalways' works (ver, 
 set wildmenu                 " use autocompletion on command line
 set cursorline               " sets cursor line highlight. cool :)
 set display=uhex             " show unprintable characters hexadecimal
-set listchars=tab:▸\ ,eol:$,
+set listchars=tab:▸\ ,eol:¬
 
 if has('mouse')
-	set mouse=a        " enable mouse in all modes
-	set mousehide      " hides the mouse while typing
+	set mouse=a              " enable mouse in all modes
+	set mousehide            " hides the mouse while typing
 endif
 
 if has('gui_running')
-	set guioptions=aAgi  " see: help guioptions
+	set guioptions=aAgi      " see: help guioptions
 
 	if has('unix')
 		"Default font
@@ -164,4 +170,3 @@ else
 		set t_Co=256
 	endif
 endif
-

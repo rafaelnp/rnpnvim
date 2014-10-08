@@ -31,7 +31,7 @@ function! HLighteColorColumn()
 endfunction
 
 function! ShowTabs()
-		setlocal listchars=tab:▸\ ,
+		setlocal listchars=tab:▸\ ,eol:¬
 		setlocal list
 endfunction
 

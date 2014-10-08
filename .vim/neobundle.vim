@@ -1,10 +1,9 @@
-
+"====================
 "1 - Neobunble config
 "====================
 
 if has('vim_starting')
-	set nocompatible               " Be iMproved
-
+	set nocompatible
 	"Required
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -16,14 +15,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
 NeoBundle 'Shougo/vimproc', {
- \ 'build' : {
- \     'windows' : 'make -f make_mingw32.mak',
- \     'cygwin' : 'make -f make_cygwin.mak',
- \     'mac' : 'make -f make_mac.mak',
- \     'unix' : 'make -f make_unix.mak',
- \    },
- \ }
+\	'build' : {
+\		'windows' : 'make -f make_mingw32.mak',
+\		'cygwin' : 'make -f make_cygwin.mak',
+\		'mac' : 'make -f make_mac.mak',
+\		'unix' : 'make -f make_unix.mak',
+\		},
+\	}
 
+"===============
 "2 - Colorscheme
 "===============
 
@@ -31,10 +31,13 @@ NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'https://github.com/tomasr/molokai'
 NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
 
+"================
 "3 -  Programming
+"================
+
 NeoBundle 'Tagbar', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : [
 \			'c',
 \			'cpp',
@@ -49,7 +52,7 @@ NeoBundle 'Tagbar', {
 \}
 NeoBundle 'Valloric/YouCompleteMe', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : [
 \			'c',
 \			'cpp',
@@ -69,7 +72,7 @@ NeoBundle 'https://github.com/mhinz/vim-signify'
 "NeoBundle 'https://github.com/SirVer/ultisnips'
 NeoBundle 'https://github.com/oblitum/rainbow', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : [
 \			'c',
 \			'cpp',
@@ -78,16 +81,59 @@ NeoBundle 'https://github.com/oblitum/rainbow', {
 \		],
 \	},
 \}
+NeoBundle 'https://github.com/Raimondi/delimitMate', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'filetypes' : [
+\			'c',
+\			'cpp',
+\			'vim',
+\			'latex',
+\			'python',
+\			'sh',
+\			'vhdl',
+\			'verilog',
+\		],
+\	},
+\}
 "NeoBundle 'honza/vim-snippets'
+
+"=========
+"4 - Unite
+"=========
+
+NeoBundle "Shougo/unite.vim", {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'commands' : [ "Unite" ],
+\	},
+\}
+NeoBundle 'ujihisa/unite-colorscheme', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'commands' : [ "Unite" ],
+\	},
+\}
+NeoBundle 'ujihisa/unite-outline', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'commands' : [ "Unite" ],
+\	},
+\}
+
+"================
+"5 - Filetypes
+"================
+
 NeoBundle 'https://github.com/WeiChungWu/vim-SystemVerilog', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : "verilog",
 \	},
 \}
 NeoBundle 'https://github.com/Cognoscan/vim-vhdl', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : "vhdl",
 \	},
 \}
@@ -97,33 +143,35 @@ NeoBundle 'kergoth/aftersyntaxc.vim', {
 \		'filetypes' : "c",
 \	},
 \}
-
-"4 - Unite
-"=========
-
-NeoBundle "Shougo/unite.vim", {
-\	'lazy' : 1,
-\   'autoload' : {
-\       'commands' : [ "Unite" ]
-\   }
-\}
-
-"5 - Miscelaneous
-"================
-
-NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'https://github.com/jtratner/vim-flavored-markdown', {
 \	'lazy' : 1,
 \   'autoload' : {
 \		'filetypes' : "markdown",
 \	},
 \}
+NeoBundle 'https://github.com/jcf/vim-latex', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'filetypes' : [
+\			'tex',
+\			'latex',
+\		],
+\	},
+\}
+NeoBundle 'jamessan/vim-gnupg'
+
+"================
+"6 - Miscelaneous
+"================
+
+NeoBundle 'sk1418/HowMuch'
+NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'SelectBuf', {
 \	'depends' : 'genutils'
 \}
 NeoBundle 'VimExplorer', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'mappings' : 'F7',
 \		'commands' : 'VE',
 \	},
@@ -133,38 +181,29 @@ NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'jistr/vim-nerdtree-tabs', {
 \	'depends': 'https://github.com/scrooloose/nerdtree.git',
 \	'lazy' : 0,
-\   'autoload' : {
+\	'autoload' : {
 \		'mappings' : 'F9',
 \		'commands' : 'NERDTreeTabsToggle',
 \	},
 \}
 NeoBundle 'https://github.com/itchyny/calendar.vim', {
 \	'lazy' : 1,
-\   'autoload' : {
-\       'commands' : 'Calendar',
-\   }
+\	'autoload' : {
+\		'commands' : 'Calendar',
+\	}
 \}
 NeoBundle 'https://github.com/Lokaltog/vim-easymotion'
 NeoBundle 'https://github.com/Shougo/vinarise.vim'
 NeoBundle 'https://github.com/mhinz/vim-startify.git'
-NeoBundle 'https://github.com/jcf/vim-latex', {
-\	'lazy' : 1,
-\   'autoload' : {
-\		'filetypes' : [
-\			'tex',
-\			'latex',
-\		]
-\	}
-\}
 NeoBundle 'https://github.com/dhruvasagar/vim-vinegar', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'mappings' : '-'
 \	}
 \}
 NeoBundle 'tpope/vim-git', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'filetypes' : [
 \			'gitcommit',
 \			'gitconfig',
@@ -172,23 +211,29 @@ NeoBundle 'tpope/vim-git', {
 \		]
 \	}
 \}
+NeoBundle 'mbbill/undotree', {
+\	'lazy' : 1,
+\   'autoload' : {
+\		'mappings' : 'F6',
+\		'commands' : 'UndotreeToggle',
+\	},
+\}
 
-"5 - Under test/to be tested
+"===========================
+"6 - Under test/to be tested
+"===========================
+
 "NeoBundle 'https://github.com/junegunn/vim-easy-align'
 "NeoBundle 'https://github.com/vim-scripts/armasm'
 "NeoBundle 'https://github.com/jamessan/vim-gnupg'
 "NeoBundle 'https://github.com/dhruvasagar/vim-table-mode/'
 "Issue 29:
 "NeoBundle 'https://github.com/chrisbra/csv.vim'
-"Issue 22:
-"NeoBundle 'https://github.com/sk1418/HowMuch'
 "Issue 18:
 "NeoBundle 'https://github.com/jiangmiao/auto-pairs'
-"NeoBundle 'https://github.com/Raimondi/delimitMate'
 "Issue 21:
 "NeoBundle 'https://github.com/Rykka/colorv.vim
 "NeoBundle 'https://github.com/Rykka/galaxy.vim
-"NeoBundle 'https://github.com/mbbill/undotree
 "NeoBundle 'https://github.com/benmills/vimux
 "NeoBundle 'https://github.com/terryma/vim-multiple-cursors (multiple cursors)
 
@@ -205,5 +250,5 @@ NeoBundleCheck
 
 call neobundle#end()
 
-filetype plugin indent on     " required!
+filetype plugin indent on    " required!
 

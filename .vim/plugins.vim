@@ -189,7 +189,7 @@ nnoremap <C-p> :Unite file_rec/async<cr>
 nnoremap <Leader>/ :Unite grep:.<cr>
 let g:unite_source_history_yank_enable = 1
 nnoremap <Leader>y :Unite history/yank<cr>
-nnoremap <Leader>s :Unite -quick-match -auto-preview buffer<cr>
+nnoremap <Leader>b :Unite -quick-match -auto-preview buffer<cr>
 nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 nnoremap <Leader>m :Unite -quick-match colorscheme<CR>
 

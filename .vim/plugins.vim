@@ -316,9 +316,8 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 
-" Set airline theme manually: auto detection did not work with summerfruit256
-let g:airline_theme="light"
-
+" Set airline theme manually
+let g:airline_theme="kolor"
 " fix messed up symbols
 let g:airline_symbols.space = "\ua0"
 
@@ -373,7 +372,6 @@ let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
-"
 "==========================================
 " 26 - vim-signify
 "      https://github.com/mhinz/vim-signify

@@ -5,6 +5,7 @@ if has("autocmd")
 		autocmd BufCreate,BufLeave,BufWinLeave * call clearmatches()
 		autocmd BufWritePre * call RmTrailSpaces()
 		autocmd VimResized  * wincmd =
+		autocmd InsertLeave * set nopaste
 	augroup END
 
 "	augroup help

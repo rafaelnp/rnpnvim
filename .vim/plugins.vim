@@ -192,6 +192,7 @@ nnoremap <Leader>y :Unite history/yank<cr>
 nnoremap <Leader>b :Unite -quick-match -auto-preview buffer<cr>
 nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 nnoremap <Leader>m :Unite -quick-match colorscheme<CR>
+nnoremap <leader>t :<C-u>Unite -buffer-name=buffer  buffer<cr>
 
 " The prefix key.
 "nnoremap    [unite]   <Nop>

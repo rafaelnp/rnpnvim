@@ -130,14 +130,6 @@ if has('gui_running')
 	call SetWindowSize()
 endif
 
-"=========================================================
-" 14 - selectBuf
-"      http://www.vim.org/scripts/script.php?script_id=107
-"=========================================================
-nmap <silent> <unique> <F3> <Plug>SelectBuf
-let g:selBufAlwaysShowDetails = 1
-let g:selBufAlwaysShowHidden  = 1
-
 "==========================================
 " 15 - tagbar
 "      https://github.com/majutsushi/tagbar

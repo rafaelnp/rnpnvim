@@ -166,9 +166,6 @@ NeoBundle 'jamessan/vim-gnupg'
 
 NeoBundle 'sk1418/HowMuch'
 NeoBundle 'https://github.com/bling/vim-airline'
-NeoBundle 'SelectBuf', {
-\	'depends' : 'genutils'
-\}
 NeoBundle 'VimExplorer', {
 \	'lazy' : 1,
 \	'autoload' : {

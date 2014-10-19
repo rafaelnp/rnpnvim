@@ -102,24 +102,9 @@ NeoBundle 'https://github.com/Raimondi/delimitMate', {
 "4 - Unite
 "=========
 
-NeoBundle "Shougo/unite.vim", {
-\	'lazy' : 1,
-\	'autoload' : {
-\		'commands' : [ "Unite" ],
-\	},
-\}
-NeoBundle 'ujihisa/unite-colorscheme', {
-\	'lazy' : 1,
-\	'autoload' : {
-\		'commands' : [ "Unite" ],
-\	},
-\}
-NeoBundle 'ujihisa/unite-outline', {
-\	'lazy' : 1,
-\	'autoload' : {
-\		'commands' : [ "Unite" ],
-\	},
-\}
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'ujihisa/unite-outline'
 
 "================
 "5 - Filetypes

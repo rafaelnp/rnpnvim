@@ -130,14 +130,6 @@ if has('gui_running')
 	call SetWindowSize()
 endif
 
-"=========================================================
-" 14 - selectBuf
-"      http://www.vim.org/scripts/script.php?script_id=107
-"=========================================================
-nmap <silent> <unique> <F3> <Plug>SelectBuf
-let g:selBufAlwaysShowDetails = 1
-let g:selBufAlwaysShowHidden  = 1
-
 "==========================================
 " 15 - tagbar
 "      https://github.com/majutsushi/tagbar
@@ -185,49 +177,16 @@ let g:undotree_SplitWidth = 40
 " 17 - Unite
 "      https://github.com/Shougo/unite.vim
 "=========================================
-nnoremap <C-p> :Unite file_rec/async<cr>
-nnoremap <Leader>/ :Unite grep:.<cr>
-let g:unite_source_history_yank_enable = 1
-nnoremap <Leader>y :Unite history/yank<cr>
-nnoremap <Leader>b :Unite -quick-match -auto-preview buffer<cr>
-nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
-nnoremap <Leader>m :Unite -quick-match colorscheme<CR>
-nnoremap <leader>t :<C-u>Unite -buffer-name=buffer  buffer<cr>
 
-" The prefix key.
-"nnoremap    [unite]   <Nop>
-"nmap    f [unite]
-"
-"nnoremap <silent> [unite]c  :<C-u>UniteWithCurrentDir
-"        \ -buffer-name=files buffer bookmark file<CR>
-"nnoremap <silent> [unite]b  :<C-u>UniteWithBufferDir
-"        \ -buffer-name=files -prompt=%\  buffer bookmark file<CR>
-"nnoremap <silent> [unite]r  :<C-u>Unite
-"        \ -buffer-name=register register<CR>
-"nnoremap <silent> [unite]o  :<C-u>Unite outline<CR>
-"nnoremap <silent> [unite]f
-"        \ :<C-u>Unite -buffer-name=resume resume<CR>
-"nnoremap <silent> [unite]ma
-"        \ :<C-u>Unite mapping<CR>
-"nnoremap <silent> [unite]me
-"        \ :<C-u>Unite output:message<CR>
-"nnoremap  [unite]f  :<C-u>Unite source<CR>
-"
-"nnoremap <silent> [unite]s
-"        \ :<C-u>Unite -buffer-name=files -no-split
-"        \ jump_point file_point buffer_tab
-"        \ file_rec:! file file/new<CR>
-"
-"" Start insert.
-"let g:unite_enable_start_insert = 1
-"let g:unite_enable_short_source_names = 1
-"
-"" Prompt choices.
-"let g:unite_prompt = '❫ '
-"let g:unite_prompt = '» '
-"
-"autocmd FileType unite call s:unite_my_settings()
-"function! s:unite_my_settings()"{{{
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+
+let g:unite_prompt = '» '
+let g:unite_source_history_yank_enable = 1
+
+" Custom mappings for the unite buffer
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
 "  " Overwrite settings.
 "
 "  imap <buffer> jj      <Plug>(unite_insert_leave)
@@ -265,7 +224,55 @@ nnoremap <leader>t :<C-u>Unite -buffer-name=buffer  buffer<cr>
 "
 "  " Runs "split" action by <C-s>.
 "  imap <silent><buffer><expr> <C-s>     unite#do_action('split')
-"endfunction"}}}
+	imap <buffer> <C-j> <Plug>(unite_select_next_line)
+	imap <buffer> <C-k> <Plug>(unite_select_previous_line)
+	imap <buffer> <c-a> <Plug>(unite_choose_action)
+
+	nmap <buffer> <ESC> <Plug>(unite_exit)
+endfunction
+
+" The prefix key.
+nnoremap [unite] <Nop>
+nmap <space> [unite]
+"
+" General purpose - list all sources
+nnoremap [unite]<space> :Unite -no-split -start-insert source<cr>
+
+nnoremap [unite]p :Unite file_rec/async<cr>
+nnoremap [unite]/ :Unite grep:.<cr>
+nnoremap [unite]y :Unite history/yank<cr>
+nnoremap [unite]b :Unite -quick-match buffer<cr>
+nnoremap [unite]r :<C-u>Unite -start-insert file_rec/async:!<CR>
+nnoremap [unite]M :Unite -quick-match colorscheme<CR>
+nnoremap [unite]t :<C-u>Unite -buffer-name=buffer  buffer<cr>
+
+" show document outline
+map [unite]o :Unite -no-split -auto-preview outline<CR>
+
+" line search
+nnoremap [unite]l :Unite -no-split -start-insert line<cr>
+
+nnoremap <silent> [unite]c  :<C-u>UniteWithCurrentDir
+        \ -buffer-name=files buffer bookmark file<CR>
+
+" list mappings
+nnoremap <silent> [unite]ma :<C-u>Unite mapping<CR>
+
+nnoremap [unite]F :Unite -no-split buffer tab file_mru directory_mru<cr>
+" Quickly switch between recent things
+nnoremap <silent> [unite]m :Unite -buffer-name=recent -winheight=10 file_mru<cr>
+"nnoremap [unite]m :Unite -no-split file_mru<cr>
+
+"nnoremap <silent> [unite]b  :<C-u>UniteWithBufferDir
+"        \ -buffer-name=files -prompt=%\  buffer bookmark file<CR>
+"nnoremap <silent> [unite]r  :<C-u>Unite
+"        \ -buffer-name=register register<CR>
+"nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=resume resume<CR>
+"nnoremap <silent> [unite]me :<C-u>Unite output:message<CR>
+"
+"" Start insert.
+"let g:unite_enable_start_insert = 1
+"let g:unite_enable_short_source_names = 1
 "
 "let g:unite_cursor_line_highlight = 'TabLineSel'
 "let g:unite_abbr_highlight = 'TabLine'

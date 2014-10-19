@@ -102,24 +102,9 @@ NeoBundle 'https://github.com/Raimondi/delimitMate', {
 "4 - Unite
 "=========
 
-NeoBundle "Shougo/unite.vim", {
-\	'lazy' : 1,
-\	'autoload' : {
-\		'commands' : [ "Unite" ],
-\	},
-\}
-NeoBundle 'ujihisa/unite-colorscheme', {
-\	'lazy' : 1,
-\	'autoload' : {
-\		'commands' : [ "Unite" ],
-\	},
-\}
-NeoBundle 'ujihisa/unite-outline', {
-\	'lazy' : 1,
-\	'autoload' : {
-\		'commands' : [ "Unite" ],
-\	},
-\}
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'ujihisa/unite-outline'
 
 "================
 "5 - Filetypes
@@ -166,9 +151,6 @@ NeoBundle 'jamessan/vim-gnupg'
 
 NeoBundle 'sk1418/HowMuch'
 NeoBundle 'https://github.com/bling/vim-airline'
-NeoBundle 'SelectBuf', {
-\	'depends' : 'genutils'
-\}
 NeoBundle 'VimExplorer', {
 \	'lazy' : 1,
 \	'autoload' : {

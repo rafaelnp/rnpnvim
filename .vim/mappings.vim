@@ -18,7 +18,6 @@
 
 " 1 - Leader related mappings
 " remap leader
-nnoremap <space> <Nop>
 let mapleader = ","
 
 nnoremap <leader>d    :call Reloadconfig()<CR>
@@ -99,11 +98,6 @@ noremap <Left>  <Nop>
 noremap <Right> <Nop>
 noremap <Up>    <Nop>
 noremap <Down>  <Nop>
-
-" shortcut for command line
-" Remapped becouse of vim-vinegar plugin
-nnoremap  <silent> <space> :
-"nnoremap <silent> - :
 
 " Use Q for formatting the current paragraph (or selection)
 vnoremap Q gq

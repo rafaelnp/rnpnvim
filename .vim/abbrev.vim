@@ -11,41 +11,57 @@ iabbrev rnp@  rnp@25ghz.net
 
 " command line
 cabbrev thelp   tab help
-cabbrev mapping ~/.vim/mappings.vim
+cabbrev mapps   ~/.vim/mappings.vim
 cabbrev bundle  ~/.vim/neobundle.vim
-cabbrev plugin  ~/.vim/plugins.vim
+cabbrev plugs   ~/.vim/plugins.vim
 cabbrev config  ~/.vim/config.vim
-cabbrev func    ~/.vim/functions.vim
+cabbrev funcs   ~/.vim/functions.vim
 cabbrev abbrev  ~/.vim/abbrev.vim
 cabbrev aucmd   ~/.vim/augroup.vim
+cabbrev vhelp   vertical help
 cabbrev vimrc   ~/.vimrc
-cabbrev vshell  VimShellTab
-" Open vimshell in a new small window
-cabbrev vshellp VimShellPop
+
+" avoid annoying error messages
+cabbrev WQ wq
+cabbrev Wq wq
+cabbrev W  w
+cabbrev Q  q
 
 " Dutch
 iabbrev Belgie   België
 iabbrev Brazilie Brazilië
 
 " English
-iabbrev tehn   then
+iabbrev aint   ain't
 iabbrev adn    and
 iabbrev waht   what
 iabbrev itll   it'll
 iabbrev youre  you're
 iabbrev theyre they're
+iabbrev tehn   then
 
 " German
-iabbrev mfg Mit freundlichen Grüßen,
-iabbrev Mfg Mit freundlichen Grüßen,
-iabbrev MFG Mit freundlichen Grüßen,
+iabbrev mfg    Mit freundlichen Grüßen,
+iabbrev Mfg    Mit freundlichen Grüßen,
+iabbrev MFG    Mit freundlichen Grüßen,
+iabbrev Muenchen   München
+iabbrev VG     Viele Grüße
 
 iabbrev Gruesse Grüße
 iabbrev Strasse Straße
 
 " Portuguese
+iabbrev abs         abraços
 iabbrev att         atenciosamente
 iabbrev Att         Atenciosamente
-iabbrev instalacao  coração
-iabbrev instalacoes corações
+iabbrev instalacao  instalação
+iabbrev instalacoes instalações
+iabbrev coracao     coração
+iabbrev coracoes    corações
+iabbrev mae         mãe
+
+" Spanish
+iabbrev manana      mañana
+iabbrev espanol     español
+iabbrev Espanol     Español
 

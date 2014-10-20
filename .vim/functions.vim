@@ -1,3 +1,39 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Highlight unwanted spaces
+" Reference:
+" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+" http://stackoverflow.com/questions/4998582/show-whitespace-characters-in-gvim
+"
+" The '\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!' highlights:
+" 1 - trailing spaces
+" 2 - leading spaces
+" 3 - spaces before tabs
+" 4 - spaces after tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+highlight ExtraSpaces term=standout ctermbg=Grey guibg=#8fddcc
+highlight TrailingSpaces term=standout ctermbg=Grey guibg=#8fddcc
+highlight ColorColumn ctermbg=magenta guibg=lightred
+
+function! RmTrailSpaces()
+	:%s/\s\+$//e
+endfunction
+
+function! HLightTrailSpaces()
+	call matchadd('TrailingSpaces','\s\+$')
+endfunction
+
+function! HLightExtraSpaces()
+	call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+endfunction
+
+function! HLighteColorColumn()
+	call matchadd('ColorColumn','\%81v')
+endfunction
+
+function! ShowTabs()
+		setlocal listchars=tab:▸\ ,eol:¬
+		setlocal list
+endfunction
 
 function! Reloadconfig()
 	wa

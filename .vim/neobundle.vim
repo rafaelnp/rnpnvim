@@ -144,6 +144,7 @@ NeoBundle 'https://github.com/jcf/vim-latex', {
 \	},
 \}
 NeoBundle 'jamessan/vim-gnupg'
+NeoBundle 'https://github.com/vim-scripts/armasm'
 
 "================
 "6 - Miscelaneous
@@ -206,7 +207,6 @@ NeoBundle 'mbbill/undotree', {
 "===========================
 
 "NeoBundle 'https://github.com/junegunn/vim-easy-align'
-"NeoBundle 'https://github.com/vim-scripts/armasm'
 "NeoBundle 'https://github.com/jamessan/vim-gnupg'
 "NeoBundle 'https://github.com/dhruvasagar/vim-table-mode/'
 "Issue 29:

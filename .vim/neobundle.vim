@@ -207,7 +207,6 @@ NeoBundle 'mbbill/undotree', {
 "===========================
 
 "NeoBundle 'https://github.com/junegunn/vim-easy-align'
-"NeoBundle 'https://github.com/jamessan/vim-gnupg'
 "NeoBundle 'https://github.com/dhruvasagar/vim-table-mode/'
 "Issue 29:
 "NeoBundle 'https://github.com/chrisbra/csv.vim'

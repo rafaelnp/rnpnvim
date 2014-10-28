@@ -105,6 +105,7 @@ NeoBundle 'https://github.com/Raimondi/delimitMate', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'ujihisa/unite-outline'
+NeoBundle 'Shougo/neomru.vim'
 
 "================
 "5 - Filetypes

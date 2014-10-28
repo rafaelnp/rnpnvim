@@ -241,7 +241,7 @@ nnoremap [unite]<space> :Unite -no-split -start-insert source<cr>
 nnoremap [unite]p :Unite file_rec/async<cr>
 nnoremap [unite]/ :Unite grep:.<cr>
 nnoremap [unite]y :Unite history/yank<cr>
-nnoremap [unite]b :Unite -quick-match buffer<cr>
+nnoremap [unite]b :Unite buffer<cr>
 nnoremap [unite]r :<C-u>Unite -start-insert file_rec/async:!<CR>
 nnoremap [unite]M :Unite -quick-match colorscheme<CR>
 nnoremap [unite]t :<C-u>Unite -buffer-name=buffer  buffer<cr>
@@ -260,8 +260,7 @@ nnoremap <silent> [unite]ma :<C-u>Unite mapping<CR>
 
 nnoremap [unite]F :Unite -no-split buffer tab file_mru directory_mru<cr>
 " Quickly switch between recent things
-nnoremap <silent> [unite]m :Unite -buffer-name=recent -winheight=10 file_mru<cr>
-"nnoremap [unite]m :Unite -no-split file_mru<cr>
+nnoremap <silent> [unite]m :Unite -buffer-name=recent -winheight=15 file_mru<cr>
 
 "nnoremap <silent> [unite]b  :<C-u>UniteWithBufferDir
 "        \ -buffer-name=files -prompt=%\  buffer bookmark file<CR>
@@ -423,8 +422,8 @@ let g:EasyMotion_smartcase = 1
 
 map s <Plug>(easymotion-bd-w)
 
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+"map  / <Plug>(easymotion-sn)
+"omap / <Plug>(easymotion-tn)
 
 " JK motions: Line motions
 nmap <Leader>j <Plug>(easymotion-j)

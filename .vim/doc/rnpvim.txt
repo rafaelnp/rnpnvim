@@ -1,0 +1,171 @@
+*rnpvim*  rnp's Vim config
+Version:     0.3.1
+Author:      Rafael do Nascimento Pereira
+Last change: 2014.09.22 (Fr) 22:59:34 (UTC +0200 CEST)
+License:     GPLv3
+
+==============================================================================
+CONTENTS                                                     *rnpvim-contents*
+
+	Introduction............................ |rnpvim-introduction|
+	Installed plugins....................... |rnpvim-plugins|
+	Structure............................... |rnpvim-struture|
+	Mappings ............................... |rnpvim-mappings|
+		General............................. |rnpvim-mappings-general|
+		Plugins............................. |rnpvim-mappings-plugins|
+
+==============================================================================
+Introduction                                             *rnpvim-introduction*
+
+This Vim setup is based on my daily workflow at work/home, where is normaly use
+C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
+Suggestions, corrections are welcome :-)
+==============================================================================
+Installed lugins                                              *rnpvim-plugins*
+
+aftersyntaxc
+calendar
+colour-sampler-pack
+genutils
+howmuch
+molokai
+neobundle
+nerdtree
+numbers
+rainbow
+selectbuf
+tagbar
+undotree
+unite
+vim-airline
+vim-easymotion
+vim-flavoured-markdown
+vim-git
+vim-latex
+vim-signify
+vim-startify.git
+vim-systemverilog
+vim-vhdl
+vim-vinegar
+vim-vividchalk.git
+vimexplorer
+vimnerdtreetabs
+vimproc
+vinarise.vim
+youcompleteme
+
+
+==============================================================================
+Structure                                                   *rnpvim-structure*
+
+==============================================================================
+Mappings                                                     *rnpvim-mappings*
+
+This section lists and describes the mappings used in the rnpvim's config,
+including the ones used in  the plugins.
+
+
+==============================================================================
+General Mappings                                     *rnpvim-mappings-general*
+
+Mapping              Key      Mode      Description
+Leader               ,                  Leader key
+Line termination     <a-r>    Normal    removes carriage return
+new tab              <a-t>    Normal    opens a new table
+next buffer          <a-n>    Normal    go to next buffer
+previous buffer      <a-p>    Normal    go to previous buffer
+save buffers         <a-s>    Normal    saves all buffers
+nnoremap             ,d       Normal    maps reload config
+nnoremap             <a-d>    Normal    save all current mappings on a text file
+Insert date nnoremap <F5>     Normal    Insert current date and time
+Insert date vnoremap <F5>     Visual    Insert current date and time
+Insert date inoremap <F5>     Insert    Insert current date and time
+Line ending          <a-m>    Normal    remove ^M in current file
+quickfix             <a-q>    Normal    closes quickfix
+nnoremap             <A-1>    Normal    toggle the menu bar
+nnoremap             <A-2>    Normal    toggle the toolbar
+nnoremap             <A-3>    Normal    toggle the right scroll bars
+nnoremap             <A-4>    Normal    toggle left the scroll bars
+
+" Moving cursor to other windows
+"
+" shift down : change window focus to lower one (cyclic)
+" shift up   : change window focus to upper one (cyclic)
+" shift left : change window focus to one on left
+" shift right: change window focus to one on right
+change focus  <s-down>   <c-w>w
+change focus  <s-up>     <c-w>W
+change focus  <s-left>   <c-w>h
+change focus  <s-right>  <c-w>l
+
+left key          <Left>  <Nop>
+right key         <Right> <Nop>
+uo key            <Up>    <Nop>
+down key          <Down>  <Nop>
+" Disable arrow keys in normal mode
+
+nnoremap <a-x> :%s/\s\+$//e<CR> " Removes trailing spaces
+nnoremap  <silent> <space> :
+" shortcut for command le
+" Remapped becouse of vim-vinegar plugin
+
+paragraph formatting          Q   visual   Format the selected paragraph
+paragraph formatting          Q   normal   Format the current paragraph
+
+" If long lines with line wrapping enabled, this solves the problem that pressing
+" down jumpes your cursor “over” the current line to the next line.It changes
+" behaviour so that it jumps to the next row in the editor (much more natural).
+nnoremap j gj
+nnoremap k gk
+
+nnoremap <silent> <a-c> Tired of clearing highlighted searches by searching
+                                        for “ldsfhjkhgakjks”? Use this
+
+inoremap <F1> <nop>   disable <F1>
+nnoremap <F1> <nop>   disable <F1>
+vnoremap <F1> <nop>   disable <F1>
+
+.vimrc    <leader>ev opens .vimrc
+
+==============================================================================
+Plugins                                              *rnpvim-mappings-plugins*
+
+==============================================================================
+Selectbuf
+
+Mapping              Key      Mode      Description
+SelectBuff        <unique> <F3> <Plug>SelectBuf
+
+
+==============================================================================
+vimexplorer
+
+Mapping              Key      Mode      Description
+nnoremap <silent> <F7> :VE ~<CR>
+==============================================================================
+tagbar
+
+Mapping              Key      Mode      Description
+nnoremap <silent> <F8> :TagbarToggle<CR>
+==============================================================================
+vim-nerdtree-tabs
+
+Mapping              Key      Mode      Description
+nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
+==============================================================================
+Unite
+
+Mapping              Key      Mode      Description
+nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <Leader>/ :Unite grep:.<cr>
+nnoremap <Leader>y :Unite history/yank<cr>
+nnoremap <Leader>s :Unite -quick-match -auto-preview buffer<cr>
+nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
+==============================================================================
+undotree
+
+Mapping              Key      Mode      Description
+nnoremap <silent> <F6> :UndotreeToggle<CR>
+
+==============================================================================
+vim:tw=78:sw=4:ts=4:ft=help:norl:

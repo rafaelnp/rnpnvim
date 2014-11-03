@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.09.23 (Tu) 17:05:17 (UTC +0200 CEST)
+Last update: 2014.11.03 (Mon) 10:01:46 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -933,7 +933,6 @@ For new and experimental stuff, take a look at the [next](https://github.com/raf
 * Document plugins configuration
 * FAQ
 * Mappings documentation
-* HDL(Verilog/VHDL) Plugins
 * Filetype support for Assembly (x86, ARM)
 * Spellcheck
 
@@ -955,6 +954,7 @@ Useful documentation about Vim:
 11. [Vimawesome](http://vimawesome.com/)
 12. [Today I learned Vim](http://tilvim.com/)
 13. [Vim Text Objects: The Definitive Guide](http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/)
+14. [Vimrcfu (vim tipps/snippets](http://vimrcfu.com/)
 
 
 ## 10 Acknowledgements

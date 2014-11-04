@@ -33,10 +33,10 @@ nnoremap <F3>  :Calendar -position=tab<cr>
 "========================================================
 " Colorscheme plugin, no config necessary
 
-"========================================================
+"===========================================
 " 5 - delimitmate
 "     https://github.com/blueyed/delimitMate
-"========================================================
+"===========================================
 " TODO: Finish configuration
 
 "======================================
@@ -60,16 +60,16 @@ let g:HowMuch_auto_engines = ['bc', 'vim', 'py']
 "============================================
 " Configured in the ~/.vim/bundle.vim file
 
-"===============================================
+"=====================================
 " 9 - neomru
 "     https://github.com/shougo/neomru
-"===============================================
+"=====================================
 " Configured in unite
 
-"===============================================
+"================================================
 " 10 - nerdtree
 "      https://github.com/scrooloose/nerdtree.git
-"===============================================
+"================================================
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
@@ -78,7 +78,7 @@ let NERDTreeShowLineNumbers   = 1
 " 11 - numbers
 "      https://github.com/myusuf3/numbers.vim
 "============================================
-"let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m']
+let g:numbers_exclude = ['unite', 'startify', 'gundo', 'undo']
 
 "========================================
 " 12 - rainbow parenthesis improved
@@ -136,16 +136,16 @@ let g:undotree_WindowLayout = 2
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_SplitWidth = 40
 
-"=========================================
+"==================================================
 " 15 - unite-colorscheme
-"      http://github.com/
-"=========================================
+"      https://github.com/ujihisa/unite-colorscheme
+"==================================================
 " Configured in unite
 
-"=========================================
+"===============================================
 " 16 - unite-outline
-"      http://github.com/
-"=========================================
+"      https://github.com/h1mesuke/unite-outline
+"===============================================
 " Configured in unite
 
 "=========================================
@@ -421,10 +421,10 @@ let g:startify_custom_footer = [
 "================================================
 " TODO: Finish configuration
 
-"================================================
+"=============================================
 " 30 - vividchalk
 "      https://github.com/tpope/vim-vividchalk
-"================================================
+"=============================================
 " Colorscheme plugin, no config necessary
 
 "===========================================
@@ -552,13 +552,13 @@ let g:ycm_confirm_extra_conf = 0
 "let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnips"]
 
 
-"=========================================
+"================================================
 " 37 - vim-easy-align
 "      https://github.com/junegunn/vim-easy-align
-"=========================================
+"================================================
 "
-"=========================================
+"===========================================
 " 38 - vim-snippets
 "      https://github.com/honza/vim-snippets
-"=========================================
+"===========================================
 

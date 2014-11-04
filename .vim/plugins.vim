@@ -6,24 +6,32 @@
 " 1 - aftersyntaxc
 "     https://github.com/vim-scripts/aftersyntaxc.vim
 "====================================================
+" Syntax plugin, no config necessary
 
 "==========================================
 " 2 - armasm
 "     https://github.com/vim-scripts/armasm
 "==========================================
+" Syntax plugin, no config necessary
 
 "============================================
 " 3 - calendar.vim
 "     https://github.com/itchyny/calendar.vim
 "============================================
-" TODO: Finish configuration
-let g:calendar_date_endian = "big"
-let g:calendar_date_separator="."
+let g:calendar_date_endian     = "big"
+let g:calendar_date_separator  = "."
+let g:calendar_first_day       = "monday"
+let g:calendar_week_number     = 1
+let g:calendar_date_month_name = 1
+let g:calendar_views           = ['year', 'month', 'week', 'clock']
+let g:calendar_updatetime      = 900
+nnoremap <F3>  :Calendar -position=tab<cr>
 
 "========================================================
 " 4 - colorsamplerpack
 "     http://www.vim.org/scripts/script.php?script_id=625
 "========================================================
+" Colorscheme plugin, no config necessary
 
 "========================================================
 " 5 - delimitmate
@@ -44,6 +52,7 @@ let g:HowMuch_auto_engines = ['bc', 'vim', 'py']
 " 7 - molokai
 "     https://github.com/tomasr/molokai
 "======================================
+" Colorscheme plugin, no config necessary
 
 "============================================
 " 8 - neobundle.vim
@@ -137,6 +146,7 @@ let g:undotree_SplitWidth = 40
 " 16 - Unite
 "      https://github.com/Shougo/unite.vim
 "=========================================
+" TODO: Finish configuration
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
@@ -311,12 +321,13 @@ nmap <Leader>k <Plug>(easymotion-k)
 " 20 - vim-git
 "      https://github.com/tpope/vim-git
 "======================================
-" TODO: Finish configuration
+" Syntax plugin, no config necessary
 
 "===========================================
 " 21 - vim-gnupg
 "      https://github.com/jamessan/vim-gnupg
 "===========================================
+" TODO: Finish configuration
 
 "======================================
 " 22 - vim-latex
@@ -390,11 +401,13 @@ let g:startify_custom_footer = [
 " 26 - vim-systemverilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog
 "=====================================================
+" Syntax plugin, no config necessary
 
 "===========================================
 " 27 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
 "===========================================
+" Syntax plugin, no config necessary
 
 "================================================
 " 28 - vim-vinegar
@@ -406,6 +419,7 @@ let g:startify_custom_footer = [
 " 29 - vividchalk
 "      https://github.com/tpop/vim-vividchalk.git
 "================================================
+" Colorscheme plugin, no config necessary
 
 "===========================================
 " 30 - vimexplorer
@@ -451,6 +465,7 @@ endif
 " 32 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 "============================================
+" TODO: Review configuration
 let g:vinarise_detect_large_file_size = 1000000
 cabbrev vimhex  Vinarise -split<CR>
 

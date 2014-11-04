@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.11.03 (Mo) 21:13:19 (UTC +0100 CET)
+Last update: 2014.11.04 (Tue) 08:39:32 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
@@ -53,8 +53,11 @@ which is also an Vim plugin, that make the Vim users life much easier.
 
 * Customized startup message and recently edited files
 
+* Undo tree history
 
-Screenshots can be found [here](https://github.com/rafaelnp/rnpvim/wiki/Screenshots).
+* VHDL/Verilog syntax highlight
+
+Nice, but let me see it in action. So, the screenshots can be found [here](https://github.com/rafaelnp/rnpvim/wiki/Screenshots).
 
 ## 2 Requirements
 
@@ -70,7 +73,7 @@ This Vim setup has the following requirements/dependencies:
 
 ## 3 Installation
 
-### 3.1 Manuall
+### 3.1 Manual
 
 This section describes the manual installation step by step. You can skip it if
 you prefer the [automatic one](https://github.com/rafaelnp/rnpvim#32-automatic).
@@ -179,57 +182,61 @@ The following plugins are used and their current configuration. No comment is
 found where configuration is self-explainatory.
 Each plugin documentation can be reached by typing `:help <plugin-name>`
 
-### 4.1 [armasm](https://github.com/vim-scripts/armasm) (ARM assembly syntax highlight)
+### 4.1 [aftersyntax](https://github.com/vim-scripts/aftersyntaxc.vim)
 
-### 4.2 [aftersyntax](https://github.com/vim-scripts/aftersyntaxc.vim)
+### 4.2 [armasm](https://github.com/vim-scripts/armasm) (ARM assembly syntax highlight)
 
 ### 4.3 [calendar.vim](https://github.com/itchyny/calendar.vim) (Integrasted calender)
 
 ### 4.4 [delimitmate](https://github.com/blueyed/delimitMate)
 
-### 4.5 [Howmuch](https://github.com/sk1418/HowMuch)
+### 4.5 [howmuch](https://github.com/sk1418/HowMuch)
 
-### 4.6 [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
+### 4.6 [neoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
 
-### 4.7 [Nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
+### 4.7 [nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
-### 4.8 [Numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
+### 4.8 [numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
 
-### 4.9 [Rainbow parentheses improved](https://github.com/oblitum/rainbow)
+### 4.9 [rainbow parentheses improved](https://github.com/oblitum/rainbow)
 
-### 4.10 [Startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
+### 4.11 [tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
 
-### 4.11 [Tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
+### 4.12 [undotree](https://github.com/mbbill/undotree)
 
-### 4.12 [Undotree](https://github.com/mbbill/undotree)
+### 4.13 [unite-colorscheme](https://github.com/ujihisa/unite-colorscheme) (Easy colorscheme changing)
 
-### 4.13 [unite](https://github.com/Shougo/unite.vim) (Fuzzy search and expand VIm capabilities)
+### 4.14 [unite-outline](https://github.com/Shougo/unite-outline) (Outline current buffer)
 
-### 4.14 [VimExplorer](https://github.com/mbbill/VimExplorer) (File browser)
+### 4.15 [unite](https://github.com/Shougo/unite.vim) (Fuzzy search and expand VIm capabilities)
 
-### 4.15 [Vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
+### 4.16 [vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
 
-### 4.16 [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
+### 4.17 [vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
 
-### 4.17 [Vim-easy-align](https://github.com/junegunn/vim-easy-align) (Text alignment made easy)
+### 4.18 [vim-flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 
-### 4.18 [Vim-Flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
+### 4.19 [vim-git](https://github.com/tpope/vim-git) (git syntax plugin)
 
-### 4.19 [Vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
+### 4.20 [vim-gnupg](https://github.com/jamessan/vim-gnupg) (Gnu PG integration)
 
-### 4.20 [Vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+### 4.21 [vim-latex](https://github.com/jcf/vim-latex) (LaTeX enhancements)
 
-### 4.21 [vim-snippets](https://github.com/honza/vim-snippets) (Code completting)
+### 4.22 [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 
-### 4.22 [vim-systemverilog](https://github.com/WeiChungWu/vim-SystemVerilog) (SystemVerilog syntax highlight)
+### 4.23 [vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
-### 4.23 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+### 4.24 [vim-startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
 
-### 4.24 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+### 4.26 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
 
-### 4.25 [Vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
+### 4.27 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
-### 4.26 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 4.28 [vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
+
+### 4.29 [vimexplorer](https://github.com/mbbill/VimExplorer) (File browser)
+
+### 4.30 [youcompleteme](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 
 ## 5 Colorschemes
@@ -238,7 +245,7 @@ Available colorschemes:
 
 ### 5.1 [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
 
-  Tenths of different colorschemes. The summerfruit256 theme is the one
+  Tenths of different colorschemes. The vimhut(dark) theme is the one
   currently used.
 
 ### 5.2 [molokai](https://github.com/tomasr/molokai)

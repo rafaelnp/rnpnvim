@@ -417,7 +417,7 @@ let g:startify_custom_footer = [
 
 "================================================
 " 29 - vividchalk
-"      https://github.com/tpop/vim-vividchalk.git
+"      https://github.com/tpope/vim-vividchalk
 "================================================
 " Colorscheme plugin, no config necessary
 

@@ -252,7 +252,7 @@ Available colorschemes:
 
 ![alt_text](https://github-camo.global.ssl.fastly.net/47bf6f7773c282e9607fc692e3a0948ee9363b6e/687474703a2f2f7777772e77696e746572646f6d2e636f6d2f7765626c6f672f636f6e74656e742f62696e6172792f57696e646f77734c6976655772697465722f4d6f6c6f6b6169666f7256696d5f383630322f6d6f6c6f6b61695f6e6f726d616c5f736d616c6c5f332e706e67)
 
-### 5.3 [vim-vividchalk](https://github.com/tpop/vim-vividchalk.git)
+### 5.3 [vim-vividchalk](https://github.com/tpope/vim-vividchalk.git)
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
 

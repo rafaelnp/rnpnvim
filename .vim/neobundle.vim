@@ -105,6 +105,7 @@ NeoBundle 'https://github.com/Raimondi/delimitMate', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'ujihisa/unite-outline'
+NeoBundle 'Shougo/neomru.vim'
 
 "================
 "5 - Filetypes
@@ -144,6 +145,7 @@ NeoBundle 'https://github.com/jcf/vim-latex', {
 \	},
 \}
 NeoBundle 'jamessan/vim-gnupg'
+NeoBundle 'https://github.com/vim-scripts/armasm'
 
 "================
 "6 - Miscelaneous
@@ -206,8 +208,6 @@ NeoBundle 'mbbill/undotree', {
 "===========================
 
 "NeoBundle 'https://github.com/junegunn/vim-easy-align'
-"NeoBundle 'https://github.com/vim-scripts/armasm'
-"NeoBundle 'https://github.com/jamessan/vim-gnupg'
 "NeoBundle 'https://github.com/dhruvasagar/vim-table-mode/'
 "Issue 29:
 "NeoBundle 'https://github.com/chrisbra/csv.vim'

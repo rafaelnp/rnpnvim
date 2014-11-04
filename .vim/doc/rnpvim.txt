@@ -1,7 +1,7 @@
 *rnpvim*  rnp's Vim config
-Version:     0.3.1
+Version:     0.3.4
 Author:      Rafael do Nascimento Pereira
-Last change: 2014.09.22 (Fr) 22:59:34 (UTC +0200 CEST)
+Last change: 2014.11.04 (Tue) 14:43:12 (UTC +0100 CET)
 License:     GPLv3
 
 ==============================================================================
@@ -13,6 +13,39 @@ CONTENTS                                                     *rnpvim-contents*
 	Mappings ............................... |rnpvim-mappings|
 		General............................. |rnpvim-mappings-general|
 		Plugins............................. |rnpvim-mappings-plugins|
+			aftersyntaxc.vim................ |plugins-aftersyntaxc|
+			armasm.......................... |plugins-aftersyntaxc|
+			calendar.vim.................... |plugins-|
+			colour-sampler-pack............. |plugins-|
+			delimitMate..................... |plugins-|
+			howMuch......................... |plugins-|
+			molokai......................... |plugins-|
+			neobundle.vim................... |plugins-|
+			nerdtree........................ |plugins-|
+			numbers.vim..................... |plugins-|
+			rainbow......................... |plugins-|
+			tagbar.......................... |plugins-|
+			undotree........................ |plugins-|
+			unite-colorscheme............... |plugins-|
+			unite-outline................... |plugins-|
+			unite.vim....................... |plugins-|
+			vim-airline..................... |plugins-|
+			vim-easymotion.................. |plugins-|
+			vim-flavored-markdown........... |plugins-|
+			vim-git......................... |plugins-|
+			vim-gnupg....................... |plugins-|
+			vim-latex....................... |plugins-|
+			vim-nerdtree-tabs............... |plugins-|
+			vim-signify..................... |plugins-|
+			vim-startify.................... |plugins-|
+			vim-systemVerilog............... |plugins-|
+			vim-vhdl........................ |plugins-|
+			vim-vinegar..................... |plugins-|
+			vim-vividchalk.................. |plugins-|
+			vimexplorer..................... |plugins-|
+			vimproc......................... |plugins-|
+			vinarise.vim.................... |plugins-|
+			youCompleteMe................... |plugins-|
 
 ==============================================================================
 Introduction                                             *rnpvim-introduction*
@@ -23,36 +56,39 @@ Suggestions, corrections are welcome :-)
 ==============================================================================
 Installed lugins                                              *rnpvim-plugins*
 
-aftersyntaxc
-calendar
+aftersyntaxc.vim
+armasm
+calendar.vim
 colour-sampler-pack
-genutils
-howmuch
+delimitMate
+howMuch
 molokai
-neobundle
+neobundle.vim
 nerdtree
-numbers
+numbers.vim
 rainbow
-selectbuf
 tagbar
 undotree
-unite
+unite-colorscheme
+unite-outline
+unite.vim
 vim-airline
 vim-easymotion
-vim-flavoured-markdown
+vim-flavored-markdown
 vim-git
+vim-gnupg
 vim-latex
+vim-nerdtree-tabs
 vim-signify
-vim-startify.git
-vim-systemverilog
+vim-startify
+vim-systemVerilog
 vim-vhdl
 vim-vinegar
-vim-vividchalk.git
+vim-vividchalk
 vimexplorer
-vimnerdtreetabs
 vimproc
 vinarise.vim
-youcompleteme
+youCompleteMe
 
 
 ==============================================================================
@@ -131,11 +167,6 @@ vnoremap <F1> <nop>   disable <F1>
 Plugins                                              *rnpvim-mappings-plugins*
 
 ==============================================================================
-Selectbuf
-
-Mapping              Key      Mode      Description
-SelectBuff        <unique> <F3> <Plug>SelectBuf
-
 
 ==============================================================================
 vimexplorer

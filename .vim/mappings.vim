@@ -20,7 +20,7 @@
 " remap leader
 let mapleader = ","
 
-nnoremap <leader>d    :call Reloadconfig()<CR>
+nnoremap <leader>c    :call Reloadconfig()<CR>
 
 " maps jumping tags
 nnoremap <leader>j  <c-]>

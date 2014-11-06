@@ -263,7 +263,10 @@ let g:nerdtree_tabs_no_startup_for_diff     = 0
 " 25 - vim-signify
 "      https://github.com/mhinz/vim-signify
 "==========================================
-" TODO: review config
+
+nnoremap <leader>gj <plug>(signify-next-hunk)
+nnoremap <leader>gk <plug>(signify-prev-hunk)
+
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
 let g:signify_update_on_bufenter = 0
 let g:signify_sign_change = '~'
@@ -476,13 +479,11 @@ let g:ycm_goto_buffer_command = 'new-tab'
 " 35 - fugitive
 "      https://github.com/tpope/vim-fugitive
 "===========================================
-" TODO: Configure fugitive
 
 "=========================================
 " 36 - ultisnips
 "      https://github.com/SirVer/ultisnips
 "=========================================
-" TODO: Finish configuration
 "let g:UltiSnipsExpandTrigger="<c-l>"
 "let g:UltiSnipsListSnippets="<c-h>"
 "let g:UltiSnipsJumpForwardTrigger="<c-j>"

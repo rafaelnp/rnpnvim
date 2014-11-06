@@ -86,7 +86,7 @@ let g:numbers_exclude = ['unite', 'startify', 'gundo', 'undo']
 " 12 - rainbow parenthesis improved
 "      https://github.com/oblitum/rainbow
 "========================================
-" TODO: review config
+
 au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
 
@@ -390,7 +390,7 @@ endif
 " 33 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 "============================================
-"
+
 let g:vinarise_enable_auto_detect = 1
 let g:vinarise_detect_large_file_size = 1000000
 cabbrev vimhex  Vinarise -split -encoding=utf-8<CR>

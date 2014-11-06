@@ -320,13 +320,12 @@ nmap <Leader>k <Plug>(easymotion-k)
 " 20 - vim-flavoured-markdown
 "      https://github.com/jtratner/vim-flavored-markdown
 "=======================================================
-" TODO: Finish configuration
-"if has("autocmd")
-"	augroup markdown
-"		au!
-"		au BufNewFile,BufRead,BufReadPost,FileReadPost *.md,*.markdown setlocal filetype=ghmarkdown
-"	augroup END
-"endif
+if has("autocmd")
+	augroup markdown
+		au!
+		au BufNewFile,BufRead,BufReadPost,FileReadPost *.md,*.markdown setlocal filetype=ghmarkdown
+	augroup END
+endif
 
 "======================================
 " 21 - vim-git

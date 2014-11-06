@@ -3,4 +3,5 @@
 .vim/ultisnips
 .vim/.undodir
 *.pyc
+.vim/doc/tags
 

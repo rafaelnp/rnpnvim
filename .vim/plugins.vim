@@ -380,8 +380,13 @@ highlight SignifySignChange gui=bold  guifg=darkorange
 "      https://github.com/mhinz/vim-startify
 "===========================================
 
-" TODO: review config
 let g:startify_files_number = 5
+
+let g:startify_skiplist = [
+	\ 'COMMIT_EDITMSG',
+	\ $VIMRUNTIME .'/doc',
+	\ 'bundle/.*/doc',
+	\ ]
 
 let g:startify_bookmarks = [
 			\'~/.vimrc',
@@ -393,6 +398,7 @@ let g:startify_bookmarks = [
 			\'~/.vim/plugins.vim'
 			\]
 
+" ascii text: http://patorjk.com/software/taag/
 let g:startify_custom_header = [
 			\'     __      ___             ______ _  _',
 			\'     \ \    / (_)           |____  | || |',
@@ -410,7 +416,6 @@ let g:startify_custom_footer = [
 	\ '',
 	\ ]
 
-
 "=====================================================
 " 27 - vim-systemverilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog
@@ -427,7 +432,7 @@ let g:startify_custom_footer = [
 " 29 - vim-vinegar
 "      https://github.com/dhruvasagar/vim-vinegar
 "================================================
-" TODO: Finish configuration
+" No extra config is necessary
 
 "=============================================
 " 30 - vividchalk
@@ -440,7 +445,6 @@ let g:startify_custom_footer = [
 "      https://github.com/mbbill/VimExplorer
 "===========================================
 
-" TODO: review config
 nnoremap <silent> <F7> :VE ~<CR>
 let g:VEConf_treePanelWidth = 40
 if has('unix')

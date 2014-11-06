@@ -5,7 +5,7 @@
 #
 # rnpvim installation script
 #
-# Last update: 2014.01.15 (Wed) 17:31:08 (UTC +0100 CET)
+# Last update: 2014.11.06 (Thu) 10:32:35 (UTC +0100 CET)
 
 basedir="$HOME/src/rnpvim"
 vimdir="$HOME/.vim"
@@ -14,11 +14,15 @@ vimfile="$HOME/.vimrc"
 vimfilebak="$HOME/.vimrc.bak"
 fontdir="$HOME/.font"
 
-echo "(1) backing up your current Vim congiguration"
+echo "
+=============================================
+(1) backing up your current Vim congiguration
+=============================================
+"
 
 if [ -d "$basedir" ]; then
 	echo "  $basedir already exists. Exiting rnpvim instalation.."
-	exit
+	exit 1
 fi
 
 if [ ! -e "$vimdir" ]; then
@@ -45,30 +49,45 @@ else
 	fi
 fi
 
-echo "(2) cloning rnpvim from Github"
+echo "
+=============================================
+(2) cloning rnpvim from Github
+=============================================
+"
+git clone https://github.com/rafaelnp/rnpvim.git $basedir
 
-git clone https://github.com/rafaelnp/rnpvim.git $basedir > /dev/null
-
-echo "(3) creating symlinks"
-
+echo "
+=====================
+(3) creating symlinks
+=====================
+"
 ln -s $basedir/.vim $HOME/.vim
-
 ln -s $basedir/.vimrc $HOME/.vimrc
 
-echo "(4) cloning plugin manager (NeoBundle) from Github"
+echo "
+==================================================
+(4) cloning plugin manager (NeoBundle) from Github
+==================================================
+"
+git clone git://github.com/Shougo/neobundle.vim $vimdir/bundle/neobundle.vim
 
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim > /dev/null
-
-echo "(5) cloning plugins from Github"
+echo "
+===============================
+(5) cloning plugins from Github
+===============================
+"
 
 #vim +NeoBundleInstall +qall
-. ~/.vim/bundle/neobundle.vim/bin/neoinstall > /dev/null
+. $vimdir/bundle/neobundle.vim/bin/neoinstall > /dev/null
 
-echo "(6) compiling YouCompleteMe Clang autocomplete support"
-
+echo "
+======================================================
+(6) compiling YouCompleteMe Clang autocomplete support
+======================================================
+"
 clangversion="llvm"  # Default: download from llvm.org
 #clangversion="local" Uncomment this line if you wanna use or local version
-cd ~/.vim/bundle/YouCompleteMe
+cd $vimdir/bundle/YouCompleteMe
 
 if [ "$clangversion" = "llvm" ]; then
 	./install.sh --clang-completer
@@ -79,7 +98,11 @@ else
 	echo "  Error: Invalid option to compile YouCompleteMe Clang completion support"
 fi
 
-echo "(7) cloning powerline fonts"
+echo "
+===========================
+(7) cloning powerline fonts
+===========================
+"
 
 if [ -d "$fontdir/powerline-fonts" ]; then
 	echo "  $fontdir/powerline-fonts already exists. Skipping porweline-fonts instalation.."
@@ -89,9 +112,18 @@ fi
 git clone https://github.com/Lokaltog/powerline-fonts $HOME/src/powerline-fonts
 ln -s $HOME/src/powerline-fonts $HOME/.fonts/powerline-fonts
 
-echo "(8) updating the font cache"
+echo "
+===========================
+(8) updating the font cache
+===========================
+"
 
 fc-cache $HOME/.fonts
 
-echo "(9) rnpvim installation ended"
+echo "
+=============================
+(9) rnpvim installation ended
+=============================
+For more infos about rnpvim type ':help rnpvim'
+"
 

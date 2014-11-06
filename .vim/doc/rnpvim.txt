@@ -1,13 +1,25 @@
-*rnpvim*  rnp's Vim config
+*rnpvim.txt*             RnpVim help                                  *rnpvim*
+
+       _____          __      ___              ___   ____  _  _   ~
+      |  __ \         \ \    / (_)            / _ \ |___ \| || |  ~
+      | |__) |_ __  _ _\ \  / / _ _ __ ___   | | | |  __) | || |_ ~
+      |  _  /| '_ \| '_ \ \/ / | | '_ ` _ \  | | | | |__ <|__   _|~
+      | | \ \| | | | |_) \  /  | | | | | | | | |_| | ___) |  | |  ~
+      |_|  \_\_| |_| .__/ \/   |_|_| |_| |_|  \___(_)____(_) |_|  ~
+                   | |                                            ~
+                   |_|                                            ~
+
+*rnpvim*     RnpVim help
 Version:     0.3.4
-Author:      Rafael do Nascimento Pereira
-Last change: 2014.11.04 (Tue) 14:43:12 (UTC +0100 CET)
+Author:      Rafael do Nascimento Pereira <rnp@25ghz.net>
+Last change: 2014.11.06 (Thu) 12:01:49 (UTC +0100 CET)
 License:     GPLv3
 
 ==============================================================================
 CONTENTS                                                     *rnpvim-contents*
 
 	Introduction............................ |rnpvim-introduction|
+	Freatures............................... |rnpvim-features|
 	Installed plugins....................... |rnpvim-plugins|
 	Structure............................... |rnpvim-struture|
 	Mappings ............................... |rnpvim-mappings|
@@ -53,6 +65,18 @@ Introduction                                             *rnpvim-introduction*
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
 Suggestions, corrections are welcome :-)
+==============================================================================
+Features                                                 *rnpvim-features*
+
+Custom settings worth to mention:
+  * open help on a new tab
+  * utf-8 encoding
+  * unix line ending
+  * disabled sound and visual alerts
+  * tabs for indentation
+  * show line ending and line break
+  * 80 column lines
+
 ==============================================================================
 Installed lugins                                              *rnpvim-plugins*
 

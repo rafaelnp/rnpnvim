@@ -11,6 +11,8 @@ iabbrev rnp@  rnp@25ghz.net
 
 " command line
 cabbrev thelp   tab help
+cabbrev help    tab help
+cabbrev h       tab help
 cabbrev mapps   ~/.vim/mappings.vim
 cabbrev bundle  ~/.vim/neobundle.vim
 cabbrev plugs   ~/.vim/plugins.vim

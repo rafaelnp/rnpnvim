@@ -43,6 +43,7 @@ nnoremap <F3>  :Calendar -position=tab<cr>
 " 6 - howmuch
 "     https://github.com/sk1418/HowMuch
 "======================================
+" TODO: review config
 "The scale of the result:
 let g:HowMuch_scale = 2
 "the engine order for auto-calculation
@@ -70,6 +71,7 @@ let g:HowMuch_auto_engines = ['bc', 'vim', 'py']
 " 10 - nerdtree
 "      https://github.com/scrooloose/nerdtree.git
 "================================================
+" TODO: review config
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
@@ -84,6 +86,7 @@ let g:numbers_exclude = ['unite', 'startify', 'gundo', 'undo']
 " 12 - rainbow parenthesis improved
 "      https://github.com/oblitum/rainbow
 "========================================
+" TODO: review config
 au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
 
@@ -99,6 +102,7 @@ let g:rainbow_load_separately = [
 "      http://majutsushi.github.io/tagbar/
 "==========================================
 
+" TODO: review config
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_autoclose   = 1
 let g:tagbar_autofocus   = 1
@@ -256,6 +260,7 @@ nnoremap <silent> [unite]m :Unite -buffer-name=recent -winheight=15 file_mru<cr>
 " 18 - vim-airline
 "      https://github.com/bling/vim-airline
 "==========================================
+" TODO: review config
 " The powerline symbols need the powerline fonts:
 " https://github.com/Lokaltog/powerline-fonts
 "
@@ -345,6 +350,7 @@ nmap <Leader>k <Plug>(easymotion-k)
 " 24 - vim-nerdtree-tabs
 "      https://github.com/jistr/vim-nerdtree-tabs.git
 "====================================================
+" TODO: review config
 nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
@@ -354,6 +360,7 @@ let g:nerdtree_tabs_no_startup_for_diff     = 0
 " 25 - vim-signify
 "      https://github.com/mhinz/vim-signify
 "==========================================
+" TODO: review config
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
 let g:signify_update_on_bufenter = 0
 let g:signify_sign_change = '~'
@@ -373,6 +380,7 @@ highlight SignifySignChange gui=bold  guifg=darkorange
 "      https://github.com/mhinz/vim-startify
 "===========================================
 
+" TODO: review config
 let g:startify_files_number = 5
 
 let g:startify_bookmarks = [
@@ -432,6 +440,7 @@ let g:startify_custom_footer = [
 "      https://github.com/mbbill/VimExplorer
 "===========================================
 
+" TODO: review config
 nnoremap <silent> <F7> :VE ~<CR>
 let g:VEConf_treePanelWidth = 40
 if has('unix')

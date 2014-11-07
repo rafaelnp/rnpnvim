@@ -146,6 +146,17 @@ let g:tagbar_type_vhdl = {
 							\]
 						\}
 
+let g:tagbar_type_armasm = {
+	\ 'ctagsbin'  : 'ctags',
+	\ 'ctagsargs' : '-f- --format=2 --excmd=pattern --fields=nksSa --extra= --sort=no --language-force=asm',
+	\ 'kinds' : [
+		\ 'm:macros:0:1',
+		\ 't:types:0:1',
+		\ 'd:defines:0:1',
+		\ 'l:labels:0:1'
+	\ ]
+\}
+
 "========================================
 " 14 - undotree
 "      https://github.com/mbbill/undotree

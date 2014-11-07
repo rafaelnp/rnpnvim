@@ -56,7 +56,7 @@ endif
 " 6 - howmuch
 "     https://github.com/sk1418/HowMuch
 "======================================
-" TODO: review config
+
 "The scale of the result:
 let g:HowMuch_scale = 2
 "the engine order for auto-calculation

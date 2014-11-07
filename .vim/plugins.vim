@@ -259,14 +259,14 @@ endif
 " 23 - vim-latex
 "      https://github.com/jcf/vim-latex
 "======================================
-" TODO: Finish configuration
+
 let g:tex_flavor='latex'
 
 "====================================================
 " 24 - vim-nerdtree-tabs
 "      https://github.com/jistr/vim-nerdtree-tabs.git
 "====================================================
-" TODO: review config
+
 nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0

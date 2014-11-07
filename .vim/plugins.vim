@@ -37,7 +37,20 @@ nnoremap <F3>  :Calendar -position=tab<cr>
 " 5 - delimitmate
 "     https://github.com/blueyed/delimitMate
 "===========================================
-" TODO: Finish configuration
+
+let delimitMate_matchpairs = "(:),[:],{:}"
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+let delimitMate_jump_expansion = 1
+let delimitMate_expand_inside_quotes = 1
+let delimitMate_balance_matchpairs = 1
+let delimitMate_excluded_regions = "Comment,String"
+
+let delimitMate_excluded_ft = "mail,text,txt,log,messages"
+
+if has("autocmd")
+	au FileType c,cpp,perl let b:delimitMate_eol_marker = ";"
+endif
 
 "======================================
 " 6 - howmuch

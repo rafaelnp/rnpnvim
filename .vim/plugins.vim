@@ -84,8 +84,10 @@ let g:HowMuch_auto_engines = ['bc', 'vim', 'py']
 " 10 - nerdtree
 "      https://github.com/scrooloose/nerdtree.git
 "================================================
-" TODO: review config
+
 let NERDTreeCaseSensitiveSort = 1
+let NERDTreeChDirMode         = 1
+let NERDTreeQuitOnOpen        = 1
 let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
 
@@ -177,7 +179,7 @@ source ~/.vim/unite.vim
 " 18 - vim-airline
 "      https://github.com/bling/vim-airline
 "==========================================
-" TODO: review config
+
 " The powerline symbols need the powerline fonts:
 " https://github.com/Lokaltog/powerline-fonts
 "
@@ -221,13 +223,10 @@ let g:airline#extensions#eclim#enabled = 0
 " 19 - vim-easymotion
 "      https://gitthub.com/Lokaltog/vim-easymotion
 "=================================================
-" TODO: Finish configuration
+
 let g:EasyMotion_smartcase = 1
 
 map s <Plug>(easymotion-bd-w)
-
-"map  / <Plug>(easymotion-sn)
-"omap / <Plug>(easymotion-tn)
 
 " JK motions: Line motions
 nmap <Leader>j <Plug>(easymotion-j)
@@ -254,13 +253,14 @@ endif
 " 22 - vim-gnupg
 "      https://github.com/jamessan/vim-gnupg
 "===========================================
-" TODO: Finish configuration
+" No adicional config so far
 
 "======================================
 " 23 - vim-latex
 "      https://github.com/jcf/vim-latex
 "======================================
 " TODO: Finish configuration
+let g:tex_flavor='latex'
 
 "====================================================
 " 24 - vim-nerdtree-tabs

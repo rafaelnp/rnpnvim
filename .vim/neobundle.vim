@@ -44,6 +44,7 @@ NeoBundle 'Tagbar', {
 \			'cpp',
 \			'vim',
 \			'latex',
+\			'make',
 \			'python',
 \			'sh',
 \			'vhdl',

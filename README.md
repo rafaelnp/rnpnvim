@@ -1,9 +1,9 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.11.06 (Tue) 08:39:32 (UTC +0100 CET)
+Last update: 2014.11.11 (Tue) 7:39:32 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
-C/C++, Assembly and HDL (Verilog, VDHL). This is still a work under development,
+C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
 Suggestions, corrections are welcome :-)
 
 
@@ -16,6 +16,10 @@ if you do something wrong you can revert it on a sane way.
 If you use vim and your workflow includes Assembly, C, C++, LaTeX and HDL(Verilog,VHDL),
 then rnpvim may be a good option for you.
 
+```
+The RnpVim was tested only on Linux. Theoretically it should work on Mac OSX. On
+Windows, well, I have no idea. Maybe you can test it and give some feedback...
+```
 
 ### 1.1 Main features
 
@@ -58,6 +62,9 @@ which is also an Vim plugin, that make the Vim users life much easier.
 * VHDL/Verilog syntax highlight
 
 Nice, but let me see it in action. So, the screenshots can be found [here](https://github.com/rafaelnp/rnpvim/wiki/Screenshots).
+
+If you want to see (and suggest) the features that are coming on next releases,
+take a look at the [RnpVim's milestones](https://github.com/rafaelnp/rnpvim/milestones).
 
 ## 2 Requirements
 

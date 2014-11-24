@@ -312,11 +312,17 @@ highlight SignifySignChange gui=bold  guifg=darkorange
 
 let g:startify_files_number = 5
 
+highlight StartifyFooter  ctermfg=green
+highlight StartifyFooter  guifg=green
+highlight StartifyHeader  ctermfg=red
+highlight StartifyHeader  guifg=red
+
 let g:startify_skiplist = [
-	\ 'COMMIT_EDITMSG',
-	\ $VIMRUNTIME .'/doc',
-	\ 'bundle/.*/doc',
-	\ ]
+		\ 'COMMIT_EDITMSG',
+		\ $VIMRUNTIME .'/doc',
+		\ 'bundle/.*/doc',
+		\ '\.DS_Store'
+		\ ]
 
 let g:startify_bookmarks = [
 			\'~/.vimrc',
@@ -345,6 +351,10 @@ let g:startify_custom_footer = [
 	\ '   Albert Einstein',
 	\ '',
 	\ ]
+
+if has('gui_running')
+	call SetWindowSize()
+endif
 
 "=====================================================
 " 27 - vim-systemverilog
@@ -386,22 +396,6 @@ if has('unix')
 elseif has('win32' || 'win64')
 	let g:VEConf_externalExplorer = "explorer.exe"
 	let g:VEConf_systemEncoding   = 'utf-16'
-endif
-
-highlight StartifyFooter  ctermfg=green
-highlight StartifyFooter  guifg=green
-highlight StartifyHeader  ctermfg=red
-highlight StartifyHeader  guifg=red
-
-let g:startify_skiplist = [
-		\ 'COMMIT_EDITMSG',
-		\ $VIMRUNTIME .'/doc',
-		\ 'bundle/.*/doc',
-		\ '\.DS_Store'
-		\ ]
-
-if has('gui_running')
-	call SetWindowSize()
 endif
 
 "===========================================

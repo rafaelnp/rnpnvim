@@ -314,35 +314,106 @@ Plugins                                              *rnpvim-mappings-plugins*
 
 ==============================================================================
 
-==============================================================================
-vimexplorer
+This section lists the installed plugins custom mappings
 
-Mapping              Key      Mode      Description
-nnoremap <silent> <F7> :VE ~<CR>
 ==============================================================================
 tagbar
 
-Mapping              Key      Mode      Description
-nnoremap <silent> <F8> :TagbarToggle<CR>
-==============================================================================
-vim-nerdtree-tabs
+Key/Function      Mapping      Mode      Description
+TagbarToggle      <F8>         Normal    Show/hide tagbar window
 
-Mapping              Key      Mode      Description
-nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
 ==============================================================================
 Unite
 
-Mapping              Key      Mode      Description
-nnoremap <C-p> :Unite file_rec/async<cr>
-nnoremap <Leader>/ :Unite grep:.<cr>
-nnoremap <Leader>y :Unite history/yank<cr>
-nnoremap <Leader>s :Unite -quick-match -auto-preview buffer<cr>
-nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
+Key/Function      Mapping      Mode      Description
+" Used in unite window
+imap <buffer> <C-j> <Plug>(unite_select_next_line)
+imap <buffer> <C-k> <Plug>(unite_select_previous_line)
+imap <buffer> <c-a> <Plug>(unite_choose_action)
+nmap <buffer> <ESC> <Plug>(unite_exit)
+
+" The prefix key.
+nnoremap [unite] <Nop>
+nmap <space> [unite]
+
+
+" General purpose - list all sources
+nnoremap [unite]<space> :Unite -no-split -start-insert source<cr>
+
+nnoremap [unite]p :Unite file_rec/async<cr>
+nnoremap [unite]/ :Unite grep:.<cr>
+nnoremap [unite]y :Unite history/yank<cr>
+nnoremap [unite]b :Unite buffer<cr>
+nnoremap [unite]r :<C-u>Unite -start-insert file_rec/async:!<CR>
+nnoremap [unite]M :Unite -quick-match colorscheme<CR>
+nnoremap [unite]t :<C-u>Unite -buffer-name=buffer  buffer<cr>
+
+" show document outline
+map [unite]o :Unite -no-split -auto-preview outline<CR>
+
+" line search
+nnoremap [unite]l :Unite -no-split -start-insert line<cr>
+
+nnoremap <silent> [unite]c  :<C-u>UniteWithCurrentDir
+        \ -buffer-name=files buffer bookmark file<CR>
+
+" list mappings
+nnoremap <silent> [unite]ma :<C-u>Unite mapping<CR>
+
+nnoremap [unite]F :Unite -no-split buffer tab file_mru directory_mru<cr>
+" Quickly switch between recent things
+nnoremap <silent> [unite]m :Unite -buffer-name=recent -winheight=15 file_mru<cr>
+
+
 ==============================================================================
 undotree
 
-Mapping              Key      Mode      Description
+Key/Function      Mapping      Mode      Description
 nnoremap <silent> <F6> :UndotreeToggle<CR>
+
+==============================================================================
+vim-easymotion
+
+Key/Function      Mapping      Mode      Description
+s <Plug>(easymotion-bd-w)
+
+" JK motions: Line motions
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
+
+==============================================================================
+vim-nerdtree-tabs
+
+Key/Function      Mapping      Mode      Description
+nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
+
+==============================================================================
+vim-signify
+
+Key/Function      Mapping      Mode      Description
+nnoremap <leader>gj <plug>(signify-next-hunk)
+nnoremap <leader>gk <plug>(signify-prev-hunk)
+
+==============================================================================
+vimexplorer
+
+Key/Function      Mapping      Mode      Description
+nnoremap <silent> <F7> :VE ~<CR>
+
+==============================================================================
+Vinarise
+
+Key/Function      Mapping      Mode      Description
+cabbrev vimhex  Vinarise -split -encoding=utf-8<CR>
+nnoremap <leader>vv  :Vinarise -split -encoding=utf-8<CR>
+
+==============================================================================
+YouCompleteMe
+
+Key/Function      Mapping      Mode      Description
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
 
 ==============================================================================
 vim:tw=78:sw=4:ts=4:ft=help:norl:

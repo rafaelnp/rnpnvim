@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.11.11 (Tue) 7:39:32 (UTC +0100 CET)
+Last update: 2014.12.02 (Di) 22:14:48 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
@@ -293,6 +293,7 @@ Useful documentation about Vim:
 13. [Vim Text Objects: The Definitive Guide](http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/)
 14. [Vimrcfu (vim tipps/snippets](http://vimrcfu.com/)
 15. [FIGlet](http://www.figlet.org/)
+16. [Vim quick reference card](http://tnerual.eriogerg.free.fr/vimqrc.html)
 
 ## 10 Acknowledgements
 

@@ -291,7 +291,7 @@ Useful documentation about Vim:
 11. [Vimawesome](http://vimawesome.com/)
 12. [Today I learned Vim](http://tilvim.com/)
 13. [Vim Text Objects: The Definitive Guide](http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/)
-14. [Vimrcfu (vim tipps/snippets](http://vimrcfu.com/)
+14. [Vimrcfu (vim tipps/snippets)](http://vimrcfu.com/)
 15. [FIGlet](http://www.figlet.org/)
 16. [Vim quick reference card](http://tnerual.eriogerg.free.fr/vimqrc.html)
 

@@ -11,6 +11,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
+" Required
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
@@ -43,6 +44,7 @@ NeoBundle 'Tagbar', {
 \			'cpp',
 \			'vim',
 \			'latex',
+\			'make',
 \			'python',
 \			'sh',
 \			'vhdl',
@@ -221,16 +223,24 @@ NeoBundle 'mbbill/undotree', {
 
 "NeoBundle 'https://github.com/ujihisa/vim-rengbang'
 "NeoBundle 'https://github.com/Shougo/vimfiler.vim'
-"
+" fugitive uses augroup fugitive.
+" NeoBundle 'tpope/vim-fugitive', { 'augroup' : 'fugitive'}
 
-"6 - NeoBundle post config
+"=========================
+"7 - NeoBundle post config
+"=========================
+
 let g:neobundle#types#git#default_protocol = "https"
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 
 call neobundle#end()
 
 filetype plugin indent on    " required!
 
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+if !has('vim_starting')
+	" Call on_source hook when reloading .vimrc.
+	call neobundle#call_hook('on_source')
+endif

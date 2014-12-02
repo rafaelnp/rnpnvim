@@ -1,5 +1,8 @@
+"=========
 " mappings
-"
+"=========
+
+" some useful mapping related information:
 " :nmap - Display normal mode maps
 " :imap - Display insert mode maps
 " :vmap - Display visual and select mode maps
@@ -35,7 +38,8 @@ nnoremap <buffer> <a-r> :%s/\r//g<CR>
 " opens a new table
 nnoremap <a-t> :tabnew<CR>
 
-" Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”? Use this
+" Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”?
+" Use this
 nnoremap <silent> <a-c> :nohlsearch<CR>
 
 " go to next buffer
@@ -76,15 +80,20 @@ nnoremap <silent> <a-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set
 "
 " Moving cursor to other windows
 "
-" shift down : change window focus to lower one (cyclic)
-" shift up   : change window focus to upper one (cyclic)
-" shift left : change window focus to one on left
-" shift right: change window focus to one on right
+" change window focus to lower one (cyclic)
+" change window focus to upper one (cyclic)
+" change window focus to one on left
+" change window focus to one on right
 nnoremap <s-down>   <c-w>w
 nnoremap <s-up>     <c-w>W
 nnoremap <s-left>   <c-w>h
 nnoremap <s-right>  <c-w>l
 
+" move a windown down, up, left, right respectively
+nnoremap <c-down>   <c-w>J
+nnoremap <c-up>     <c-w>K
+nnoremap <c-left>   <c-w>H
+nnoremap <c-right>  <c-w>L
 
 " 4 - Miscelaneous mappings
 

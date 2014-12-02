@@ -37,13 +37,26 @@ nnoremap <F3>  :Calendar -position=tab<cr>
 " 5 - delimitmate
 "     https://github.com/blueyed/delimitMate
 "===========================================
-" TODO: Finish configuration
+
+let delimitMate_matchpairs = "(:),[:],{:}"
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+let delimitMate_jump_expansion = 1
+let delimitMate_expand_inside_quotes = 1
+let delimitMate_balance_matchpairs = 1
+let delimitMate_excluded_regions = "Comment,String"
+
+let delimitMate_excluded_ft = "mail,text,txt,log,messages"
+
+if has("autocmd")
+	au FileType c,cpp,perl let b:delimitMate_eol_marker = ";"
+endif
 
 "======================================
 " 6 - howmuch
 "     https://github.com/sk1418/HowMuch
 "======================================
-" TODO: review config
+
 "The scale of the result:
 let g:HowMuch_scale = 2
 "the engine order for auto-calculation
@@ -71,8 +84,10 @@ let g:HowMuch_auto_engines = ['bc', 'vim', 'py']
 " 10 - nerdtree
 "      https://github.com/scrooloose/nerdtree.git
 "================================================
-" TODO: review config
+
 let NERDTreeCaseSensitiveSort = 1
+let NERDTreeChDirMode         = 1
+let NERDTreeQuitOnOpen        = 1
 let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
 
@@ -131,6 +146,17 @@ let g:tagbar_type_vhdl = {
 							\]
 						\}
 
+let g:tagbar_type_armasm = {
+	\ 'ctagsbin'  : 'ctags',
+	\ 'ctagsargs' : '-f- --format=2 --excmd=pattern --fields=nksSa --extra= --sort=no --language-force=asm',
+	\ 'kinds' : [
+		\ 'm:macros:0:1',
+		\ 't:types:0:1',
+		\ 'd:defines:0:1',
+		\ 'l:labels:0:1'
+	\ ]
+\}
+
 "========================================
 " 14 - undotree
 "      https://github.com/mbbill/undotree
@@ -164,7 +190,7 @@ source ~/.vim/unite.vim
 " 18 - vim-airline
 "      https://github.com/bling/vim-airline
 "==========================================
-" TODO: review config
+
 " The powerline symbols need the powerline fonts:
 " https://github.com/Lokaltog/powerline-fonts
 "
@@ -208,13 +234,10 @@ let g:airline#extensions#eclim#enabled = 0
 " 19 - vim-easymotion
 "      https://gitthub.com/Lokaltog/vim-easymotion
 "=================================================
-" TODO: Finish configuration
+
 let g:EasyMotion_smartcase = 1
 
 map s <Plug>(easymotion-bd-w)
-
-"map  / <Plug>(easymotion-sn)
-"omap / <Plug>(easymotion-tn)
 
 " JK motions: Line motions
 nmap <Leader>j <Plug>(easymotion-j)
@@ -241,19 +264,20 @@ endif
 " 22 - vim-gnupg
 "      https://github.com/jamessan/vim-gnupg
 "===========================================
-" TODO: Finish configuration
+" No adicional config so far
 
 "======================================
 " 23 - vim-latex
 "      https://github.com/jcf/vim-latex
 "======================================
-" TODO: Finish configuration
+
+let g:tex_flavor='latex'
 
 "====================================================
 " 24 - vim-nerdtree-tabs
 "      https://github.com/jistr/vim-nerdtree-tabs.git
 "====================================================
-" TODO: review config
+
 nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup     = 0
 let g:nerdtree_tabs_open_on_console_startup = 0

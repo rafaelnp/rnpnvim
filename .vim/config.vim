@@ -154,9 +154,9 @@ if has('gui_running')
 		" Other good fonts:
 		"set guifont=Anonymous\ Pro\ Minus\ 11
 		"set guifont=Anonymous\ Pro\ 9
-		"set guifont=DejaVu\ Sans\ Mono\ 9
+		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
 		"set guifont=Inconsolata\ for\ Powerline\ 9
-		set guifont=Liberation\ Mono\ for\ Powerline\ 8
+		"set guifont=Liberation\ Mono\ for\ Powerline\ 8
 	elseif has ('mac')
 		set guifont=Monospace\ 9
 	elseif has ('win32') || ('win64')

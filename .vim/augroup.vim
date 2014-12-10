@@ -62,6 +62,12 @@ if has("autocmd")
 "		autocmd BufLeave,BufWinLeave *.vim call clearmatches()
 	augroup END
 
+	augroup verilog
+		au!
+		autocmd BufEnter,BufWinEnter *.v setlocal shiftwidth=4 tabstop=4 softtabstop=4
+		autocmd BufEnter,BufWinEnter *.v call ShowTabs()
+		autocmd BufEnter,BufWinEnter *.v setlocal noexpandtab
+	augroup END
 "	augroup unite
 "		au!
 "		autocmd BufWinEnter,BufCreate,BufEnter FileType unite call clearmatches()

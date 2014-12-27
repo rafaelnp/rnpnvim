@@ -1,18 +1,18 @@
 *rnpvim.txt*             RnpVim help                                  *rnpvim*
+       _____          __      ___              ___  _  _  __   ~
+      |  __ \         \ \    / (_)            / _ \| || |/_ |  ~
+      | |__) |_ __  _ _\ \  / / _ _ __ ___   | | | | || |_| | ~
+      |  _  /| '_ \| '_ \ \/ / | | '_ ` _ \  | | | |__   _| |  ~
+      | | \ \| | | | |_) \  /  | | | | | | | | |_| |  | |_| | ~
+      |_|  \_\_| |_| .__/ \/   |_|_| |_| |_|  \___(_) |_(_)_| ~
+                   | |                                        ~
+                   |_|                                        ~
 
-       _____          __      ___              ___  _  _    ___   ~
-      |  __ \         \ \    / (_)            / _ \| || |  / _ \  ~
-      | |__) |_ __  _ _\ \  / / _ _ __ ___   | | | | || |_| | | | ~
-      |  _  /| '_ \| '_ \ \/ / | | '_ ` _ \  | | | |__   _| | | | ~
-      | | \ \| | | | |_) \  /  | | | | | | | | |_| |  | |_| |_| | ~
-      |_|  \_\_| |_| .__/ \/   |_|_| |_| |_|  \___(_) |_(_)\___/  ~
-                   | |                                            ~
-                   |_|                                            ~
 
-*rnpvim*     RnpVim help
-Version:     0.4.0
+Name:        RnpVim help
+Version:     0.4.1
 Author:      Rafael do Nascimento Pereira <rnp@25ghz.net>
-Last change: 2014.11.25 (Tue) 08:01:49 (UTC +0100 CET)
+Last change: 2014.12.27 (Sa) 12:11:11 (UTC +0100 CET)
 License:     GPLv2
 
 ==============================================================================
@@ -26,39 +26,39 @@ CONTENTS                                                     *rnpvim-contents*
 		Vim built-in........................ |rnpvim-mappings-vim-builtin|
 		General............................. |rnpvim-mappings-general|
 		Plugins............................. |rnpvim-mappings-plugins|
-			aftersyntaxc.vim................ |plugins-aftersyntaxc|
-			armasm.......................... |plugins-aftersyntaxc|
-			calendar.vim.................... |plugins-|
-			colour-sampler-pack............. |plugins-|
-			delimitMate..................... |plugins-|
-			howMuch......................... |plugins-|
-			molokai......................... |plugins-|
-			neobundle.vim................... |plugins-|
-			nerdtree........................ |plugins-|
-			numbers.vim..................... |plugins-|
-			rainbow......................... |plugins-|
-			tagbar.......................... |plugins-|
-			undotree........................ |plugins-|
-			unite-colorscheme............... |plugins-|
-			unite-outline................... |plugins-|
-			unite.vim....................... |plugins-|
-			vim-airline..................... |plugins-|
-			vim-easymotion.................. |plugins-|
-			vim-flavored-markdown........... |plugins-|
-			vim-git......................... |plugins-|
-			vim-gnupg....................... |plugins-|
-			vim-latex....................... |plugins-|
-			vim-nerdtree-tabs............... |plugins-|
-			vim-signify..................... |plugins-|
-			vim-startify.................... |plugins-|
-			vim-systemVerilog............... |plugins-|
-			vim-vhdl........................ |plugins-|
-			vim-vinegar..................... |plugins-|
-			vim-vividchalk.................. |plugins-|
-			vimexplorer..................... |plugins-|
-			vimproc......................... |plugins-|
-			vinarise.vim.................... |plugins-|
-			youCompleteMe................... |plugins-|
+			aftersyntax..................... |plugins-aftersyntaxc|
+			armasm.......................... |plugins-armasm|
+			calendar........................ |plugins-calendar|
+			colour-sampler-pack............. |plugins-colour-sampler-pack|
+			delimitmate..................... |plugins-delimitmate|
+			howMuch......................... |plugins-howmuch|
+			molokai......................... |plugins-molokai|
+			neobundle....................... |plugins-neobundle|
+			nerdtree........................ |plugins-nerdtree|
+			numbers......................... |plugins-number|
+			rainbow......................... |plugins-rainbow|
+			tagbar.......................... |plugins-tagbar|
+			undotree........................ |plugins-undotree|
+			unite-colorscheme............... |plugins-colorscheme|
+			unite-outline................... |plugins-unite-outline|
+			unite........................... |plugins-unite|
+			vim-airline..................... |plugins-airline|
+			vim-easymotion.................. |plugins-vim-easymotion|
+			vim-flavored-markdown........... |plugins-flavored-markdown|
+			vim-git......................... |plugins-vim-git|
+			vim-gnupg....................... |plugins-vim-gnupg|
+			vim-latex....................... |plugins-vim-latex|
+			vim-nerdtree-tabs............... |plugins-nerdtree-tabs|
+			vim-signify..................... |plugins-signify|
+			vim-startify.................... |plugins-startify|
+			vim-systemverilog............... |plugins-systemverilog|
+			vim-vhdl........................ |plugins-vim-vhdl|
+			vim-vinegar..................... |plugins-vinegar|
+			vim-vividchalk.................. |plugins-vividchalk|
+			vimexplorer..................... |plugins-viimexplorer|
+			vimproc......................... |plugins-vimproc|
+			vinarise........................ |plugins-vinarise|
+			youcompleteme................... |plugins-youcompleteme|
 
 ==============================================================================
 Introduction                                             *rnpvim-introduction*
@@ -112,39 +112,41 @@ rnpvim
 ==============================================================================
 Installed lugins                                              *rnpvim-plugins*
 
-aftersyntaxc.vim
-armasm
-calendar.vim
-colour-sampler-pack
-delimitMate
-howMuch
-molokai
-neobundle.vim
-nerdtree
-numbers.vim
-rainbow
-tagbar
-undotree
-unite-colorscheme
-unite-outline
-unite.vim
-vim-airline
-vim-easymotion
-vim-flavored-markdown
-vim-git
-vim-gnupg
-vim-latex
-vim-nerdtree-tabs
-vim-signify
-vim-startify
-vim-systemVerilog
-vim-vhdl
-vim-vinegar
-vim-vividchalk
-vimexplorer
-vimproc
-vinarise.vim
-youCompleteMe
+The rnpvim uses so far the following plugins:
+
+  aftersyntaxc
+  armasm
+  calendar
+  colour-sampler-pack
+  delimitMate
+  howMuch
+  molokai
+  neobundle
+  nerdtree
+  numbers
+  rainbow
+  tagbar
+  undotree
+  unite-colorscheme
+  unite-outline
+  unite
+  vim-airline
+  vim-easymotion
+  vim-flavored-markdown
+  vim-git
+  vim-gnupg
+  vim-latex
+  vim-nerdtree-tabs
+  vim-signify
+  vim-startify
+  vim-systemVerilog
+  vim-vhdl
+  vim-vinegar
+  vim-vividchalk
+  vimexplorer
+  vimproc
+  vinarise
+  youCompleteMe
 
 ==============================================================================
 Mappings                                                     *rnpvim-mappings*
@@ -156,7 +158,7 @@ including the ones used in  the plugins.
 ==============================================================================
 Vim built-in                                     *rnpvim-mappings-vim-builtin*
 
-1 - useful commands
+  Useful commands
 
   Vim quick and advanced reference card
   http://tnerual.eriogerg.free.fr/vimqrc.html
@@ -185,48 +187,48 @@ Vim built-in                                     *rnpvim-mappings-vim-builtin*
    CTRL-N                 completes a parcially typed word searching forward
 
   Editing:
-   VU                      uppercase the whole current line
-   mark <n>                create a new mark `n`
-   `<n>                    go to mark `n`
-   ^E e ^Y                 less-like page navigation
-   gg=G                    reidenta o codigo todo
-   CTRL+D (insert mode)    retira um `tab` de identacao
-   %retab                  replaces TABs by spaces
-   gq (visual selected)    ajusta texto em textwidth
-   CTRL+F (insert mode)    indent line
-   normal <key-cmd>        execute a sequence of keys
-   execute <command>       execute a :command
-   yaw                     copies word to yank register
-   '.                      goto position where last change was made
-   K                       executes man page for the word under the cursor
-   split                   horizontal split
-   vsplit                  vertical split
-   q:                      show command line window
-   ce                      change to end of word (a complete change command)
-   C or c$                 change to end of wine
-   s or cl                 erase character under the cursosr and enters in insert mode
-   S or ^C                 erase the whole line
-   I or ^i                 goes to the line begin and enters in insert mode
-   A or $a                 goes to the line end and enters in edit mode
-   o or A<CR>              adds new line bellow
-   O or ko                 adds new line above
-   <C-w> =                 makes windows have the same size
-   bdi                     buffer delete
-   <C-a>                   increments the number under the cursor
-   <C-x>                   decrements the number under the cursor
+   VU                     uppercase the whole current line
+   mark <n>               create a new mark `n`
+   `<n>                   go to mark `n`
+   ^E e ^Y                less-like page navigation
+   gg=G                   reidenta o codigo todo
+   CTRL+D (insert mode)   retira um `tab` de identacao
+   %retab                 replaces TABs by spaces
+   gq (visual selected)   ajusta texto em textwidth
+   CTRL+F (insert mode)   indent line
+   normal <key-cmd>       execute a sequence of keys
+   execute <command>      execute a :command
+   yaw                    copies word to yank register
+   '.                     goto position where last change was made
+   K                      executes man page for the word under the cursor
+   split                  horizontal split
+   vsplit                 vertical split
+   q:                     show command line window
+   ce                     change to end of word (a complete change command)
+   C or c$                change to end of wine
+   s or cl                erase character under the cursosr and enters in insert mode
+   S or ^C                erase the whole line
+   I or ^i                goes to the line begin and enters in insert mode
+   A or $a                goes to the line end and enters in edit mode
+   o or A<CR>             adds new line bellow
+   O or ko                adds new line above
+   <C-w> =                makes windows have the same size
+   bdi                    buffer delete
+   <C-a>                  increments the number under the cursor
+   <C-x>                  decrements the number under the cursor
 
   Mappings:
 
   Here is an overview of map commands and in which mode they work:
-   :map                    Normal, Visual and Operator-pending
-   :vmap                   Visual
-   :nmap                   Normal
-   :omap                   Operator-pending
-   :map!                   Insert and Command-line
-   :imap                   Insert
-   :cmap                   Command-line
-   :verbose map            Lists which plugin uses all key
-   :verbose map <key>      Lists which plugin uses the specified key
+   :map                   Normal, Visual and Operator-pending
+   :vmap                  Visual
+   :nmap                  Normal
+   :omap                  Operator-pending
+   :map!                  Insert and Command-line
+   :imap                  Insert
+   :cmap                  Command-line
+   :verbose map           Lists which plugin uses all key
+   :verbose map <key>     Lists which plugin uses the specified key
 
    Search:
    /^\(.*pattern\)\@!.*$  for lines not containing pattern:
@@ -237,7 +239,7 @@ Vim built-in                                     *rnpvim-mappings-vim-builtin*
   :%s/search/replace/g       search and replace thru the whole buffer
   :50,100s/search/replace/g  search and replace between the lines 50 and 100
 
-  Misc:
+  Miscelaneous:
    so ~/.vimrc             reloads .vimrc
 
   Easter Eggs:
@@ -250,69 +252,79 @@ Vim built-in                                     *rnpvim-mappings-vim-builtin*
 ==============================================================================
 General Mappings                                     *rnpvim-mappings-general*
 
-Mode     key/function         mapping   Description
-normal   Leader               ,         Leader key
-Normal   Line termination     <a-r>     removes carriage return
-Normal   new tab              <a-t>     opens a new table
-Normal   next buffer          <a-n>     go to next buffer
-Normal   previous buffer      <a-p>     go to previous buffer
-Normal   save buffers         <a-s>     saves all buffers
-Normal   nnoremap             ,d        maps reload config
-Normal   nnoremap             <a-d>     save all current mappings on a text file
-Normal   Insert date nnoremap <F5>      Insert current date and time
-Visual   Insert date vnoremap <F5>      Insert current date and time
-Insert   Insert date inoremap <F5>      Insert current date and time
-Normal   Line ending          <a-m>     remove ^M in current file
-Normal   quickfix             <a-q>     closes quickfix
-Normal   nnoremap             <A-1>     toggle the menu bar
-Normal   nnoremap             <A-2>     toggle the toolbar
-Normal   nnoremap             <A-3>     toggle the right scroll bars
-Normal   nnoremap             <A-4>     toggle left the scroll bars
+Mode     key/function         mapping    Description
+normal   Leader               ,          Leader key
+normal   Line termination     <a-r>      removes carriage return
+normal   new tab              <a-t>      opens a new table
+normal   next buffer          <a-n>      go to next buffer
+normal   previous buffer      <a-p>      go to previous buffer
+normal   save buffers         <a-s>      saves all buffers
+normal   nnoremap             ,d         maps reload config
+normal   nnoremap             <a-d>      save all current mappings on a text file
+normal   Insert date nnoremap <F5>       Insert current date and time
+Visual   Insert date vnoremap <F5>       Insert current date and time
+Insert   Insert date inoremap <F5>       Insert current date and time
+normal   Line ending          <a-m>      remove ^M in current file
+normal   quickfix             <a-q>      closes quickfix
+normal   nnoremap             <A-1>      toggle the menu bar
+normal   nnoremap             <A-2>      toggle the toolbar
+normal   nnoremap             <A-3>      toggle the right scroll bars
+normal   nnoremap             <A-4>      toggle left the scroll bars
+normal   :tabedit.vimrc       <leader>ev opens .vimrc
 
-" Moving cursor to other windows
-"
-" shift down : change window focus to lower one (cyclic)
-" shift up   : change window focus to upper one (cyclic)
-" shift left : change window focus to one on left
-" shift right: change window focus to one on right
-change focus  <s-down>   <c-w>w
-change focus  <s-up>     <c-w>W
-change focus  <s-left>   <c-w>h
-change focus  <s-right>  <c-w>l
+==============================================================================
+Moving cursor to other windows
 
-left key          <Left>  <Nop>
-right key         <Right> <Nop>
-uo key            <Up>    <Nop>
-down key          <Down>  <Nop>
-" Disable arrow keys in normal mode
+Mode     key/function       mapping   Description
+normal   <s-down>           <c-w>w    change window focus to lower one (cyclic)
+normal   <s-up>             <c-w>W    change window focus to upper one (cyclic)
+normal   <s-left>           <c-w>h    change window focus to one on left
+normal   <s-right>          <c-w>l    change window focus to one on right
 
-nnoremap <a-x> :%s/\s\+$//e<CR> " Removes trailing spaces
-nnoremap  <silent> <space> :
-" shortcut for command le
-" Remapped becouse of vim-vinegar plugin
+==============================================================================
+Disable arrow keys in normal mode
 
-paragraph formatting          Q   visual   Format the selected paragraph
-paragraph formatting          Q   normal   Format the current paragraph
+Mode     key/function       mapping   Description
+normal   <Left>             <Nop>     disabled
+normal   <Right>            <Nop>     disabled
+normal   <Up>               <Nop>     disabled
+normal   <Down>             <Nop>     disabled
 
-" If long lines with line wrapping enabled, this solves the problem that pressing
-" down jumpes your cursor “over” the current line to the next line.It changes
-" behaviour so that it jumps to the next row in the editor (much more natural).
-nnoremap j gj
-nnoremap k gk
+==============================================================================
+Paragraph formatting
 
-nnoremap <silent> <a-c> Tired of clearing highlighted searches by searching
-                                        for “ldsfhjkhgakjks”? Use this
+Mode     key/function       mapping   Description
+visual   gq                 Q         Format the selected paragraph
+normal   gqap               Q         Format the current paragraph
 
-inoremap <F1> <nop>   disable <F1>
-nnoremap <F1> <nop>   disable <F1>
-vnoremap <F1> <nop>   disable <F1>
+==============================================================================
+Moving cursor between lines and keep the current row
 
-.vimrc    <leader>ev opens .vimrc
+If long lines with line wrapping enabled, this solves the problem that pressing
+down jumpes your cursor “over” the current line to the next line.It changes
+behaviour so that it jumps to the next row in the editor (much more natural).
+
+Mode     key/function       mapping   Description
+normal   j                  gj        move one line bellow at the same row
+normal   k                  gk        move one line above at the same row
+
+==============================================================================
+Mode     key/function       mapping   Description
+normal   :%s/\s\+$//e<CR>   <a-x>     remove trailing spaces in current buffer
+normal   :nohlsearch<CR>    <a-c>     tired of clearing highlighted searches by
+                                      searching for “ldsfhjkhgakjks”? Use this
+
+==============================================================================
+Disable F1 key
+
+Mode     key/function       mapping   Description
+insert   <F1>               <nop>     disable <F1>
+normal   <F1>               <nop>     disable <F1>
+visual   <F1>               <nop>     disable <F1>
+
 
 ==============================================================================
 Plugins                                              *rnpvim-mappings-plugins*
-
-==============================================================================
 
 This section lists the installed plugins custom mappings
 
@@ -320,7 +332,7 @@ This section lists the installed plugins custom mappings
 tagbar
 
 Mode      Mapping    Key/Function   Description
-Normal    <F8>       TagbarToggle   Show/hide tagbar window
+normal    <F8>       TagbarToggle   Show/hide tagbar window
 
 ==============================================================================
 Unite
@@ -350,22 +362,19 @@ normal  [unite]r        <C-u>Unite -start-insert file_rec/async:!
 normal  [unite]M        Unite -quick-match colorscheme<CR>
 normal  [unite]t        <C-u>Unite -buffer-name=buffer buffer<cr>
 
-" show document outline
-map [unite]o :Unite -no-split -auto-preview outline<CR>
 
-" line search
-nnoremap [unite]l :Unite -no-split -start-insert line<cr>
+Mode    Mapping    Key/Function                            Description
+normal  [unite]o   Unite -no-split -auto-preview outline   show document outline
 
-nnoremap <silent> [unite]c  :<C-u>UniteWithCurrentDir
-        \ -buffer-name=files buffer bookmark file<CR>
+normal  [unite]l   Unite -no-split -start-insert line      line search
 
-" list mappings
-nnoremap <silent> [unite]ma :<C-u>Unite mapping<CR>
+normal  [unite]c   <C-u>UniteWithCurrentDir
+                   \ -buffer-name=files buffer bookmark file
 
-nnoremap [unite]F :Unite -no-split buffer tab file_mru directory_mru<cr>
-" Quickly switch between recent things
-nnoremap <silent> [unite]m :Unite -buffer-name=recent -winheight=15 file_mru<cr>
+normal  [unite]ma  <C-u>Unite mapping                      list mappings
 
+normal  [unite]F   Unite -no-split buffer tab file_mru directory_mru  Quickly switch between recent things
+normal  [unite]m   Unite -buffer-name=recent -winheight=15 file_mru
 
 ==============================================================================
 undotree
@@ -376,7 +385,7 @@ normal    <F6>       UndotreeToggle     show/hide undo tree window
 ==============================================================================
 vim-easymotion
 
-Mode      Mapping    Key/Function       Description
+Mode     Mapping     Key/Function       Description
 normal      s        easymotion-bd-w    motions in both directions
 normal   <Leader>j   easymotion-j       motions to lower lines
 normal   <Leader>k   easymotion-k       motions to upper lines
@@ -390,30 +399,30 @@ normal    <F9>       NERDTreeTabsToggle  show/hide nerdtree window
 ==============================================================================
 vim-signify
 
-Mode      Mapping    Key/Function       Description
-nnoremap <leader>gj <plug>(signify-next-hunk)
-nnoremap <leader>gk <plug>(signify-prev-hunk)
+Mode      Mapping    Key/Function              Description
+nnoremap  <leader>gj <plug>(signify-next-hunk) show moves to lines bellow
+nnoremap  <leader>gk <plug>(signify-prev-hunk) show moves to lines above
 
 ==============================================================================
 vimexplorer
 
 Mode      Mapping    Key/Function       Description
-nnoremap <silent> <F7> :VE ~<CR>
+nnoremap  <F7>       VE $HOME           open vimexplorer on the home directory
 
 ==============================================================================
 Vinarise
 
-Mode      Mapping    Key/Function       Description
-cabbrev vimhex  Vinarise -split -encoding=utf-8<CR>
-nnoremap <leader>vv  :Vinarise -split -encoding=utf-8<CR>
+Mode     Mapping                          Key/Function       Description
+cmdline  :Vinarise -split -encoding=utf-8 cabbrev vimhex     open vinarise
+normal   :Vinarise -split -encoding=utf-8 <leader>v          open vinarisev
 
 ==============================================================================
 YouCompleteMe
 
 Mode    Mapping     Key/Function                      Description
-normal  <leader>jd  GoToDefinitionElseDeclaration<CR>
-normal  <leader>gd  GoToDefinition<CR>
-normal  <leader>gt  GoTo<CR>
+normal  <leader>jd  GoToDefinitionElseDeclaration
+normal  <leader>gd  GoToDefinition
+normal  <leader>gt  GoTo
 
 ==============================================================================
 vim:tw=78:sw=4:ts=4:ft=help:norl:

@@ -1,11 +1,12 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.12.02 (Di) 22:14:48 (UTC +0100 CET)
+Last update: 2014.12.27 (Sa) 12:34:18 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
 Suggestions, corrections are welcome :-)
 
+Current version: [0.4.1](https://github.com/rafaelnp/rnpvim/releases).
 
 ## 1 Why rnpvim ?
 
@@ -84,6 +85,12 @@ This Vim setup has the following requirements/dependencies:
 
 This section describes the manual installation step by step. You can skip it if
 you prefer the [automatic one](https://github.com/rafaelnp/rnpvim#32-automatic).
+
+One can download a released version (which are normally tested and less buggy)
+[here](https://github.com/rafaelnp/rnpvim/releases).
+
+Or if one wants to have the last commit or even help and give some feedback,
+then just follow the instructions bellow:
 
 Start by opening a terminal and make a back up from the current Vim settings:
 

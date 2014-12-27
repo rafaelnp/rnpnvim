@@ -1,18 +1,18 @@
 *rnpvim.txt*             RnpVim help                                  *rnpvim*
+       _____          __      ___              ___  _  _  __   ~
+      |  __ \         \ \    / (_)            / _ \| || |/_ |  ~
+      | |__) |_ __  _ _\ \  / / _ _ __ ___   | | | | || |_| | ~
+      |  _  /| '_ \| '_ \ \/ / | | '_ ` _ \  | | | |__   _| |  ~
+      | | \ \| | | | |_) \  /  | | | | | | | | |_| |  | |_| | ~
+      |_|  \_\_| |_| .__/ \/   |_|_| |_| |_|  \___(_) |_(_)_| ~
+                   | |                                        ~
+                   |_|                                        ~
 
-       _____          __      ___              ___  _  _    ___   ~
-      |  __ \         \ \    / (_)            / _ \| || |  / _ \  ~
-      | |__) |_ __  _ _\ \  / / _ _ __ ___   | | | | || |_| | | | ~
-      |  _  /| '_ \| '_ \ \/ / | | '_ ` _ \  | | | |__   _| | | | ~
-      | | \ \| | | | |_) \  /  | | | | | | | | |_| |  | |_| |_| | ~
-      |_|  \_\_| |_| .__/ \/   |_|_| |_| |_|  \___(_) |_(_)\___/  ~
-                   | |                                            ~
-                   |_|                                            ~
 
 Name:        RnpVim help
-Version:     0.4.0
+Version:     0.4.1
 Author:      Rafael do Nascimento Pereira <rnp@25ghz.net>
-Last change: 2014.12.04 (Tue) 20:20:49 (UTC +0100 CET)
+Last change: 2014.12.27 (Sa) 12:11:11 (UTC +0100 CET)
 License:     GPLv2
 
 ==============================================================================
@@ -252,24 +252,25 @@ Vim built-in                                     *rnpvim-mappings-vim-builtin*
 ==============================================================================
 General Mappings                                     *rnpvim-mappings-general*
 
-Mode     key/function         mapping   Description
-normal   Leader               ,         Leader key
-Normal   Line termination     <a-r>     removes carriage return
-Normal   new tab              <a-t>     opens a new table
-Normal   next buffer          <a-n>     go to next buffer
-Normal   previous buffer      <a-p>     go to previous buffer
-Normal   save buffers         <a-s>     saves all buffers
-Normal   nnoremap             ,d        maps reload config
-Normal   nnoremap             <a-d>     save all current mappings on a text file
-Normal   Insert date nnoremap <F5>      Insert current date and time
-Visual   Insert date vnoremap <F5>      Insert current date and time
-Insert   Insert date inoremap <F5>      Insert current date and time
-Normal   Line ending          <a-m>     remove ^M in current file
-Normal   quickfix             <a-q>     closes quickfix
-Normal   nnoremap             <A-1>     toggle the menu bar
-Normal   nnoremap             <A-2>     toggle the toolbar
-Normal   nnoremap             <A-3>     toggle the right scroll bars
-Normal   nnoremap             <A-4>     toggle left the scroll bars
+Mode     key/function         mapping    Description
+normal   Leader               ,          Leader key
+normal   Line termination     <a-r>      removes carriage return
+normal   new tab              <a-t>      opens a new table
+normal   next buffer          <a-n>      go to next buffer
+normal   previous buffer      <a-p>      go to previous buffer
+normal   save buffers         <a-s>      saves all buffers
+normal   nnoremap             ,d         maps reload config
+normal   nnoremap             <a-d>      save all current mappings on a text file
+normal   Insert date nnoremap <F5>       Insert current date and time
+Visual   Insert date vnoremap <F5>       Insert current date and time
+Insert   Insert date inoremap <F5>       Insert current date and time
+normal   Line ending          <a-m>      remove ^M in current file
+normal   quickfix             <a-q>      closes quickfix
+normal   nnoremap             <A-1>      toggle the menu bar
+normal   nnoremap             <A-2>      toggle the toolbar
+normal   nnoremap             <A-3>      toggle the right scroll bars
+normal   nnoremap             <A-4>      toggle left the scroll bars
+normal   :tabedit.vimrc       <leader>ev opens .vimrc
 
 ==============================================================================
 Moving cursor to other windows
@@ -289,31 +290,38 @@ normal   <Right>            <Nop>     disabled
 normal   <Up>               <Nop>     disabled
 normal   <Down>             <Nop>     disabled
 
-nnoremap <a-x> :%s/\s\+$//e<CR> " Removes trailing spaces
-nnoremap  <silent> <space> :
-" shortcut for command le
-" Remapped becouse of vim-vinegar plugin
+==============================================================================
+Paragraph formatting
 
-paragraph formatting          Q   visual   Format the selected paragraph
-paragraph formatting          Q   normal   Format the current paragraph
+Mode     key/function       mapping   Description
+visual   gq                 Q         Format the selected paragraph
+normal   gqap               Q         Format the current paragraph
 
-" If long lines with line wrapping enabled, this solves the problem that pressing
-" down jumpes your cursor “over” the current line to the next line.It changes
-" behaviour so that it jumps to the next row in the editor (much more natural).
-nnoremap j gj
-nnoremap k gk
+==============================================================================
+Moving cursor between lines and keep the current row
 
-nnoremap <silent> <a-c> Tired of clearing highlighted searches by searching
-                                        for “ldsfhjkhgakjks”? Use this
+If long lines with line wrapping enabled, this solves the problem that pressing
+down jumpes your cursor “over” the current line to the next line.It changes
+behaviour so that it jumps to the next row in the editor (much more natural).
+
+Mode     key/function       mapping   Description
+normal   j                  gj        move one line bellow at the same row
+normal   k                  gk        move one line above at the same row
+
+==============================================================================
+Mode     key/function       mapping   Description
+normal   :%s/\s\+$//e<CR>   <a-x>     remove trailing spaces in current buffer
+normal   :nohlsearch<CR>    <a-c>     tired of clearing highlighted searches by
+                                      searching for “ldsfhjkhgakjks”? Use this
 
 ==============================================================================
 Disable F1 key
 
-inoremap <F1> <nop>   disable <F1>
-nnoremap <F1> <nop>   disable <F1>
-vnoremap <F1> <nop>   disable <F1>
+Mode     key/function       mapping   Description
+insert   <F1>               <nop>     disable <F1>
+normal   <F1>               <nop>     disable <F1>
+visual   <F1>               <nop>     disable <F1>
 
-.vimrc    <leader>ev opens .vimrc
 
 ==============================================================================
 Plugins                                              *rnpvim-mappings-plugins*
@@ -324,7 +332,7 @@ This section lists the installed plugins custom mappings
 tagbar
 
 Mode      Mapping    Key/Function   Description
-Normal    <F8>       TagbarToggle   Show/hide tagbar window
+normal    <F8>       TagbarToggle   Show/hide tagbar window
 
 ==============================================================================
 Unite
@@ -392,8 +400,8 @@ normal    <F9>       NERDTreeTabsToggle  show/hide nerdtree window
 vim-signify
 
 Mode      Mapping    Key/Function              Description
-nnoremap  <leader>gj <plug>(signify-next-hunk)
-nnoremap  <leader>gk <plug>(signify-prev-hunk)
+nnoremap  <leader>gj <plug>(signify-next-hunk) show moves to lines bellow
+nnoremap  <leader>gk <plug>(signify-prev-hunk) show moves to lines above
 
 ==============================================================================
 vimexplorer
@@ -404,9 +412,9 @@ nnoremap  <F7>       VE $HOME           open vimexplorer on the home directory
 ==============================================================================
 Vinarise
 
-Mode      Mapping    Key/Function       Description
-cmd line  cabbrev vimhex  Vinarise -split -encoding=utf-8
-normal    <leader>vv  :Vinarise -split -encoding=utf-8
+Mode     Mapping                          Key/Function       Description
+cmdline  :Vinarise -split -encoding=utf-8 cabbrev vimhex     open vinarise
+normal   :Vinarise -split -encoding=utf-8 <leader>v          open vinarisev
 
 ==============================================================================
 YouCompleteMe

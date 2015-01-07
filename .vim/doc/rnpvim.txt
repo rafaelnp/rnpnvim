@@ -12,53 +12,54 @@
 Name:        RnpVim help
 Version:     0.4.1
 Author:      Rafael do Nascimento Pereira <rnp@25ghz.net>
-Last change: 2014.12.27 (Sa) 12:11:11 (UTC +0100 CET)
+Last change: 2015.01.07 (Wed) 15:04:23 (UTC +0100 CET)
 License:     GPLv2
 
 ==============================================================================
 CONTENTS                                                     *rnpvim-contents*
 
-	Introduction............................ |rnpvim-introduction|
-	Freatures............................... |rnpvim-features|
-	Structure............................... |rnpvim-struture|
-	Installed plugins....................... |rnpvim-plugins|
-	Mappings ............................... |rnpvim-mappings|
-		Vim built-in........................ |rnpvim-mappings-vim-builtin|
-		General............................. |rnpvim-mappings-general|
-		Plugins............................. |rnpvim-mappings-plugins|
-			aftersyntax..................... |plugins-aftersyntaxc|
-			armasm.......................... |plugins-armasm|
-			calendar........................ |plugins-calendar|
-			colour-sampler-pack............. |plugins-colour-sampler-pack|
-			delimitmate..................... |plugins-delimitmate|
-			howMuch......................... |plugins-howmuch|
-			molokai......................... |plugins-molokai|
-			neobundle....................... |plugins-neobundle|
-			nerdtree........................ |plugins-nerdtree|
-			numbers......................... |plugins-number|
-			rainbow......................... |plugins-rainbow|
-			tagbar.......................... |plugins-tagbar|
-			undotree........................ |plugins-undotree|
-			unite-colorscheme............... |plugins-colorscheme|
-			unite-outline................... |plugins-unite-outline|
-			unite........................... |plugins-unite|
-			vim-airline..................... |plugins-airline|
-			vim-easymotion.................. |plugins-vim-easymotion|
-			vim-flavored-markdown........... |plugins-flavored-markdown|
-			vim-git......................... |plugins-vim-git|
-			vim-gnupg....................... |plugins-vim-gnupg|
-			vim-latex....................... |plugins-vim-latex|
-			vim-nerdtree-tabs............... |plugins-nerdtree-tabs|
-			vim-signify..................... |plugins-signify|
-			vim-startify.................... |plugins-startify|
-			vim-systemverilog............... |plugins-systemverilog|
-			vim-vhdl........................ |plugins-vim-vhdl|
-			vim-vinegar..................... |plugins-vinegar|
-			vim-vividchalk.................. |plugins-vividchalk|
-			vimexplorer..................... |plugins-viimexplorer|
-			vimproc......................... |plugins-vimproc|
-			vinarise........................ |plugins-vinarise|
-			youcompleteme................... |plugins-youcompleteme|
+	Introduction...................... |rnpvim-introduction|
+	Freatures......................... |rnpvim-features|
+	Structure......................... |rnpvim-struture|
+	Installed plugins................. |rnpvim-plugins|
+	Mappings ......................... |rnpvim-mappings|
+		Vim built-in.................. |rnpvim-mappings-vim-builtin|
+		General....................... |rnpvim-mappings-general|
+		Plugins....................... |rnpvim-mappings-plugins|
+			aftersyntax............... |plugins-mappings-aftersyntaxc|
+			armasm.................... |plugins-mappings-armasm|
+			calendar.................. |plugins-mappings-calendar|
+			colour-sampler-pack....... |plugins-mappings-colour-sampler-pack|
+			delimitmate............... |plugins-mappings-delimitmate|
+			howMuch................... |plugins-mappings-howmuch|
+			man....................... |plugins-mappings-man|
+			molokai................... |plugins-mappings-molokai|
+			neobundle................. |plugins-mappings-neobundle|
+			nerdtree.................. |plugins-mappings-nerdtree|
+			numbers................... |plugins-mappings-number|
+			rainbow................... |plugins-mappings-rainbow|
+			tagbar.................... |plugins-mappings-tagbar|
+			undotree.................. |plugins-mappings-undotree|
+			unite-colorscheme......... |plugins-mappings-colorscheme|
+			unite-outline............. |plugins-mappings-unite-outline|
+			unite..................... |plugins-mappings-unite|
+			vim-airline............... |plugins-mappings-airline|
+			vim-easymotion............ |plugins-mappings-vim-easymotion|
+			vim-flavored-markdown..... |plugins-mappings-flavored-markdown|
+			vim-git................... |plugins-mappings-vim-git|
+			vim-gnupg................. |plugins-mappings-vim-gnupg|
+			vim-latex................. |plugins-mappings-vim-latex|
+			vim-nerdtree-tabs......... |plugins-mappings-nerdtree-tabs|
+			vim-signify............... |plugins-mappings-signify|
+			vim-startify.............. |plugins-mappings-startify|
+			vim-systemverilog......... |plugins-mappings-systemverilog|
+			vim-vhdl.................. |plugins-mappings-vim-vhdl|
+			vim-vinegar............... |plugins-mappings-vinegar|
+			vim-vividchalk............ |plugins-mappings-vividchalk|
+			vimexplorer............... |plugins-mappings-viimexplorer|
+			vimproc................... |plugins-mappings-vimproc|
+			vinarise.................. |plugins-mappings-vinarise|
+			youcompleteme............. |plugins-mappings-youcompleteme|
 
 ==============================================================================
 Introduction                                             *rnpvim-introduction*
@@ -120,6 +121,7 @@ The rnpvim uses so far the following plugins:
   colour-sampler-pack
   delimitMate
   howMuch
+  man
   molokai
   neobundle
   nerdtree
@@ -250,7 +252,7 @@ Vim built-in                                     *rnpvim-mappings-vim-builtin*
    :help UserGettingBored
 
 ==============================================================================
-General Mappings                                     *rnpvim-mappings-general*
+General Mappings                                      *rnpvim-mappings-general*
 
 Mode     key/function         mapping    Description
 normal   Leader               ,          Leader key
@@ -324,18 +326,25 @@ visual   <F1>               <nop>     disable <F1>
 
 
 ==============================================================================
-Plugins                                              *rnpvim-mappings-plugins*
+Plugins                                               *rnpvim-mappings-plugins*
 
 This section lists the installed plugins custom mappings
 
 ==============================================================================
-tagbar
+man                                                      *plugins-mappings-man*
+
+Mode      Mapping    Key/Function   Description
+normal    <s-k>      Man <cword>    open man page of the keyword under the
+                                    cursor on a new window
+
+==============================================================================
+tagbar                                                *plugins-mappings-tagbar*
 
 Mode      Mapping    Key/Function   Description
 normal    <F8>       TagbarToggle   Show/hide tagbar window
 
 ==============================================================================
-Unite
+Unite                                                  *plugins-mappings-unite*
 
 Plugin mapping used in unite window
 
@@ -377,13 +386,13 @@ normal  [unite]F   Unite -no-split buffer tab file_mru directory_mru  Quickly sw
 normal  [unite]m   Unite -buffer-name=recent -winheight=15 file_mru
 
 ==============================================================================
-undotree
+undotree                                            *plugins-mappings-undotree*
 
 Mode      Mapping    Key/Function       Description
 normal    <F6>       UndotreeToggle     show/hide undo tree window
 
 ==============================================================================
-vim-easymotion
+vim-easymotion                                      *plugins-mappings-undotree*
 
 Mode     Mapping     Key/Function       Description
 normal      s        easymotion-bd-w    motions in both directions
@@ -391,33 +400,33 @@ normal   <Leader>j   easymotion-j       motions to lower lines
 normal   <Leader>k   easymotion-k       motions to upper lines
 
 ==============================================================================
-vim-nerdtree-tabs
+vim-nerdtree-tabs                          *plugins-mappings-vim-nerdtree-tabs*
 
 Mode      Mapping    Key/Function        Description
 normal    <F9>       NERDTreeTabsToggle  show/hide nerdtree window
 
 ==============================================================================
-vim-signify
+vim-signify                                      *plugins-mappings-vim-signify*
 
 Mode      Mapping    Key/Function              Description
 nnoremap  <leader>gj <plug>(signify-next-hunk) show moves to lines bellow
 nnoremap  <leader>gk <plug>(signify-prev-hunk) show moves to lines above
 
 ==============================================================================
-vimexplorer
+vimexplorer                                  *plugins-mappings-vim-vimexplorer*
 
 Mode      Mapping    Key/Function       Description
 nnoremap  <F7>       VE $HOME           open vimexplorer on the home directory
 
 ==============================================================================
-Vinarise
+Vinarise                                            *plugins-mappings-vinarise*
 
 Mode     Mapping                          Key/Function       Description
 cmdline  :Vinarise -split -encoding=utf-8 cabbrev vimhex     open vinarise
 normal   :Vinarise -split -encoding=utf-8 <leader>v          open vinarisev
 
 ==============================================================================
-YouCompleteMe
+YouCompleteMe                                  *plugins-mappings-youcompleteme*
 
 Mode    Mapping     Key/Function                      Description
 normal  <leader>jd  GoToDefinitionElseDeclaration

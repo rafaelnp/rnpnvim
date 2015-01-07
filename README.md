@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2014.12.27 (Sa) 12:34:18 (UTC +0100 CET)
+Last update: 2015.01.07 (Wed) 16:19:25 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
@@ -61,6 +61,8 @@ which is also an Vim plugin, that make the Vim users life much easier.
 * Undo tree history
 
 * VHDL/Verilog syntax highlight
+
+* Man page inside Vim
 
 Nice, but let me see it in action. So, the screenshots can be found [here](https://github.com/rafaelnp/rnpvim/wiki/Screenshots).
 
@@ -206,51 +208,53 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 4.5 [howmuch](https://github.com/sk1418/HowMuch)
 
-### 4.6 [neoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
+### 4.6 [man.vim]($VIMRUNTIME/ftplugins/man.vim)(Pager for man pages)
 
-### 4.7 [nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
+### 4.7 [neoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
 
-### 4.8 [numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
+### 4.8 [nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
-### 4.9 [rainbow parentheses improved](https://github.com/oblitum/rainbow)
+### 4.9 [numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
 
-### 4.11 [tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
+### 4.10 [rainbow parentheses improved](https://github.com/oblitum/rainbow)
 
-### 4.12 [undotree](https://github.com/mbbill/undotree)
+### 4.12 [tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
 
-### 4.13 [unite-colorscheme](https://github.com/ujihisa/unite-colorscheme) (Easy colorscheme changing)
+### 4.13 [undotree](https://github.com/mbbill/undotree)
 
-### 4.14 [unite-outline](https://github.com/Shougo/unite-outline) (Outline current buffer)
+### 4.14 [unite-colorscheme](https://github.com/ujihisa/unite-colorscheme) (Easy colorscheme changing)
 
-### 4.15 [unite](https://github.com/Shougo/unite.vim) (Fuzzy search and expand VIm capabilities)
+### 4.15 [unite-outline](https://github.com/Shougo/unite-outline) (Outline current buffer)
 
-### 4.16 [vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
+### 4.16 [unite](https://github.com/Shougo/unite.vim) (Fuzzy search and expand VIm capabilities)
 
-### 4.17 [vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
+### 4.17 [vim-airline](https://github.com/bling/vim-airline) (Powerful and customizable status bar)
 
-### 4.18 [vim-flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
+### 4.18 [vim-easymotion](https://github.com/Lokaltog/vim-easymotion) (Move easily across the text)
 
-### 4.19 [vim-git](https://github.com/tpope/vim-git) (git syntax plugin)
+### 4.19 [vim-flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 
-### 4.20 [vim-gnupg](https://github.com/jamessan/vim-gnupg) (Gnu PG integration)
+### 4.20 [vim-git](https://github.com/tpope/vim-git) (git syntax plugin)
 
-### 4.21 [vim-latex](https://github.com/jcf/vim-latex) (LaTeX enhancements)
+### 4.21 [vim-gnupg](https://github.com/jamessan/vim-gnupg) (Gnu PG integration)
 
-### 4.22 [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
+### 4.22 [vim-latex](https://github.com/jcf/vim-latex) (LaTeX enhancements)
 
-### 4.23 [vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+### 4.23 [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 
-### 4.24 [vim-startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
+### 4.24 [vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
-### 4.26 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+### 4.25 [vim-startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
 
-### 4.27 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+### 4.27 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
 
-### 4.28 [vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
+### 4.28 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
-### 4.29 [vimexplorer](https://github.com/mbbill/VimExplorer) (File browser)
+### 4.29 [vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
 
-### 4.30 [youcompleteme](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 4.30 [vimexplorer](https://github.com/mbbill/VimExplorer) (File browser)
+
+### 4.31 [youcompleteme](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 
 ## 5 Colorschemes

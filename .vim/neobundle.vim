@@ -205,8 +205,14 @@ NeoBundle 'mbbill/undotree', {
 \	},
 \}
 
+"=========================
+"7 - Vim built-in plugins
+"=========================
+
+runtime! ftplugin/man.vim
+
 "===========================
-"6 - Under test/to be tested
+"8 - Under test/to be tested
 "===========================
 
 "NeoBundle 'https://github.com/junegunn/vim-easy-align'
@@ -226,8 +232,9 @@ NeoBundle 'mbbill/undotree', {
 " fugitive uses augroup fugitive.
 " NeoBundle 'tpope/vim-fugitive', { 'augroup' : 'fugitive'}
 
+
 "=========================
-"7 - NeoBundle post config
+"9 - NeoBundle post config
 "=========================
 
 let g:neobundle#types#git#default_protocol = "https"

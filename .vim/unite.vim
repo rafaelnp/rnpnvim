@@ -9,6 +9,15 @@ call unite#filters#sorter_default#use(['sorter_rank'])
 
 let g:unite_prompt = '» '
 let g:unite_source_history_yank_enable = 1
+"let g:unite_source_grep_command = 'ag'
+"let g:unite_source_grep_default_opts = '--column --smart-case'
+
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts =
+          \ '--line-numbers --column --nocolor --nogroup --hidden --ignore ' .
+          \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+let g:unite_source_grep_recursive_opt = ''
+
 
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()

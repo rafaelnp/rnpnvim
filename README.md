@@ -274,6 +274,8 @@ Available colorschemes:
 ### 5.3 [vim-vividchalk](https://github.com/tpope/vim-vividchalk.git)
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
+### 5.4 [harlequin](https://github.com/nielsmadan/harlequin)
+![harlequin_pic](https://camo.githubusercontent.com/f317a1e44ae848ab57213bce85a0b3974fa1ca4b/687474703a2f2f692e696d6775722e636f6d2f4f446243442e706e67)
 
 ## 6 Known problems
 

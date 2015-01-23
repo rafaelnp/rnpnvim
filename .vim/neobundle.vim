@@ -31,6 +31,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'https://github.com/tomasr/molokai'
 NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
+NeoBundle 'https://github.com/nielsmadan/harlequin'
 
 "================
 "3 -  Programming

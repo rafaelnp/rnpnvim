@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.01.07 (Wed) 16:19:25 (UTC +0100 CET)
+Last update: 2015.01.22 (Do) 23:43:06 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
@@ -79,6 +79,7 @@ This Vim setup has the following requirements/dependencies:
 * [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
 * [Python](http://www.python.org) 2.7 or newer
 * [Git](http://www.git-scm.com/) 1.7 or newer
+* [The Silver Search](http://geoff.greer.fm/ag/)
 
 
 ## 3 Installation

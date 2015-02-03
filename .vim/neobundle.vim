@@ -69,9 +69,10 @@ NeoBundle 'Valloric/YouCompleteMe', {
 \			'zsh',
 \		],
 \	},
+\	'rev' : 'ba6e1408fd2f6929a8e3f4dc527ed1096945fef8',
 \}
 NeoBundle 'https://github.com/mhinz/vim-signify'
-"NeoBundle 'https://github.com/tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'https://github.com/SirVer/ultisnips'
 NeoBundle 'https://github.com/oblitum/rainbow', {
 \	'lazy' : 1,

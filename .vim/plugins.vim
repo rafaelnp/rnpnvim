@@ -266,27 +266,32 @@ if has("autocmd")
 	augroup END
 endif
 
+"===========================================
+" 23 - vim-fugitive
+"      https://github.com/tpope/vim-fugitive
+"===========================================
+
 "======================================
-" 23 - vim-git
+" 24 - vim-git
 "      https://github.com/tpope/vim-git
 "======================================
 " Syntax plugin, no config necessary
 
 "===========================================
-" 24 - vim-gnupg
+" 25 - vim-gnupg
 "      https://github.com/jamessan/vim-gnupg
 "===========================================
 " No adicional config so far
 
 "======================================
-" 25 - vim-latex
+" 26 - vim-latex
 "      https://github.com/jcf/vim-latex
 "======================================
 
 let g:tex_flavor='latex'
 
 "====================================================
-" 26 - vim-nerdtree-tabs
+" 27 - vim-nerdtree-tabs
 "      https://github.com/jistr/vim-nerdtree-tabs.git
 "====================================================
 
@@ -296,7 +301,7 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 "==========================================
-" 27 - vim-signify
+" 28 - vim-signify
 "      https://github.com/mhinz/vim-signify
 "==========================================
 
@@ -318,7 +323,7 @@ highlight SignifySignDelete gui=bold  guifg=red
 highlight SignifySignChange gui=bold  guifg=darkorange
 
 "===========================================
-" 28 - vim-startify
+" 29 - vim-startify
 "      https://github.com/mhinz/vim-startify
 "===========================================
 
@@ -369,31 +374,31 @@ if has('gui_running')
 endif
 
 "=====================================================
-" 29 - vim-systemverilog
+" 30 - vim-systemverilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog
 "=====================================================
 " Syntax plugin, no config necessary
 
 "===========================================
-" 30 - vim-vhdl
+" 31 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
 "===========================================
 " Syntax plugin, no config necessary
 
 "================================================
-" 31 - vim-vinegar
+" 32 - vim-vinegar
 "      https://github.com/dhruvasagar/vim-vinegar
 "================================================
 " No extra config is necessary
 
 "=============================================
-" 32 - vividchalk
+" 33 - vividchalk
 "      https://github.com/tpope/vim-vividchalk
 "=============================================
 " Colorscheme plugin, no config necessary
 
 "===========================================
-" 33 - vimexplorer
+" 34 - vimexplorer
 "      https://github.com/mbbill/VimExplorer
 "===========================================
 
@@ -411,13 +416,13 @@ elseif has('win32' || 'win64')
 endif
 
 "===========================================
-" 34 - vimproc
+" 35 - vimproc
 "      https://github.com/Shougo/vimproc.vim
 "===========================================
 "      Configured in ~/.vim/bundle.vim
 
 "============================================
-" 35 - Vinarise
+" 36 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 "============================================
 
@@ -427,7 +432,7 @@ cabbrev vimhex  Vinarise -split -encoding=utf-8<CR>
 nnoremap <leader>vv  :Vinarise -split -encoding=utf-8<CR>
 
 "===============================================
-" 36 - YouCompleteMe
+" 37 - YouCompleteMe
 "      https://github.com/Valloric/YouCompleteMe
 "===============================================
 
@@ -506,12 +511,12 @@ let g:ycm_goto_buffer_command = 'new-tab'
 "================
 "
 "===========================================
-" 36 - fugitive
+" 37 - fugitive
 "      https://github.com/tpope/vim-fugitive
 "===========================================
 
 "=========================================
-" 37 - ultisnips
+" 38 - ultisnips
 "      https://github.com/SirVer/ultisnips
 "=========================================
 "let g:UltiSnipsExpandTrigger="<c-l>"
@@ -524,12 +529,12 @@ let g:ycm_goto_buffer_command = 'new-tab'
 
 
 "================================================
-" 38 - vim-easy-align
+" 39 - vim-easy-align
 "      https://github.com/junegunn/vim-easy-align
 "================================================
 "
 "===========================================
-" 39 - vim-snippets
+" 40 - vim-snippets
 "      https://github.com/honza/vim-snippets
 "===========================================
 

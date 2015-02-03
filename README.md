@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.01.22 (Do) 23:43:06 (UTC +0100 CET)
+Last update: 2015.02.03 (Di) 21:06:47 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
@@ -211,7 +211,7 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 4.6 [man.vim]($VIMRUNTIME/ftplugins/man.vim)(Pager for man pages)
 
-### 4.7 [neoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
+### 4.7 [neoBundle.vim](https://github.com/Shougo/neobundle.vim) (Plugin manager)
 
 ### 4.8 [nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
@@ -235,27 +235,29 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 4.19 [vim-flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 
-### 4.20 [vim-git](https://github.com/tpope/vim-git) (git syntax plugin)
+### 4.20 [vim-fugitive](https://github.com/tpope/vim-fugitive) (git integration)
 
-### 4.21 [vim-gnupg](https://github.com/jamessan/vim-gnupg) (Gnu PG integration)
+### 4.21 [vim-git](https://github.com/tpope/vim-git) (git syntax plugin)
 
-### 4.22 [vim-latex](https://github.com/jcf/vim-latex) (LaTeX enhancements)
+### 4.22 [vim-gnupg](https://github.com/jamessan/vim-gnupg) (Gnu PG integration)
 
-### 4.23 [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
+### 4.23 [vim-latex](https://github.com/jcf/vim-latex) (LaTeX enhancements)
 
-### 4.24 [vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+### 4.24 [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 
-### 4.25 [vim-startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
+### 4.25 [vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
-### 4.27 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+### 4.26 [vim-startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
 
-### 4.28 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+### 4.28 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
 
-### 4.29 [vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
+### 4.29 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
-### 4.30 [vimexplorer](https://github.com/mbbill/VimExplorer) (File browser)
+### 4.30 [vim-vinegar](https://github.com/dhruvasagar/vim-vinegar) (Project drawer file browser)
 
-### 4.31 [youcompleteme](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 4.31 [vimexplorer](https://github.com/mbbill/VimExplorer) (File browser)
+
+### 4.32 [youcompleteme](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 
 ## 5 Colorschemes

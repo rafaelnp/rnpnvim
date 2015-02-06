@@ -11,6 +11,11 @@
 " Load all Vundle managed plugins
 source ~/.vim/neobundle.vim
 
+" Load local user config, if exists
+if filereadable(expand("$HOME/.vim/userconfig.vim"))
+	source ~/.vim/userconfig.vim
+endif
+
 " Vim basic configuration.
 source ~/.vim/config.vim
 

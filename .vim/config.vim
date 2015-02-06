@@ -128,7 +128,12 @@ set scrolloff=2              " number of screen lines to keep above and below th
 set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
-colorscheme harlequin
+
+if exists("g:usercolorscheme")
+	execute 'colorscheme '. g:usercolorscheme
+else
+	colorscheme vimhut
+endif
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
 set matchtime=2              " Tenths of a second to show the matching parten

@@ -70,7 +70,6 @@ NeoBundle 'Valloric/YouCompleteMe', {
 \			'zsh',
 \		],
 \	},
-\	'rev' : 'ba6e1408fd2f6929a8e3f4dc527ed1096945fef8',
 \}
 NeoBundle 'https://github.com/mhinz/vim-signify'
 NeoBundle 'tpope/vim-fugitive'

@@ -15,7 +15,13 @@
 " Syntax plugin, no config necessary
 
 "============================================
-" 3 - calendar.vim
+" 3 - badwolf
+"     https://github.com/sjl/badwolf
+"============================================
+" Colorscheme plugin, no config necessary
+
+"============================================
+" 4 - calendar.vim
 "     https://github.com/itchyny/calendar.vim
 "============================================
 let g:calendar_date_endian     = "big"
@@ -28,13 +34,13 @@ let g:calendar_updatetime      = 900
 nnoremap <F3>  :Calendar -position=tab<cr>
 
 "========================================================
-" 4 - colorsamplerpack
+" 5 - colorsamplerpack
 "     http://www.vim.org/scripts/script.php?script_id=625
 "========================================================
 " Colorscheme plugin, no config necessary
 
 "===========================================
-" 5 - delimitmate
+" 6 - delimitmate
 "     https://github.com/blueyed/delimitMate
 "===========================================
 
@@ -53,13 +59,13 @@ if has("autocmd")
 endif
 
 "============================================
-" 6 - harlequin
+" 7 - harlequin
 "     https://github.com/nielsmadan/harlequin
 "============================================
 " Colorscheme plugin, no config necessary
 
 "======================================
-" 7 - howmuch
+" 8 - howmuch
 "     https://github.com/sk1418/HowMuch
 "======================================
 
@@ -69,31 +75,31 @@ let g:HowMuch_scale = 2
 let g:HowMuch_auto_engines = ['bc', 'vim', 'py']
 
 "======================================
-" 8 - man
+" 9 - man
 "     runtime/ftplugin/man.vim
 "======================================
 nnoremap K :Man <cword><cr>
 
 "======================================
-" 9 - molokai
+" 10 - molokai
 "     https://github.com/tomasr/molokai
 "======================================
 " Colorscheme plugin, no config necessary
 
 "=============================================
-" 10 - neobundle.vim
+" 11 - neobundle.vim
 "      https://github.com/Shougo/neobundle.vim
 "=============================================
 " Configured in the ~/.vim/bundle.vim file
 
 "=====================================
-" 11 - neomru
+" 12 - neomru
 "      https://github.com/shougo/neomru
 "=====================================
 " Configured in unite
 
 "================================================
-" 12 - nerdtree
+" 13 - nerdtree
 "      https://github.com/scrooloose/nerdtree.git
 "================================================
 
@@ -104,13 +110,13 @@ let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
 
 "============================================
-" 13 - numbers
+" 14 - numbers
 "      https://github.com/myusuf3/numbers.vim
 "============================================
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'undo']
 
 "========================================
-" 14 - rainbow parenthesis improved
+" 15 - rainbow parenthesis improved
 "      https://github.com/oblitum/rainbow
 "========================================
 
@@ -124,7 +130,7 @@ let g:rainbow_load_separately = [
     \ ]
 
 "==========================================
-" 15 - tagbar
+" 16 - tagbar
 "      https://github.com/majutsushi/tagbar
 "      http://majutsushi.github.io/tagbar/
 "==========================================
@@ -170,7 +176,7 @@ let g:tagbar_type_armasm = {
 \}
 
 "========================================
-" 16 - undotree
+" 17 - undotree
 "      https://github.com/mbbill/undotree
 "========================================
 nnoremap <silent> <F6> :UndotreeToggle<CR>
@@ -179,19 +185,19 @@ let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_SplitWidth = 40
 
 "==================================================
-" 17 - unite-colorscheme
+" 18 - unite-colorscheme
 "      https://github.com/ujihisa/unite-colorscheme
 "==================================================
 " Configured in unite
 
 "===============================================
-" 18 - unite-outline
+" 19 - unite-outline
 "      https://github.com/h1mesuke/unite-outline
 "===============================================
 " Configured in unite
 
 "=========================================
-" 19 - Unite
+" 20 - Unite
 "      https://github.com/Shougo/unite.vim
 "=========================================
 
@@ -199,7 +205,7 @@ source ~/.vim/unite.vim
 
 
 "==========================================
-" 20 - vim-airline
+" 21 - vim-airline
 "      https://github.com/bling/vim-airline
 "==========================================
 
@@ -243,7 +249,7 @@ let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#eclim#enabled = 0
 
 "=================================================
-" 21 - vim-easymotion
+" 22 - vim-easymotion
 "      https://gitthub.com/Lokaltog/vim-easymotion
 "=================================================
 
@@ -256,7 +262,7 @@ nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
 
 "=======================================================
-" 22 - vim-flavoured-markdown
+" 23 - vim-flavoured-markdown
 "      https://github.com/jtratner/vim-flavored-markdown
 "=======================================================
 if has("autocmd")

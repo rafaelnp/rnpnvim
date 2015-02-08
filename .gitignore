@@ -4,4 +4,5 @@
 .vim/.undodir
 *.pyc
 .vim/doc/tags
-
+.vim/.cache
+*~

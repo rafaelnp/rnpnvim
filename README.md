@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.02.03 (Di) 21:06:47 (UTC +0100 CET)
+Last update: 2015.02.06 (Fri) 08:00:07 (UTC +0100 CET)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
@@ -264,24 +264,33 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 Available colorschemes:
 
-### 5.1 [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
+### 5.1 [badwolf](https://github.com/sjl/badwolf)
 
-  Tenths of different colorschemes. The vimhut(dark) theme is the one
-  currently used.
+![badwolf_pic](https://camo.githubusercontent.com/119e6c7e0edcbef3f8a88c8cbbe3df57f6d18e74/687474703a2f2f692e696d6775722e636f6d2f4a353656532e706e67)
 
-### 5.2 [molokai](https://github.com/tomasr/molokai)
+### 5.2 [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
+
+  Tenths of different colorschemes.
+
+### 5.4 [harlequin](https://github.com/nielsmadan/harlequin)
+
+  This theme is the one currently used.
+
+![harlequin_pic](https://camo.githubusercontent.com/f317a1e44ae848ab57213bce85a0b3974fa1ca4b/687474703a2f2f692e696d6775722e636f6d2f4f446243442e706e67)
+
+### 5.4 [molokai](https://github.com/tomasr/molokai)
 
 ![alt_text](https://github-camo.global.ssl.fastly.net/47bf6f7773c282e9607fc692e3a0948ee9363b6e/687474703a2f2f7777772e77696e746572646f6d2e636f6d2f7765626c6f672f636f6e74656e742f62696e6172792f57696e646f77734c6976655772697465722f4d6f6c6f6b6169666f7256696d5f383630322f6d6f6c6f6b61695f6e6f726d616c5f736d616c6c5f332e706e67)
 
-### 5.3 [vim-vividchalk](https://github.com/tpope/vim-vividchalk.git)
+### 5.5 [vim-vividchalk](https://github.com/tpope/vim-vividchalk.git)
+
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
-### 5.4 [harlequin](https://github.com/nielsmadan/harlequin)
-![harlequin_pic](https://camo.githubusercontent.com/f317a1e44ae848ab57213bce85a0b3974fa1ca4b/687474703a2f2f692e696d6775722e636f6d2f4f446243442e706e67)
 
 ## 6 Known problems
 
 See the project [issues page](https://github.com/rafaelnp/rnpvim/issues?state=open).
+
 
 ## 7 TODO
 

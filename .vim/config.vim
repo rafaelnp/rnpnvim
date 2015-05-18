@@ -72,7 +72,10 @@ set fo=tcrqn        " See Help (:help fo-table)
 set ai              " autoindent
 set si              " smartindent
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
-set textwidth=80    " no fucking long lines
+if exists("g:usertextwidth")
+	let &textwidth=g:usertextwidth
+endif
+
 set cpoptions=BceF  " compatible options
 
 " Here are the space and tabulator keys definition:

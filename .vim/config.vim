@@ -105,7 +105,17 @@ else
 	set shiftwidth=4       " unify
 endif
 
-set noexpandtab        " just tabs please :)
+if exists("g:indenttype")
+	if g:indenttype ==? "tabs"
+		setlocal noexpandtab
+	elseif g:indenttype ==? "spaces"
+		setlocal expandtab
+	else
+		setlocal noexpandtab
+	endif
+else
+	setlocal noexpandtab
+endif
 
 
 "==========

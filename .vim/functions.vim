@@ -78,3 +78,30 @@ function! Ycmconf_exist()
 		return 0
 	endif
 endfunction
+
+
+function! Config_cindent()
+
+if exists("g:cindent")
+	let &l:tabstop=g:cindent
+	let &l:softtabstop=g:cindent
+	let &l:shiftwidth=g:cindent
+else
+	setlocal shiftwidth=8 tabstop=8 softtabstop=8
+endif
+
+if exists("g:cindenttype")
+	if g:cindenttype ==? "tabs"
+		setlocal noexpandtab
+	elseif g:cindenttype ==? "spaces"
+		setlocal expandtab
+	else
+		setlocal noexpandtab
+	endif
+else
+	setlocal noexpandtab
+endif
+
+retab
+endfunction
+

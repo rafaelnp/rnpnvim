@@ -87,16 +87,24 @@ set cpoptions=BceF  " compatible options
 "
 " Vim tabs configuration
 "
-" tabstop = Set tabstop to tell vim how many columns a tab counts for. This is the only
-"           command here that will affect how existing text displays.
+" tabstop = Set tabstop to tell vim how many columns a tab counts for. This isx
+"           the only command here that will affect how existing text displays.
+"
 " shiftwidth = Set shiftwidth to control how many columns text is indented
 "              with the reindent operations (<< and >>) and automatic C-style
 "              indentation.
 " softtabstop = Set softtabstop to control how many columns vim uses when you
 "               hit Tab in insert mode
-set tabstop=4          " tab spacing (settings below are to unify it)
-set softtabstop=4      " unify
-set shiftwidth=4       " unify
+if exists("g:indent")
+	let &tabstop=g:indent
+	let &softtabstop=g:indent
+	let &shiftwidth=g:indent
+else
+	set tabstop=4          " tab spacing (settings below are to unify it)
+	set softtabstop=4      " unify
+	set shiftwidth=4       " unify
+endif
+
 set noexpandtab        " just tabs please :)
 
 

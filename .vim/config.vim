@@ -180,11 +180,19 @@ if has('gui_running')
 	set bg=dark
 
 	if has('unix')
-		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
+		if exists("g:guifont")
+			let &guifont=g:guifont
+		else
+			set guifont=Monospace\ 9
+		endif
 	elseif has ('mac')
 		set guifont=Monospace\ 9
 	elseif has ('win32') || ('win64')
-		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h8
+		if exists("g:winguifont")
+			let &guifont=g:winguifont
+		else
+			set guifont=Lucida_Sans_Typewriter:h9
+		endif
 	endif
 
 	set mousemodel=popup

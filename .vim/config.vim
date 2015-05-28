@@ -28,16 +28,21 @@ set pastetoggle=<F2>               " enables paste mode
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has("multi_byte_encoding")
-	if has('unix') || has('macunix')
+	if has('unix')
 		set termencoding=utf-8
 		set encoding=utf-8
 		set fileformat=unix
 		set fileformats=unix
-	elseif has('mac')
+	elseif has('mac') || has('macunix')
 		set termencoding=utf-8
 		set encoding=utf-8
 		set fileformat=unix
 		set fileformats=unix
+	elseif has('win32') || has('win64')
+		set termencoding=utf-8
+		set encoding=utf-8
+		set fileformat=dos,unix
+		set fileformats=dos,unix
 	else
 		set termencoding=utf-8
 		set encoding=utf-8

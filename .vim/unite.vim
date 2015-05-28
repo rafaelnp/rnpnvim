@@ -9,16 +9,27 @@ nmap <space> [unite]
 let g:unite_prompt = '» '
 let g:unite_source_history_yank_enable = 1
 let g:unite_data_directory="~/.vim/.cache/unite"
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts =
+
+if has('unix')
+	let g:unite_source_grep_command = 'ag'
+	let g:unite_source_grep_default_opts =
           \ '--line-numbers --column --nocolor --nogroup --hidden --ignore ' .
           \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
-let g:unite_source_grep_recursive_opt = ''
+	let g:unite_source_grep_recursive_opt = ''
+elseif has('win32') || ('win64')
+	let g:unite_source_grep_command = 'grep'
+	let g:unite_source_rec_async_command = 'ls -aR'
+	let g:unite_source_grep_default_opts = '-i  -n'
+	let g:unite_source_grep_recursive_opt = '-r'
+endif
 
 call unite#custom_source('file_rec,file_rec/async', 'matchers',
             \ ['converter_relative_word', 'matcher_default'])
 call unite#custom_source('file_rec,file_rec/async', 'converters',
             \ 'converter_relative_abbr')
+
+" Test
+call unite#custom#source( 'buffer', 'converters', ['converter_file_directory'])
 
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()

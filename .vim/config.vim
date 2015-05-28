@@ -175,18 +175,11 @@ if has('gui_running')
 	set bg=dark
 
 	if has('unix')
-		"Default font
-		"set guifont=Monospace\ 9
-		" Other good fonts:
-		"set guifont=Anonymous\ Pro\ Minus\ 11
-		"set guifont=Anonymous\ Pro\ 9
 		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
-		"set guifont=Inconsolata\ for\ Powerline\ 9
-		"set guifont=Liberation\ Mono\ for\ Powerline\ 8
 	elseif has ('mac')
 		set guifont=Monospace\ 9
 	elseif has ('win32') || ('win64')
-		set guifont=Lucida_Sans_Typewriter:h9
+		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h8
 	endif
 
 	set mousemodel=popup

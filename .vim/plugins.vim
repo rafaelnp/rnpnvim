@@ -217,10 +217,37 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 
+" unicode symbols
+" TODO: test it under windows
+"let g:airline_left_sep = '»'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+"let g:airline_right_sep = '◀'
+"let g:airline_symbols.linenr = '␊'
+"let g:airline_symbols.linenr = '␤'
+"let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
+"let g:airline_symbols.whitespace = 'Ξ'
+
+" powerline symbols
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
+"let g:airline_symbols.linenr = ''
+
 " Set airline theme manually
 let g:airline_theme="kolor"
 " fix messed up symbols
-let g:airline_symbols.space = "\ua0"
+" TODO: test it under windows
+if has('unix')
+	let g:airline_symbols.space = "\ua0"
+endif
 
 " enable/disable enhanced tabline.
 let g:airline#extensions#tabline#enabled = 1
@@ -311,14 +338,14 @@ let g:nerdtree_tabs_no_startup_for_diff     = 0
 "      https://github.com/mhinz/vim-signify
 "==========================================
 
-nnoremap <leader>gj <plug>(signify-next-hunk)
-nnoremap <leader>gk <plug>(signify-prev-hunk)
-
 let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
 let g:signify_update_on_bufenter = 0
 let g:signify_sign_change = '~'
 let g:signify_sign_delete_first_line = '*'
 let g:signify_update_on_focusgained = 0
+
+nnoremap <leader>gj <plug>(signify-next-hunk)
+nnoremap <leader>gk <plug>(signify-prev-hunk)
 
 highlight SignifySignAdd    cterm=bold ctermfg=green
 highlight SignifySignDelete cterm=bold ctermfg=red

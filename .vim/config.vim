@@ -15,7 +15,7 @@ set backspace=indent,eol,start     " see :help bs
 set helplang=de,en                 " help language
 set history=200                    " command history
 set printoptions=paper:a4          " printer options
-set fileencodings=utf-8,latin1     " Encodings
+set fileencodings=ucs-bom,utf-8    " Encodings
 set spelllang=de,pt_br,en,es       " set your favorite language here
 if has("browse")
 	set browsedir=buffer           " defaults to the current file's directory

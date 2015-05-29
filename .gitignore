@@ -6,3 +6,4 @@
 .vim/doc/tags
 .vim/.cache
 *~
+.vim/userconfig.vim

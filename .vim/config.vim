@@ -27,7 +27,7 @@ set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
 
 " Force utf-8. Fallback latin1. Always use unix file format
-if has("multi_byte_encoding")
+if has('multi_byte')
 	if has('unix')
 		set termencoding=utf-8
 		set encoding=utf-8
@@ -41,7 +41,7 @@ if has("multi_byte_encoding")
 	elseif has('win32') || has('win64')
 		set termencoding=utf-8
 		set encoding=utf-8
-		set fileformat=dos,unix
+		set fileformat=dos
 		set fileformats=dos,unix
 	else
 		set termencoding=utf-8

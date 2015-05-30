@@ -12,7 +12,7 @@
 Name:        RnpVim help
 Version:     0.5.0
 Author:      Rafael do Nascimento Pereira <rnp@25ghz.net>
-Last change: 2015.01.07 (Wed) 15:04:23 (UTC +0100 CET)
+Last update: 2015.05.30 (Sa) 17:35:26 (UTC +0200 CEST)
 License:     GPLv2
 
 ==============================================================================

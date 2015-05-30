@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.05.30 (Sa) 16:21:39 (UTC +0200 CEST)
+Last update: 2015.05.30 (Sa) 17:35:26 (UTC +0200 CEST)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rafaelnp/rnpvim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

@@ -1,6 +1,8 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.02.06 (Fri) 08:00:07 (UTC +0100 CET)
+Last update: 2015.05.30 (Sa) 16:21:39 (UTC +0200 CEST)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rafaelnp/rnpvim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so

@@ -45,7 +45,8 @@ CONTENTS                                                     *rnpvim-contents*
 			unite..................... |plugins-mappings-unite|
 			vim-airline............... |plugins-mappings-airline|
 			vim-easymotion............ |plugins-mappings-vim-easymotion|
-			vim-flavored-markdown..... |plugins-mappings-flavored-markdown|
+			vim-flavored-markdown..... |plugins-mappings-vim-flavored-markdown|
+			vim-fugitive.............. |plugins-mappings-vim-fugitive|
 			vim-git................... |plugins-mappings-vim-git|
 			vim-gnupg................. |plugins-mappings-vim-gnupg|
 			vim-latex................. |plugins-mappings-vim-latex|
@@ -135,6 +136,7 @@ The rnpvim uses so far the following plugins:
   vim-airline
   vim-easymotion
   vim-flavored-markdown
+  vim-fugitive
   vim-git
   vim-gnupg
   vim-latex
@@ -386,13 +388,13 @@ normal  [unite]F   Unite -no-split buffer tab file_mru directory_mru  Quickly sw
 normal  [unite]m   Unite -buffer-name=recent -winheight=15 file_mru
 
 ==============================================================================
-undotree                                            *plugins-mappings-undotree*
+undotree                                             *plugins-mappings-undotree*
 
 Mode      Mapping    Key/Function       Description
 normal    <F6>       UndotreeToggle     show/hide undo tree window
 
 ==============================================================================
-vim-easymotion                                      *plugins-mappings-undotree*
+vim-easymotion                                 *plugins-mappings-vim-easymotion*
 
 Mode     Mapping     Key/Function       Description
 normal      s        easymotion-bd-w    motions in both directions
@@ -400,7 +402,14 @@ normal   <Leader>j   easymotion-j       motions to lower lines
 normal   <Leader>k   easymotion-k       motions to upper lines
 
 ==============================================================================
-vim-nerdtree-tabs                          *plugins-mappings-vim-nerdtree-tabs*
+vim-fugitive                                     *plugins-mappings-vim-fugitive*
+
+Mode     Mapping     Key/Function       Description
+
+TODO: document fugitive config
+
+==============================================================================
+vim-nerdtree-tabs                           *plugins-mappings-vim-nerdtree-tabs*
 
 Mode      Mapping    Key/Function        Description
 normal    <F9>       NERDTreeTabsToggle  show/hide nerdtree window

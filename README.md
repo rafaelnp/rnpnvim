@@ -8,7 +8,7 @@ This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
 Suggestions, corrections are welcome :-)
 
-Current version: [0.4.1](https://github.com/rafaelnp/rnpvim/releases).
+Current version: [0.5.0](https://github.com/rafaelnp/rnpvim/releases).
 
 ## 1 Why rnpvim ?
 

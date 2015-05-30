@@ -4,12 +4,17 @@
 "
 " Description:   vim configuraton file
 " Creation date: 1998.02.12
-" Last update:   2014.11.07 (Fri) 12:04:37 (UTC +0100 CET)
-
+" Last update:   2015.05.30 (Sa) 17:35:26 (UTC +0200 CEST)
+"
 " This file is just an entry point for a modulatized configuration
 "
 " Load all Vundle managed plugins
 source ~/.vim/neobundle.vim
+
+" Load local user config, if exists
+if filereadable(expand("$HOME/.vim/userconfig.vim"))
+	source ~/.vim/userconfig.vim
+endif
 
 " Vim basic configuration.
 source ~/.vim/config.vim

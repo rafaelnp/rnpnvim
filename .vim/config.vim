@@ -15,7 +15,7 @@ set backspace=indent,eol,start     " see :help bs
 set helplang=de,en                 " help language
 set history=200                    " command history
 set printoptions=paper:a4          " printer options
-set fileencodings=utf-8,latin1     " Encodings
+set fileencodings=ucs-bom,utf-8    " Encodings
 set spelllang=de,pt_br,en,es       " set your favorite language here
 if has("browse")
 	set browsedir=buffer           " defaults to the current file's directory
@@ -27,17 +27,22 @@ set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
 
 " Force utf-8. Fallback latin1. Always use unix file format
-if has("multi_byte_encoding")
-	if has('unix') || has('macunix')
+if has('multi_byte')
+	if has('unix')
 		set termencoding=utf-8
 		set encoding=utf-8
 		set fileformat=unix
 		set fileformats=unix
-	elseif has('mac')
+	elseif has('mac') || has('macunix')
 		set termencoding=utf-8
 		set encoding=utf-8
 		set fileformat=unix
 		set fileformats=unix
+	elseif has('win32') || has('win64')
+		set termencoding=utf-8
+		set encoding=utf-8
+		set fileformat=dos
+		set fileformats=dos,unix
 	else
 		set termencoding=utf-8
 		set encoding=utf-8
@@ -72,7 +77,10 @@ set fo=tcrqn        " See Help (:help fo-table)
 set ai              " autoindent
 set si              " smartindent
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
-set textwidth=80    " no fucking long lines
+if exists("g:usertextwidth")
+	let &textwidth=g:usertextwidth
+endif
+
 set cpoptions=BceF  " compatible options
 
 " Here are the space and tabulator keys definition:
@@ -84,17 +92,35 @@ set cpoptions=BceF  " compatible options
 "
 " Vim tabs configuration
 "
-" tabstop = Set tabstop to tell vim how many columns a tab counts for. This is the only
-"           command here that will affect how existing text displays.
+" tabstop = Set tabstop to tell vim how many columns a tab counts for. This isx
+"           the only command here that will affect how existing text displays.
+"
 " shiftwidth = Set shiftwidth to control how many columns text is indented
 "              with the reindent operations (<< and >>) and automatic C-style
 "              indentation.
 " softtabstop = Set softtabstop to control how many columns vim uses when you
 "               hit Tab in insert mode
-set tabstop=4          " tab spacing (settings below are to unify it)
-set softtabstop=4      " unify
-set shiftwidth=4       " unify
-set noexpandtab        " just tabs please :)
+if exists("g:indent")
+	let &tabstop=g:indent
+	let &softtabstop=g:indent
+	let &shiftwidth=g:indent
+else
+	set tabstop=4          " tab spacing (settings below are to unify it)
+	set softtabstop=4      " unify
+	set shiftwidth=4       " unify
+endif
+
+if exists("g:indenttype")
+	if g:indenttype ==? "tabs"
+		setlocal noexpandtab
+	elseif g:indenttype ==? "spaces"
+		setlocal expandtab
+	else
+		setlocal noexpandtab
+	endif
+else
+	setlocal noexpandtab
+endif
 
 
 "==========
@@ -128,7 +154,12 @@ set scrolloff=2              " number of screen lines to keep above and below th
 set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
-colorscheme vimhut
+
+if exists("g:usercolorscheme")
+	execute 'colorscheme '. g:usercolorscheme
+else
+	colorscheme vimhut
+endif
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
 set matchtime=2              " Tenths of a second to show the matching parten
@@ -149,18 +180,19 @@ if has('gui_running')
 	set bg=dark
 
 	if has('unix')
-		"Default font
-		"set guifont=Monospace\ 9
-		" Other good fonts:
-		"set guifont=Anonymous\ Pro\ Minus\ 11
-		"set guifont=Anonymous\ Pro\ 9
-		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
-		"set guifont=Inconsolata\ for\ Powerline\ 9
-		"set guifont=Liberation\ Mono\ for\ Powerline\ 8
+		if exists("g:guifont")
+			let &guifont=g:guifont
+		else
+			set guifont=Monospace\ 9
+		endif
 	elseif has ('mac')
 		set guifont=Monospace\ 9
 	elseif has ('win32') || ('win64')
-		set guifont=Lucida_Sans_Typewriter:h9
+		if exists("g:winguifont")
+			let &guifont=g:winguifont
+		else
+			set guifont=Lucida_Sans_Typewriter:h9
+		endif
 	endif
 
 	set mousemodel=popup

@@ -110,7 +110,7 @@ if [ -d "$fontdir/powerline-fonts" ]; then
 fi
 
 git clone https://github.com/Lokaltog/powerline-fonts $HOME/src/powerline-fonts
-ln -s $HOME/src/powerline-fonts $HOME/.fonts/powerline-fonts
+ln -s $HOME/src/powerline-fonts $HOME/.fonts
 
 echo "
 ===========================

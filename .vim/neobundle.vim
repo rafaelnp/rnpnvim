@@ -31,6 +31,8 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'https://github.com/tomasr/molokai'
 NeoBundle 'https://github.com/tpope/vim-vividchalk.git'
+NeoBundle 'https://github.com/nielsmadan/harlequin'
+NeoBundle 'https://github.com/sjl/badwolf'
 
 "================
 "3 -  Programming
@@ -70,7 +72,7 @@ NeoBundle 'Valloric/YouCompleteMe', {
 \	},
 \}
 NeoBundle 'https://github.com/mhinz/vim-signify'
-"NeoBundle 'https://github.com/tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'https://github.com/SirVer/ultisnips'
 NeoBundle 'https://github.com/oblitum/rainbow', {
 \	'lazy' : 1,

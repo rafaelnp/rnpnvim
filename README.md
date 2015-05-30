@@ -1,12 +1,14 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.01.07 (Wed) 16:19:25 (UTC +0100 CET)
+Last update: 2015.05.30 (Sa) 17:35:26 (UTC +0200 CEST)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rafaelnp/rnpvim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
 Suggestions, corrections are welcome :-)
 
-Current version: [0.4.1](https://github.com/rafaelnp/rnpvim/releases).
+Current version: [0.5.0](https://github.com/rafaelnp/rnpvim/releases).
 
 ## 1 Why rnpvim ?
 
@@ -79,6 +81,7 @@ This Vim setup has the following requirements/dependencies:
 * [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
 * [Python](http://www.python.org) 2.7 or newer
 * [Git](http://www.git-scm.com/) 1.7 or newer
+* [The Silver Search](http://geoff.greer.fm/ag/)
 
 
 ## 3 Installation
@@ -210,7 +213,7 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 4.6 [man.vim]($VIMRUNTIME/ftplugins/man.vim)(Pager for man pages)
 
-### 4.7 [neoBundle.vim](https://github.com/Shougo/neobundle.vim)(Plugin manager)
+### 4.7 [neoBundle.vim](https://github.com/Shougo/neobundle.vim) (Plugin manager)
 
 ### 4.8 [nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
@@ -234,49 +237,62 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 4.19 [vim-flavoured-Markdown](https://github.com/jtratner/vim-flavored-markdown) (Markdown)
 
-### 4.20 [vim-git](https://github.com/tpope/vim-git) (git syntax plugin)
+### 4.20 [vim-fugitive](https://github.com/tpope/vim-fugitive) (git integration)
 
-### 4.21 [vim-gnupg](https://github.com/jamessan/vim-gnupg) (Gnu PG integration)
+### 4.21 [vim-git](https://github.com/tpope/vim-git) (git syntax plugin)
 
-### 4.22 [vim-latex](https://github.com/jcf/vim-latex) (LaTeX enhancements)
+### 4.22 [vim-gnupg](https://github.com/jamessan/vim-gnupg) (Gnu PG integration)
 
-### 4.23 [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
+### 4.23 [vim-latex](https://github.com/jcf/vim-latex) (LaTeX enhancements)
 
-### 4.24 [vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+### 4.24 [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 
-### 4.25 [vim-startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
+### 4.25 [vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
-### 4.27 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+### 4.26 [vim-startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
 
-### 4.28 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+### 4.28 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
 
-### 4.29 [vim-vinegar](https://github.com/dhruvasagar/vim-vinegar)(Project drawer file browser)
+### 4.29 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
-### 4.30 [vimexplorer](https://github.com/mbbill/VimExplorer) (File browser)
+### 4.30 [vim-vinegar](https://github.com/dhruvasagar/vim-vinegar) (Project drawer file browser)
 
-### 4.31 [youcompleteme](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 4.31 [vimexplorer](https://github.com/mbbill/VimExplorer) (File browser)
+
+### 4.32 [youcompleteme](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 
 ## 5 Colorschemes
 
 Available colorschemes:
 
-### 5.1 [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
+### 5.1 [badwolf](https://github.com/sjl/badwolf)
 
-  Tenths of different colorschemes. The vimhut(dark) theme is the one
-  currently used.
+![badwolf_pic](https://camo.githubusercontent.com/119e6c7e0edcbef3f8a88c8cbbe3df57f6d18e74/687474703a2f2f692e696d6775722e636f6d2f4a353656532e706e67)
 
-### 5.2 [molokai](https://github.com/tomasr/molokai)
+### 5.2 [Color-Sampler-Pack](https://github.com/vim-scripts/Color-Sampler-Pack)
+
+  Tenths of different colorschemes.
+
+### 5.4 [harlequin](https://github.com/nielsmadan/harlequin)
+
+  This theme is the one currently used.
+
+![harlequin_pic](https://camo.githubusercontent.com/f317a1e44ae848ab57213bce85a0b3974fa1ca4b/687474703a2f2f692e696d6775722e636f6d2f4f446243442e706e67)
+
+### 5.4 [molokai](https://github.com/tomasr/molokai)
 
 ![alt_text](https://github-camo.global.ssl.fastly.net/47bf6f7773c282e9607fc692e3a0948ee9363b6e/687474703a2f2f7777772e77696e746572646f6d2e636f6d2f7765626c6f672f636f6e74656e742f62696e6172792f57696e646f77734c6976655772697465722f4d6f6c6f6b6169666f7256696d5f383630322f6d6f6c6f6b61695f6e6f726d616c5f736d616c6c5f332e706e67)
 
-### 5.3 [vim-vividchalk](https://github.com/tpope/vim-vividchalk.git)
+### 5.5 [vim-vividchalk](https://github.com/tpope/vim-vividchalk.git)
+
 ![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
 
 ## 6 Known problems
 
 See the project [issues page](https://github.com/rafaelnp/rnpvim/issues?state=open).
+
 
 ## 7 TODO
 

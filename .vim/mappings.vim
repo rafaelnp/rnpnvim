@@ -123,3 +123,5 @@ inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
+" disable Ex mode (maybe this key could be used for something else
+nnoremap Q <nop>

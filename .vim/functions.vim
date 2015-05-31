@@ -23,7 +23,13 @@ function! HLightTrailSpaces()
 endfunction
 
 function! HLightExtraSpaces()
-	call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+	if exists("g:cindenttype") && g:cindenttype ==? "spaces"
+		call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\ \+\)\(\%#\)\@!')
+	elseif exists("g:cindenttype") && g:cindenttype ==? "tabs"
+		call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+	else
+		call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+	endif
 endfunction
 
 function! HLighteColorColumn()

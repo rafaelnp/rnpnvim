@@ -101,6 +101,21 @@ NeoBundle 'https://github.com/Raimondi/delimitMate', {
 \	},
 \}
 "NeoBundle 'honza/vim-snippets'
+NeoBundle 'nathanaelkane/vim-indent-guides', {
+\	'lazy' : 1,
+\	'autoload' : {
+\		'filetypes' : [
+\			'c',
+\			'cpp',
+\			'vim',
+\			'latex',
+\			'python',
+\			'sh',
+\			'vhdl',
+\			'verilog',
+\		],
+\	},
+\}
 
 "=========
 "4 - Unite

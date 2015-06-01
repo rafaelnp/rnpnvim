@@ -124,10 +124,10 @@ au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
 
 let g:rainbow_load_separately = [
-    \ [ '*.c' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
-    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-    \ ]
+	\ [ '*.c' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+	\ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+	\ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+	\ ]
 
 "==========================================
 " 16 - tagbar
@@ -316,15 +316,30 @@ endif
 "===========================================
 " No adicional config so far
 
+"========================================================
+" 26 - vim-indent-guides
+"      https://github.com/nathanaelkane/vim-indent-guides
+"========================================================
+
+if exists("g:indenttype") && g:indenttype ==? "spaces"
+	let g:indent_guides_enable_on_vim_startup = 1
+else
+	let g:indent_guides_enable_on_vim_startup = 0
+endif
+
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_guide_size = 0
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'unite']
+
 "======================================
-" 26 - vim-latex
+" 27 - vim-latex
 "      https://github.com/jcf/vim-latex
 "======================================
 
 let g:tex_flavor='latex'
 
 "====================================================
-" 27 - vim-nerdtree-tabs
+" 28 - vim-nerdtree-tabs
 "      https://github.com/jistr/vim-nerdtree-tabs.git
 "====================================================
 
@@ -334,7 +349,7 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 "==========================================
-" 28 - vim-signify
+" 29 - vim-signify
 "      https://github.com/mhinz/vim-signify
 "==========================================
 
@@ -356,7 +371,7 @@ highlight SignifySignDelete gui=bold  guifg=red
 highlight SignifySignChange gui=bold  guifg=darkorange
 
 "===========================================
-" 29 - vim-startify
+" 30 - vim-startify
 "      https://github.com/mhinz/vim-startify
 "===========================================
 
@@ -386,14 +401,14 @@ let g:startify_bookmarks = [
 
 " ascii text: http://patorjk.com/software/taag/
 let g:startify_custom_header = [
-			\'     __      ___             ______ _  _',
-			\'     \ \    / (_)           |____  | || |',
-			\'      \ \  / / _ _ __ ___       / /| || |_',
-			\'       \ \/ / | | `_ ` _ \     / / |__   _|',
-			\'        \  /  | | | | | | |   / / _   | |',
-			\'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
-			\ '',
-			\ ]
+            \'     __      ___             ______ _  _',
+            \'     \ \    / (_)           |____  | || |',
+            \'      \ \  / / _ _ __ ___       / /| || |_',
+            \'       \ \/ / | | `_ ` _ \     / / |__   _|',
+            \'        \  /  | | | | | | |   / / _   | |',
+            \'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
+            \ '',
+            \ ]
 
 let g:startify_custom_footer = [
 	\ '',
@@ -407,31 +422,31 @@ if has('gui_running')
 endif
 
 "=====================================================
-" 30 - vim-systemverilog
+" 31 - vim-systemverilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog
 "=====================================================
 " Syntax plugin, no config necessary
 
 "===========================================
-" 31 - vim-vhdl
+" 32 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
 "===========================================
 " Syntax plugin, no config necessary
 
 "================================================
-" 32 - vim-vinegar
+" 33 - vim-vinegar
 "      https://github.com/dhruvasagar/vim-vinegar
 "================================================
 " No extra config is necessary
 
 "=============================================
-" 33 - vividchalk
+" 34 - vividchalk
 "      https://github.com/tpope/vim-vividchalk
 "=============================================
 " Colorscheme plugin, no config necessary
 
 "===========================================
-" 34 - vimexplorer
+" 35 - vimexplorer
 "      https://github.com/mbbill/VimExplorer
 "===========================================
 
@@ -449,13 +464,13 @@ elseif has('win32' || 'win64')
 endif
 
 "===========================================
-" 35 - vimproc
+" 36 - vimproc
 "      https://github.com/Shougo/vimproc.vim
 "===========================================
 "      Configured in ~/.vim/bundle.vim
 
 "============================================
-" 36 - Vinarise
+" 37 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 "============================================
 
@@ -465,7 +480,7 @@ cabbrev vimhex  Vinarise -split -encoding=utf-8<CR>
 nnoremap <leader>vv  :Vinarise -split -encoding=utf-8<CR>
 
 "===============================================
-" 37 - YouCompleteMe
+" 38 - YouCompleteMe
 "      https://github.com/Valloric/YouCompleteMe
 "===============================================
 
@@ -543,11 +558,6 @@ let g:ycm_goto_buffer_command = 'new-tab'
 " To be installed
 "================
 "
-"===========================================
-" 37 - fugitive
-"      https://github.com/tpope/vim-fugitive
-"===========================================
-
 "=========================================
 " 38 - ultisnips
 "      https://github.com/SirVer/ultisnips

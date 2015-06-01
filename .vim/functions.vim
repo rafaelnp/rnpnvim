@@ -22,10 +22,18 @@ function! HLightTrailSpaces()
 	call matchadd('TrailingSpaces','\s\+$')
 endfunction
 
+" this function turns on space highlight for 3 groups:
+" 1 - trailing spaces
+" 2 - spaces after tabs
+" 3 - spaces at the line start (indentation)
+"
+" if the userconfig.vim exists and the specified indenation type is "spaces",
+" then the group (3) is disabled
+"
 function! HLightExtraSpaces()
-	if exists("g:cindenttype") && g:cindenttype ==? "spaces"
+	if exists("g:indenttype") && g:indenttype ==? "spaces"
 		call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\ \+\)\(\%#\)\@!')
-	elseif exists("g:cindenttype") && g:cindenttype ==? "tabs"
+	elseif exists("g:indenttype") && g:indenttype ==? "tabs"
 		call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
 	else
 		call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
@@ -37,8 +45,12 @@ function! HLighteColorColumn()
 endfunction
 
 function! ShowTabs()
+	if exists("g:indenttype") && g:indenttype ==? "spaces"
+		setlocal listchars=eol:¬
+	else
 		setlocal listchars=tab:▸\ ,eol:¬
-		setlocal list
+	endif
+	setlocal list
 endfunction
 
 function! Reloadconfig()
@@ -55,7 +67,7 @@ endfunction
 
 function! SetWindowSize()
 	"if line('$') == 1 && getline(1) == ''
-	"	 return
+	"	return
 	"else
 		if has("gui_running")
 			set lines=45 columns=90
@@ -85,29 +97,33 @@ function! Ycmconf_exist()
 	endif
 endfunction
 
-
 function! Config_cindent()
 
-if exists("g:cindent")
-	let &l:tabstop=g:cindent
-	let &l:softtabstop=g:cindent
-	let &l:shiftwidth=g:cindent
-else
-	setlocal shiftwidth=8 tabstop=8 softtabstop=8
-endif
+	if exists("g:cindent")
+		let &l:tabstop=g:cindent
+		let &l:softtabstop=g:cindent
+		let &l:shiftwidth=g:cindent
+	else
+		setlocal shiftwidth=8 tabstop=8 softtabstop=8
+	endif
+endfunction
 
-if exists("g:cindenttype")
-	if g:cindenttype ==? "tabs"
-		setlocal noexpandtab
-	elseif g:cindenttype ==? "spaces"
-		setlocal expandtab
+
+" config indentation type (tabs of spaces) for all file types for now.
+" TODO: expand this configuration for each relevant file type.
+function! Config_indenttype()
+	if exists("g:indenttype")
+		if g:indenttype ==? "tabs"
+			setlocal noexpandtab
+		elseif g:indenttype ==? "spaces"
+			setlocal expandtab
+		else
+			setlocal noexpandtab
+		endif
 	else
 		setlocal noexpandtab
 	endif
-else
-	setlocal noexpandtab
-endif
 
-retab
+	retab
 endfunction
 

@@ -20,6 +20,7 @@ if has("autocmd")
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call HLighteColorColumn()
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call HLightExtraSpaces()
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call Config_cindent()
+		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call Config_indenttype()
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call ShowTabs()
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal cindent
 		autocmd BufEnter,BufWinEnter *.c,*.h if !Ycmconf_exist() | let g:ycm_global_ycm_extra_conf='~/.vim/c/.ycm_extra_conf.py' | endif
@@ -36,9 +37,8 @@ if has("autocmd")
 		au!
 		autocmd BufEnter,BufWinEnter *.py,SConstruct call HLighteColorColumn()
 "		autocmd BufEnter,BufWinEnter *.py,SConstruct call HLightExtraSpaces()
-		autocmd BufEnter,BufWinEnter *.py,SConstruct setlocal shiftwidth=4 tabstop=4 softtabstop=4
 		autocmd BufEnter,BufWinEnter *.py,SConstruct call ShowTabs()
-		autocmd BufEnter,BufWinEnter *.py,SConstruct setlocal noexpandtab
+		autocmd BufEnter,BufWinEnter *.py,SConstruct call Config_indenttype()
 "		autocmd BufLeave,BufWinLeave *.py,SConstruct call clearmatches()
 	augroup END
 
@@ -47,25 +47,23 @@ if has("autocmd")
 		autocmd BufEnter,BufWinEnter *.sh call HLighteColorColumn()
 "		autocmd BufEnter,BufWinEnter *.sh call HLightExtraSpaces()
 		autocmd BufEnter,BufWinEnter *.sh call ShowTabs()
-		autocmd BufEnter,BufWinEnter *.sh setlocal noexpandtab
+		autocmd BufEnter,BufWinEnter *.sh call Config_indenttype()
 "		autocmd BufLeave,BufWinLeave *.sh call clearmatches()
 	augroup END
 
 	augroup vim
 		au!
 		autocmd BufEnter,BufWinEnter *.vim call HLighteColorColumn()
-"		autocmd BufEnter,BufWinEnter *.vim call HLightExtraSpaces()
-		autocmd BufEnter,BufWinEnter *.vim setlocal shiftwidth=4 tabstop=4 softtabstop=4
+		"autocmd BufEnter,BufWinEnter *.vim call HLightExtraSpaces()
 		autocmd BufEnter,BufWinEnter *.vim call ShowTabs()
-		autocmd BufEnter,BufWinEnter *.vim setlocal noexpandtab
-"		autocmd BufLeave,BufWinLeave *.vim call clearmatches()
+		autocmd BufEnter,BufWinEnter *.vim call Config_indenttype()
+		"autocmd BufLeave,BufWinLeave *.vim call clearmatches()
 	augroup END
 
 	augroup verilog
 		au!
-		autocmd BufEnter,BufWinEnter *.v setlocal shiftwidth=4 tabstop=4 softtabstop=4
 		autocmd BufEnter,BufWinEnter *.v call ShowTabs()
-		autocmd BufEnter,BufWinEnter *.v setlocal noexpandtab
+		autocmd BufEnter,BufWinEnter *.v call Config_indenttype()
 	augroup END
 "	augroup unite
 "		au!

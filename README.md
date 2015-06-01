@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.05.30 (Sa) 17:35:26 (UTC +0200 CEST)
+Last update: 2015.06.02 (Di) 00:04:13 (UTC +0200 CEST)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rafaelnp/rnpvim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
@@ -243,23 +243,25 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 4.22 [vim-gnupg](https://github.com/jamessan/vim-gnupg) (Gnu PG integration)
 
-### 4.23 [vim-latex](https://github.com/jcf/vim-latex) (LaTeX enhancements)
+### 4.23 [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) (Indentation guides)
 
-### 4.24 [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
+### 4.24 [vim-latex](https://github.com/jcf/vim-latex) (LaTeX enhancements)
 
-### 4.25 [vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
+### 4.25 [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs.git) (File browser with tabs)
 
-### 4.26 [vim-startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
+### 4.26 [vim-signify](https://github.com/mhinz/vim-signify) (Indicate modified lines in [VCS](http://en.wikipedia.org/wiki/Revision_control) managed files)
 
-### 4.28 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
+### 4.27 [vim-startify](https://github.com/mhinz/vim-startify) (Useful Vim startscreen)
 
-### 4.29 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
+### 4.29 [vim-vhdl](https://github.com/Cognoscan/vim-vhdl) (VHDL syntax highlight)
 
-### 4.30 [vim-vinegar](https://github.com/dhruvasagar/vim-vinegar) (Project drawer file browser)
+### 4.30 [vimrproc](https://github.com/Shougo/vimproc.vim) (Asynchronous execution library for Vim)
 
-### 4.31 [vimexplorer](https://github.com/mbbill/VimExplorer) (File browser)
+### 4.31 [vim-vinegar](https://github.com/dhruvasagar/vim-vinegar) (Project drawer file browser)
 
-### 4.32 [youcompleteme](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
+### 4.32 [vimexplorer](https://github.com/mbbill/VimExplorer) (File browser)
+
+### 4.33 [youcompleteme](https://github.com/Valloric/YouCompleteMe) (Text/Code completion)
 
 
 ## 5 Colorschemes

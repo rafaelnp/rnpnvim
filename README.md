@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.06.02 (Di) 00:04:13 (UTC +0200 CEST)
+Last update: 2015.06.02 (Di) 13:35:41 (UTC +0200 CEST)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rafaelnp/rnpvim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
@@ -65,6 +65,11 @@ which is also an Vim plugin, that make the Vim users life much easier.
 * VHDL/Verilog syntax highlight
 
 * Man page inside Vim
+
+* Separate user (based) config for relevant general settings
+
+For the last feature (user config) take a look at the [userconfig.vim](https://gist.github.com/rafaelnp/a078f9941b43d1f62e3f) template at
+my git page or at the [rnpvim help file](https://github.com/rafaelnp/rnpvim/blob/master/.vim/doc/rnpvim.txt).
 
 Nice, but let me see it in action. So, the screenshots can be found [here](https://github.com/rafaelnp/rnpvim/wiki/Screenshots).
 

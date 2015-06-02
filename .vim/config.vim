@@ -32,7 +32,7 @@ if has('multi_byte')
 		set termencoding=utf-8
 		set encoding=utf-8
 		set fileformat=unix
-		set fileformats=unix
+		set fileformats=unix,dos
 	elseif has('mac') || has('macunix')
 		set termencoding=utf-8
 		set encoding=utf-8

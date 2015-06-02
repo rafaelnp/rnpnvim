@@ -329,7 +329,7 @@ endif
 
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_guide_size = 0
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'unite']
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'unite', 'tagbar']
 
 "======================================
 " 27 - vim-latex

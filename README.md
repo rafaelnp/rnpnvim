@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.06.02 (Di) 13:35:41 (UTC +0200 CEST)
+Last update: 2015.06.02 (Di) 13:53:13 (UTC +0200 CEST)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rafaelnp/rnpvim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
@@ -287,13 +287,13 @@ Available colorschemes:
 
 ![harlequin_pic](https://camo.githubusercontent.com/f317a1e44ae848ab57213bce85a0b3974fa1ca4b/687474703a2f2f692e696d6775722e636f6d2f4f446243442e706e67)
 
-### 5.4 [molokai](https://github.com/tomasr/molokai)
+### 5.5 [molokai](https://github.com/tomasr/molokai)
 
-![alt_text](https://github-camo.global.ssl.fastly.net/47bf6f7773c282e9607fc692e3a0948ee9363b6e/687474703a2f2f7777772e77696e746572646f6d2e636f6d2f7765626c6f672f636f6e74656e742f62696e6172792f57696e646f77734c6976655772697465722f4d6f6c6f6b6169666f7256696d5f383630322f6d6f6c6f6b61695f6e6f726d616c5f736d616c6c5f332e706e67)
+![molokai](https://camo.githubusercontent.com/47bf6f7773c282e9607fc692e3a0948ee9363b6e/687474703a2f2f7777772e77696e746572646f6d2e636f6d2f7765626c6f672f636f6e74656e742f62696e6172792f57696e646f77734c6976655772697465722f4d6f6c6f6b6169666f7256696d5f383630322f6d6f6c6f6b61695f6e6f726d616c5f736d616c6c5f332e706e67)
 
-### 5.5 [vim-vividchalk](https://github.com/tpope/vim-vividchalk.git)
+### 5.6 [vividchalk](https://github.com/tpope/vim-vividchalk)
 
-![alt text](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
+![vividchalk](http://www.vimninjas.com/images/posts/10vim/vividchalk.png)
 
 
 ## 6 Known problems

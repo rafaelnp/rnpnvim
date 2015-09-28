@@ -45,11 +45,7 @@ function! HLighteColorColumn()
 endfunction
 
 function! ShowTabs()
-	if exists("g:indenttype") && g:indenttype ==? "spaces"
-		setlocal listchars=eol:¬
-	else
-		setlocal listchars=tab:▸\ ,eol:¬
-	endif
+	setlocal listchars=tab:▸\ ,eol:¬
 	setlocal list
 endfunction
 
@@ -98,32 +94,6 @@ function! Ycmconf_exist()
 endfunction
 
 function! Config_cindent()
-
-	if exists("g:cindent")
-		let &l:tabstop=g:cindent
-		let &l:softtabstop=g:cindent
-		let &l:shiftwidth=g:cindent
-	else
-		setlocal shiftwidth=8 tabstop=8 softtabstop=8
-	endif
-endfunction
-
-
-" config indentation type (tabs of spaces) for all file types for now.
-" TODO: expand this configuration for each relevant file type.
-function! Config_indenttype()
-	if exists("g:indenttype")
-		if g:indenttype ==? "tabs"
-			setlocal noexpandtab
-		elseif g:indenttype ==? "spaces"
-			setlocal expandtab
-		else
-			setlocal noexpandtab
-		endif
-	else
-		setlocal noexpandtab
-	endif
-
-	retab
+	setlocal shiftwidth=8 tabstop=8 softtabstop=8
 endfunction
 

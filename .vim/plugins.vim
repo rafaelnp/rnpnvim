@@ -58,14 +58,21 @@ if has("autocmd")
 	au FileType c,cpp,perl let b:delimitMate_eol_marker = ";"
 endif
 
+"=====================================================
+" 7 - editorconfig
+"     https://github.com/editorconfig/editorconfig-vim
+"=====================================================
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
 "============================================
-" 7 - harlequin
+" 8 - harlequin
 "     https://github.com/nielsmadan/harlequin
 "============================================
 " Colorscheme plugin, no config necessary
 
 "======================================
-" 8 - howmuch
+" 9 - howmuch
 "     https://github.com/sk1418/HowMuch
 "======================================
 
@@ -75,31 +82,31 @@ let g:HowMuch_scale = 2
 let g:HowMuch_auto_engines = ['bc', 'vim', 'py']
 
 "======================================
-" 9 - man
-"     runtime/ftplugin/man.vim
+" 10 - man
+"      runtime/ftplugin/man.vim
 "======================================
 nnoremap K :Man <cword><cr>
 
 "======================================
-" 10 - molokai
+" 11 - molokai
 "     https://github.com/tomasr/molokai
 "======================================
 " Colorscheme plugin, no config necessary
 
 "=============================================
-" 11 - neobundle.vim
+" 12 - neobundle.vim
 "      https://github.com/Shougo/neobundle.vim
 "=============================================
 " Configured in the ~/.vim/bundle.vim file
 
 "=====================================
-" 12 - neomru
+" 13 - neomru
 "      https://github.com/shougo/neomru
 "=====================================
 " Configured in unite
 
 "================================================
-" 13 - nerdtree
+" 14 - nerdtree
 "      https://github.com/scrooloose/nerdtree.git
 "================================================
 
@@ -110,13 +117,13 @@ let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
 
 "============================================
-" 14 - numbers
+" 15 - numbers
 "      https://github.com/myusuf3/numbers.vim
 "============================================
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'undo']
 
 "========================================
-" 15 - rainbow parenthesis improved
+" 16 - rainbow parenthesis improved
 "      https://github.com/oblitum/rainbow
 "========================================
 
@@ -130,7 +137,7 @@ let g:rainbow_load_separately = [
 	\ ]
 
 "==========================================
-" 16 - tagbar
+" 17 - tagbar
 "      https://github.com/majutsushi/tagbar
 "      http://majutsushi.github.io/tagbar/
 "==========================================
@@ -176,7 +183,7 @@ let g:tagbar_type_armasm = {
 \}
 
 "========================================
-" 17 - undotree
+" 18 - undotree
 "      https://github.com/mbbill/undotree
 "========================================
 nnoremap <silent> <F6> :UndotreeToggle<CR>
@@ -185,19 +192,19 @@ let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_SplitWidth = 40
 
 "==================================================
-" 18 - unite-colorscheme
+" 19 - unite-colorscheme
 "      https://github.com/ujihisa/unite-colorscheme
 "==================================================
 " Configured in unite
 
 "===============================================
-" 19 - unite-outline
+" 20 - unite-outline
 "      https://github.com/h1mesuke/unite-outline
 "===============================================
 " Configured in unite
 
 "=========================================
-" 20 - Unite
+" 21 - Unite
 "      https://github.com/Shougo/unite.vim
 "=========================================
 
@@ -205,7 +212,7 @@ source ~/.vim/unite.vim
 
 
 "==========================================
-" 21 - vim-airline
+" 22 - vim-airline
 "      https://github.com/bling/vim-airline
 "==========================================
 
@@ -276,7 +283,7 @@ let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#eclim#enabled = 0
 
 "=================================================
-" 22 - vim-easymotion
+" 23 - vim-easymotion
 "      https://gitthub.com/Lokaltog/vim-easymotion
 "=================================================
 
@@ -289,7 +296,7 @@ nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
 
 "=======================================================
-" 23 - vim-flavoured-markdown
+" 24 - vim-flavoured-markdown
 "      https://github.com/jtratner/vim-flavored-markdown
 "=======================================================
 if has("autocmd")
@@ -300,24 +307,24 @@ if has("autocmd")
 endif
 
 "===========================================
-" 23 - vim-fugitive
+" 25 - vim-fugitive
 "      https://github.com/tpope/vim-fugitive
 "===========================================
 
 "======================================
-" 24 - vim-git
+" 26 - vim-git
 "      https://github.com/tpope/vim-git
 "======================================
 " Syntax plugin, no config necessary
 
 "===========================================
-" 25 - vim-gnupg
+" 27 - vim-gnupg
 "      https://github.com/jamessan/vim-gnupg
 "===========================================
 " No adicional config so far
 
 "========================================================
-" 26 - vim-indent-guides
+" 28 - vim-indent-guides
 "      https://github.com/nathanaelkane/vim-indent-guides
 "========================================================
 
@@ -332,14 +339,14 @@ let g:indent_guides_guide_size = 0
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'unite', 'tagbar']
 
 "======================================
-" 27 - vim-latex
+" 29 - vim-latex
 "      https://github.com/jcf/vim-latex
 "======================================
 
 let g:tex_flavor='latex'
 
 "====================================================
-" 28 - vim-nerdtree-tabs
+" 30 - vim-nerdtree-tabs
 "      https://github.com/jistr/vim-nerdtree-tabs.git
 "====================================================
 
@@ -349,7 +356,7 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff     = 0
 
 "==========================================
-" 29 - vim-signify
+" 31 - vim-signify
 "      https://github.com/mhinz/vim-signify
 "==========================================
 
@@ -371,7 +378,7 @@ highlight SignifySignDelete gui=bold  guifg=red
 highlight SignifySignChange gui=bold  guifg=darkorange
 
 "===========================================
-" 30 - vim-startify
+" 32 - vim-startify
 "      https://github.com/mhinz/vim-startify
 "===========================================
 
@@ -422,31 +429,31 @@ if has('gui_running')
 endif
 
 "=====================================================
-" 31 - vim-systemverilog
+" 33 - vim-systemverilog
 "      https://github.com/WeiChungWu/vim-SystemVerilog
 "=====================================================
 " Syntax plugin, no config necessary
 
 "===========================================
-" 32 - vim-vhdl
+" 34 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
 "===========================================
 " Syntax plugin, no config necessary
 
 "================================================
-" 33 - vim-vinegar
+" 35 - vim-vinegar
 "      https://github.com/dhruvasagar/vim-vinegar
 "================================================
 " No extra config is necessary
 
 "=============================================
-" 34 - vividchalk
+" 36 - vividchalk
 "      https://github.com/tpope/vim-vividchalk
 "=============================================
 " Colorscheme plugin, no config necessary
 
 "===========================================
-" 35 - vimexplorer
+" 37 - vimexplorer
 "      https://github.com/mbbill/VimExplorer
 "===========================================
 
@@ -464,13 +471,13 @@ elseif has('win32' || 'win64')
 endif
 
 "===========================================
-" 36 - vimproc
+" 38 - vimproc
 "      https://github.com/Shougo/vimproc.vim
 "===========================================
 "      Configured in ~/.vim/bundle.vim
 
 "============================================
-" 37 - Vinarise
+" 39 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 "============================================
 
@@ -480,7 +487,7 @@ cabbrev vimhex  Vinarise -split -encoding=utf-8<CR>
 nnoremap <leader>vv  :Vinarise -split -encoding=utf-8<CR>
 
 "===============================================
-" 38 - YouCompleteMe
+" 40 - YouCompleteMe
 "      https://github.com/Valloric/YouCompleteMe
 "===============================================
 
@@ -559,7 +566,7 @@ let g:ycm_goto_buffer_command = 'new-tab'
 "================
 "
 "=========================================
-" 38 - ultisnips
+" 40 - ultisnips
 "      https://github.com/SirVer/ultisnips
 "=========================================
 "let g:UltiSnipsExpandTrigger="<c-l>"
@@ -572,12 +579,12 @@ let g:ycm_goto_buffer_command = 'new-tab'
 
 
 "================================================
-" 39 - vim-easy-align
+" 41 - vim-easy-align
 "      https://github.com/junegunn/vim-easy-align
 "================================================
 "
 "===========================================
-" 40 - vim-snippets
+" 42 - vim-snippets
 "      https://github.com/honza/vim-snippets
 "===========================================
 

@@ -1,0 +1,10 @@
+# top-most editorconfig file
+root = true
+
+[*.vim]
+indent_style = tab
+indent_size  = 4
+
+[*.py]
+indent_style = tab
+indent_size  = 4

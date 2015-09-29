@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's vim config files
 
-Last update: 2015.06.02 (Di) 13:53:13 (UTC +0200 CEST)
+Last update: 2015.09.29 (Di) 01:55:05 (UTC +0200 CEST)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rafaelnp/rnpvim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
@@ -87,6 +87,7 @@ This Vim setup has the following requirements/dependencies:
 * [Python](http://www.python.org) 2.7 or newer
 * [Git](http://www.git-scm.com/) 1.7 or newer
 * [The Silver Search](http://geoff.greer.fm/ag/)
+* [EditorConfig](http://editorconfig.org/)
 
 
 ## 3 Installation
@@ -214,17 +215,19 @@ Each plugin documentation can be reached by typing `:help <plugin-name>`
 
 ### 4.4 [delimitmate](https://github.com/blueyed/delimitMate)
 
-### 4.5 [howmuch](https://github.com/sk1418/HowMuch)
+### 4.5 [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 
-### 4.6 [man.vim]($VIMRUNTIME/ftplugins/man.vim)(Pager for man pages)
+### 4.6 [howmuch](https://github.com/sk1418/HowMuch)
 
-### 4.7 [neoBundle.vim](https://github.com/Shougo/neobundle.vim) (Plugin manager)
+### 4.7 [man.vim]($VIMRUNTIME/ftplugins/man.vim)(Pager for man pages)
 
-### 4.8 [nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
+### 4.8 [neoBundle.vim](https://github.com/Shougo/neobundle.vim) (Plugin manager)
 
-### 4.9 [numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
+### 4.9 [nerdtree](https://github.com/scrooloose/nerdtree.git) (File browser)
 
-### 4.10 [rainbow parentheses improved](https://github.com/oblitum/rainbow)
+### 4.10 [numbers.vim](https://github.com/myusuf3/numbers.vim) (Line numbering)
+
+### 4.11 [rainbow parentheses improved](https://github.com/oblitum/rainbow)
 
 ### 4.12 [tagbar](https://github.com/majutsushi/tagbar) (Tag browser)
 

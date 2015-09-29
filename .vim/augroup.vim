@@ -3,7 +3,7 @@ if has("autocmd")
 	augroup generalformating
 		au!
 		autocmd BufCreate,BufLeave,BufWinLeave * call clearmatches()
-		autocmd BufWritePre * call RmTrailSpaces()
+		"autocmd BufWritePre * call RmTrailSpaces()
 		autocmd VimResized  * wincmd =
 		autocmd InsertLeave * set nopaste
 	augroup END
@@ -19,7 +19,7 @@ if has("autocmd")
 		au!
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call HLighteColorColumn()
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call HLightExtraSpaces()
-		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call Config_cindent()
+		"autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call Config_cindent()
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp call ShowTabs()
 		autocmd BufEnter,BufWinEnter *.c,*.cpp,*.h,*.hpp setlocal cindent
 		autocmd BufEnter,BufWinEnter *.c,*.h if !Ycmconf_exist() | let g:ycm_global_ycm_extra_conf='~/.vim/c/.ycm_extra_conf.py' | endif

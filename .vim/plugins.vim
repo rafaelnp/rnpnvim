@@ -225,36 +225,32 @@ if !exists('g:airline_symbols')
 endif
 
 " unicode symbols
-" TODO: test it under windows
-"let g:airline_left_sep = '»'
-"let g:airline_left_sep = '▶'
-"let g:airline_right_sep = '«'
-"let g:airline_right_sep = '◀'
-"let g:airline_symbols.linenr = '␊'
-"let g:airline_symbols.linenr = '␤'
-"let g:airline_symbols.linenr = '¶'
-"let g:airline_symbols.branch = '⎇'
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.paste = 'Þ'
-"let g:airline_symbols.paste = '∥'
-"let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
 
 " powerline symbols
-"let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_right_alt_sep = ''
-"let g:airline_symbols.branch = ''
-"let g:airline_symbols.readonly = ''
-"let g:airline_symbols.linenr = ''
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 " Set airline theme manually
 let g:airline_theme="kolor"
 " fix messed up symbols
-" TODO: test it under windows
-if has('unix')
-	let g:airline_symbols.space = "\ua0"
-endif
+"let g:airline_symbols.space = "\ua0"
 
 " enable/disable enhanced tabline.
 let g:airline#extensions#tabline#enabled = 1
@@ -328,11 +324,7 @@ endif
 "      https://github.com/nathanaelkane/vim-indent-guides
 "========================================================
 
-if exists("g:indenttype") && g:indenttype ==? "spaces"
-	let g:indent_guides_enable_on_vim_startup = 1
-else
-	let g:indent_guides_enable_on_vim_startup = 0
-endif
+let g:indent_guides_enable_on_vim_startup = 1
 
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_guide_size = 0
@@ -408,14 +400,14 @@ let g:startify_bookmarks = [
 
 " ascii text: http://patorjk.com/software/taag/
 let g:startify_custom_header = [
-            \'     __      ___             ______ _  _',
-            \'     \ \    / (_)           |____  | || |',
-            \'      \ \  / / _ _ __ ___       / /| || |_',
-            \'       \ \/ / | | `_ ` _ \     / / |__   _|',
-            \'        \  /  | | | | | | |   / / _   | |',
-            \'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
-            \ '',
-            \ ]
+			\'     __      ___             ______ _  _',
+			\'     \ \    / (_)           |____  | || |',
+			\'      \ \  / / _ _ __ ___       / /| || |_',
+			\'       \ \/ / | | `_ ` _ \     / / |__   _|',
+			\'        \  /  | | | | | | |   / / _   | |',
+			\'         \/   |_|_| |_| |_|  /_/ (_)  |_|',
+			\ '',
+			\ ]
 
 let g:startify_custom_footer = [
 	\ '',

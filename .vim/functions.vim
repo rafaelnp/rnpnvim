@@ -93,7 +93,3 @@ function! Ycmconf_exist()
 	endif
 endfunction
 
-function! Config_cindent()
-	setlocal shiftwidth=8 tabstop=8 softtabstop=8
-endfunction
-

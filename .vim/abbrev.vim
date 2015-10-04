@@ -22,10 +22,13 @@ cabbrev vhelp   vertical help
 cabbrev vimrc   ~/.vimrc
 
 " avoid annoying error messages
-cabbrev WQ wq
-cabbrev Wq wq
-cabbrev W  w
-cabbrev Q  q
+cabbrev Wqa  wqa
+cabbrev WQA  wqa
+cabbrev WQ   wq
+cabbrev Wq   wq
+cabbrev W    w
+cabbrev Q    q
+cabbrev E    e
 
 " Dutch
 iabbrev Belgie   België

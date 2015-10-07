@@ -26,6 +26,7 @@ cabbrev Wqa  wqa
 cabbrev WQA  wqa
 cabbrev WQ   wq
 cabbrev Wq   wq
+cabbrev Qa   qa
 cabbrev W    w
 cabbrev Q    q
 cabbrev E    e

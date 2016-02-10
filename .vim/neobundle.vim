@@ -172,6 +172,7 @@ NeoBundle 'https://github.com/vim-scripts/armasm'
 "================
 
 NeoBundle 'sk1418/HowMuch'
+NeoBundle 'https://github.com/vim-airline/vim-airline-themes'
 NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'VimExplorer', {
 \	'lazy' : 1,

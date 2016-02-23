@@ -238,5 +238,12 @@ source ~/.config/nvim/config.vim
 "==============
 " Mappings
 "==============
-"
+
 source ~/.config/nvim/mappings.vim
+
+"==============
+" Plugins
+"==============
+
+source ~/.config/nvim/plugins.vim
+

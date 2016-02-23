@@ -1,12 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'myusuf3/numbers.vim'
-Plug 'https://github.com/nielsmadan/harlequin'
-
-
-
 "===============
-"2 - Colorscheme
+"1 - Colorscheme
 "===============
 
 Plug 'vim-scripts/Colour-Sampler-Pack'
@@ -16,7 +11,7 @@ Plug 'https://github.com/nielsmadan/harlequin'
 Plug 'https://github.com/sjl/badwolf'
 
 "================
-"3 -  Programming
+"2 -  Programming
 "================
 
 "Plug 'Tagbar', {
@@ -99,6 +94,7 @@ Plug 'tpope/vim-fugitive'
 "\		],
 "\	},
 "\}
+
 Plug 'editorconfig/editorconfig-vim'
 
 "=========
@@ -147,6 +143,7 @@ Plug 'Shougo/neomru.vim'
 "\		],
 "\	},
 "\}
+
 Plug 'jamessan/vim-gnupg'
 Plug 'https://github.com/vim-scripts/armasm'
 
@@ -155,16 +152,17 @@ Plug 'https://github.com/vim-scripts/armasm'
 "================
 
 Plug 'sk1418/HowMuch'
-Plug 'https://github.com/vim-airline/vim-airline-themes'
 Plug 'https://github.com/bling/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline-themes'
 "Plug 'VimExplorer', {
 "\	'lazy' : 1,
 "\	'autoload' : {
 "\		'mappings' : 'F7',
 "\		'commands' : 'VE',
 "\	},
-"\}
+
 Plug 'myusuf3/numbers.vim'
+
  " mapping does not work when set to 1
 "Plug 'jistr/vim-nerdtree-tabs', {
 "\	'depends': 'https://github.com/scrooloose/nerdtree.git',
@@ -174,21 +172,13 @@ Plug 'myusuf3/numbers.vim'
 "\		'commands' : 'NERDTreeTabsToggle',
 "\	},
 "\}
-"Plug 'https://github.com/itchyny/calendar.vim', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'commands' : 'Calendar',
-"\	}
-"\}
+Plug 'https://github.com/itchyny/calendar.vim', { 'on': 'Calendar' }
+
 Plug 'https://github.com/Lokaltog/vim-easymotion'
 Plug 'https://github.com/Shougo/vinarise.vim'
 Plug 'https://github.com/mhinz/vim-startify.git'
-"Plug 'https://github.com/dhruvasagar/vim-vinegar', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'mappings' : '-'
-"\	}
-"\}
+Plug 'https://github.com/dhruvasagar/vim-vinegar', { 'on': '<Plug>-' }
+
 "Plug 'tpope/vim-git', {
 "\	'lazy' : 1,
 "\	'autoload' : {
@@ -199,13 +189,8 @@ Plug 'https://github.com/mhinz/vim-startify.git'
 "\		]
 "\	}
 "\}
-"Plug 'mbbill/undotree', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'mappings' : 'F6',
-"\		'commands' : 'UndotreeToggle',
-"\	},
-"\}
+
+Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 
 "=========================
 "7 - Vim built-in plugins
@@ -243,15 +228,15 @@ runtime! ftplugin/man.vim
 " Add plugins to &runtimepath
 call plug#end()
 
-"
+"==============
 " config
-"
-set nu
-colorscheme harlequin
-
+"==============
 filetype plugin indent on    " required!
 
-"
+source ~/.config/nvim/config.vim
+
+"==============
 " Mappings
+"==============
 "
 source ~/.config/nvim/mappings.vim

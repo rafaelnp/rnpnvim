@@ -14,26 +14,23 @@ Plug 'https://github.com/sjl/badwolf'
 "2 -  Programming
 "================
 
-"Plug 'Tagbar', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'c',
-"\			'cpp',
-"\			'vim',
-"\			'latex',
-"\			'make',
-"\			'python',
-"\			'sh',
-"\			'vhdl',
-"\			'verilog',
-"\		],
-"\	},
-"\}
+Plug 'Tagbar', {
+\	'for' : [
+\			'c',
+\			'cpp',
+\			'vim',
+\			'latex',
+\			'make',
+\			'python',
+\			'sh',
+\			'vhdl',
+\			'verilog',
+\		],
+\	}
+
 "Plug 'Valloric/YouCompleteMe', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
+"\	'on' :
+"\		[
 "\			'c',
 "\			'cpp',
 "\			'lua',
@@ -154,30 +151,19 @@ Plug 'https://github.com/vim-scripts/armasm'
 Plug 'sk1418/HowMuch'
 Plug 'https://github.com/bling/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
-"Plug 'VimExplorer', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'mappings' : 'F7',
-"\		'commands' : 'VE',
-"\	},
+Plug 'VimExplorer', { 'on' : [ 'F7','VE' ] }
 
 Plug 'myusuf3/numbers.vim'
 
- " mapping does not work when set to 1
-"Plug 'jistr/vim-nerdtree-tabs', {
-"\	'depends': 'https://github.com/scrooloose/nerdtree.git',
-"\	'lazy' : 0,
-"\	'autoload' : {
-"\		'mappings' : 'F9',
-"\		'commands' : 'NERDTreeTabsToggle',
-"\	},
-"\}
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
+
 Plug 'https://github.com/itchyny/calendar.vim', { 'on': 'Calendar' }
 
 Plug 'https://github.com/Lokaltog/vim-easymotion'
 Plug 'https://github.com/Shougo/vinarise.vim'
 Plug 'https://github.com/mhinz/vim-startify.git'
-Plug 'https://github.com/dhruvasagar/vim-vinegar', { 'on': '<Plug>-' }
+Plug 'https://github.com/dhruvasagar/vim-vinegar',
 
 "Plug 'tpope/vim-git', {
 "\	'lazy' : 1,

@@ -20,7 +20,6 @@ if has("browse")
 	set browsedir=buffer           " defaults to the current file's directory
 endif
 set completeopt=menu               " menu completion options
-set ttyfast                        " fast terminal connection
 set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
@@ -56,7 +55,7 @@ endif
 " centralize undo files
 " the directory must be created manually
 if has("persistent_undo")
-	set undodir=~/.vim/.undodir
+	set undodir=~/.config/nvim/.undodir
 	set undofile
 endif
 

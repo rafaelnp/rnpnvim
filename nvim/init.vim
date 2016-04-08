@@ -94,6 +94,8 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'benekastah/neomake'
+
 "=========
 "4 - Unite
 "=========

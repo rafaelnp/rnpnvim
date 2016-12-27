@@ -6,3 +6,6 @@
 .vim/doc/tags
 .vim/.cache
 *~
+
+nvim/.undodir/
+

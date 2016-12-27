@@ -23,6 +23,7 @@ set completeopt=menu               " menu completion options
 set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
+set modifiable
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has('multi_byte')

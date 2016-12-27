@@ -208,7 +208,7 @@ let g:undotree_SplitWidth = 40
 "      https://github.com/Shougo/unite.vim
 "=========================================
 
-source ~/.vim/unite.vim
+source ~/.config/nvim/unite.vim
 
 
 "==========================================
@@ -395,7 +395,8 @@ let g:startify_bookmarks = [
 			\'~/.config/nvim/config.vim',
 			\'~/.config/nvim/mappings.vim',
 			\'~/.config/nvim/neobundle.vim',
-			\'~/.config/nvim/plugins.vim'
+			\'~/.config/nvim/plugins.vim',
+			\'~/.config/nvim/unite.vim'
 			\]
 
 " ascii text: http://patorjk.com/software/taag/

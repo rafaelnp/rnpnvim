@@ -116,6 +116,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides', {
 \		],
 \	},
 \}
+NeoBundle 'editorconfig/editorconfig-vim'
 
 "=========
 "4 - Unite
@@ -171,6 +172,7 @@ NeoBundle 'https://github.com/vim-scripts/armasm'
 "================
 
 NeoBundle 'sk1418/HowMuch'
+NeoBundle 'https://github.com/vim-airline/vim-airline-themes'
 NeoBundle 'https://github.com/bling/vim-airline'
 NeoBundle 'VimExplorer', {
 \	'lazy' : 1,
@@ -216,7 +218,7 @@ NeoBundle 'tpope/vim-git', {
 \}
 NeoBundle 'mbbill/undotree', {
 \	'lazy' : 1,
-\   'autoload' : {
+\	'autoload' : {
 \		'mappings' : 'F6',
 \		'commands' : 'UndotreeToggle',
 \	},

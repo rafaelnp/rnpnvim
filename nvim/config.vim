@@ -4,7 +4,6 @@
 " General
 "========
 
-set nocompatible                   " no vi-compatibility
 set autochdir                      " disabled because of vimshell plugin
 set autowriteall                   " automatically save all buffers
 set autoread                       " load file modified outside vim
@@ -21,10 +20,10 @@ if has("browse")
 	set browsedir=buffer           " defaults to the current file's directory
 endif
 set completeopt=menu               " menu completion options
-set ttyfast                        " fast terminal connection
 set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
+set modifiable
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has('multi_byte')
@@ -57,7 +56,7 @@ endif
 " centralize undo files
 " the directory must be created manually
 if has("persistent_undo")
-	set undodir=~/.vim/.undodir
+	set undodir=~/.config/nvim/.undodir
 	set undofile
 endif
 

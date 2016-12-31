@@ -184,7 +184,9 @@ Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 "7 - Vim built-in plugins
 "=========================
 
-runtime! ftplugin/man.vim
+" BUG: causing problems at start, loading an empty buffer instead of the given
+"      filename
+"runtime! ftplugin/man.vim
 
 "===========================
 "8 - Under test/to be tested

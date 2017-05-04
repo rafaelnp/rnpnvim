@@ -1,4 +1,13 @@
-call plug#begin('~/.config/nvim/plugged')
+
+if has('unix') || has('mac')
+	"call plug#begin('~/.config/nvim/plugged') 
+	let g:nvimdir=$HOME . '/.config/nvim/'
+else " has("win32") || has("win64")
+	"call plug#begin('C:\Users\rnp\AppData\Local\nvim\plugged')
+	let g:nvimdir=$LOCALAPPDATA.'\nvim\'
+endif
+
+call plug#begin(g:nvimdir . 'plugged')
 
 "===============
 "1 - Colorscheme
@@ -14,7 +23,7 @@ Plug 'https://github.com/sjl/badwolf'
 "2 -  Programming
 "================
 
-Plug 'Tagbar', {
+Plug 'majutsushi/tagbar', {
 \	'for' : [
 \			'c',
 \			'cpp',
@@ -92,7 +101,7 @@ Plug 'tpope/vim-fugitive'
 "\	},
 "\}
 
-Plug 'editorconfig/editorconfig-vim'
+"Plug 'editorconfig/editorconfig-vim'
 
 Plug 'benekastah/neomake'
 
@@ -153,7 +162,7 @@ Plug 'https://github.com/vim-scripts/armasm'
 Plug 'sk1418/HowMuch'
 Plug 'https://github.com/bling/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
-Plug 'VimExplorer', { 'on' : [ 'F7','VE' ] }
+Plug 'mbbill/VimExplorer', { 'on' : [ 'F7','VE' ] }
 
 Plug 'myusuf3/numbers.vim'
 
@@ -223,17 +232,22 @@ call plug#end()
 "==============
 filetype plugin indent on    " required!
 
-source ~/.config/nvim/config.vim
+exec 'source ' . g:nvimdir . 'config.vim'
+"source C:\Users\rnp\AppData\Local\nvim\config.vim
+"source ~/.config/nvim/config.vim
 
 "==============
 " Mappings
 "==============
 
-source ~/.config/nvim/mappings.vim
+exec 'source ' . g:nvimdir . 'mappings.vim'
+"source C:\Users\rnp\AppData\Local\nvim\mappings.vim
+"source ~/.config/nvim/mappings.vim
 
 "==============
 " Plugins
 "==============
-
-source ~/.config/nvim/plugins.vim
+exec 'source ' . g:nvimdir . 'plugins.vim'
+"source C:\Users\rnp\AppData\Local\nvim\plugins.vim
+"source ~/.config/nvim/plugins.vim
 

@@ -37,72 +37,8 @@ Plug 'majutsushi/tagbar', {
 \		],
 \	}
 
-"Plug 'Valloric/YouCompleteMe', {
-"\	'on' :
-"\		[
-"\			'c',
-"\			'cpp',
-"\			'lua',
-"\			'python',
-"\			'sh',
-"\			'tex',
-"\			'verilog',
-"\			'vhdl',
-"\			'vim',
-"\			'zsh',
-"\		],
-"\	},
-"\}
-
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-
-"Plug 'https://github.com/SirVer/ultisnips'
-"Plug 'https://github.com/oblitum/rainbow', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'c',
-"\			'cpp',
-"\			'vim',
-"\			'sh',
-"\		],
-"\	},
-"\}
-"Plug 'https://github.com/Raimondi/delimitMate', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'c',
-"\			'cpp',
-"\			'vim',
-"\			'latex',
-"\			'python',
-"\			'sh',
-"\			'vhdl',
-"\			'verilog',
-"\		],
-"\	},
-"\}
-"Plug 'honza/vim-snippets'
-"Plug 'nathanaelkane/vim-indent-guides', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'c',
-"\			'cpp',
-"\			'vim',
-"\			'latex',
-"\			'python',
-"\			'sh',
-"\			'vhdl',
-"\			'verilog',
-"\		],
-"\	},
-"\}
-
-"Plug 'editorconfig/editorconfig-vim'
-
 Plug 'benekastah/neomake'
 
 "=========
@@ -117,40 +53,6 @@ Plug 'Shougo/neomru.vim'
 "================
 "5 - Filetypes
 "================
-
-"Plug 'https://github.com/WeiChungWu/vim-SystemVerilog', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : "verilog",
-"\	},
-"\}
-"Plug 'https://github.com/Cognoscan/vim-vhdl', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : "vhdl",
-"\	},
-"\}
-"Plug 'kergoth/aftersyntaxc.vim', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : "c",
-"\	},
-"\}
-"Plug 'https://github.com/jtratner/vim-flavored-markdown', {
-"\	'lazy' : 1,
-"\   'autoload' : {
-"\		'filetypes' : "markdown",
-"\	},
-"\}
-"Plug 'https://github.com/jcf/vim-latex', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'tex',
-"\			'latex',
-"\		],
-"\	},
-"\}
 
 Plug 'jamessan/vim-gnupg'
 Plug 'https://github.com/vim-scripts/armasm'
@@ -176,17 +78,6 @@ Plug 'https://github.com/Shougo/vinarise.vim'
 Plug 'https://github.com/mhinz/vim-startify.git'
 Plug 'https://github.com/dhruvasagar/vim-vinegar',
 
-"Plug 'tpope/vim-git', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'gitcommit',
-"\			'gitconfig',
-"\			'gitsendemail',
-"\		]
-"\	}
-"\}
-
 Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 
 "=========================
@@ -200,24 +91,6 @@ Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 "===========================
 "8 - Under test/to be tested
 "===========================
-
-"Plug 'https://github.com/junegunn/vim-easy-align'
-"Plug 'https://github.com/dhruvasagar/vim-table-mode/'
-"Issue 29:
-"Plug 'https://github.com/chrisbra/csv.vim'
-"Issue 18:
-"Plug 'https://github.com/jiangmiao/auto-pairs'
-"Issue 21:
-"Plug 'https://github.com/Rykka/colorv.vim
-"Plug 'https://github.com/Rykka/galaxy.vim
-"Plug 'https://github.com/benmills/vimux
-"Plug 'https://github.com/terryma/vim-multiple-cursors (multiple cursors)
-
-"Plug 'https://github.com/ujihisa/vim-rengbang'
-"Plug 'https://github.com/Shougo/vimfiler.vim'
-" fugitive uses augroup fugitive.
-" Plug 'tpope/vim-fugitive', { 'augroup' : 'fugitive'}
-
 
 "=========================
 "9 - Plug post config

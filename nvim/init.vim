@@ -39,16 +39,16 @@ Plug 'majutsushi/tagbar', {
 
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'benekastah/neomake'
+"Plug 'benekastah/neomake'
 
 "=========
 "4 - Unite
 "=========
 
-Plug 'Shougo/unite.vim'
-Plug 'ujihisa/unite-colorscheme'
-Plug 'ujihisa/unite-outline'
-Plug 'Shougo/neomru.vim'
+"Plug 'Shougo/unite.vim'
+"Plug 'ujihisa/unite-colorscheme'
+"Plug 'ujihisa/unite-outline'
+"Plug 'Shougo/neomru.vim'
 
 "================
 "5 - Filetypes

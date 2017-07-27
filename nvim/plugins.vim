@@ -208,7 +208,7 @@ let g:undotree_SplitWidth = 40
 "      https://github.com/Shougo/unite.vim
 "=========================================
 
-exec 'source ' . g:nvimdir . 'unite.vim'
+"exec 'source ' . g:nvimdir . 'unite.vim'
 
 
 "==========================================

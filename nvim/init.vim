@@ -1,6 +1,6 @@
 
 if has('unix') || has('mac')
-	"call plug#begin('~/.config/nvim/plugged') 
+	"call plug#begin('~/.config/nvim/plugged')
 	let g:nvimdir=$HOME . '/.config/nvim/'
 else " has("win32") || has("win64")
 	"call plug#begin('C:\Users\rnp\AppData\Local\nvim\plugged')
@@ -45,7 +45,7 @@ Plug 'tpope/vim-fugitive'
 "4 - Unite
 "=========
 
-"Plug 'Shougo/unite.vim'
+Plug 'Shougo/denite.nvim'
 "Plug 'ujihisa/unite-colorscheme'
 "Plug 'ujihisa/unite-outline'
 "Plug 'Shougo/neomru.vim'

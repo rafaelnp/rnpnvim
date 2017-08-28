@@ -54,28 +54,45 @@ Plug 'Shougo/denite.nvim'
 "5 - Filetypes
 "================
 
+" gnupg integration
 Plug 'jamessan/vim-gnupg'
+
+" arm assembly highlighting
 Plug 'https://github.com/vim-scripts/armasm'
 
 "================
 "6 - Miscelaneous
 "================
 
+" calculator
 Plug 'sk1418/HowMuch'
+
+" custom statusline
 Plug 'https://github.com/bling/vim-airline'
+
+" custom statusline theme
 Plug 'https://github.com/vim-airline/vim-airline-themes'
+
+" full tab file browser
 Plug 'mbbill/VimExplorer', { 'on' : [ 'F7','VE' ] }
 
 Plug 'myusuf3/numbers.vim'
 
+" side pane file browser
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
 
 Plug 'https://github.com/itchyny/calendar.vim', { 'on': 'Calendar' }
 
 Plug 'https://github.com/Lokaltog/vim-easymotion'
+
+" hexadecimal viewer
 Plug 'https://github.com/Shougo/vinarise.vim'
+
+" startup screen configuration
 Plug 'https://github.com/mhinz/vim-startify.git'
+
+" 'in-buffer' file browser
 Plug 'https://github.com/dhruvasagar/vim-vinegar',
 
 Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }

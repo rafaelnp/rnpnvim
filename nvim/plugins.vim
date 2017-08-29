@@ -479,6 +479,20 @@ cabbrev vimhex  Vinarise -split -encoding=utf-8<CR>
 nnoremap <leader>vv  :Vinarise -split -encoding=utf-8<CR>
 
 "=====================================================
+" 40 - Vim ESearch
+"      https://github.com/eugen0329/vim-esearch
+"=====================================================
+
+let g:esearch = {
+  \ 'adapter':    'ag',
+  \ 'backend':    'nvim',
+  \ 'out':        'qflist',
+  \ 'batch_size': 1000,
+  \ 'use':        ['visual', 'hlsearch', 'last'],
+  \}
+
+
+"=====================================================
 " 40 - nvim-completion-manager
 "      https://github.com/roxma/nvim-completion-manage
 "=====================================================

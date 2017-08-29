@@ -97,6 +97,8 @@ Plug 'https://github.com/dhruvasagar/vim-vinegar',
 
 Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 
+Plug 'eugen0329/vim-esearch'
+
 "=========================
 "7 - Vim built-in plugins
 "=========================

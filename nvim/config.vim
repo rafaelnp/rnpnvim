@@ -146,7 +146,8 @@ set ead=both                 " set in which direction 'equalalways' works (ver, 
 set wildmenu                 " use autocompletion on command line
 set cursorline               " sets cursor line highlight. cool :)
 set display=uhex             " show unprintable characters hexadecimal
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:-,extends:>,precedes:<,nbsp:+,space:·
+set list
 
 if has('mouse')
 	set mouse=a              " enable mouse in all modes

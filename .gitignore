@@ -9,4 +9,5 @@
 
 nvim/.undodir/
 nvim/plugged
+nvim/autoload
 

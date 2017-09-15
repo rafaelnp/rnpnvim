@@ -122,20 +122,6 @@ let NERDTreeShowLineNumbers   = 1
 "============================================
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'undo']
 
-"========================================
-" 16 - rainbow parenthesis improved
-"      https://github.com/oblitum/rainbow
-"========================================
-
-au FileType c,cpp,objc,objcpp call rainbow#load()
-let g:rainbow_active = 1
-
-let g:rainbow_load_separately = [
-	\ [ '*.c' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-	\ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
-	\ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-	\ ]
-
 "==========================================
 " 17 - tagbar
 "      https://github.com/majutsushi/tagbar

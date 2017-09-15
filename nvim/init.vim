@@ -41,6 +41,8 @@ Plug 'https://github.com/mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 "Plug 'benekastah/neomake'
 
+Plug 'https://github.com/w0rp/ale'
+
 "=========
 "4 - Unite
 "=========
@@ -123,6 +125,8 @@ call plug#end()
 " config
 "==============
 filetype plugin indent on    " required!
+
+exec 'source ' . g:nvimdir . 'ginit.vim'
 
 exec 'source ' . g:nvimdir . 'config.vim'
 "source C:\Users\rnp\AppData\Local\nvim\config.vim

@@ -11,7 +11,7 @@
 " Workaround to load vim-plug
 source ~/.vim/autoload/plug.vim
 
-source ~/.vim/init.vim
+source ~/.vim/vim-plug.vim
 
 " Vim basic configuration.
 source ~/.vim/config.vim

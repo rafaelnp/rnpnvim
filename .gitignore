@@ -8,6 +8,6 @@
 *~
 
 nvim/.undodir/
-nvim/autoload/
-nvim/plugged/
+nvim/plugged
+nvim/autoload
 

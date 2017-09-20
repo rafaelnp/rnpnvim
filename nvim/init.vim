@@ -1,4 +1,13 @@
-call plug#begin('~/.config/nvim/plugged')
+
+if has('unix') || has('mac')
+	"call plug#begin('~/.config/nvim/plugged')
+	let g:nvimdir=$HOME . '/.config/nvim/'
+else " has("win32") || has("win64")
+	"call plug#begin('C:\Users\rnp\AppData\Local\nvim\plugged')
+	let g:nvimdir=$LOCALAPPDATA.'\nvim\'
+endif
+
+call plug#begin(g:nvimdir . 'plugged')
 
 "===============
 "1 - Colorscheme
@@ -14,7 +23,7 @@ Plug 'https://github.com/sjl/badwolf'
 "2 -  Programming
 "================
 
-Plug 'Tagbar', {
+Plug 'majutsushi/tagbar', {
 \	'for' : [
 \			'c',
 \			'cpp',
@@ -28,157 +37,72 @@ Plug 'Tagbar', {
 \		],
 \	}
 
-"Plug 'Valloric/YouCompleteMe', {
-"\	'on' :
-"\		[
-"\			'c',
-"\			'cpp',
-"\			'lua',
-"\			'python',
-"\			'sh',
-"\			'tex',
-"\			'verilog',
-"\			'vhdl',
-"\			'vim',
-"\			'zsh',
-"\		],
-"\	},
-"\}
-
 Plug 'https://github.com/mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
+"Plug 'benekastah/neomake'
 
-"Plug 'https://github.com/SirVer/ultisnips'
-"Plug 'https://github.com/oblitum/rainbow', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'c',
-"\			'cpp',
-"\			'vim',
-"\			'sh',
-"\		],
-"\	},
-"\}
-"Plug 'https://github.com/Raimondi/delimitMate', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'c',
-"\			'cpp',
-"\			'vim',
-"\			'latex',
-"\			'python',
-"\			'sh',
-"\			'vhdl',
-"\			'verilog',
-"\		],
-"\	},
-"\}
-"Plug 'honza/vim-snippets'
-"Plug 'nathanaelkane/vim-indent-guides', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'c',
-"\			'cpp',
-"\			'vim',
-"\			'latex',
-"\			'python',
-"\			'sh',
-"\			'vhdl',
-"\			'verilog',
-"\		],
-"\	},
-"\}
-
-Plug 'editorconfig/editorconfig-vim'
-
-Plug 'benekastah/neomake'
+Plug 'https://github.com/w0rp/ale'
 
 "=========
 "4 - Unite
 "=========
 
-Plug 'Shougo/unite.vim'
-Plug 'ujihisa/unite-colorscheme'
-Plug 'ujihisa/unite-outline'
-Plug 'Shougo/neomru.vim'
+Plug 'Shougo/denite.nvim'
+"Plug 'ujihisa/unite-colorscheme'
+"Plug 'ujihisa/unite-outline'
+"Plug 'Shougo/neomru.vim'
 
 "================
 "5 - Filetypes
 "================
 
-"Plug 'https://github.com/WeiChungWu/vim-SystemVerilog', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : "verilog",
-"\	},
-"\}
-"Plug 'https://github.com/Cognoscan/vim-vhdl', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : "vhdl",
-"\	},
-"\}
-"Plug 'kergoth/aftersyntaxc.vim', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : "c",
-"\	},
-"\}
-"Plug 'https://github.com/jtratner/vim-flavored-markdown', {
-"\	'lazy' : 1,
-"\   'autoload' : {
-"\		'filetypes' : "markdown",
-"\	},
-"\}
-"Plug 'https://github.com/jcf/vim-latex', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'tex',
-"\			'latex',
-"\		],
-"\	},
-"\}
-
+" gnupg integration
 Plug 'jamessan/vim-gnupg'
+
+" arm assembly highlighting
 Plug 'https://github.com/vim-scripts/armasm'
 
 "================
 "6 - Miscelaneous
 "================
 
+" calculator
 Plug 'sk1418/HowMuch'
+
+" custom statusline
 Plug 'https://github.com/bling/vim-airline'
+
+" custom statusline theme
 Plug 'https://github.com/vim-airline/vim-airline-themes'
-Plug 'VimExplorer', { 'on' : [ 'F7','VE' ] }
+
+" full tab file browser
+Plug 'mbbill/VimExplorer', { 'on' : [ 'F7','VE' ] }
 
 Plug 'myusuf3/numbers.vim'
 
+" side pane file browser
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
 
 Plug 'https://github.com/itchyny/calendar.vim', { 'on': 'Calendar' }
 
 Plug 'https://github.com/Lokaltog/vim-easymotion'
+
+" hexadecimal viewer
 Plug 'https://github.com/Shougo/vinarise.vim'
+
+" startup screen configuration
 Plug 'https://github.com/mhinz/vim-startify.git'
+
+" 'in-buffer' file browser
 Plug 'https://github.com/dhruvasagar/vim-vinegar',
 
-"Plug 'tpope/vim-git', {
-"\	'lazy' : 1,
-"\	'autoload' : {
-"\		'filetypes' : [
-"\			'gitcommit',
-"\			'gitconfig',
-"\			'gitsendemail',
-"\		]
-"\	}
-"\}
-
 Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
+
+Plug 'eugen0329/vim-esearch'
+
+" Underline the word under cursor
+Plug 'https://github.com/itchyny/vim-cursorword'
 
 "=========================
 "7 - Vim built-in plugins
@@ -191,24 +115,6 @@ Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 "===========================
 "8 - Under test/to be tested
 "===========================
-
-"Plug 'https://github.com/junegunn/vim-easy-align'
-"Plug 'https://github.com/dhruvasagar/vim-table-mode/'
-"Issue 29:
-"Plug 'https://github.com/chrisbra/csv.vim'
-"Issue 18:
-"Plug 'https://github.com/jiangmiao/auto-pairs'
-"Issue 21:
-"Plug 'https://github.com/Rykka/colorv.vim
-"Plug 'https://github.com/Rykka/galaxy.vim
-"Plug 'https://github.com/benmills/vimux
-"Plug 'https://github.com/terryma/vim-multiple-cursors (multiple cursors)
-
-"Plug 'https://github.com/ujihisa/vim-rengbang'
-"Plug 'https://github.com/Shougo/vimfiler.vim'
-" fugitive uses augroup fugitive.
-" Plug 'tpope/vim-fugitive', { 'augroup' : 'fugitive'}
-
 
 "=========================
 "9 - Plug post config
@@ -223,17 +129,24 @@ call plug#end()
 "==============
 filetype plugin indent on    " required!
 
-source ~/.config/nvim/config.vim
+exec 'source ' . g:nvimdir . 'ginit.vim'
+
+exec 'source ' . g:nvimdir . 'config.vim'
+"source C:\Users\rnp\AppData\Local\nvim\config.vim
+"source ~/.config/nvim/config.vim
 
 "==============
 " Mappings
 "==============
 
-source ~/.config/nvim/mappings.vim
+exec 'source ' . g:nvimdir . 'mappings.vim'
+"source C:\Users\rnp\AppData\Local\nvim\mappings.vim
+"source ~/.config/nvim/mappings.vim
 
 "==============
 " Plugins
 "==============
-
-source ~/.config/nvim/plugins.vim
+exec 'source ' . g:nvimdir . 'plugins.vim'
+"source C:\Users\rnp\AppData\Local\nvim\plugins.vim
+"source ~/.config/nvim/plugins.vim
 

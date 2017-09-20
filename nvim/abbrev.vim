@@ -20,6 +20,11 @@ cabbrev abbrev  ~/.vim/abbrev.vim
 cabbrev aucmd   ~/.vim/augroup.vim
 cabbrev vhelp   vertical help
 cabbrev vimrc   ~/.vimrc
+cabbrev W       w
+cabbrev QW      qw
+cabbrev qW      qw
+cabbrev Qw      qw
+cabbrev Q       q
 
 " avoid annoying error messages
 cabbrev Wqa  wqa

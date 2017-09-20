@@ -401,7 +401,8 @@ let g:startify_bookmarks = [
 			\'~/.vim/augroup.vim',
 			\'~/.vim/config.vim',
 			\'~/.vim/mappings.vim',
-			\'~/.vim/plugins.vim'
+			\'~/.vim/plugins.vim',
+			\'~/.vim/vim-plug.vim'
 			\]
 
 " ascii text: http://patorjk.com/software/taag/

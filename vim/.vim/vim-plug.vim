@@ -24,6 +24,9 @@ Plug 'https://github.com/sjl/badwolf'
 "2 -  Programming
 "================
 
+" tag generator
+Plug 'ludovicchabant/vim-gutentags'
+
 Plug 'majutsushi/tagbar', {
 \	'for' : [
 \			'c',

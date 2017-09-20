@@ -38,6 +38,12 @@ nnoremap <buffer> <a-r> :%s/\r//g<CR>
 " opens a new table
 nnoremap <a-t> :tabnew<CR>
 
+" go to next tab
+nnoremap <a-j> :tabnext<CR>
+
+" go to previous tab
+nnoremap <a-k> :tabprevious<CR>
+
 " Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”?
 " Use this
 nnoremap <silent> <a-c> :nohlsearch<CR>

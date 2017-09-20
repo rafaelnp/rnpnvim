@@ -194,7 +194,7 @@ let g:undotree_SplitWidth = 40
 "      https://github.com/Shougo/denite.nvim
 "===========================================
 
-exec 'source ' . g:nvimdir . 'unite.vim'
+exec 'source ' . g:nvimdir . 'denite.vim'
 
 
 "==========================================

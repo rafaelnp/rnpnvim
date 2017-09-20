@@ -13,8 +13,8 @@ let g:unite_data_directory="~/.vim/.cache/unite"
 if has('unix')
 	let g:unite_source_grep_command = 'ag'
 	let g:unite_source_grep_default_opts =
-          \ '--line-numbers --column --nocolor --nogroup --hidden --ignore ' .
-          \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+	\ '--line-numbers --column --nocolor --nogroup --hidden --ignore ' .
+	\  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
 	let g:unite_source_grep_recursive_opt = ''
 elseif has('win32') || ('win64')
 	let g:unite_source_grep_command = 'grep'

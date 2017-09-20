@@ -1,13 +1,16 @@
-*.sw*
-.vim/bundle
-.vim/ultisnips
-.vim/.undodir
-*.pyc
-.vim/doc/tags
-.vim/.cache
-*~
+vim/.vim/.cache
+vim/.vim/.undodir
+vim/.vim/autoload
+vim/.vim/config
+vim/.vim/doc/tags
+vim/.vim/plugged
+vim/.vim/ultisnips
 
 nvim/.undodir/
-nvim/plugged
 nvim/autoload
+nvim/plugged
+
+*.sw*
+*.pyc
+*~
 

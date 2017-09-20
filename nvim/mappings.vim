@@ -35,6 +35,8 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " removes carriage return
 nnoremap <buffer> <a-r> :%s/\r//g<CR>
 
+" go/jump to the link under the cursor
+nnoremap <a-g> <c-]><CR>
 " opens a new table
 nnoremap <a-t> :tabnew<CR>
 

@@ -17,6 +17,8 @@ filetype plugin indent on    " required!
 exec 'source ' . g:nvimdir . 'ginit.vim'
 
 exec 'source ' . g:nvimdir . 'config.vim'
+
+exec 'source ' . g:nvimdir . 'functions.vim'
 "source C:\Users\rnp\AppData\Local\nvim\config.vim
 "source ~/.config/nvim/config.vim
 

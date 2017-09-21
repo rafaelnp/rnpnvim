@@ -375,13 +375,15 @@ let g:startify_skiplist = [
 		\ ]
 
 let g:startify_bookmarks = [
-			\g:nvimdir . 'init.vim',
 			\g:nvimdir . 'abbrev.vim',
 			\g:nvimdir . 'augroup.vim',
 			\g:nvimdir . 'config.vim',
+			\g:nvimdir . 'denite.vim',
+			\g:nvimdir . 'functions.vim',
+			\g:nvimdir . 'init.vim',
 			\g:nvimdir . 'mappings.vim',
-			\g:nvimdir . 'neobundle.vim',
-			\g:nvimdir . 'plugins.vim'
+			\g:nvimdir . 'plugins.vim',
+			\g:nvimdir . 'vim-plug.vim'
 			\]
 
 " ascii text: http://patorjk.com/software/taag/

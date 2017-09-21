@@ -16,6 +16,9 @@ call denite#custom#option('_', 'prompt', '>>')
 " General purpose - list all sources
 nnoremap [denite]p :Denite file_rec line<cr>
 nnoremap [denite]b :Denite buffer<cr>
+
+" open menu
+nnoremap [denite]m :Denite menu<cr>
 nnoremap [denite]r :<C-u>Denite file_rec/async:!<CR>
 nnoremap [denite]M :Denite colorscheme<CR>
 nnoremap [denite]t :<C-u>Denite -buffer-name=buffer  buffer<cr>
@@ -24,3 +27,16 @@ nnoremap [denite]t :<C-u>Denite -buffer-name=buffer  buffer<cr>
 nnoremap [denite]o :Denite  -auto-preview outline<CR>
 
 nnoremap <silent> [denite]me :<C-u>Denite output:message<CR>
+
+let s:menus = {}
+let s:menus.settings = {'description': 'Configuration files (rafaelnp/rnpvim)'}
+let s:menus.settings.file_candidates = [
+	\   ['  Configuration Files                         │', ''],
+	\   ['──────────────────────────────────────────────┤', ''],
+	\   ['▶ General settings: config/config.vim         │', g:nvimdir.'/config.vim'],
+	\   ['▶ Installed plugins: config/plugins.vim       │', g:nvimdir.'/plugins.vim'],
+	\   ['▶ Global Key mappings: config/mappings.vim    │', g:nvimdir.'/mappings.vim'],
+	\   ['▶ Plugin key-mappings config/vim-plug         │', g:nvimdir.'/vim-plug.vim'],
+	\   ['──────────────────────────────────────────────┘', '']
+\ ]
+call denite#custom#var('menu', 'menus', s:menus)

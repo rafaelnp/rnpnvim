@@ -59,7 +59,7 @@ Plug 'jamessan/vim-gnupg'
 Plug 'https://github.com/vim-scripts/armasm'
 
 " Github Flavoured Markdown
-https://github.com/rhysd/vim-gfm-syntax
+Plug 'https://github.com/rhysd/vim-gfm-syntax'
 
 "================
 "6 - Miscelaneous

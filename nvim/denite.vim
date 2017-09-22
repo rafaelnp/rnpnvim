@@ -31,12 +31,14 @@ nnoremap <silent> [denite]me :<C-u>Denite output:message<CR>
 let s:menus = {}
 let s:menus.settings = {'description': 'Configuration files (rafaelnp/rnpvim)'}
 let s:menus.settings.file_candidates = [
-	\   ['  Configuration Files                         │', ''],
-	\   ['──────────────────────────────────────────────┤', ''],
-	\   ['▶ General settings: config/config.vim         │', g:nvimdir.'/config.vim'],
-	\   ['▶ Installed plugins: config/plugins.vim       │', g:nvimdir.'/plugins.vim'],
-	\   ['▶ Global Key mappings: config/mappings.vim    │', g:nvimdir.'/mappings.vim'],
-	\   ['▶ Plugin key-mappings config/vim-plug         │', g:nvimdir.'/vim-plug.vim'],
-	\   ['──────────────────────────────────────────────┘', '']
+	\   ['  Configuration Files                             │', ''],
+	\   ['──────────────────────────────────────────────────┤', ''],
+	\   ['▶ Abbreviations:              config/abbrev.vim   │', g:nvimdir.'/abbrev.vim'],
+	\   ['▶ General settings:           config/config.vim   │', g:nvimdir.'/config.vim'],
+	\   ['▶ Denite settings:            config/denite.vim   │', g:nvimdir.'/denite.vim'],
+	\   ['▶ Global Key mappings:        config/mappings.vim │', g:nvimdir.'/mappings.vim'],
+	\   ['▶ Installed plugins:          config/plugins.vim  │', g:nvimdir.'/plugins.vim'],
+	\   ['▶ Plugin management settings: config/vim-plug.vim │', g:nvimdir.'/vim-plug.vim'],
+	\   ['──────────────────────────────────────────────────┘', '']
 \ ]
 call denite#custom#var('menu', 'menus', s:menus)

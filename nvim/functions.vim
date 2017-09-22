@@ -22,8 +22,22 @@ function! HLightTrailSpaces()
 	call matchadd('TrailingSpaces','\s\+$')
 endfunction
 
+" this function turns on space highlight for 3 groups:
+" 1 - trailing spaces
+" 2 - spaces after tabs
+" 3 - spaces at the line start (indentation)
+"
+" if the userconfig.vim exists and the specified indenation type is "spaces",
+" then the group (3) is disabled
+"
 function! HLightExtraSpaces()
-	call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+	if exists("g:indenttype") && g:indenttype ==? "spaces"
+		call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\ \+\)\(\%#\)\@!')
+	elseif exists("g:indenttype") && g:indenttype ==? "tabs"
+		call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+	else
+		call matchadd('ExtraSpaces','\(\s\+$\| \+\ze\t\|^\t*\zs \+\)\(\%#\)\@!')
+	endif
 endfunction
 
 function! HLighteColorColumn()
@@ -31,8 +45,8 @@ function! HLighteColorColumn()
 endfunction
 
 function! ShowTabs()
-		setlocal listchars=tab:▸\ ,eol:¬
-		setlocal list
+	setlocal listchars=tab:▸\ ,eol:¬
+	setlocal list
 endfunction
 
 function! Reloadconfig()
@@ -49,7 +63,7 @@ endfunction
 
 function! SetWindowSize()
 	"if line('$') == 1 && getline(1) == ''
-	"	 return
+	"	return
 	"else
 		if has("gui_running")
 			set lines=45 columns=90
@@ -77,31 +91,5 @@ function! Ycmconf_exist()
 	else
 		return 0
 	endif
-endfunction
-
-
-function! Config_cindent()
-
-if exists("g:cindent")
-	let &l:tabstop=g:cindent
-	let &l:softtabstop=g:cindent
-	let &l:shiftwidth=g:cindent
-else
-	setlocal shiftwidth=8 tabstop=8 softtabstop=8
-endif
-
-if exists("g:cindenttype")
-	if g:cindenttype ==? "tabs"
-		setlocal noexpandtab
-	elseif g:cindenttype ==? "spaces"
-		setlocal expandtab
-	else
-		setlocal noexpandtab
-	endif
-else
-	setlocal noexpandtab
-endif
-
-retab
 endfunction
 

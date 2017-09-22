@@ -12,7 +12,7 @@
 Name:        RnpVim help
 Version:     0.5.0
 Author:      Rafael do Nascimento Pereira <rnp@25ghz.net>
-Last update: 2015.05.30 (Sa) 17:35:26 (UTC +0200 CEST)
+Last update: 2015.06.02 (Di) 00:04:13 (UTC +0200 CEST)
 License:     GPLv2
 
 ==============================================================================
@@ -49,6 +49,7 @@ CONTENTS                                                     *rnpvim-contents*
 			vim-fugitive.............. |plugins-mappings-vim-fugitive|
 			vim-git................... |plugins-mappings-vim-git|
 			vim-gnupg................. |plugins-mappings-vim-gnupg|
+			vim-indent-guides ........ |plugins-mappings-vim-indent-guides|
 			vim-latex................. |plugins-mappings-vim-latex|
 			vim-nerdtree-tabs......... |plugins-mappings-nerdtree-tabs|
 			vim-signify............... |plugins-mappings-signify|
@@ -139,6 +140,7 @@ The rnpvim uses so far the following plugins:
   vim-fugitive
   vim-git
   vim-gnupg
+  vim-indent-guides
   vim-latex
   vim-nerdtree-tabs
   vim-signify

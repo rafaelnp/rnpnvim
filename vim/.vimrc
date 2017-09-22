@@ -8,13 +8,10 @@
 "
 " This file is just an entry point for a modulatized configuration
 "
-" Load all Vundle managed plugins
-source ~/.vim/neobundle.vim
+" Workaround to load vim-plug
+source ~/.vim/autoload/plug.vim
 
-" Load local user config, if exists
-if filereadable(expand("$HOME/.vim/userconfig.vim"))
-	source ~/.vim/userconfig.vim
-endif
+source ~/.vim/vim-plug.vim
 
 " Vim basic configuration.
 source ~/.vim/config.vim
@@ -33,3 +30,4 @@ source ~/.vim/abbrev.vim
 
 " Autogroup/autocmd
 source ~/.vim/augroup.vim
+

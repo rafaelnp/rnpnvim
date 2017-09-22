@@ -4,7 +4,6 @@
 " General
 "========
 
-set nocompatible                   " no vi-compatibility
 set autochdir                      " disabled because of vimshell plugin
 set autowriteall                   " automatically save all buffers
 set autoread                       " load file modified outside vim
@@ -21,10 +20,10 @@ if has("browse")
 	set browsedir=buffer           " defaults to the current file's directory
 endif
 set completeopt=menu               " menu completion options
-set ttyfast                        " fast terminal connection
 set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
+set modifiable
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has('multi_byte')
@@ -32,7 +31,7 @@ if has('multi_byte')
 		set termencoding=utf-8
 		set encoding=utf-8
 		set fileformat=unix
-		set fileformats=unix
+		set fileformats=unix,dos
 	elseif has('mac') || has('macunix')
 		set termencoding=utf-8
 		set encoding=utf-8
@@ -57,7 +56,7 @@ endif
 " centralize undo files
 " the directory must be created manually
 if has("persistent_undo")
-	set undodir=~/.vim/.undodir
+	set undodir=~/.config/nvim/.undodir
 	set undofile
 endif
 
@@ -77,9 +76,7 @@ set fo=tcrqn        " See Help (:help fo-table)
 set ai              " autoindent
 set si              " smartindent
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
-if exists("g:usertextwidth")
-	let &textwidth=g:usertextwidth
-endif
+"set textwidth
 
 set cpoptions=BceF  " compatible options
 
@@ -100,27 +97,11 @@ set cpoptions=BceF  " compatible options
 "              indentation.
 " softtabstop = Set softtabstop to control how many columns vim uses when you
 "               hit Tab in insert mode
-if exists("g:indent")
-	let &tabstop=g:indent
-	let &softtabstop=g:indent
-	let &shiftwidth=g:indent
-else
-	set tabstop=4          " tab spacing (settings below are to unify it)
-	set softtabstop=4      " unify
-	set shiftwidth=4       " unify
-endif
 
-if exists("g:indenttype")
-	if g:indenttype ==? "tabs"
-		setlocal noexpandtab
-	elseif g:indenttype ==? "spaces"
-		setlocal expandtab
-	else
-		setlocal noexpandtab
-	endif
-else
-	setlocal noexpandtab
-endif
+set tabstop=4          " tab spacing (settings below are to unify it)
+set softtabstop=4      " unify
+set shiftwidth=4       " unify
+set noexpandtab
 
 
 "==========
@@ -155,11 +136,8 @@ set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
 
-if exists("g:usercolorscheme")
-	execute 'colorscheme '. g:usercolorscheme
-else
-	colorscheme vimhut
-endif
+colorscheme harlequin
+
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
 set matchtime=2              " Tenths of a second to show the matching parten
@@ -168,7 +146,8 @@ set ead=both                 " set in which direction 'equalalways' works (ver, 
 set wildmenu                 " use autocompletion on command line
 set cursorline               " sets cursor line highlight. cool :)
 set display=uhex             " show unprintable characters hexadecimal
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:-,extends:>,precedes:<,nbsp:+,space:·
+set list
 
 if has('mouse')
 	set mouse=a              " enable mouse in all modes
@@ -180,19 +159,13 @@ if has('gui_running')
 	set bg=dark
 
 	if has('unix')
-		if exists("g:guifont")
-			let &guifont=g:guifont
-		else
-			set guifont=Monospace\ 9
-		endif
+		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
+		"set guifont=Monospace\ 9
 	elseif has ('mac')
 		set guifont=Monospace\ 9
 	elseif has ('win32') || ('win64')
-		if exists("g:winguifont")
-			let &guifont=g:winguifont
-		else
-			set guifont=Lucida_Sans_Typewriter:h9
-		endif
+		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h8
+		"set guifont=Lucida_Sans_Typewriter:h9
 	endif
 
 	set mousemodel=popup

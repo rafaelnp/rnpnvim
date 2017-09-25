@@ -81,7 +81,10 @@ Plug 'myusuf3/numbers.vim'
 
 " side pane file browser
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
+
+" Does not work with loading on demand
+"Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
+Plug 'jistr/vim-nerdtree-tabs'
 
 Plug 'https://github.com/itchyny/calendar.vim', { 'on': 'Calendar' }
 

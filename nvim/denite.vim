@@ -2,16 +2,29 @@
 " 17 - Denite
 "      https://github.com/Shougo/denite.nvim
 "      https://github.com/sodiumjoe/dotfiles/blob/master/vimrc#L179
+"      https://github.com/rafi/vim-config/blob/master/config/plugins/all.vim
 "=========================================
-" The prefix key.
-nnoremap [denite] <Nop>
-nmap <space> [denite]
 
+"================================================================================
+" 17.1 - general options
+"================================================================================
+"
 " disable devicons for denite because it's slow
 let g:webdevicons_enable_denite = 0
 
 " change default cursor
 call denite#custom#option('_', 'prompt', '>>')
+
+"================================================================================
+" 17.2 - key mapping
+"================================================================================
+
+" The prefix key.
+nnoremap [denite] <Nop>
+nmap <space> [denite]
+
+call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
 
 " General purpose - list all sources
 nnoremap [denite]p :Denite file_rec line<cr>
@@ -28,6 +41,10 @@ nnoremap [denite]o :Denite  -auto-preview outline<CR>
 
 nnoremap <silent> [denite]me :<C-u>Denite output:message<CR>
 
+
+"================================================================================
+" 17.3 - Menus
+"================================================================================
 let s:menus = {}
 let s:menus.settings = {'description': 'Configuration files (rafaelnp/rnpvim)'}
 let s:menus.settings.file_candidates = [

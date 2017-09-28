@@ -112,9 +112,13 @@ nnoremap K :Man <cword><cr>
 
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeChDirMode         = 1
-let NERDTreeQuitOnOpen        = 1
+let NERDTreeQuitOnOpen        = 0
 let NERDTreeShowHidden        = 1
 let NERDTreeShowLineNumbers   = 1
+
+if has("win32") || has("win64")
+	let NERDTreeIgnore = ['\.DAT$', '\.LOG1$', '\.LOG1$', '\c^ntuser\..*']
+endif
 
 "============================================
 " 15 - numbers

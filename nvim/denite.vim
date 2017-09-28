@@ -15,6 +15,32 @@ let g:webdevicons_enable_denite = 0
 " change default cursor
 call denite#custom#option('_', 'prompt', '>>')
 
+call denite#custom#option('_', {
+	\ 'empty': 0,
+	\ 'winheight': 16,
+	\ 'short_source_names': 1,
+	\ 'vertical_preview': 1,
+\ })
+
+" FIND and GREP COMMANDS
+if executable('ag')
+	" The Silver Searcher
+	call denite#custom#var('file_rec', 'command',
+		\ ['ag', '-U', '--hidden', '--follow', '--nocolor', '--nogroup', '-g', ''])
+
+	" Setup ignore patterns in your .agignore file!
+	" https://github.com/ggreer/the_silver_searcher/wiki/Advanced-Usage
+
+	call denite#custom#var('grep', 'command', ['ag'])
+	call denite#custom#var('grep', 'recursive_opts', [])
+	call denite#custom#var('grep', 'pattern_opt', [])
+	call denite#custom#var('grep', 'separator', ['--'])
+	call denite#custom#var('grep', 'final_opts', [])
+	call denite#custom#var('grep', 'default_opts',
+			\ [ '--vimgrep', '--smart-case', '--hidden' ])
+endif
+
+
 "================================================================================
 " 17.2 - key mapping
 "================================================================================
@@ -28,23 +54,40 @@ call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'nor
 
 " General purpose - list all sources
 nnoremap [denite]p :Denite file_rec line<cr>
+
+" list all buffers
 nnoremap [denite]b :Denite buffer<cr>
 
-" open menu
+" open user custom menu
 nnoremap [denite]m :Denite menu<cr>
+
+" search list file recursively
 nnoremap [denite]r :<C-u>Denite file_rec<CR>
+
+" show installed colorschemes
 nnoremap [denite]M :Denite colorscheme<CR>
-nnoremap [denite]t :<C-u>Denite -buffer-name=buffer  buffer<cr>
+
+" search for patern in the current buffer lines
+nnoremap [denite]l :Denite line<CR>
+
+" execute grep in the current directory
+nnoremap [denite]g :Denite grep<CR>
+
+"nnoremap [denite]t :<C-u>Denite -buffer-name=buffer  buffer<cr>
 
 " show document outline
 nnoremap [denite]o :Denite  -auto-preview outline<CR>
 
+" show output messages
 nnoremap <silent> [denite]me :<C-u>Denite output:message<CR>
 
 
 "================================================================================
 " 17.3 - Menus
 "================================================================================
+"
+"TODO: Add menu for vim-plug. git, zsh
+
 let s:menus = {}
 let s:menus.settings = {'description': 'Configuration files (rafaelnp/rnpvim)'}
 let s:menus.settings.file_candidates = [

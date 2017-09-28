@@ -32,7 +32,7 @@ nnoremap [denite]b :Denite buffer<cr>
 
 " open menu
 nnoremap [denite]m :Denite menu<cr>
-nnoremap [denite]r :<C-u>Denite file_rec/async:!<CR>
+nnoremap [denite]r :<C-u>Denite file_rec<CR>
 nnoremap [denite]M :Denite colorscheme<CR>
 nnoremap [denite]t :<C-u>Denite -buffer-name=buffer  buffer<cr>
 

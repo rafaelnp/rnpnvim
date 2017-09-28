@@ -37,3 +37,4 @@ exec 'source ' . g:nvimdir . 'plugins.vim'
 "source C:\Users\rnp\AppData\Local\nvim\plugins.vim
 "source ~/.config/nvim/plugins.vim
 
+exec 'source ' . g:nvimdir . 'abbrev.vim'

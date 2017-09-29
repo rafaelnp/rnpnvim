@@ -62,7 +62,10 @@ nnoremap [denite]b :Denite buffer<cr>
 nnoremap [denite]m :Denite menu<cr>
 
 " search list file recursively
-nnoremap [denite]r :<C-u>Denite file_rec<CR>
+nnoremap [denite]fr :<C-u>Denite file_rec<CR>
+
+" search list file in the current directory
+nnoremap [denite]f :<C-u>Denite file<CR>
 
 " show installed colorschemes
 nnoremap [denite]M :Denite colorscheme<CR>
@@ -89,6 +92,7 @@ nnoremap <silent> [denite]me :<C-u>Denite output:message<CR>
 "TODO: Add menu for vim-plug. git, zsh
 
 let s:menus = {}
+
 let s:menus.settings = {'description': 'Configuration files (rafaelnp/rnpvim)'}
 let s:menus.settings.file_candidates = [
 	\   ['  Configuration Files                             │', ''],
@@ -100,5 +104,17 @@ let s:menus.settings.file_candidates = [
 	\   ['▶ Installed plugins:          config/plugins.vim  │', g:nvimdir.'/plugins.vim'],
 	\   ['▶ Plugin management settings: config/vim-plug.vim │', g:nvimdir.'/vim-plug.vim'],
 	\   ['──────────────────────────────────────────────────┘', '']
-\ ]
+	\]
+
+let s:menus.vimplug = {'description': 'Plugin management (vim-plug)'}
+let s:menus.vimplug.command_candidates = [
+	\   ['  Configuration Files                             │', ''],
+	\   ['──────────────────────────────────────────────────┤', ''],
+	\   ['▶ Install:                    PlugInstall         │', 'PlugInstall'],
+	\   ['▶ Update plugins:             PlugUpdate          │', 'PlugUpdate'],
+	\   ['▶ Update vim-plug:            PlugUPgrade         │', 'PlugUpgrade'],
+	\   ['▶ Status:                     PlugStatus          │', 'PlugUpgrade'],
+	\   ['──────────────────────────────────────────────────┘', '']
+	\ ]
+
 call denite#custom#var('menu', 'menus', s:menus)

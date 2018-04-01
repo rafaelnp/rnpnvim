@@ -97,7 +97,7 @@ Plug 'https://github.com/Shougo/vinarise.vim'
 Plug 'https://github.com/mhinz/vim-startify.git'
 
 " 'in-buffer' file browser
-Plug 'https://github.com/dhruvasagar/vim-vinegar',
+Plug 'jeetsukumaran/vim-filebeagle'
 
 Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 

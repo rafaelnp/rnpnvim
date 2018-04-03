@@ -1,6 +1,6 @@
 # rnpvim: Rafael Pereira's Neovim and Vim config files
 
-Last update: 2017.09.20 (Mi) 16:15:28 (UTC +2)
+Last update: 2018.04.02 (Mo) 01:14:09 (UTC +0200 CEST)
 
 This Vim setup is based on my daily workflow at work/home, where is normaly use
 C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so

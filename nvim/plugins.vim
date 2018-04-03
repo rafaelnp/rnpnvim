@@ -489,6 +489,7 @@ let g:esearch = {
 "      https://github.com/roxma/nvim-completion-manage
 "=====================================================
 
+set statusline+=%{gutentags#statusline()}
 
 "================
 " To be installed

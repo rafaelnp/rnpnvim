@@ -39,6 +39,9 @@ Plug 'tpope/vim-fugitive'
 " asynchronous linter
 Plug 'https://github.com/w0rp/ale'
 
+" find and replace
+ Plug 'https://github.com/brooth/far.vim'
+
 "=========
 "4 - Unite
 "=========

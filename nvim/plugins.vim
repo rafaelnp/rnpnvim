@@ -461,7 +461,7 @@ endif
 "      Configured in ~/.vim/bundle.vim
 
 "============================================
-" 39 - Vinarise
+" 38 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 "============================================
 
@@ -471,7 +471,7 @@ cabbrev vimhex  Vinarise -split -encoding=utf-8<CR>
 nnoremap <leader>vv  :Vinarise -split -encoding=utf-8<CR>
 
 "=====================================================
-" 40 - Vim ESearch
+" 39 - Vim ESearch
 "      https://github.com/eugen0329/vim-esearch
 "=====================================================
 
@@ -490,6 +490,12 @@ let g:esearch = {
 "=====================================================
 
 set statusline+=%{gutentags#statusline()}
+
+"=====================================================
+"41 - far.vim
+"     Plug 'https://github.com/brooth/far.vim'
+"=====================================================
+"
 
 "================
 " To be installed

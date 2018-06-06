@@ -109,6 +109,8 @@ Plug 'eugen0329/vim-esearch'
 " Underline the word under cursor
 Plug 'https://github.com/itchyny/vim-cursorword'
 
+Plug 'yuttie/comfortable-motion.vim'
+
 "=========================
 "7 - Vim built-in plugins
 "=========================

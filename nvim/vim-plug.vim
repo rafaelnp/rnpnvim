@@ -15,6 +15,8 @@ Plug 'https://github.com/sjl/badwolf'
 "2 -  Programming
 "================
 
+Plug 'editorconfig/editorconfig-vim'
+
 " tag generator
 Plug 'ludovicchabant/vim-gutentags'
 

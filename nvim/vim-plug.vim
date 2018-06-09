@@ -15,6 +15,8 @@ Plug 'https://github.com/sjl/badwolf'
 "2 -  Programming
 "================
 
+Plug 'davidhalter/jedi-vim'
+
 Plug 'editorconfig/editorconfig-vim'
 
 " tag generator

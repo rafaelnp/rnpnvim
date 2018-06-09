@@ -63,6 +63,7 @@ This Vim setup has the following requirements/dependencies:
 * [Git](http://www.git-scm.com/) 2.10 or newer
 * [The Silver Search](http://geoff.greer.fm/ag/)
 * [EditorConfig](http://editorconfig.org/)
+* [pyton-jedi](https://jedi.readthedocs.io/en/latest/)
 
 
 ## 3 Installation

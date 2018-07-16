@@ -420,6 +420,14 @@ set statusline+=%{gutentags#statusline()}
 
 "=====================================================
 " 31 - far.vim
-"      Plug 'https://github.com/brooth/far.vim'
+"      https://github.com/brooth/far.vim
 "=====================================================
+
+
+"=====================================================
+" 32 - vim-filebeagle
+"      https://github.com/jeetsukumaran/vim-filebeagle
+"=====================================================
+let g:filebeagle_show_hidden=1
+let g:filebeagle_show_line_numbers=1
 

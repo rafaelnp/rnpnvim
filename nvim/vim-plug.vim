@@ -20,7 +20,19 @@ Plug 'davidhalter/jedi-vim'
 Plug 'editorconfig/editorconfig-vim'
 
 " tag generator
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags', {
+\	'for' : [
+\			'c',
+\			'cpp',
+\			'vim',
+\			'latex',
+\			'make',
+\			'python',
+\			'sh',
+\			'vhdl',
+\			'verilog',
+\		],
+\	}
 
 Plug 'majutsushi/tagbar', {
 \	'for' : [

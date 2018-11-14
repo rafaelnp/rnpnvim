@@ -10,6 +10,12 @@ Plug 'https://github.com/tomasr/molokai'
 Plug 'https://github.com/tpope/vim-vividchalk.git'
 Plug 'https://github.com/nielsmadan/harlequin'
 Plug 'https://github.com/sjl/badwolf'
+Plug 'https://github.com/drewtempelmeyer/palenight.vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'rakr/vim-one'
+Plug 'semibran/vim-colors-synthetic'
+Plug 'schickele/vim-nachtleben'
+Plug 'ErichDonGubler/vim-sublime-monokai'
 
 "================
 "2 -  Programming

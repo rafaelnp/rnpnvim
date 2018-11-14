@@ -113,9 +113,9 @@ set noexpandtab
 set hlsearch      " highlight search patern
 set incsearch     " incremental search
 set ignorecase
-set smartcase     " Override the 'ignorecase' option if the
-                  " search pattern contains upper case characters. Only used when
-                  " the search pattern is typed and 'ignorecase' option is on
+set smartcase       " Override the 'ignorecase' option if the
+					" search pattern contains upper case characters. Only used when
+					" the search pattern is typed and 'ignorecase' option is on
 
 " wildmenu: ignore these extensions
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls

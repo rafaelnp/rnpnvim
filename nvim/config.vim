@@ -24,6 +24,7 @@ set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
 set modifiable
+set clipboard+=unnamedplus
 
 " workaround for (failing) autoread
 au FocusGained * :checktime
@@ -145,7 +146,8 @@ if (has("termguicolors"))
 endif
 
 set bg=dark
-colorscheme sublimemonokai
+colorscheme vividchalk
+"colorscheme sublimemonokai
 "colorscheme one
 "colorscheme ayu
 "colorscheme harlequin
@@ -168,7 +170,6 @@ endif
 
 if has('gui_running')
 	set guioptions=aAgi      " see: help guioptions
-	set bg=dark
 
 	if has('unix')
 		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
@@ -182,7 +183,6 @@ if has('gui_running')
 
 	set mousemodel=popup
 else
-	set bg=light
 	" Enable 256 colors in terminal
 	if &term == 'xterm' || &term == 'screen' || &term =='terminator' || &term == 'gnome-terminal'
 		set t_Co=256

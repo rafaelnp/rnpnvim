@@ -24,6 +24,10 @@ set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
 set modifiable
+set clipboard+=unnamedplus
+
+" workaround for (failing) autoread
+au FocusGained * :checktime
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has('multi_byte')
@@ -110,9 +114,9 @@ set noexpandtab
 set hlsearch      " highlight search patern
 set incsearch     " incremental search
 set ignorecase
-set smartcase     " Override the 'ignorecase' option if the
-                  " search pattern contains upper case characters. Only used when
-                  " the search pattern is typed and 'ignorecase' option is on
+set smartcase       " Override the 'ignorecase' option if the
+					" search pattern contains upper case characters. Only used when
+					" the search pattern is typed and 'ignorecase' option is on
 
 " wildmenu: ignore these extensions
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
@@ -136,7 +140,17 @@ set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
 
-colorscheme harlequin
+
+if (has("termguicolors"))
+	set termguicolors
+endif
+
+set bg=dark
+colorscheme vividchalk
+"colorscheme sublimemonokai
+"colorscheme one
+"colorscheme ayu
+"colorscheme harlequin
 
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
@@ -156,7 +170,6 @@ endif
 
 if has('gui_running')
 	set guioptions=aAgi      " see: help guioptions
-	set bg=dark
 
 	if has('unix')
 		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
@@ -170,7 +183,6 @@ if has('gui_running')
 
 	set mousemodel=popup
 else
-	set bg=light
 	" Enable 256 colors in terminal
 	if &term == 'xterm' || &term == 'screen' || &term =='terminator' || &term == 'gnome-terminal'
 		set t_Co=256

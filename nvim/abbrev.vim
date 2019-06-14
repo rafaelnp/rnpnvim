@@ -19,12 +19,15 @@ cabbrev funcs   ~/.vim/functions.vim
 cabbrev abbrev  ~/.vim/abbrev.vim
 cabbrev aucmd   ~/.vim/augroup.vim
 cabbrev vhelp   vertical help
+cabbrev vh      vertical help
 cabbrev vimrc   ~/.vimrc
 cabbrev W       w
 cabbrev QW      qw
 cabbrev qW      qw
 cabbrev Qw      qw
 cabbrev Q       q
+cabbrev help    tab help
+cabbrev h       tab help
 
 " avoid annoying error messages
 cabbrev Wqa  wqa

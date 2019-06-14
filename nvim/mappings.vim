@@ -103,6 +103,9 @@ nnoremap <c-up>     <c-w>K
 nnoremap <c-left>   <c-w>H
 nnoremap <c-right>  <c-w>L
 
+" close window
+nnoremap <c-c>      :close
+
 " 4 - Miscelaneous mappings
 
 " Insert current date and time
@@ -133,3 +136,10 @@ vnoremap <F1> <nop>
 
 " disable Ex mode (maybe this key could be used for something else
 nnoremap Q <nop>
+
+" 5 - terminal mappings
+
+" Use ESC to exit terminal mode
+tnoremap <Esc> <C-\><C-n>
+
+

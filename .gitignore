@@ -9,6 +9,7 @@ vim/.vim/ultisnips
 nvim/.undodir/
 nvim/autoload
 nvim/plugged
+nvim/.netrwhist
 
 tags
 *.sw*

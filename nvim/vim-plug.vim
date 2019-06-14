@@ -10,13 +10,35 @@ Plug 'https://github.com/tomasr/molokai'
 Plug 'https://github.com/tpope/vim-vividchalk.git'
 Plug 'https://github.com/nielsmadan/harlequin'
 Plug 'https://github.com/sjl/badwolf'
+Plug 'https://github.com/drewtempelmeyer/palenight.vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'rakr/vim-one'
+Plug 'semibran/vim-colors-synthetic'
+Plug 'schickele/vim-nachtleben'
+Plug 'ErichDonGubler/vim-sublime-monokai'
 
 "================
 "2 -  Programming
 "================
 
+Plug 'davidhalter/jedi-vim'
+
+Plug 'editorconfig/editorconfig-vim'
+
 " tag generator
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags', {
+\	'for' : [
+\			'c',
+\			'cpp',
+\			'vim',
+\			'latex',
+\			'make',
+\			'python',
+\			'sh',
+\			'vhdl',
+\			'verilog',
+\		],
+\	}
 
 Plug 'majutsushi/tagbar', {
 \	'for' : [
@@ -38,6 +60,9 @@ Plug 'tpope/vim-fugitive'
 
 " asynchronous linter
 Plug 'https://github.com/w0rp/ale'
+
+" find and replace
+ Plug 'https://github.com/brooth/far.vim'
 
 "=========
 "4 - Unite
@@ -81,7 +106,10 @@ Plug 'myusuf3/numbers.vim'
 
 " side pane file browser
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
+
+" Does not work with loading on demand
+"Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
+Plug 'jistr/vim-nerdtree-tabs'
 
 Plug 'https://github.com/itchyny/calendar.vim', { 'on': 'Calendar' }
 
@@ -94,7 +122,7 @@ Plug 'https://github.com/Shougo/vinarise.vim'
 Plug 'https://github.com/mhinz/vim-startify.git'
 
 " 'in-buffer' file browser
-Plug 'https://github.com/dhruvasagar/vim-vinegar',
+Plug 'jeetsukumaran/vim-filebeagle'
 
 Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 
@@ -102,6 +130,8 @@ Plug 'eugen0329/vim-esearch'
 
 " Underline the word under cursor
 Plug 'https://github.com/itchyny/vim-cursorword'
+
+Plug 'yuttie/comfortable-motion.vim'
 
 "=========================
 "7 - Vim built-in plugins

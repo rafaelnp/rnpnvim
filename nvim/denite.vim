@@ -9,6 +9,9 @@
 " 17.1 - general options
 "================================================================================
 "
+" avoid errors if plugin is not available
+try
+
 " disable devicons for denite because it's slow
 let g:webdevicons_enable_denite = 0
 
@@ -85,8 +88,6 @@ nnoremap [denite]l :Denite line<CR>
 " execute grep in the current directory
 nnoremap [denite]g :Denite grep<CR>
 
-"nnoremap [denite]t :<C-u>Denite -buffer-name=buffer  buffer<cr>
-
 " show document outline
 nnoremap [denite]o :Denite outline<CR>
 
@@ -127,3 +128,8 @@ let s:menus.vimplug.command_candidates = [
 	\ ]
 
 call denite#custom#var('menu', 'menus', s:menus)
+
+catch
+	echo 'denite is not installed. Add it to vim-plug plugin list and run :PlugInstall'
+endtry
+

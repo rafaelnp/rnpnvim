@@ -37,6 +37,7 @@ Plug 'ludovicchabant/vim-gutentags', {
 \			'sh',
 \			'vhdl',
 \			'verilog',
+\			'lua',
 \		],
 \	}
 
@@ -51,6 +52,7 @@ Plug 'majutsushi/tagbar', {
 \			'sh',
 \			'vhdl',
 \			'verilog',
+\			'lua',
 \		],
 \	}
 

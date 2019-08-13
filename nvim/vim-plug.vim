@@ -66,14 +66,15 @@ Plug 'https://github.com/w0rp/ale'
 " find and replace
  Plug 'https://github.com/brooth/far.vim'
 
-"=========
-"4 - Unite
-"=========
+"==========
+"4 - Deinte
+"==========
 
 Plug 'Shougo/denite.nvim'
 Plug 'ujihisa/unite-colorscheme'
 Plug 'ujihisa/unite-outline'
 Plug 'Shougo/neomru.vim'
+Plug 'Shougo/neoyank.vim'
 
 "================
 "5 - Filetypes

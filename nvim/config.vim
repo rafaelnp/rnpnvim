@@ -132,13 +132,14 @@ endif
 tab all                      " open a new tab instead of a new vim instance
 set showcmd                  " show command in last line of screen
 set laststatus=2             " statusline always visible
-set shortmess=aToO           " see: help shortmess
+set shortmess=aToOc          " see: help shortmess
 set ruler                    " Show cursor line and column number position
 set number                   " show line numbers
 set scrolloff=2              " number of screen lines to keep above and below the cursor.
 set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
+set signcolumn=yes
 
 
 if (has("termguicolors"))

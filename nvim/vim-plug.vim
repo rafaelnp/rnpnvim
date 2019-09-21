@@ -21,6 +21,9 @@ Plug 'ErichDonGubler/vim-sublime-monokai'
 "2 -  Programming
 "================
 
+" conquer of completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'davidhalter/jedi-vim'
 
 Plug 'editorconfig/editorconfig-vim'
@@ -61,7 +64,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'benekastah/neomake'
 
 " asynchronous linter
-Plug 'https://github.com/w0rp/ale'
+"Plug 'https://github.com/w0rp/ale'
 
 " find and replace
  Plug 'https://github.com/brooth/far.vim'

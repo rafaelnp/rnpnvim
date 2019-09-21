@@ -19,8 +19,11 @@ let g:webdevicons_enable_denite = 0
 call denite#custom#option('_', 'prompt', '>>')
 
 call denite#custom#option('_', {
-	\ 'empty': 0,
+	\ 'split': 'horizontal',
+	\ 'start_filter': 0,
+	\ 'autoresize': 0,
 	\ 'winheight': 16,
+	\ 'empty': 0,
 	\ 'short_source_names': 1,
 	\ 'vertical_preview': 1,
 \ })
@@ -61,7 +64,8 @@ function! s:denite_my_settings() abort
 	nnoremap <silent><buffer><expr> <ESC> denite#do_map('quit')
 	nnoremap <silent><buffer><expr> q     denite#do_map('quit')
 	nnoremap <silent><buffer><expr> i     denite#do_map('open_filter_buffer')
-	nnoremap <silent><buffer><expr> <Space>  denite#do_map('toggle_select').'j'
+	nnoremap <silent><buffer><expr> <Space>  denite#do_map('toggle_select')
+	"nnoremap <silent><buffer><expr> <Space>  denite#do_map('toggle_select').'j'
 	nnoremap <silent><buffer><expr> y   denite#do_map('do_action', 'yank')
 endfunction
 
@@ -69,12 +73,20 @@ autocmd FileType denite-filter call s:denite_filter_settings()
 function! s:denite_filter_settings() abort
 	nnoremap <silent><buffer><expr> <Esc>  denite#do_map('quit')
 	nnoremap <silent><buffer><expr> q      denite#do_map('quit')
-	inoremap <silent><buffer><expr> <C-c>  denite#do_map('quit')
+	inoremap <silent><buffer><expr> <C-c>  denite#do_map('denite_filter_quit')
+	inoremap <silent><buffer><expr> <C-t>  denite#do_map('do_action', 'tabopen')
+	inoremap <silent><buffer><expr> <S-v>  denite#do_map('do_action', 'vsplit')
+	inoremap <silent><buffer><expr> <S-h>  denite#do_map('do_action', 'split')
+
 	"inoremap <silent><buffer>       kk     <Esc><C-w>p
 	"nnoremap <silent><buffer>       kk     <C-w>p
 	"inoremap <silent><buffer>       jj     <Esc><C-w>p
 	"nnoremap <silent><buffer>       jj     <C-w>p
 endfunction
+
+call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+
 
 " General purpose - list all sources
 nnoremap [denite]r :Denite file/rec line<cr>

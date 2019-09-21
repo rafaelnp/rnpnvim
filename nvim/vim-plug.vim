@@ -6,11 +6,11 @@ call plug#begin(g:nvimdir . 'plugged')
 "===============
 
 Plug 'vim-scripts/Colour-Sampler-Pack'
-Plug 'https://github.com/tomasr/molokai'
+Plug 'tomasr/molokai'
 Plug 'https://github.com/tpope/vim-vividchalk.git'
-Plug 'https://github.com/nielsmadan/harlequin'
-Plug 'https://github.com/sjl/badwolf'
-Plug 'https://github.com/drewtempelmeyer/palenight.vim'
+Plug 'nielsmadan/harlequin'
+Plug 'sjl/badwolf'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'
 Plug 'semibran/vim-colors-synthetic'
@@ -59,18 +59,18 @@ Plug 'majutsushi/tagbar', {
 \		],
 \	}
 
-Plug 'https://github.com/mhinz/vim-signify'
+Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 "Plug 'benekastah/neomake'
 
 " asynchronous linter
-"Plug 'https://github.com/w0rp/ale'
+"Plug 'w0rp/ale'
 
 " find and replace
- Plug 'https://github.com/brooth/far.vim'
+ Plug 'brooth/far.vim'
 
 "==========
-"4 - Deinte
+"4 - Denite
 "==========
 
 Plug 'Shougo/denite.nvim'
@@ -87,10 +87,10 @@ Plug 'Shougo/neoyank.vim'
 Plug 'jamessan/vim-gnupg'
 
 " arm assembly highlighting
-Plug 'https://github.com/vim-scripts/armasm'
+Plug 'vim-scripts/armasm'
 
 " Github Flavoured Markdown
-Plug 'https://github.com/rhysd/vim-gfm-syntax'
+Plug 'rhysd/vim-gfm-syntax'
 
 "================
 "6 - Miscelaneous
@@ -100,10 +100,10 @@ Plug 'https://github.com/rhysd/vim-gfm-syntax'
 Plug 'sk1418/HowMuch'
 
 " custom statusline
-Plug 'https://github.com/bling/vim-airline'
+Plug 'bling/vim-airline'
 
 " custom statusline theme
-Plug 'https://github.com/vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
 " full tab file browser
 Plug 'mbbill/VimExplorer', { 'on' : [ 'F7','VE' ] }
@@ -117,12 +117,12 @@ Plug 'scrooloose/nerdtree'
 "Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
 Plug 'jistr/vim-nerdtree-tabs'
 
-Plug 'https://github.com/itchyny/calendar.vim', { 'on': 'Calendar' }
+Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
 
-Plug 'https://github.com/Lokaltog/vim-easymotion'
+Plug 'Lokaltog/vim-easymotion'
 
 " hexadecimal viewer
-Plug 'https://github.com/Shougo/vinarise.vim'
+Plug 'Shougo/vinarise.vim'
 
 " startup screen configuration
 Plug 'https://github.com/mhinz/vim-startify.git'
@@ -135,7 +135,7 @@ Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 Plug 'eugen0329/vim-esearch'
 
 " Underline the word under cursor
-Plug 'https://github.com/itchyny/vim-cursorword'
+Plug 'itchyny/vim-cursorword'
 
 Plug 'yuttie/comfortable-motion.vim'
 
@@ -151,11 +151,5 @@ Plug 'yuttie/comfortable-motion.vim'
 "8 - Under test/to be tested
 "===========================
 
-"=========================
-"9 - Plug post config
-"=========================
-"
-
-" Add plugins to &runtimepath
 call plug#end()
 

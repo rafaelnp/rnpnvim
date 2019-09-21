@@ -139,6 +139,9 @@ Plug 'itchyny/vim-cursorword'
 
 Plug 'yuttie/comfortable-motion.vim'
 
+" Devicons have nerdfonts as dependency https://www.nerdfonts.com/
+Plug 'ryanoasis/vim-devicons'
+
 "=========================
 "7 - Vim built-in plugins
 "=========================

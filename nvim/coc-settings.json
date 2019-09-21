@@ -82,6 +82,14 @@
       // not start server at home directory, since it won't work.
       "ignoredRootPaths": ["~"],
       "filetypes": ["tex", "bib", "plaintex", "context"]
+    },
+    // Viml, Yaml, Markdown
+    "efm": {
+      "command": "efm-langserver",
+      "args": [],
+      // custom config path
+      // "args": ["-c", "/path/to/your/config.yaml"],
+      "filetypes": ["vim", "markdown", "yaml"]
     }
   } // LanguageServer End
 }

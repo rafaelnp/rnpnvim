@@ -183,6 +183,8 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 
+let g:airline_extensions = ['branch', 'hunks', 'coc', 'tabline']
+
 " unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
@@ -207,7 +209,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " Set airline theme manually
-"let g:airline_theme="sublimemonokai"
+let g:airline_theme="violet"
 "let g:airline_theme="nachtleben"
 "let g:airline_theme="one"
 let g:airline_theme="ayu"

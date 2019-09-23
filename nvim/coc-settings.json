@@ -90,6 +90,11 @@
       // custom config path
       // "args": ["-c", "/path/to/your/config.yaml"],
       "filetypes": ["vim", "markdown", "yaml"]
+    },
+    // Lua
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": ["lua"]
     }
   } // LanguageServer End
 }

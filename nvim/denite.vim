@@ -75,7 +75,7 @@ function! s:denite_filter_settings() abort
 	nnoremap <silent><buffer><expr> q      denite#do_map('quit')
 	inoremap <silent><buffer><expr> <C-c>  denite#do_map('denite_filter_quit')
 	inoremap <silent><buffer><expr> <C-t>  denite#do_map('do_action', 'tabopen')
-	inoremap <silent><buffer><expr> <S-v>  denite#do_map('do_action', 'vsplit')
+	inoremap <silent><buffer><expr> <C-v>  denite#do_map('do_action', 'vsplit')
 	inoremap <silent><buffer><expr> <S-h>  denite#do_map('do_action', 'split')
 
 	"inoremap <silent><buffer>       kk     <Esc><C-w>p

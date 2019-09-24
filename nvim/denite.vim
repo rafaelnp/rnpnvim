@@ -109,8 +109,14 @@ nnoremap [denite]M :Denite colorscheme<CR>
 " search for patern in the current buffer lines
 nnoremap [denite]l :Denite line<CR>
 
+" search for patern under the cursor in the current buffer lines
+nnoremap [denite]L :DeniteCursorWord line<CR>
+
 " execute grep in the current directory
 nnoremap [denite]g :Denite grep<CR>
+
+" execute grep the word under the cursor in the current directory
+nnoremap [denite]G :DeniteCursorWord grep<CR>
 
 " show document outline
 nnoremap [denite]o :Denite outline<CR>

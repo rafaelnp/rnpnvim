@@ -31,27 +31,10 @@ au FocusGained * :checktime
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has('multi_byte')
-	if has('unix')
-		set termencoding=utf-8
-		set encoding=utf-8
-		set fileformat=unix
-		set fileformats=unix,dos
-	elseif has('mac') || has('macunix')
-		set termencoding=utf-8
-		set encoding=utf-8
-		set fileformat=unix
-		set fileformats=unix
-	elseif has('win32') || has('win64')
-		set termencoding=utf-8
-		set encoding=utf-8
-		set fileformat=dos
-		set fileformats=dos,unix
-	else
-		set termencoding=utf-8
-		set encoding=utf-8
-		set fileformat=unix
-		set fileformats=unix
-	endif
+	set termencoding=utf-8
+	set encoding=utf-8
+	set fileformat=unix
+	set fileformats=unix,dos
 else
 	set termencoding=latin1
 	set encoding=latin1
@@ -185,7 +168,7 @@ if has('gui_running')
 	set mousemodel=popup
 else
 	" Enable 256 colors in terminal
-	if &term == 'xterm' || &term == 'screen' || &term =='terminator' || &term == 'gnome-terminal'
+	if &term == 'xterm' || &term == 'screen' || &term =='terminator' || &term == 'gnome-terminal' || &term == 'konsole'
 		set t_Co=256
 	endif
 endif

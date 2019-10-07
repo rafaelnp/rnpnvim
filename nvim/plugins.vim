@@ -485,3 +485,24 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " correct json comment highlighting
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
+
+"=====================================================
+" vim-devicons
+"=====================================================
+
+" Force extra padding in NERDTree so that the filetype icons line up vertically
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+
+" Adding the custom source to denite
+let g:webdevicons_enable_denite = 1
+
+" set a byte character marker (BOM) utf-8 symbol when retrieving file encoding
+" disabled by default with no value
+let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
+
+" enable folder/directory glyph flag (disabled by default with 0)
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
+" enable open and close folder/directory glyph flags (disabled by default with 0)
+let g:DevIconsEnableFoldersOpenClose = 1
+

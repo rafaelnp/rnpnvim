@@ -209,7 +209,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " Set airline theme manually
-let g:airline_theme="violet"
+let g:airline_theme="papercolor"
 " fix messed up symbols
 "let g:airline_symbols.space = "\ua0"
 

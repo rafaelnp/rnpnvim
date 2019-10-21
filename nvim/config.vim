@@ -130,9 +130,9 @@ if (has("termguicolors"))
 endif
 
 set bg=dark
-colorscheme vividchalk
+"colorscheme vividchalk
 "colorscheme sublimemonokai
-"colorscheme one
+colorscheme one
 "colorscheme ayu
 "colorscheme harlequin
 

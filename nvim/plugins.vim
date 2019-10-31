@@ -485,6 +485,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " correct json comment highlighting
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
+nmap ce :CocCommand explorer<CR>
 
 "=====================================================
 " vim-devicons
@@ -505,4 +506,10 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " enable open and close folder/directory glyph flags (disabled by default with 0)
 let g:DevIconsEnableFoldersOpenClose = 1
+
+" adding the column to vimfiler
+let g:webdevicons_enable_vimfiler = 1
+
+" adding to vim-startify screen
+let g:webdevicons_enable_startify = 1
 

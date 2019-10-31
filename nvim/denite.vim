@@ -13,7 +13,7 @@
 try
 
 " disable devicons for denite because it's slow
-let g:webdevicons_enable_denite = 0
+let g:webdevicons_enable_denite = 1
 
 " change default cursor
 call denite#custom#option('_', 'prompt', '>>')
@@ -21,7 +21,6 @@ call denite#custom#option('_', 'prompt', '>>')
 call denite#custom#option('_', {
 	\ 'split': 'horizontal',
 	\ 'start_filter': 0,
-	\ 'autoresize': 0,
 	\ 'winheight': 16,
 	\ 'empty': 0,
 	\ 'short_source_names': 1,
@@ -65,19 +64,27 @@ function! s:denite_my_settings() abort
 	nnoremap <silent><buffer><expr> q     denite#do_map('quit')
 	nnoremap <silent><buffer><expr> i     denite#do_map('open_filter_buffer')
 	nnoremap <silent><buffer><expr> <Space>  denite#do_map('toggle_select')
-	"nnoremap <silent><buffer><expr> <Space>  denite#do_map('toggle_select').'j'
-	nnoremap <silent><buffer><expr> y   denite#do_map('do_action', 'yank')
+	nnoremap <silent><buffer><expr> t     denite#do_map('do_action', 'tabopen')
+	nnoremap <silent><buffer><expr> v     denite#do_map('do_action', 'vsplit')
+	nnoremap <silent><buffer><expr> s     denite#do_map('do_action', 'split')
+	nnoremap <silent><buffer><expr> V     denite#do_map('toggle_select').'j'
+	nnoremap <silent><buffer><expr> y     denite#do_map('do_action', 'yank')
 endfunction
 
 autocmd FileType denite-filter call s:denite_filter_settings()
 function! s:denite_filter_settings() abort
-	nnoremap <silent><buffer><expr> <Esc>  denite#do_map('quit')
-	nnoremap <silent><buffer><expr> q      denite#do_map('quit')
+	imap     <silent><buffer> <tab> <Plug> (denite_filter_quit)
+	inoremap <silent><buffer><expr> <CR>   denite#do_map('do_action')
+	inoremap <silent><buffer><expr> <Esc>  denite#do_map('quit')
+	inoremap <silent><buffer><expr> q      denite#do_map('quit')
 	inoremap <silent><buffer><expr> <C-c>  denite#do_map('denite_filter_quit')
-	inoremap <silent><buffer><expr> <C-t>  denite#do_map('do_action', 'tabopen')
-	inoremap <silent><buffer><expr> <C-v>  denite#do_map('do_action', 'vsplit')
-	inoremap <silent><buffer><expr> <S-h>  denite#do_map('do_action', 'split')
-
+	inoremap <silent><buffer><expr> <c-t>  denite#do_map('do_action', 'tabopen')
+	inoremap <silent><buffer><expr> <c-v>  denite#do_map('do_action', 'vsplit')
+	inoremap <silent><buffer><expr> <c-x>  denite#do_map('do_action', 'split')
+    inoremap <silent><buffer> <C-j>
+                \ <Esc><C-w>p:call cursor(line('.')+1,0)<CR><C-w>pA
+    inoremap <silent><buffer> <C-k>
+                \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
 	"inoremap <silent><buffer>       kk     <Esc><C-w>p
 	"nnoremap <silent><buffer>       kk     <C-w>p
 	"inoremap <silent><buffer>       jj     <Esc><C-w>p

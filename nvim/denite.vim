@@ -166,6 +166,19 @@ let s:menus.vimplug.command_candidates = [
 	\   ['──────────────────────────────────────────────────┘', '']
 	\ ]
 
+let s:menus.coc = {'description': 'Conquer Of Completion'}
+let s:menus.coc.command_candidates = [
+	\   ['  Conquer Of Completion                           │', ''],
+	\   ['──────────────────────────────────────────────────┤', ''],
+	\   ['▶ Config:              show CoC config file       │', 'CocConfig'],
+	\   ['▶ Diagnostic:          list code diagnostics      │', 'CocList diagnostics'],
+	\   ['▶ Info:                show runtime information   │', 'CocInfo'],
+	\   ['▶ Open log:            open Coc log file          │', 'CocOpenLog'],
+	\   ['▶ Restart:             restart CoC                │', 'CocRestart'],
+	\   ['▶ Update:              update CoC extensiona      │', 'CocUpdate'],
+	\   ['──────────────────────────────────────────────────┘', '']
+	\ ]
+
 call denite#custom#var('menu', 'menus', s:menus)
 
 catch

@@ -6,15 +6,13 @@
 
 set autochdir                      " disabled because of vimshell plugin
 set autowriteall                   " automatically save all buffers
-set autoread                       " load file modified outside vim
 set nobackup                       " no backup files, we have git :)
 set nowritebackup
 set noswapfile                     " no swap file
-set backspace=indent,eol,start     " see :help bs
-set helplang=de,en                 " help language
-set history=200                    " command history
+set helplang=en                    " help language
+set history=1000                   " command history
 set printoptions=paper:a4          " printer options
-set fileencodings=ucs-bom,utf-8    " Encodings
+set fileencodings=utf-8,ucs-bom    " Encodings
 set spelllang=de,pt_br,en,es       " set your favorite language here
 if has("browse")
 	set browsedir=buffer           " defaults to the current file's directory
@@ -23,7 +21,6 @@ set completeopt=menu               " menu completion options
 set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
-set modifiable
 set clipboard+=unnamedplus
 
 " workaround for (failing) autoread
@@ -60,8 +57,7 @@ set noerrorbells         " no noise
 
 syntax enable       " syntax highlight on and keep your settings
 set fo=tcrqn        " See Help (:help fo-table)
-set ai              " autoindent
-set si              " smartindent
+set smartindent     " smartindent
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
 "set textwidth
 
@@ -88,14 +84,11 @@ set cpoptions=BceF  " compatible options
 set tabstop=4          " tab spacing (settings below are to unify it)
 set softtabstop=4      " unify
 set shiftwidth=4       " unify
-set noexpandtab
 
 
 "==========
 " Searching
 "==========
-set hlsearch      " highlight search patern
-set incsearch     " incremental search
 set ignorecase
 set smartcase       " Override the 'ignorecase' option if the
 					" search pattern contains upper case characters. Only used when
@@ -113,10 +106,7 @@ endif
 " GUI/Visual Options
 "===================
 tab all                      " open a new tab instead of a new vim instance
-set showcmd                  " show command in last line of screen
-set laststatus=2             " statusline always visible
 set shortmess=aToOc          " see: help shortmess
-set ruler                    " Show cursor line and column number position
 set number                   " show line numbers
 set scrolloff=2              " number of screen lines to keep above and below the cursor.
 set splitright               " Always splits to the right and below
@@ -129,18 +119,11 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-set bg=dark
-"colorscheme vividchalk
-"colorscheme sublimemonokai
-colorscheme one
-"colorscheme ayu
-"colorscheme harlequin
+colorscheme one              " colour scheme name
 
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
 set matchtime=2              " Tenths of a second to show the matching parten
-set equalalways
-set ead=both                 " set in which direction 'equalalways' works (ver, hor, both)
 set wildmenu                 " use autocompletion on command line
 set cursorline               " sets cursor line highlight. cool :)
 set display=uhex             " show unprintable characters hexadecimal
@@ -152,7 +135,7 @@ if has('mouse')
 	set mousehide            " hides the mouse while typing
 endif
 
-if has('gui_running')
+if exists('g:GuiLoaded')
 	set guioptions=aAgi      " see: help guioptions
 
 	if has('unix')

@@ -4,7 +4,7 @@
 " General
 "========
 
-set autochdir                      " disabled because of vimshell plugin
+"set autochdir                      " disabled because of vimshell plugin
 set autowriteall                   " automatically save all buffers
 set nobackup                       " no backup files, we have git :)
 set nowritebackup

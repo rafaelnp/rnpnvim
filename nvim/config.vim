@@ -172,3 +172,7 @@ else
 		set t_Co=256
 	endif
 endif
+
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python2'
+

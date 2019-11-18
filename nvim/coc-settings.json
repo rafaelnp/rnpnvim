@@ -95,6 +95,11 @@
     "lua": {
       "command": "lua-lsp",
       "filetypes": ["lua"]
+    },
+    "hdlchecker": {
+       "command": "hdl_checker",
+       "args": ["--lsp"],
+       "filetypes": ["vhdl", "verilog", "systemverilog"]
     }
   } // LanguageServer End
 }

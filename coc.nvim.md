@@ -54,6 +54,24 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
   python-languge-server https://github.com/palantir/python-language-server
   pip install --user 'python-language-server[all]'
 
+4.5 - hdl: systemverilog, verilog, vhdl
+
+  pip3 install --user  hdl-checker
+
+  add language server configutation to coc-settings.json:
+
+```json
+    "hdlChecker": {
+       "command": "hdl_checker",
+       "args": [
+           "--lsp"
+       ],
+       "filetypes": [
+           "vhdl",
+           "verilog",
+           "systemverilog"
+       ]
+```
 5 - Languages:
 
 * latex

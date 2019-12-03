@@ -65,8 +65,6 @@ set cpoptions=BceF  " compatible options
 
 " Here are the space and tabulator keys definition:
 " tabs are for indenting and aligning code and data.
-" spaces are for separating words in text and comments.
-"
 " https://en.wikipedia.org/wiki/Space_bar
 " https://en.wikipedia.org/wiki/Tabulator_key
 "

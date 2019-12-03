@@ -485,7 +485,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " correct json comment highlighting
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
-nmap ce :CocCommand explorer<CR>
+nnoremap <a-e> :CocCommand explorer<CR>
 
 "=====================================================
 " vim-devicons

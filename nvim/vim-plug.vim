@@ -140,10 +140,12 @@ Plug 'itchyny/vim-cursorword'
 Plug 'yuttie/comfortable-motion.vim'
 
 " Devicons have nerdfonts as dependency https://www.nerdfonts.com/
- Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+Plug 'godlygeek/tabular'
 
 "=========================
 "7 - Vim built-in plugins

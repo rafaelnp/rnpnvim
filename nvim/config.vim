@@ -137,7 +137,8 @@ if exists('g:GuiLoaded')
 	set guioptions=aAgi      " see: help guioptions
 
 	if has('unix')
-		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
+		set guifont=DejaVuSansMono\ Nerd\ Font\ Mono\ 8
+		"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
 		"set guifont=Monospace\ 9
 	elseif has ('mac')
 		set guifont=Monospace\ 9

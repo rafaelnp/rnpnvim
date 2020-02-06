@@ -209,7 +209,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " Set airline theme manually
-let g:airline_theme="papercolor"
+let g:airline_theme="sierra"
 " fix messed up symbols
 "let g:airline_symbols.space = "\ua0"
 
@@ -240,7 +240,7 @@ let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#eclim#enabled = 0
 
 "=================================================
-" 23 - vim-easymotion
+" 19 - vim-easymotion
 "      https://gitthub.com/Lokaltog/vim-easymotion
 "=================================================
 
@@ -251,17 +251,6 @@ map s <Plug>(easymotion-bd-w)
 " JK motions: Line motions
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
-
-"=======================================================
-" 19 - vim-flavoured-markdown
-"      https://github.com/jtratner/vim-flavored-markdown
-"=======================================================
-if has("autocmd")
-	augroup markdown
-		au!
-		au BufNewFile,BufRead,BufReadPost,FileReadPost *.md,*.markdown setlocal filetype=ghmarkdown
-	augroup END
-endif
 
 "===========================================
 " 20 - vim-fugitive
@@ -360,19 +349,19 @@ let g:startify_custom_footer = [
 "endif
 
 "===========================================
-" 25 - vim-vhdl
+" 24 - vim-vhdl
 "      https://github.com/Cognoscan/vim-vhdl
 "===========================================
 " Syntax plugin, no config necessary
 
 "=============================================
-" 26 - vividchalk
+" 25 - vividchalk
 "      https://github.com/tpope/vim-vividchalk
 "=============================================
 " Colorscheme plugin, no config necessary
 
 "===========================================
-" 27 - vimexplorer
+" 26 - vimexplorer
 "      https://github.com/mbbill/VimExplorer
 "===========================================
 
@@ -390,7 +379,7 @@ elseif has('win32' || 'win64')
 endif
 
 "============================================
-" 28 - Vinarise
+" 27 - Vinarise
 "      https://github.com/Shougo/vinarise.vim
 "============================================
 
@@ -400,7 +389,7 @@ cabbrev vimhex  Vinarise -split -encoding=utf-8<CR>
 nnoremap <leader>vv  :Vinarise -split -encoding=utf-8<CR>
 
 "=====================================================
-" 29 - Vim ESearch
+" 28 - Vim ESearch
 "      https://github.com/eugen0329/vim-esearch
 "=====================================================
 
@@ -414,20 +403,20 @@ let g:esearch = {
 
 
 "=====================================================
-" 30 - guterntag
+" 29 - guterntag
 "      https://github.com/ludovicchabant/vim-gutentags
 "=====================================================
 
 set statusline+=%{gutentags#statusline()}
 
 "=====================================================
-" 31 - far.vim
+" 30 - far.vim
 "      https://github.com/brooth/far.vim
 "=====================================================
 
 
 "=====================================================
-" 32 - vim-filebeagle
+" 31 - vim-filebeagle
 "      https://github.com/jeetsukumaran/vim-filebeagle
 "=====================================================
 let g:filebeagle_show_hidden=1
@@ -435,7 +424,7 @@ let g:filebeagle_show_line_numbers=1
 
 
 "=====================================================
-" 33 - coc.nvim and related configuration
+" 32 - coc.nvim and related configuration
 "=====================================================
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -488,7 +477,7 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 nnoremap <a-e> :CocCommand explorer<CR>
 
 "=====================================================
-" vim-devicons
+" 33 - vim-devicons
 "=====================================================
 
 " Force extra padding in NERDTree so that the filetype icons line up vertically

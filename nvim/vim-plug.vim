@@ -89,8 +89,8 @@ Plug 'jamessan/vim-gnupg'
 " arm assembly highlighting
 Plug 'vim-scripts/armasm'
 
-" Github Flavoured Markdown
-Plug 'rhysd/vim-gfm-syntax'
+" markdown syntax highlight and extras
+Plug 'SidOfc/mkdx'
 
 "================
 "6 - Miscelaneous

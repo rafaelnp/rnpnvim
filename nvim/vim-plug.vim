@@ -142,6 +142,9 @@ Plug 'yuttie/comfortable-motion.vim'
 " Devicons have nerdfonts as dependency https://www.nerdfonts.com/
  Plug 'ryanoasis/vim-devicons'
 
+" markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
 "=========================
 "7 - Vim built-in plugins
 "=========================

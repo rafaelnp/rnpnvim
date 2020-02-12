@@ -506,6 +506,8 @@ let g:webdevicons_enable_startify = 1
 "=====================================================
 " 34 - mkdx
 "      https://github.com/SidOfc/mkdx
+"      https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md
+"      Markdownlint configuration file: $HOME/.config/markdownlint.json
 "=====================================================
 
 let g:mkdx#settings     = { 'highlight': { 'enable': 1 },

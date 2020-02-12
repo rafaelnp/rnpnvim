@@ -79,17 +79,3 @@ function! SetWindowSize()
 	"endif
 endfunction
 
-function! Ycmconf_exist()
-	if !filereadable("~/.vim/bundle/YouCompleteMe/install.sh")
-		return 0
-	endif
-
-	let foo=getcwd().".ycm_extra_conf.py"
-
-	if filereadable(foo)
-		return 1
-	else
-		return 0
-	endif
-endfunction
-

@@ -1,9 +1,9 @@
-# rnpvim: Rafael Pereira's Neovim and Vim config files
+# rnpvim: Rafael Pereira's Neovim config files
 
-Last update: 2017.09.20 (Mi) 16:15:28 (UTC +2)
+Last update: 2018.04.10 (Di) 23:55:40 (UTC +0200 CEST)
 
-This Vim setup is based on my daily workflow at work/home, where is normaly use
-C/C++, Assembly and HDL (Verilog, VDHL). This is still a work in progress, so
+This Neovim setup is based on my daily workflow at work/home, where is normaly use
+C/C++, Assembly, Python, LaTeX and HDL (Verilog, VDHL). This is still a work in progress, so
 Suggestions, corrections are welcome :-)
 
 **THIS IS A PRE_RELEASE version, expect some glitches...**
@@ -28,48 +28,34 @@ Here are listed the main rnpvim 's features, provided by additional plugins. Tho
 plugins are managed by [vim-plug](https://github.com/junegunn/vim-plug)
 which is also an Vim plugin, that make the Vim users life much easier.
 
+Implemented:
 * Buffer browsing
-
-* Code/text autocompletion
-
 * Calender integration
-
 * Extensible status/tagline
-
 * Enhanced Vim motion
-
 * File browsing
-
 * Git full integration
-
-* LaTeX integration
-
 * Opensource VCSs integration
-
 * Plugins management
-
 * Fuzzy search
-
-* Syntax check
-
+* Syntax check:w
 * Tag browser
-
 * Integration with GnuPG for encrypted files
-
 * Customized startup message and recently edited files
-
 * Undo tree history
+* Useful abbreviations
 
+Todo:
 * VHDL/Verilog syntax highlight
-
-
+* Code/text autocompletion
+* LaTeX integration
+* Editorconfig intergration
 
 ## 2 Requirements
 
 This Vim setup has the following requirements/dependencies:
 
 * [Neovim](http://www.vim.org) 0.2.0 or newer
-* [Vim](http://www.vim.org) 8.0 or newer
 * [Universal ctags](https://github.com/universal-ctags/ctags)
 * [clang](http://clang.llvm.org/) 3.3 or newer (to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe) clang-completer)
 * [cmake](http://www.cmake.org/)(to compile the [YouCompletMe](https://github.com/Valloric/YouCompleteMe))
@@ -77,6 +63,7 @@ This Vim setup has the following requirements/dependencies:
 * [Git](http://www.git-scm.com/) 2.10 or newer
 * [The Silver Search](http://geoff.greer.fm/ag/)
 * [EditorConfig](http://editorconfig.org/)
+* [pyton-jedi](https://jedi.readthedocs.io/en/latest/)
 
 
 ## 3 Installation

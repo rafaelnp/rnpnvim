@@ -6,17 +6,43 @@ call plug#begin(g:nvimdir . 'plugged')
 "===============
 
 Plug 'vim-scripts/Colour-Sampler-Pack'
-Plug 'https://github.com/tomasr/molokai'
+Plug 'tomasr/molokai'
 Plug 'https://github.com/tpope/vim-vividchalk.git'
-Plug 'https://github.com/nielsmadan/harlequin'
-Plug 'https://github.com/sjl/badwolf'
+Plug 'nielsmadan/harlequin'
+Plug 'sjl/badwolf'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'rakr/vim-one'
+Plug 'semibran/vim-colors-synthetic'
+Plug 'schickele/vim-nachtleben'
+Plug 'ErichDonGubler/vim-sublime-monokai'
 
 "================
 "2 -  Programming
 "================
 
+" conquer of completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'davidhalter/jedi-vim'
+
+Plug 'editorconfig/editorconfig-vim'
+
 " tag generator
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags', {
+\	'for' : [
+\			'c',
+\			'cpp',
+\			'vim',
+\			'latex',
+\			'make',
+\			'python',
+\			'sh',
+\			'vhdl',
+\			'verilog',
+\			'lua',
+\		],
+\	}
 
 Plug 'majutsushi/tagbar', {
 \	'for' : [
@@ -29,24 +55,29 @@ Plug 'majutsushi/tagbar', {
 \			'sh',
 \			'vhdl',
 \			'verilog',
+\			'lua',
 \		],
 \	}
 
-Plug 'https://github.com/mhinz/vim-signify'
+Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 "Plug 'benekastah/neomake'
 
 " asynchronous linter
-Plug 'https://github.com/w0rp/ale'
+"Plug 'w0rp/ale'
 
-"=========
-"4 - Unite
-"=========
+" find and replace
+ Plug 'brooth/far.vim'
+
+"==========
+"4 - Denite
+"==========
 
 Plug 'Shougo/denite.nvim'
 Plug 'ujihisa/unite-colorscheme'
 Plug 'ujihisa/unite-outline'
 Plug 'Shougo/neomru.vim'
+Plug 'Shougo/neoyank.vim'
 
 "================
 "5 - Filetypes
@@ -56,10 +87,10 @@ Plug 'Shougo/neomru.vim'
 Plug 'jamessan/vim-gnupg'
 
 " arm assembly highlighting
-Plug 'https://github.com/vim-scripts/armasm'
+Plug 'vim-scripts/armasm'
 
-" Github Flavoured Markdown
-Plug 'https://github.com/rhysd/vim-gfm-syntax'
+" markdown syntax highlight and extras
+Plug 'SidOfc/mkdx'
 
 "================
 "6 - Miscelaneous
@@ -69,10 +100,10 @@ Plug 'https://github.com/rhysd/vim-gfm-syntax'
 Plug 'sk1418/HowMuch'
 
 " custom statusline
-Plug 'https://github.com/bling/vim-airline'
+Plug 'bling/vim-airline'
 
 " custom statusline theme
-Plug 'https://github.com/vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
 " full tab file browser
 Plug 'mbbill/VimExplorer', { 'on' : [ 'F7','VE' ] }
@@ -81,27 +112,40 @@ Plug 'myusuf3/numbers.vim'
 
 " side pane file browser
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
 
-Plug 'https://github.com/itchyny/calendar.vim', { 'on': 'Calendar' }
+" Does not work with loading on demand
+"Plug 'jistr/vim-nerdtree-tabs', { 'on' : [ 'F9', 'NERDTreeTabsToggle' ] }
+Plug 'jistr/vim-nerdtree-tabs'
 
-Plug 'https://github.com/Lokaltog/vim-easymotion'
+Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
+
+Plug 'Lokaltog/vim-easymotion'
 
 " hexadecimal viewer
-Plug 'https://github.com/Shougo/vinarise.vim'
+Plug 'Shougo/vinarise.vim'
 
 " startup screen configuration
 Plug 'https://github.com/mhinz/vim-startify.git'
 
 " 'in-buffer' file browser
-Plug 'https://github.com/dhruvasagar/vim-vinegar',
+Plug 'jeetsukumaran/vim-filebeagle'
 
 Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 
 Plug 'eugen0329/vim-esearch'
 
 " Underline the word under cursor
-Plug 'https://github.com/itchyny/vim-cursorword'
+Plug 'itchyny/vim-cursorword'
+
+Plug 'yuttie/comfortable-motion.vim'
+
+" Devicons have nerdfonts as dependency https://www.nerdfonts.com/
+Plug 'ryanoasis/vim-devicons'
+
+" markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+Plug 'godlygeek/tabular'
 
 "=========================
 "7 - Vim built-in plugins
@@ -115,11 +159,5 @@ Plug 'https://github.com/itchyny/vim-cursorword'
 "8 - Under test/to be tested
 "===========================
 
-"=========================
-"9 - Plug post config
-"=========================
-"
-
-" Add plugins to &runtimepath
 call plug#end()
 

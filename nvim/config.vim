@@ -4,17 +4,15 @@
 " General
 "========
 
-set autochdir                      " disabled because of vimshell plugin
+"set autochdir                      " disabled because of vimshell plugin
 set autowriteall                   " automatically save all buffers
-set autoread                       " load file modified outside vim
 set nobackup                       " no backup files, we have git :)
 set nowritebackup
 set noswapfile                     " no swap file
-set backspace=indent,eol,start     " see :help bs
-set helplang=de,en                 " help language
-set history=200                    " command history
+set helplang=en                    " help language
+set history=1000                   " command history
 set printoptions=paper:a4          " printer options
-set fileencodings=ucs-bom,utf-8    " Encodings
+set fileencodings=utf-8,ucs-bom    " Encodings
 set spelllang=de,pt_br,en,es       " set your favorite language here
 if has("browse")
 	set browsedir=buffer           " defaults to the current file's directory
@@ -23,31 +21,17 @@ set completeopt=menu               " menu completion options
 set hidden                         " don't discard buffers
 set ttimeoutlen=50                 " timeout for a key sequence complete
 set pastetoggle=<F2>               " enables paste mode
-set modifiable
+set clipboard+=unnamedplus
+
+" workaround for (failing) autoread
+au FocusGained * :checktime
 
 " Force utf-8. Fallback latin1. Always use unix file format
 if has('multi_byte')
-	if has('unix')
-		set termencoding=utf-8
-		set encoding=utf-8
-		set fileformat=unix
-		set fileformats=unix,dos
-	elseif has('mac') || has('macunix')
-		set termencoding=utf-8
-		set encoding=utf-8
-		set fileformat=unix
-		set fileformats=unix
-	elseif has('win32') || has('win64')
-		set termencoding=utf-8
-		set encoding=utf-8
-		set fileformat=dos
-		set fileformats=dos,unix
-	else
-		set termencoding=utf-8
-		set encoding=utf-8
-		set fileformat=unix
-		set fileformats=unix
-	endif
+	set termencoding=utf-8
+	set encoding=utf-8
+	set fileformat=unix
+	set fileformats=unix,dos
 else
 	set termencoding=latin1
 	set encoding=latin1
@@ -73,8 +57,7 @@ set noerrorbells         " no noise
 
 syntax enable       " syntax highlight on and keep your settings
 set fo=tcrqn        " See Help (:help fo-table)
-set ai              " autoindent
-set si              " smartindent
+set smartindent     " smartindent
 set copyindent      " Copy the structure of the existing lines indent when autoindenting a new line
 "set textwidth
 
@@ -82,8 +65,6 @@ set cpoptions=BceF  " compatible options
 
 " Here are the space and tabulator keys definition:
 " tabs are for indenting and aligning code and data.
-" spaces are for separating words in text and comments.
-"
 " https://en.wikipedia.org/wiki/Space_bar
 " https://en.wikipedia.org/wiki/Tabulator_key
 "
@@ -101,18 +82,15 @@ set cpoptions=BceF  " compatible options
 set tabstop=4          " tab spacing (settings below are to unify it)
 set softtabstop=4      " unify
 set shiftwidth=4       " unify
-set noexpandtab
 
 
 "==========
 " Searching
 "==========
-set hlsearch      " highlight search patern
-set incsearch     " incremental search
 set ignorecase
-set smartcase     " Override the 'ignorecase' option if the
-                  " search pattern contains upper case characters. Only used when
-                  " the search pattern is typed and 'ignorecase' option is on
+set smartcase       " Override the 'ignorecase' option if the
+					" search pattern contains upper case characters. Only used when
+					" the search pattern is typed and 'ignorecase' option is on
 
 " wildmenu: ignore these extensions
 set wildignore=*.o,*.obj,*.bak,*.exe,*~,*.aux,*.fls
@@ -126,23 +104,24 @@ endif
 " GUI/Visual Options
 "===================
 tab all                      " open a new tab instead of a new vim instance
-set showcmd                  " show command in last line of screen
-set laststatus=2             " statusline always visible
-set shortmess=aToO           " see: help shortmess
-set ruler                    " Show cursor line and column number position
+set shortmess=aToOc          " see: help shortmess
 set number                   " show line numbers
 set scrolloff=2              " number of screen lines to keep above and below the cursor.
 set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
+set signcolumn=yes
 
-colorscheme harlequin
+
+if (has("termguicolors"))
+	set termguicolors
+endif
+
+colorscheme one              " colour scheme name
 
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
 set matchtime=2              " Tenths of a second to show the matching parten
-set equalalways
-set ead=both                 " set in which direction 'equalalways' works (ver, hor, both)
 set wildmenu                 " use autocompletion on command line
 set cursorline               " sets cursor line highlight. cool :)
 set display=uhex             " show unprintable characters hexadecimal
@@ -154,12 +133,12 @@ if has('mouse')
 	set mousehide            " hides the mouse while typing
 endif
 
-if has('gui_running')
+if exists('g:GuiLoaded')
 	set guioptions=aAgi      " see: help guioptions
-	set bg=dark
 
 	if has('unix')
-		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
+		set guifont=DejaVuSansMono\ Nerd\ Font\ Mono\ 8
+		"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
 		"set guifont=Monospace\ 9
 	elseif has ('mac')
 		set guifont=Monospace\ 9
@@ -170,9 +149,12 @@ if has('gui_running')
 
 	set mousemodel=popup
 else
-	set bg=light
 	" Enable 256 colors in terminal
-	if &term == 'xterm' || &term == 'screen' || &term =='terminator' || &term == 'gnome-terminal'
+	if &term == 'xterm' || &term == 'screen' || &term =='terminator' || &term == 'gnome-terminal' || &term == 'konsole'
 		set t_Co=256
 	endif
 endif
+
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python2'
+

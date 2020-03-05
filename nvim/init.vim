@@ -1,6 +1,7 @@
 
 if has('unix') || has('mac')
-	let g:nvimdir=$HOME . '/.config/nvim/'
+	let g:homedir=$HOME
+	let g:nvimdir=g:homedir . '/.config/nvim/'
 else " has("win32") || has("win64")
 	let g:nvimdir=$LOCALAPPDATA.'\nvim\'
 endif

@@ -43,6 +43,7 @@ inside neovim run the following commmands:
 - pip
 - clangd
 - editorconfig
+- ccls
 
 
 ## 3 - coc.nvim extentions

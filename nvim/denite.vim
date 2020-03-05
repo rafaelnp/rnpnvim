@@ -144,7 +144,7 @@ let s:menus = {}
 
 let s:menus.settings = {'description': 'Configuration files (rafaelnp/rnpvim)'}
 let s:menus.settings.file_candidates = [
-	\   ['  Configuration Files                             │', ''],
+	\   ['  Vim Configuration Files                         │', ''],
 	\   ['──────────────────────────────────────────────────┤', ''],
 	\   ['▶ Abbreviations:              config/abbrev.vim   │', g:nvimdir.'/abbrev.vim'],
 	\   ['▶ General settings:           config/config.vim   │', g:nvimdir.'/config.vim'],
@@ -157,7 +157,7 @@ let s:menus.settings.file_candidates = [
 
 let s:menus.vimplug = {'description': 'Plugin management (vim-plug)'}
 let s:menus.vimplug.command_candidates = [
-	\   ['  Configuration Files                             │', ''],
+	\   ['  Plug Commands                                   │', ''],
 	\   ['──────────────────────────────────────────────────┤', ''],
 	\   ['▶ Install:                    PlugInstall         │', 'PlugInstall'],
 	\   ['▶ Update plugins:             PlugUpdate          │', 'PlugUpdate'],
@@ -177,6 +177,15 @@ let s:menus.coc.command_candidates = [
 	\   ['▶ Restart:             restart CoC                │', 'CocRestart'],
 	\   ['▶ Update:              update CoC extensiona      │', 'CocUpdate'],
 	\   ['──────────────────────────────────────────────────┘', '']
+	\ ]
+
+let s:menus.linters = {'description': 'Linters Configuration'}
+let s:menus.linters.file_candidates = [
+	\   ['  Linters configuration                                 │', ''],
+	\   ['────────────────────────────────────────────────────────┤', ''],
+	\   ['▶ Efm-langserver settings:    .config/config.yaml       │', g:homedir.'/.config/efm-langserver/config.yaml'],
+	\   ['▶ markdownlint:               .config/markdownlint.yaml │', g:homedir.'/.config/markdownlint.json'],
+	\   ['────────────────────────────────────────────────────────┘', '']
 	\ ]
 
 call denite#custom#var('menu', 'menus', s:menus)

@@ -111,7 +111,11 @@ nnoremap [denite]fr :<C-u>Denite file/rec<CR>
 nnoremap [denite]f :<C-u>Denite file<CR>
 
 " show installed colorschemes
-nnoremap [denite]M :Denite colorscheme<CR>
+nnoremap [denite]c :Denite colorscheme<CR>
+
+" show file and directory MRU
+nnoremap [denite]Mf :Denite file_mru<CR>
+nnoremap [denite]Md :Denite directory_mru<CR>
 
 " search for patern in the current buffer lines
 nnoremap [denite]l :Denite line<CR>

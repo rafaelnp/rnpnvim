@@ -61,6 +61,7 @@ Plug 'majutsushi/tagbar', {
 
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
+Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'benekastah/neomake'
 
 " asynchronous linter

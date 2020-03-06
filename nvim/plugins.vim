@@ -515,3 +515,20 @@ let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
                         \ 'links': { 'external': { 'enable': 1 } },
                         \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
                         \ 'fold': { 'enable': 1 } }
+
+
+"=====================================================
+" 35 - vim-cpp-enhanced-highlight
+"      https://github.com/octol/vim-cpp-enhanced-highlight
+"=====================================================
+
+let g:cpp_class_scope_highlight = 1
+
+let g:cpp_member_variable_highlight = 1
+
+let g:cpp_class_decl_highlight = 1
+
+let g:cpp_posix_standard = 1
+
+
+

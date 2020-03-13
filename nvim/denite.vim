@@ -177,6 +177,7 @@ let s:menus.coc.command_candidates = [
 	\   ['▶ Config:              show CoC config file       │', 'CocConfig'],
 	\   ['▶ Diagnostic:          list code diagnostics      │', 'CocList diagnostics'],
 	\   ['▶ Info:                show runtime information   │', 'CocInfo'],
+	\   ['▶ Marketplace:         list Coc extentions        │', 'CocList marketplace'],
 	\   ['▶ Open log:            open Coc log file          │', 'CocOpenLog'],
 	\   ['▶ Restart:             restart CoC                │', 'CocRestart'],
 	\   ['▶ Update:              update CoC extensiona      │', 'CocUpdate'],
@@ -187,8 +188,9 @@ let s:menus.linters = {'description': 'Linters Configuration'}
 let s:menus.linters.file_candidates = [
 	\   ['  Linters configuration                                 │', ''],
 	\   ['────────────────────────────────────────────────────────┤', ''],
-	\   ['▶ Efm-langserver settings:    .config/config.yaml       │', g:homedir.'/.config/efm-langserver/config.yaml'],
+	\   ['▶ efm-langserver settings:    .config/config.yaml       │', g:homedir.'/.config/efm-langserver/config.yaml'],
 	\   ['▶ markdownlint:               .config/markdownlint.yaml │', g:homedir.'/.config/markdownlint.json'],
+	\   ['▶ vint:                       .vintrc.yaml              │', g:homedir.'/.vintrc.yaml'],
 	\   ['────────────────────────────────────────────────────────┘', '']
 	\ ]
 

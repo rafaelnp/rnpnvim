@@ -64,6 +64,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'benekastah/neomake'
 
+Plug 'honza/vim-snippets'
 " asynchronous linter
 "Plug 'w0rp/ale'
 

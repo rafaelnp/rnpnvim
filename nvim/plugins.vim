@@ -433,8 +433,10 @@ let g:filebeagle_show_line_numbers=1
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
 	\ pumvisible() ? "\<C-n>" :
+	\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
 	\ <SID>check_back_space() ? "\<TAB>" :
 	\ coc#refresh()
+
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
@@ -472,6 +474,8 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold  * silent call CocActionAsync('highlight')
+autocmd CursorHoldI * silent call CocActionAsync('showSignatureHelp')
+
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
@@ -529,6 +533,99 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " 2 - coc extentions
 
 nnoremap <a-e> :CocCommand explorer<CR>
+
+"
+" 3 - ccls config
+"
+
+" Use <C-l> for trigger snippet expand.
+"imap <C-l> <Plug>(coc-snippets-expand)
+"
+"" Use <C-j> for select text for visual placeholder of snippet.
+"vmap <C-j> <Plug>(coc-snippets-select)
+""let g:coc_snippet_next = '<tab>'
+"
+"" Use <C-j> for both expand and jump (make expand higher priority.)
+"imap <C-j> <Plug>(coc-snippets-expand-jump)
+"" Remap for rename current word
+"nmap <leader>rn <Plug>(coc-rename)
+"
+"" Remap for format selected region
+"xmap <leader>f  <Plug>(coc-format-selected)
+"nmap <leader>f  <Plug>(coc-format-selected)
+"
+"" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
+"nmap <silent> <TAB> <Plug>(coc-range-select)
+"xmap <silent> <TAB> <Plug>(coc-range-select)
+"xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
+"
+"
+"" correct json comment highlighting
+"autocmd FileType json syntax match Comment +\/\/.\+$+
+"
+"
+"" from ccls wiki
+""textDocument/documentHighlight
+"
+"set updatetime=300
+"au CursorHold * sil call CocActionAsync('highlight')
+"au CursorHoldI * sil call CocActionAsync('showSignatureHelp')
+"
+" bases
+nn <silent> xb :call CocLocations('ccls','$ccls/inheritance')<cr>
+" bases of up to 3 levels
+nn <silent> xB :call CocLocations('ccls','$ccls/inheritance',{'levels':3})<cr>
+" derived
+nn <silent> xd :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true})<cr>
+" derived of up to 3 levels
+nn <silent> xD :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true,'levels':3})<cr>
+
+" caller
+nn <silent> xc :call CocLocations('ccls','$ccls/call')<cr>
+" callee
+nn <silent> xC :call CocLocations('ccls','$ccls/call',{'callee':v:true})<cr>
+
+" $ccls/member
+" member variables / variables in a namespace
+nn <silent> xm :call CocLocations('ccls','$ccls/member')<cr>
+" member functions / functions in a namespace
+nn <silent> xf :call CocLocations('ccls','$ccls/member',{'kind':3})<cr>
+" nested classes / types in a namespace
+nn <silent> xs :call CocLocations('ccls','$ccls/member',{'kind':2})<cr>
+
+nn <silent> xv :call CocLocations('ccls','$ccls/vars')<cr>
+nn <silent> xV :call CocLocations('ccls','$ccls/vars',{'kind':1})<cr> bases
+nn <silent> xb :call CocLocations('ccls','$ccls/inheritance')<cr>
+" bases of up to 3 levels
+nn <silent> xB :call CocLocations('ccls','$ccls/inheritance',{'levels':3})<cr>
+" derived
+nn <silent> xd :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true})<cr>
+" derived of up to 3 levels
+nn <silent> xD :call CocLocations('ccls','$ccls/inheritance',{'derived':v:true,'levels':3})<cr>
+
+" caller
+nn <silent> xc :call CocLocations('ccls','$ccls/call')<cr>
+" callee
+nn <silent> xC :call CocLocations('ccls','$ccls/call',{'callee':v:true})<cr>
+
+" $ccls/member
+" member variables / variables in a namespace
+nn <silent> xm :call CocLocations('ccls','$ccls/member')<cr>
+" member functions / functions in a namespace
+nn <silent> xf :call CocLocations('ccls','$ccls/member',{'kind':3})<cr>
+" nested classes / types in a namespace
+nn <silent> xs :call CocLocations('ccls','$ccls/member',{'kind':2})<cr>
+
+"nmap <silent> xt <Plug>(coc-type-definition)<cr>
+nn <silent> xv :call CocLocations('ccls','$ccls/vars')<cr>
+nn <silent> xV :call CocLocations('ccls','$ccls/vars',{'kind':1})<cr>
+
+" navigate
+nn <silent><buffer> <C-l> :call CocLocations('ccls','$ccls/navigate',{'direction':'D'})<cr>
+nn <silent><buffer> <C-k> :call CocLocations('ccls','$ccls/navigate',{'direction':'L'})<cr>
+nn <silent><buffer> <C-j> :call CocLocations('ccls','$ccls/navigate',{'direction':'R'})<cr>
+nn <silent><buffer> <C-h> :call CocLocations('ccls','$ccls/navigate',{'direction':'U'})<cr>
+
 
 "=====================================================
 " 33 - vim-devicons

@@ -42,11 +42,22 @@ Implemented:
 
 - Buffer browsing
 - Calender integration
+- Code completion
+- Editorconfig intergration
 - Extensible status/tagline
 - Enhanced Vim motion
 - File browsing
 - Git full integration
+- LaTeX integration
+- LSP support
+  - C/C++
+  - Lua
+  - Python
+  - Verilog/SystemVerilog
+  - VHDL
 - Markdown integration
+- Markdown Preview
+- MRU File/Directory browsing
 - Plugins management
 - Fuzzy search
 - Syntax check
@@ -55,14 +66,12 @@ Implemented:
 - Customized startup message and recently edited files
 - Undo tree history
 - Useful abbreviations
-- Editorconfig intergration
 
 Todo:
 
 - Linting (work in progress)
 - VHDL/Verilog syntax highlight
 - Code/text autocompletion (in progress)
-- LaTeX integration
 
 
 ## 2 Requirements
@@ -78,6 +87,7 @@ This Vim setup has the following requirements/dependencies:
 - [The Silver Search](http://geoff.greer.fm/ag/)
 - [EditorConfig](http://editorconfig.org/)
 - [pyton-jedi](https://jedi.readthedocs.io/en/latest/)
+- [Nerdfonts](https://www.nerdfonts.com/)
 
 
 ## 3 Installation
@@ -113,4 +123,9 @@ Work in progress, being rewritten.
 
 I'd like to thank all NeoVim and Vim developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)
+
+
+
+
+
 

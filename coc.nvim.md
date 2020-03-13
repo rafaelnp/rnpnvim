@@ -20,7 +20,16 @@
         - [4.4 - Upgrade installed packages](#44---upgrade-installed-packages)
         - [4.5 - HDL: systemverilog, verilog, vhdl](#45---hdl-systemverilog-verilog-vhdl)
     - [5 - Languages](#5---languages)
-    - [6 - Additional reference](#6---additional-reference)
+        - [5.1 - C/C++](#51---cc)
+        - [5.2 - Latex](#52---latex)
+        - [5.3 - Python](#53---python)
+        - [5.4 - VHDL](#54---vhdl)
+        - [5.5 - Verilog](#55---verilog)
+        - [5.6 - Lua](#56---lua)
+        - [5.7 - Json](#57---json)
+        - [5.8 - VimL](#58---viml)
+    - [6 - Fonts](#6---fonts)
+    - [7 - Additional reference](#7---additional-reference)
 
 ## 1 - Install coc.nvim
 
@@ -50,13 +59,17 @@ inside neovim run the following commmands:
 
 Installed coc.nvim extentions:
 
-- LSP diagnostics: [coc-diagnostic](https://github.com/iamcco/coc-diagnostic)
-- project explorer: [coc-explorer](https://github.com/weirongxu/coc-explorer)
-- [coc-json]()
-- [coc-marketplace]()
+- [coc-diagnostic](https://github.com/iamcco/coc-diagnostic)
+- [coc-json](https://github.com/neoclide/coc-json)
+- [coc-marketplace](https://github.com/fannheyward/coc-marketplace)
+- [coc-explorer](https://github.com/weirongxu/coc-explorer)
+- [coc-snippets](https://www.npmjs.com/package/coc-snippets)
 - [coc-texlab](https://texlab.netlify.com/)
 - [coc-utils](https://github.com/coc-extensions/coc-utils)
-- word autocompletion: [coc-word](https://github.com/neoclide/coc-sources)
+- [coc-word](https://github.com/neoclide/coc-sources)
+
+More infos: [Using coc extentions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
+
 
 ### 3.1 - to review
 
@@ -145,10 +158,14 @@ luarocks install luacheck`lua-lsp
 
 ### 4.4 - Python
 
-vim scripr linter:  [vint](https://github.com/Kuniwak/vint)
+[vint](https://github.com/Vimjas/vint)
+
+[yamllint](https://github.com/adrienverge/yamllint)
 
 ```sh
 pip install --user vim-vint
+
+pip install --user yamllint
 ```
 
   [python-languge-server](https://github.com/palantir/python-language-server)
@@ -196,24 +213,45 @@ each HDL language:
 
 ## 5 - Languages
 
-- Latex
-- C/C++ Clangd
-- Python
-- [VHDL](https://github.com/kraigher/rust_hdl)
-- Verilog
-- Lua
-- [JSON](https://github.com/neoclide/coc-json)
-- Vim
+### 5.1 - C/C++
 
-
-## 6 - Additional reference
-
+- [Configure coc.nvim for C/C++ Development](https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/)
 - [clang-format](https://clangformat.com/)
-- [Configure coc.nvim for C/C++ Development](https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/) **(READIT!!)**
+- [ccls wiki](https://github.com/MaskRay/ccls/wiki)
 - [clang json compilation database](https://clang.llvm.org/docs/JSONCompilationDatabas…)
 - [Compilation Database](https://sarcasm.github.io/notes/dev/compilation-database.html)
 - [c_cpp_properties.json reference](https://code.visualstudio.com/docs/cpp/c-cpp-prope…)
 - [clang](https://clang.llvm.org/docs/index.html)
+
+### 5.2 - Latex
+
+
+### 5.3 - Python
+
+
+### 5.4 - VHDL
+
+- [VHDL](https://github.com/kraigher/rust_hdl)
+
+### 5.5 - Verilog
+- Verilog
+
+### 5.6 - Lua
+
+
+### 5.7 - Json
+
+- [coc-json](https://github.com/neoclide/coc-json)
+
+### 5.8 - VimL
+
+
+## 6 - Fonts
+
+
+
+## 7 - Additional reference
+
 - [How to Build a CMake-Based Project](https://preshing.com/20170511/how-to-build-a-cmake-based-project/)
 
 

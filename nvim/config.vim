@@ -111,13 +111,15 @@ set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
 set signcolumn=yes
-
+set bg=dark
 
 if (has("termguicolors"))
 	set termguicolors
 endif
 
-colorscheme one              " colour scheme name
+let g:material_theme_style = 'darker'
+let g:material_terminal_italics = 1
+colorscheme material
 
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.

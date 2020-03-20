@@ -133,27 +133,24 @@ set list
 if has('mouse')
 	set mouse=a              " enable mouse in all modes
 	set mousehide            " hides the mouse while typing
+	set mousemodel=popup
 endif
 
-if exists('g:GuiLoaded')
-	set guioptions=aAgi      " see: help guioptions
-
-	if has('unix')
-		set guifont=DejaVuSansMono\ Nerd\ Font\ Mono\ 8
-		"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
-		"set guifont=Monospace\ 9
-	elseif has ('mac')
-		set guifont=Monospace\ 9
-	elseif has ('win32') || ('win64')
-		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h8
-		"set guifont=Lucida_Sans_Typewriter:h9
-	endif
-
-	set mousemodel=popup
+if  has('nvim')
+	" neovim-qt configuration
+	exec 'source ' . g:nvimdir . 'ginit.vim'
 else
-	" Enable 256 colors in terminal
-	if &term == 'xterm' || &term == 'screen' || &term =='terminator' || &term == 'gnome-terminal' || &term == 'konsole'
-		set t_Co=256
+	" vim/gvim configuration
+	if exists('gui_running')
+		set guioptions=aAgi      " see: help guioptions
+
+		if has('unix')
+			set guifont=DejaVuSansMono\ Nerd\ Font\ Mono\ 9
+		elseif has ('mac')
+			set guifont=Monospace\ 9
+		elseif has ('win32') || ('win64')
+			set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h8
+		endif
 	endif
 endif
 
@@ -162,7 +159,7 @@ let g:python_host_prog = '/usr/bin/python2'
 
 " settings needed for coc.nvim
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.

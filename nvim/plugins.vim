@@ -535,13 +535,24 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 nnoremap <a-e> :CocCommand explorer<CR>
 
 "
-" 3 - ccls config
+" 3 - coc-snippets
 "
 
 " Use <C-l> for trigger snippet expand.
-"imap <C-l> <Plug>(coc-snippets-expand)
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+"let g:coc_snippet_next = '<tab>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+
 "
-"" Use <C-j> for select text for visual placeholder of snippet.
+" 4 - ccls-config
 "
 " bases
 nn <silent> xb :call CocLocations('ccls','$ccls/inheritance')<cr>

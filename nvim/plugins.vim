@@ -542,34 +542,6 @@ nnoremap <a-e> :CocCommand explorer<CR>
 "imap <C-l> <Plug>(coc-snippets-expand)
 "
 "" Use <C-j> for select text for visual placeholder of snippet.
-"vmap <C-j> <Plug>(coc-snippets-select)
-""let g:coc_snippet_next = '<tab>'
-"
-"" Use <C-j> for both expand and jump (make expand higher priority.)
-"imap <C-j> <Plug>(coc-snippets-expand-jump)
-"" Remap for rename current word
-"nmap <leader>rn <Plug>(coc-rename)
-"
-"" Remap for format selected region
-"xmap <leader>f  <Plug>(coc-format-selected)
-"nmap <leader>f  <Plug>(coc-format-selected)
-"
-"" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-"nmap <silent> <TAB> <Plug>(coc-range-select)
-"xmap <silent> <TAB> <Plug>(coc-range-select)
-"xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
-"
-"
-"" correct json comment highlighting
-"autocmd FileType json syntax match Comment +\/\/.\+$+
-"
-"
-"" from ccls wiki
-""textDocument/documentHighlight
-"
-"set updatetime=300
-"au CursorHold * sil call CocActionAsync('highlight')
-"au CursorHoldI * sil call CocActionAsync('showSignatureHelp')
 "
 " bases
 nn <silent> xb :call CocLocations('ccls','$ccls/inheritance')<cr>

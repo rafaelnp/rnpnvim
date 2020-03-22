@@ -665,4 +665,12 @@ let g:cpp_class_decl_highlight = 1
 let g:cpp_posix_standard = 1
 
 
+"=====================================================
+" 35 - markdown-preview.nvim
+"      https://github.com/iamcco/markdown-preview.nvim
+"=====================================================
+
+let g:mkdp_auto_start = 1
+
+nmap <F2> <Plug>MarkdownPreviewToggle
 

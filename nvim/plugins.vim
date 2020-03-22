@@ -93,7 +93,7 @@ endif
 " 12 - numbers
 "      https://github.com/myusuf3/numbers.vim
 "============================================
-let g:numbers_exclude = ['unite', 'startify', 'gundo', 'undo']
+let g:numbers_exclude = ['startify', 'gundo', 'undo']
 
 "==========================================
 " 13 - tagbar

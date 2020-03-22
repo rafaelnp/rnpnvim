@@ -111,13 +111,15 @@ set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
 set signcolumn=yes
-
+set bg=dark
 
 if (has("termguicolors"))
 	set termguicolors
 endif
 
-colorscheme one              " colour scheme name
+let g:material_theme_style = 'darker'
+let g:material_terminal_italics = 1
+colorscheme material
 
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
@@ -131,30 +133,35 @@ set list
 if has('mouse')
 	set mouse=a              " enable mouse in all modes
 	set mousehide            " hides the mouse while typing
+	set mousemodel=popup
 endif
 
-if exists('g:GuiLoaded')
-	set guioptions=aAgi      " see: help guioptions
-
-	if has('unix')
-		set guifont=DejaVuSansMono\ Nerd\ Font\ Mono\ 8
-		"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
-		"set guifont=Monospace\ 9
-	elseif has ('mac')
-		set guifont=Monospace\ 9
-	elseif has ('win32') || ('win64')
-		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h8
-		"set guifont=Lucida_Sans_Typewriter:h9
-	endif
-
-	set mousemodel=popup
+if  has('nvim')
+	" neovim-qt configuration
+	exec 'source ' . g:nvimdir . 'ginit.vim'
 else
-	" Enable 256 colors in terminal
-	if &term == 'xterm' || &term == 'screen' || &term =='terminator' || &term == 'gnome-terminal' || &term == 'konsole'
-		set t_Co=256
+	" vim/gvim configuration
+	if exists('gui_running')
+		set guioptions=aAgi      " see: help guioptions
+
+		if has('unix')
+			set guifont=DejaVuSansMono\ Nerd\ Font\ Mono\ 9
+		elseif has ('mac')
+			set guifont=Monospace\ 9
+		elseif has ('win32') || ('win64')
+			set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h8
+		endif
 	endif
 endif
 
 let g:python3_host_prog = '/usr/bin/python3'
 let g:python_host_prog = '/usr/bin/python2'
+
+" settings needed for coc.nvim
+" Give more space for displaying messages.
+set cmdheight=1
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
 

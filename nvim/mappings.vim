@@ -71,19 +71,6 @@ noremap <buffer> <a-m> :%s///g<CR>
 " Removes trailing spaces
 nnoremap <a-x> :%s/\s\+$//e<CR>
 
-" CTRL+F1 to toggle the menu bar
-nnoremap <silent> <a-1> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR><ESC>
-
-" CTRL+F2 to toggle the toolbar
-nnoremap <silent> <a-2> :if &guioptions=~'T' \| set guioptions-=T \| else \| set guioptions+=T \| endif<CR><ESC>
-
-" CTRL+F3 to toggle the right scroll bars
-nnoremap <silent> <a-3> :if &guioptions=~'r' \| set guioptions-=r \| else \| set guioptions+=r \| endif<CR><ESC>
-
-" CTRL+F4 to toggle left the scroll bars
-nnoremap <silent> <a-4> :if &guioptions=~'l' \| set guioptions-=l \| else \| set guioptions+=l \| endif<CR><ESC>
-
-
 " 3 - Shift related mappings
 "
 " Moving cursor to other windows

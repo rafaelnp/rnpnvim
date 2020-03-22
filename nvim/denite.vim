@@ -111,7 +111,11 @@ nnoremap [denite]fr :<C-u>Denite file/rec<CR>
 nnoremap [denite]f :<C-u>Denite file<CR>
 
 " show installed colorschemes
-nnoremap [denite]M :Denite colorscheme<CR>
+nnoremap [denite]c :Denite colorscheme<CR>
+
+" show file and directory MRU
+nnoremap [denite]Mf :Denite file_mru<CR>
+nnoremap [denite]Md :Denite directory_mru<CR>
 
 " search for patern in the current buffer lines
 nnoremap [denite]l :Denite line<CR>
@@ -144,7 +148,7 @@ let s:menus = {}
 
 let s:menus.settings = {'description': 'Configuration files (rafaelnp/rnpvim)'}
 let s:menus.settings.file_candidates = [
-	\   ['  Configuration Files                             │', ''],
+	\   ['  Vim Configuration Files                         │', ''],
 	\   ['──────────────────────────────────────────────────┤', ''],
 	\   ['▶ Abbreviations:              config/abbrev.vim   │', g:nvimdir.'/abbrev.vim'],
 	\   ['▶ General settings:           config/config.vim   │', g:nvimdir.'/config.vim'],
@@ -157,7 +161,7 @@ let s:menus.settings.file_candidates = [
 
 let s:menus.vimplug = {'description': 'Plugin management (vim-plug)'}
 let s:menus.vimplug.command_candidates = [
-	\   ['  Configuration Files                             │', ''],
+	\   ['  Plug Commands                                   │', ''],
 	\   ['──────────────────────────────────────────────────┤', ''],
 	\   ['▶ Install:                    PlugInstall         │', 'PlugInstall'],
 	\   ['▶ Update plugins:             PlugUpdate          │', 'PlugUpdate'],
@@ -173,10 +177,21 @@ let s:menus.coc.command_candidates = [
 	\   ['▶ Config:              show CoC config file       │', 'CocConfig'],
 	\   ['▶ Diagnostic:          list code diagnostics      │', 'CocList diagnostics'],
 	\   ['▶ Info:                show runtime information   │', 'CocInfo'],
+	\   ['▶ Marketplace:         list Coc extentions        │', 'CocList marketplace'],
 	\   ['▶ Open log:            open Coc log file          │', 'CocOpenLog'],
 	\   ['▶ Restart:             restart CoC                │', 'CocRestart'],
 	\   ['▶ Update:              update CoC extensiona      │', 'CocUpdate'],
 	\   ['──────────────────────────────────────────────────┘', '']
+	\ ]
+
+let s:menus.linters = {'description': 'Linters Configuration'}
+let s:menus.linters.file_candidates = [
+	\   ['  Linters configuration                                 │', ''],
+	\   ['────────────────────────────────────────────────────────┤', ''],
+	\   ['▶ efm-langserver settings:    .config/config.yaml       │', g:homedir.'/.config/efm-langserver/config.yaml'],
+	\   ['▶ markdownlint:               .config/markdownlint.yaml │', g:homedir.'/.config/markdownlint.json'],
+	\   ['▶ vint:                       .vintrc.yaml              │', g:homedir.'/.vintrc.yaml'],
+	\   ['────────────────────────────────────────────────────────┘', '']
 	\ ]
 
 call denite#custom#var('menu', 'menus', s:menus)

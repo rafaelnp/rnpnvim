@@ -16,6 +16,10 @@ Plug 'rakr/vim-one'
 Plug 'semibran/vim-colors-synthetic'
 Plug 'schickele/vim-nachtleben'
 Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'ajmwagar/vim-deus'
+Plug 'sickill/vim-monokai'
+Plug 'kaicataldo/material.vim'
+Plug 'vim-airline/vim-airline-themes'
 
 "================
 "2 -  Programming
@@ -61,8 +65,10 @@ Plug 'majutsushi/tagbar', {
 
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
+Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'benekastah/neomake'
 
+Plug 'honza/vim-snippets'
 " asynchronous linter
 "Plug 'w0rp/ale'
 

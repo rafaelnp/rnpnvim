@@ -1,8 +1,11 @@
 
 if has('unix') || has('mac')
-	let g:nvimdir=$HOME . '/.config/nvim/'
-else " has("win32") || has("win64")
+	let g:homedir=$HOME
+	let g:nvimdir=g:homedir . '/.config/nvim/'
+elseif (has("win32") || has("win64"))
 	let g:nvimdir=$LOCALAPPDATA.'\nvim\'
+else
+	echoerr "unsupported platform"
 endif
 
 exec 'source ' . g:nvimdir . 'vim-plug.vim'
@@ -11,8 +14,6 @@ exec 'source ' . g:nvimdir . 'vim-plug.vim'
 " config
 "==============
 filetype plugin indent on    " required!
-
-exec 'source ' . g:nvimdir . 'ginit.vim'
 
 exec 'source ' . g:nvimdir . 'config.vim'
 

@@ -98,6 +98,8 @@ Plug 'vim-scripts/armasm'
 " markdown syntax highlight and extras
 Plug 'SidOfc/mkdx'
 
+" xilinx constraint files syntax
+Plug 'amal-khailtash/vim-xdc-syntax'
 "================
 "6 - Miscelaneous
 "================

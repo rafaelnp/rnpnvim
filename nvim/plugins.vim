@@ -670,7 +670,5 @@ let g:cpp_posix_standard = 1
 "      https://github.com/iamcco/markdown-preview.nvim
 "=====================================================
 
-let g:mkdp_auto_start = 1
-
-nmap <F2> <Plug>MarkdownPreviewToggle
+nmap <F2> <Plug>MarkdownPreview
 

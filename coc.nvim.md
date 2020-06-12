@@ -12,11 +12,9 @@
     - [4 - Language level packages](#4---language-level-packages)
         - [4.1 - javascript](#41---javascript)
             - [4.1.1 - Update installed packages](#411---update-installed-packages)
-        - [4.2 - Go](#42---go)
-            - [4.2.1 - Upgrade installed packages](#421---upgrade-installed-packages)
-        - [4.3 - Lua](#43---lua)
-        - [4.3.1 - Upgrade installed packages](#431---upgrade-installed-packages)
-        - [4.4 - Python](#44---python)
+        - [4.2- Lua](#42--lua)
+        - [4.2.1 - Upgrade installed packages](#421---upgrade-installed-packages)
+        - [4.3 - Python](#43---python)
         - [4.4 - Upgrade installed packages](#44---upgrade-installed-packages)
         - [4.5 - HDL: systemverilog, verilog, vhdl](#45---hdl-systemverilog-verilog-vhdl)
     - [5 - Languages](#5---languages)
@@ -63,10 +61,13 @@ Installed coc.nvim extentions:
 - [coc-json](https://github.com/neoclide/coc-json)
 - [coc-marketplace](https://github.com/fannheyward/coc-marketplace)
 - [coc-explorer](https://github.com/weirongxu/coc-explorer)
+- [coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)
 - [coc-snippets](https://www.npmjs.com/package/coc-snippets)
 - [coc-texlab](https://texlab.netlify.com/)
 - [coc-utils](https://github.com/coc-extensions/coc-utils)
+- [coc-vimlsp](https://github.com/iamcco/coc-vimlsp)
 - [coc-word](https://github.com/neoclide/coc-sources)
+- [coc-yaml](https://github.com/neoclide/coc-yaml)
 
 More infos: [Using coc extentions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
 
@@ -127,21 +128,7 @@ or to install neovim related packages:
 sudo npm update -g nodejs neovim markdownlint-cli
 ```
 
-### 4.2 - Go
-
-to install `efm-langserver`:
-
-```sh
-go get github.com/mattn/efm-langserver
-```
-
-#### 4.2.1 - Upgrade installed packages
-
-```sh
-go get -u github.com/mattn/efm-langserver
-```
-
-### 4.3 - Lua
+### 4.2- Lua
 
 to install lua lsp server and luacheck:
 
@@ -150,25 +137,15 @@ luarocks install --server=http://luarocks.org/dev lua-lsp`
 luarocks install luacheck`
 ```
 
-### 4.3.1 - Upgrade installed packages
+### 4.2.1 - Upgrade installed packages
 
 ```sh
 luarocks install luacheck`lua-lsp
 ```
 
-### 4.4 - Python
+### 4.3 - Python
 
-[vint](https://github.com/Vimjas/vint)
-
-[yamllint](https://github.com/adrienverge/yamllint)
-
-```sh
-pip install --user vim-vint
-
-pip install --user yamllint
-```
-
-  [python-languge-server](https://github.com/palantir/python-language-server)
+[python-languge-server](https://github.com/palantir/python-language-server)
 
 ```sh
 pip install --user 'python-language-server[all]'
@@ -177,7 +154,7 @@ pip install --user 'python-language-server[all]'
 ### 4.4 - Upgrade installed packages
 
 ```sh
-pip install --user vim-vint python-language-server yapf pyflakes rope
+pip install --user python-language-server yapf pyflakes rope
 ```
 
 

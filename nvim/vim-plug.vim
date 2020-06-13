@@ -19,6 +19,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'
 Plug 'kaicataldo/material.vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'joshdick/onedark.vim'
 
 "================
 "2 -  Programming
@@ -66,8 +68,9 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 
 Plug 'honza/vim-snippets'
-" asynchronous linter
-"Plug 'w0rp/ale'
+
+" better syntax highlight
+Plug 'sheerun/vim-polyglot'
 
 " find and replace
  Plug 'brooth/far.vim'

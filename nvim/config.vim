@@ -113,14 +113,6 @@ set showbreak=↳              " Show the linebreak for a long line
 set signcolumn=yes
 set bg=dark
 
-if (has("termguicolors"))
-	set termguicolors
-endif
-
-let g:material_theme_style = 'darker'
-let g:material_terminal_italics = 1
-colorscheme material
-
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
 set matchtime=2              " Tenths of a second to show the matching parten

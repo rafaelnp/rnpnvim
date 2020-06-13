@@ -39,7 +39,7 @@ try
 	let g:airline_symbols.linenr = ''
 
 	" Set airline theme manually
-	let g:airline_theme="murmur"
+	"let g:airline_theme="murmur"
 	" fix messed up symbols
 	"let g:airline_symbols.space = "\ua0"
 

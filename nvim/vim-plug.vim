@@ -12,19 +12,11 @@ call plug#begin(g:nvimdir . 'plugged')
 "1 - Colorscheme
 "===============
 
-Plug 'vim-scripts/Colour-Sampler-Pack'
-Plug 'tomasr/molokai'
-Plug 'https://github.com/tpope/vim-vividchalk.git'
-Plug 'nielsmadan/harlequin'
+Plug 'tpope/vim-vividchalk'
 Plug 'sjl/badwolf'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'
-Plug 'semibran/vim-colors-synthetic'
-Plug 'schickele/vim-nachtleben'
-Plug 'ErichDonGubler/vim-sublime-monokai'
-Plug 'ajmwagar/vim-deus'
-Plug 'sickill/vim-monokai'
 Plug 'kaicataldo/material.vim'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -72,8 +64,6 @@ Plug 'majutsushi/tagbar', {
 
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'octol/vim-cpp-enhanced-highlight'
-"Plug 'benekastah/neomake'
 
 Plug 'honza/vim-snippets'
 " asynchronous linter

@@ -113,6 +113,9 @@ Plug 'bling/vim-airline'
 " custom statusline theme
 Plug 'vim-airline/vim-airline-themes'
 
+" airline extension to show clock
+Plug 'enricobacis/vim-airline-clock'
+
 " full tab file browser
 Plug 'mbbill/VimExplorer', { 'on' : [ 'F7','VE' ] }
 

@@ -13,7 +13,7 @@ try
 		let g:airline_symbols = {}
 	endif
 
-	let g:airline_extensions = ['branch', 'hunks', 'coc', 'tabline']
+	let g:airline_extensions = ['branch', 'hunks', 'coc', 'tabline', 'clock']
 
 	" unicode symbols
 	let g:airline_left_sep = '»'
@@ -37,11 +37,6 @@ try
 	let g:airline_symbols.branch = ''
 	let g:airline_symbols.readonly = ''
 	let g:airline_symbols.linenr = ''
-
-	" Set airline theme manually
-	"let g:airline_theme="murmur"
-	" fix messed up symbols
-	"let g:airline_symbols.space = "\ua0"
 
 	" enable/disable enhanced tabline.
 	let g:airline#extensions#tabline#enabled = 1
@@ -68,6 +63,10 @@ try
 	" enable/disable eclim integration, which works well with the
 	" |airline-syntastic| extension. >
 	let g:airline#extensions#eclim#enabled = 0
+
+	" add time to statusline
+	let g:airline#extensions#clock#format = '%H:%M:%S'
+	let g:airline#extensions#clock#updatetime = 1000
 catch
 	echo 'vim-airline is not installed. Add it to vim-plug plugin list and run :PlugInstall'
 endtry

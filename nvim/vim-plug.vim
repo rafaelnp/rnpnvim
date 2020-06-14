@@ -112,7 +112,7 @@ Plug 'bling/vim-airline'
 
 " custom statusline theme
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'ntpeters/vim-airline-colornum'
 " airline extension to show clock
 Plug 'enricobacis/vim-airline-clock'
 

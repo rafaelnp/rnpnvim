@@ -58,9 +58,9 @@ inside neovim run the following commmands:
 Installed coc.nvim extentions:
 
 - [coc-diagnostic](https://github.com/iamcco/coc-diagnostic)
+- [coc-explorer](https://github.com/weirongxu/coc-explorer)
 - [coc-json](https://github.com/neoclide/coc-json)
 - [coc-marketplace](https://github.com/fannheyward/coc-marketplace)
-- [coc-explorer](https://github.com/weirongxu/coc-explorer)
 - [coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)
 - [coc-snippets](https://www.npmjs.com/package/coc-snippets)
 - [coc-texlab](https://texlab.netlify.com/)
@@ -68,6 +68,11 @@ Installed coc.nvim extentions:
 - [coc-vimlsp](https://github.com/iamcco/coc-vimlsp)
 - [coc-word](https://github.com/neoclide/coc-sources)
 - [coc-yaml](https://github.com/neoclide/coc-yaml)
+
+```vim
+CocInstall coc-diagnostic coc-json coc-explorer coc-marketplace coc-markdownlint \
+coc-snippets coc-texlab coc-utils coc-vimlsp coc-word coc-yaml
+```
 
 More infos: [Using coc extentions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
 

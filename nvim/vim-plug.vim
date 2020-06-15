@@ -1,9 +1,18 @@
-" auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if has('unix') || has('mac')
+	" auto-install vim-plug
+	if empty(glob('~/.config/nvim/autoload/plug.vim'))
+		silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+			\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	endif
 
 	autocmd VimEnter * PlugInstall | source $MYVIMRC
+elseif (has("win32") || has("win64"))
+	" auto-install vim-plug
+	if empty(glob('~\.config\nvim\autoload\plug.vim'))
+		message "Install it manually!"
+	endif
+else
+	echoerr "unsupported platform"
 endif
 
 call plug#begin(g:nvimdir . 'plugged')

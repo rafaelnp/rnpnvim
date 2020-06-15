@@ -40,7 +40,8 @@ endif
 " centralize undo files
 " the directory must be created manually
 if has("persistent_undo")
-	set undodir=~/.config/nvim/.undodir
+	"set undodir=~/.config/nvim/.undodir
+	set undodir= g:nvimdir .'.undodir'
 	set undofile
 endif
 
@@ -146,8 +147,8 @@ else
 	endif
 endif
 
-let g:python3_host_prog = '/usr/bin/python3'
-let g:python_host_prog = '/usr/bin/python2'
+"let g:python3_host_prog = '/usr/bin/python3'
+"let g:python_host_prog = '/usr/bin/python2'
 
 " settings needed for coc.nvim
 " Give more space for displaying messages.

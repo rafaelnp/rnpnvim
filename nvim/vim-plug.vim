@@ -127,7 +127,6 @@ Plug 'enricobacis/vim-airline-clock'
 " full tab file browser
 Plug 'mbbill/VimExplorer', { 'on' : [ 'F7','VE' ] }
 
-Plug 'myusuf3/numbers.vim'
 
 " side pane file browser
 Plug 'scrooloose/nerdtree'

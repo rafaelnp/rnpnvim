@@ -123,6 +123,8 @@ set display=uhex             " show unprintable characters hexadecimal
 set listchars=tab:▸\ ,eol:¬,trail:-,extends:>,precedes:<,nbsp:+,space:·
 set list
 
+set relativenumber           " Show the line number relative to the line with the cursor in
+                             " front of each line
 if has('mouse')
 	set mouse=a              " enable mouse in all modes
 	set mousehide            " hides the mouse while typing

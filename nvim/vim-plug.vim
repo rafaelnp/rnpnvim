@@ -116,6 +116,9 @@ Plug 'amal-khailtash/vim-xdc-syntax'
 "6 - Miscelaneous
 "================
 
+"Insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
+
 " calculator
 Plug 'sk1418/HowMuch'
 

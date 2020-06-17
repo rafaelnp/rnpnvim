@@ -42,35 +42,39 @@ Plug 'davidhalter/jedi-vim'
 Plug 'editorconfig/editorconfig-vim'
 
 " tag generator
-Plug 'ludovicchabant/vim-gutentags', {
-\	'for' : [
-\			'c',
-\			'cpp',
-\			'vim',
-\			'latex',
-\			'make',
-\			'python',
-\			'sh',
-\			'vhdl',
-\			'verilog',
-\			'lua',
-\		],
-\	}
+"Plug 'ludovicchabant/vim-gutentags', {
+"\	'for' : [
+"\			'c',
+"\			'cpp',
+"\			'vim',
+"\			'latex',
+"\			'make',
+"\			'python',
+"\			'sh',
+"\			'vhdl',
+"\			'verilog',
+"\			'lua',
+"\		],
+"\	}
 
-Plug 'majutsushi/tagbar', {
-\	'for' : [
-\			'c',
-\			'cpp',
-\			'vim',
-\			'latex',
-\			'make',
-\			'python',
-\			'sh',
-\			'vhdl',
-\			'verilog',
-\			'lua',
-\		],
-\	}
+"View and search LSP symbols, tags in Vim/NeoVim.
+Plug 'liuchengxu/vista.vim'
+
+"Plug 'majutsushi/tagbar', {
+"\	'for' : [
+"\			'c',
+"\			'cpp',
+"\			'vim',
+"\			'latex',
+"\			'make',
+"\			'python',
+"\			'sh',
+"\			'vhdl',
+"\			'verilog',
+"\			'lua',
+"\		],
+"\	}
+
 
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'

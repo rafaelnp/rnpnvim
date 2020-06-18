@@ -116,7 +116,10 @@ Plug 'amal-khailtash/vim-xdc-syntax'
 "6 - Miscelaneous
 "================
 
-"Insert or delete brackets, parens, quotes in pair
+" Vim plugin that shows keybindings in popup
+Plug 'liuchengxu/vim-which-key'
+
+""Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
 " calculator

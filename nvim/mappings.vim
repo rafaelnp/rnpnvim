@@ -22,11 +22,12 @@
 " 1 - Leader related mappings
 " remap leader
 let mapleader = ","
+let maplocalleader = "´"
 
-nnoremap <leader>c    :call Reloadconfig()<CR>
+"nnoremap <leader>c    :call Reloadconfig()<CR>
 
 " maps jumping tags
-nnoremap <leader>j  <c-]>
+"nnoremap <leader>j  <c-]>
 
 " opens .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>

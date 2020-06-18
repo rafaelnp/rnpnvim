@@ -28,6 +28,7 @@ exec 'source ' . g:nvimdir . 'plugin-config/vim-fugitive.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/vim-nerdtree-tabs.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/vim-signify.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/vim-startify.vim'
+exec 'source ' . g:nvimdir . 'plugin-config/vim-which-key.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/vimexplorer.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/vista.vim'
 

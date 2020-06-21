@@ -76,15 +76,19 @@ Plug 'liuchengxu/vista.vim'
 "\	}
 
 
+" sign column to indicate VCS status
 Plug 'mhinz/vim-signify'
+
+" git integration
 Plug 'tpope/vim-fugitive'
 
+" code snippets - review
 Plug 'honza/vim-snippets'
 
 " better syntax highlight
 Plug 'sheerun/vim-polyglot'
 
-" find and replace
+" find and replace. TODO: review configuration
  Plug 'brooth/far.vim'
 
 "==========
@@ -150,9 +154,10 @@ Plug 'jistr/vim-nerdtree-tabs'
 
 Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
 
+" TODO: improve comfiguration
 Plug 'Lokaltog/vim-easymotion'
 
-" hexadecimal viewer
+" hexadecimal viewer TODO: review
 Plug 'Shougo/vinarise.vim'
 
 " startup screen configuration
@@ -168,6 +173,7 @@ Plug 'eugen0329/vim-esearch'
 " Underline the word under cursor
 Plug 'itchyny/vim-cursorword'
 
+" TODO: review
 Plug 'yuttie/comfortable-motion.vim'
 
 " Devicons have nerdfonts as dependency https://www.nerdfonts.com/
@@ -176,6 +182,7 @@ Plug 'ryanoasis/vim-devicons'
 " markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
+" TODO; review plugin
 Plug 'godlygeek/tabular'
 
 "=========================

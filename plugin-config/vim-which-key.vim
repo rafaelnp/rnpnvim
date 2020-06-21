@@ -73,6 +73,12 @@ try
 		\ 'Z' : [':CocEnable'                          , 'enable CoC'],
 		\ }
 
+	" TODO: add g:which_key_map.d for denite
+	let g:which_key_map.d = {
+		\ 'name' : '+denite' ,
+		\ 'b' : [':Denite buffer'                        , 'buffers'],
+		\}
+
 	" g is for git
 	let g:which_key_map.g = {
 		\ 'name' : '+git' ,
@@ -100,6 +106,9 @@ try
 		\ 'V' : [':GV!'                              , 'view buffer commits'],
 		\ }
 
+	" TODO: add g:which_key_map.m for mdxk (markdown)
+
+	" terminal group
 	let g:which_key_map.t = {
 		\ 'name' : '+terminal' ,
 		\ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
@@ -115,7 +124,6 @@ try
 	" Register which key map
 	call which_key#register(',', "g:which_key_map")
 
-	"nnoremap <silent> <leader>  :WhichKey '<Space>'<CR>
 	nnoremap <silent> <leader>      :<c-u>WhichKey ','<CR>
 	vnoremap <silent> <localleader> :<c-u>hichKeyVisual '´'<CR>
 catch

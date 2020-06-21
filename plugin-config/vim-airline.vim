@@ -23,7 +23,7 @@ try
 		\ 'keymap',
 		\ 'nerdtree',
 		\ 'tabline',
-		\ 'tagbar'
+		\ 'vista'
 		\ ]
 
 	"========

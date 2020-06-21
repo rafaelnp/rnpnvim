@@ -41,7 +41,7 @@ endif
 " the directory must be created manually
 if has("persistent_undo")
 	"set undodir=~/.config/nvim/.undodir
-	set undodir= g:nvimdir .'.undodir'
+	let &undodir= g:nvimdir .'.undodir'
 	set undofile
 endif
 

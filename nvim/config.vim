@@ -160,3 +160,5 @@ set cmdheight=1
 " delays and poor user experience.
 set updatetime=300
 
+autocmd bufwritepost vim-plug.vim source vim-plug.vim
+

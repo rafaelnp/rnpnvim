@@ -52,7 +52,6 @@ inside neovim run the following commmands:
 - editorconfig
 - ccls
 
-
 ## 3 - coc.nvim extentions
 
 Installed coc.nvim extentions:
@@ -69,13 +68,15 @@ Installed coc.nvim extentions:
 - [coc-word](https://github.com/neoclide/coc-sources)
 - [coc-yaml](https://github.com/neoclide/coc-yaml)
 
+Command to install extensions:
+
 ```vim
-CocInstall coc-diagnostic coc-json coc-explorer coc-marketplace coc-markdownlint \
-coc-snippets coc-texlab coc-utils coc-vimlsp coc-word coc-yaml
+CocInstall coc-diagnostic coc-json coc-explorer coc-marketplace \
+coc-markdownlint  coc-snippets coc-texlab coc-utils coc-vimlsp \
+coc-word coc-yaml
 ```
 
 More infos: [Using coc extentions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
-
 
 ### 3.1 - to review
 
@@ -97,7 +98,6 @@ More infos: [Using coc extentions](https://github.com/neoclide/coc.nvim/wiki/Usi
   npm install -g markdownlint-cli
 ```
 
-
 #### 4.1.1 - Update installed packages
 
 install the `npm-check-updates`:
@@ -108,7 +108,7 @@ install the `npm-check-updates`:
 
 to update all installed packages, check if there are updates:
 
-```
+```sh
 sudo ncu -g
 [====================] 10/10 100%
 
@@ -162,7 +162,6 @@ pip install --user 'python-language-server[all]'
 pip install --user python-language-server yapf pyflakes rope
 ```
 
-
 ### 4.5 - HDL: systemverilog, verilog, vhdl
 
 ```sh
@@ -192,7 +191,6 @@ each HDL language:
 3. icarus (Verilog/SystemVerilog)
 4. modelsim (VHDL/Verilog/SystemVerilog)
 
-
 ## 5 - Languages
 
 ### 5.1 - C/C++
@@ -207,16 +205,13 @@ each HDL language:
 
 ### 5.2 - Latex
 
-
 ### 5.3 - Python
-
 
 ### 5.4 - VHDL
 
 - [VHDL](https://github.com/kraigher/rust_hdl)
 
 ### 5.5 - Verilog
-- Verilog
 
 ### 5.6 - Lua
 
@@ -227,13 +222,9 @@ each HDL language:
 
 ### 5.8 - VimL
 
-
 ## 6 - Fonts
-
-
 
 ## 7 - Additional reference
 
 - [How to Build a CMake-Based Project](https://preshing.com/20170511/how-to-build-a-cmake-based-project/)
-
 

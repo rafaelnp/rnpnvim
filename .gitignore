@@ -6,10 +6,10 @@ vim/.vim/doc/tags
 vim/.vim/plugged
 vim/.vim/ultisnips
 
-nvim/.undodir/
-nvim/autoload
-nvim/plugged
-nvim/.netrwhist
+.undodir/
+autoload
+plugged
+.netrwhist
 
 tags
 *.sw*

@@ -116,6 +116,9 @@ Plug 'amal-khailtash/vim-xdc-syntax'
 "6 - Miscelaneous
 "================
 
+" floating terminal integration
+Plug 'voldikss/vim-floaterm'
+
 " Vim plugin that shows keybindings in popup
 Plug 'liuchengxu/vim-which-key'
 

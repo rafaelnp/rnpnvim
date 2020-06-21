@@ -73,7 +73,7 @@ try
 		\ 'Z' : [':CocEnable'                          , 'enable CoC'],
 		\ }
 
-" g is for git
+	" g is for git
 	let g:which_key_map.g = {
 		\ 'name' : '+git' ,
 		\ 'a' : [':Git add .'                        , 'add all'],
@@ -98,6 +98,18 @@ try
 		\ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
 		\ 'v' : [':GV'                               , 'view commits'],
 		\ 'V' : [':GV!'                              , 'view buffer commits'],
+		\ }
+
+	let g:which_key_map.t = {
+		\ 'name' : '+terminal' ,
+		\ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
+		\ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+		\ 'g' : [':FloatermNew lazygit'                           , 'git'],
+		\ 'p' : [':FloatermNew python'                            , 'python'],
+		\ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+		\ 't' : [':FloatermToggle'                                , 'toggle'],
+		\ 'y' : [':FloatermNew ytop'                              , 'ytop'],
+		\ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
 		\ }
 
 	" Register which key map

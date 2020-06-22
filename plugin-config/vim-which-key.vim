@@ -27,7 +27,6 @@ try
 	let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 	let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 	let g:which_key_map['q'] = [ 'q'                          , 'quit' ]
-	let g:which_key_map['r'] = [ ':RnvimrToggle'              , 'ranger' ]
 	let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
 	let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 	let g:which_key_map['W'] = [ 'w'                          , 'write' ]
@@ -108,6 +107,29 @@ try
 
 	" TODO: add g:which_key_map.m for mdxk (markdown)
 
+	" rnpvim config files
+	let g:which_key_map.r = {
+		\ 'name' : '+rnpvim' ,
+		\ 'G' : [':tabedit ' . g:nvimdir . '.gitignore'    , 'gitignore'],
+		\ 'E' : [':tabedit ' . g:nvimdir . '.editorconfig' , 'editorconfig'],
+		\ 'a' : [':tabedit ' . g:nvimdir . 'abbrev.vim'    , 'abbreviations'],
+		\ 'i' : [':tabedit ' . g:nvimdir . 'init.vim'      , 'init.vim'],
+		\ 'c' : [':tabedit ' . g:nvimdir . 'config.vim'    , 'config.vim'],
+		\ 'f' : [':tabedit ' . g:nvimdir . 'functions.vim' , 'functions'],
+		\ 'g' : [':tabedit ' . g:nvimdir . 'ginit.vim'     , 'gui neovim'],
+		\ 'm' : [':tabedit ' . g:nvimdir . 'mappings.vim'  , 'mappings'],
+		\ 'M' : [':tabedit ' . g:nvimdir . 'minimal.vim'   , 'minimal config'],
+		\ 'P' : [':tabedit ' . g:nvimdir . 'plugins.vim'   , 'plugin list'],
+		\ 'r' : [':tabedit ' . g:nvimdir . 'README.md'     , 'README'],
+		\ 'v' : [':tabedit ' . g:nvimdir . 'vim-plug.vim'  , 'vim-plug'],
+		\ }
+
+	" rnpvim config files
+	" TODO: use floaterm to list files in the plugin-config directory
+	let g:which_key_map.r.p = {
+		\ 'name' : '+plugin config' ,
+		\ 'w' : [':tabedit ' . g:nvimdir . 'plugin-config/vim-which-key.vim'      , 'vim-which-key'],
+		\ }
 	" terminal group
 	let g:which_key_map.t = {
 		\ 'name' : '+terminal' ,

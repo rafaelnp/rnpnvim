@@ -10,6 +10,7 @@ vim/.vim/ultisnips
 autoload
 plugged
 .netrwhist
+coc
 
 tags
 *.sw*

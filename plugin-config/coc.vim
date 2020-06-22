@@ -5,6 +5,12 @@
 
 try
 	" TODO: review plguin config
+
+	" set explictly coc config and data directories. When using windows 10 +
+	" user network share it points to it, instead of user home directory
+	let g:coc_config_home  = g:nvimdir
+	let g:coc_data_home  = g:nvimdir . 'coc'
+
 	" 1 - suggested configuration from coc.nvim wiki
 	" Use tab for trigger completion with characters ahead and navigate.
 	" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by

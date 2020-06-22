@@ -1,7 +1,5 @@
 
 {
-  // coc
-  // TODO: set $COC_VIMCONFIG, $COC_DATAHOME
   // coc-explorer
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
@@ -15,7 +13,6 @@
     "MD009": true,
     "MD012": { "maximum": 2},
     "MD013": { "line_length": 100 }
-    //"line_length": true
   },
   "languageserver": {
     // C/C++/OBjectivC

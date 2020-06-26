@@ -11,25 +11,26 @@ iabbrev rnp@  rnp@25ghz.net
 
 " command line
 cabbrev thelp   tab help
-cabbrev mapps   ~/.vim/mappings.vim
-cabbrev bundle  ~/.vim/neobundle.vim
-cabbrev plugs   ~/.vim/plugins.vim
-cabbrev vconf   ~/.vim/config.vim
-cabbrev funcs   ~/.vim/functions.vim
-cabbrev abbrev  ~/.vim/abbrev.vim
-cabbrev aucmd   ~/.vim/augroup.vim
+cabbrev th      tab help
 cabbrev vhelp   vertical help
 cabbrev vh      vertical help
-cabbrev vimrc   ~/.vimrc
-cabbrev W       w
-cabbrev QW      qw
-cabbrev qW      qw
-cabbrev Qw      qw
-cabbrev Q       q
-cabbrev help    tab help
-cabbrev h       tab help
+
+cabbrev maps    ~/.config/nvim/mappings.vim
+cabbrev vplug   ~/.config/nvim/vim-plug.vim
+cabbrev plugs   ~/.config/nvim/plugins.vim
+cabbrev conf    ~/.config/nvim/config.vim
+cabbrev funcs   ~/.config/nvim/functions.vim
+cabbrev abbrev  ~/.config/nvim/abbrev.vim
+cabbrev ginit   ~/.config/nvim/ginit.vim
+cabbrev init    ~/.config/nvim/init.vim
 
 " avoid annoying error messages
+cabbrev W    w
+cabbrev WA   wa
+cabbrev QW   qw
+cabbrev qW   qw
+cabbrev Qw   qw
+cabbrev Q    q
 cabbrev Wqa  wqa
 cabbrev WQA  wqa
 cabbrev WQ   wq

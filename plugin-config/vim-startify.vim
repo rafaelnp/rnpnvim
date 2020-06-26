@@ -21,12 +21,13 @@ try
 
 	let g:startify_bookmarks = [
 				\g:nvimdir . 'abbrev.vim',
-				\g:nvimdir . 'augroup.vim',
+				\g:nvimdir . 'coc-settings.json',
 				\g:nvimdir . 'config.vim',
-				\g:nvimdir . 'denite.vim',
 				\g:nvimdir . 'functions.vim',
+				\g:nvimdir . 'ginit.vim',
 				\g:nvimdir . 'init.vim',
 				\g:nvimdir . 'mappings.vim',
+				\g:nvimdir . 'minimal.vim',
 				\g:nvimdir . 'plugins.vim',
 				\g:nvimdir . 'vim-plug.vim'
 				\]
@@ -49,9 +50,6 @@ try
 		\ '',
 		\ ]
 
-	"if has('gui_running')
-	"	call SetWindowSize()
-	"endif
 catch
 	echo 'vim-startify is not installed. Add it to vim-plug plugin list and run :PlugInstall'
 endtry

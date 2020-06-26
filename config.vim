@@ -4,7 +4,9 @@
 " General
 "========
 
-"set autochdir                      " disabled because of vimshell plugin
+set autochdir                      " change the current working directory whenever you
+                                   " open a file, switch buffers, delete a buffer or
+                                   " open/close a window.
 set autowriteall                   " automatically save all buffers
 set nobackup                       " no backup files, we have git :)
 set nowritebackup
@@ -48,7 +50,7 @@ endif
 "======
 " sound
 "======
-set t_vb=                " disable the  annoyng visual and sound bell :)
+set t_vb=                " disable the  annoying visual and sound bell :)
 set novisualbell         " no noise
 set noerrorbells         " no noise
 

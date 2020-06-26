@@ -4,7 +4,7 @@
 "=====================================================
 
 try
-	nmap <F2> <Plug>MarkdownPreview
+	nmap <leader><F2> <Plug>MarkdownPreview
 catch
 	echo 'markdown-preview is not installed. Add it to vim-plug plugin list and run :PlugInstall'
 endtry

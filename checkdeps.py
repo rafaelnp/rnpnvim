@@ -33,12 +33,16 @@ def check_file_inpath(file):
     return found, fullpath
 
 
-def print_filestatus(file):
+def print_filestatus(name, file=None):
     """
     check the result of file search and print it in the terminal
 
+    name: application name
     file: filename to be searched and its result to be printed
     """
+
+    if file is None:
+        file = name
 
     found, filepath = check_file_inpath(file)
 
@@ -65,12 +69,15 @@ def main():
     print_filestatus("clangd")
     print_filestatus("cmake")
     print_filestatus("editorconfig")
+    print_filestatus("fzf")
     print_filestatus("git")
     print_filestatus("go")
     print_filestatus("luarocks")
+    print_filestatus("ncdu")
     print_filestatus("nvim")
     print_filestatus("npm")
     print_filestatus("pip")
+    print_filestatus("ranger")
 
     print("\n2 - javascript packages\n" +
           "=======================")

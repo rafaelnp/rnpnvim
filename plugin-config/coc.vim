@@ -11,6 +11,21 @@ try
 	let g:coc_config_home  = g:nvimdir
 	let g:coc_data_home  = g:nvimdir . 'coc'
 
+	" install extensions
+	let g:coc_global_extensions = [
+		\ 'coc-actions',
+		\ 'coc-diagnostic',
+		\ 'coc-explorer',
+		\ 'coc-json',
+		\ 'coc-marketplace',
+		\ 'coc-markdownlint',
+		\ 'coc-texlab',
+		\ 'coc-utils',
+		\ 'coc-vimlsp',
+		\ 'coc-xml',
+		\ 'coc-yank',
+		\ ]
+
 	" 1 - suggested configuration from coc.nvim wiki
 	" Use tab for trigger completion with characters ahead and navigate.
 	" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by

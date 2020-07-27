@@ -2,8 +2,10 @@
 if has('unix') || has('mac')
 	let g:homedir=$HOME
 	let g:nvimdir=g:homedir . '/.config/nvim/'
+	let g:nvimcolordir=g:homedir . '/.config/nvim/color/'
 elseif (has("win32") || has("win64"))
 	let g:nvimdir=$LOCALAPPDATA.'\nvim\'
+	let g:nvimcolordir=$LOCALAPPDATA.'\nvim\color\'
 else
 	echoerr "unsupported platform"
 endif

@@ -143,6 +143,16 @@ try
 		\ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
 		\ }
 
+	" visual
+	let g:which_key_map.v = {
+		\ 'name' : '+visual' ,
+		\ 'a' : [':source ' . g:nvimcolordir . 'papercolordark.vim'   , 'PaperColor Dark'],
+		\ 'b' : [':source ' . g:nvimcolordir . 'papercolorlight.vim'  , 'PaperColor Light'],
+		\ 'c' : [':source ' . g:nvimcolordir . 'onedark.vim'          , 'onedark'],
+		\ 'd' : [':source ' . g:nvimcolordir . 'onehalflight.vim'     , 'onehalflight'],
+		\ 'e' : [':source ' . g:nvimcolordir . 'onehalfdark.vim'      , 'onehalfdark'],
+		\ }
+
 	" Register which key map
 	call which_key#register(',', "g:which_key_map")
 

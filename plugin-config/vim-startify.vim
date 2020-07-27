@@ -5,7 +5,7 @@
 
 try
 	" TODO: review plugin config
-	let g:startify_files_number = 5
+	let g:startify_files_number = 10
 
 	highlight StartifyFooter  ctermfg=green
 	highlight StartifyFooter  guifg=green

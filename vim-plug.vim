@@ -29,6 +29,8 @@ Plug 'kaicataldo/material.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'joshdick/onedark.vim'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'NLKNguyen/papercolor-theme'
 
 "================
 "2 -  Programming

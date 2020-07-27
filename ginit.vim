@@ -3,7 +3,6 @@
 "
 
 if exists('g:GuiLoaded')
-	set bg=dark
 	"Guifont DejaVu\ Sans\ Mono\ for\ Powerline:h8
 	Guifont! DejaVuSansMono\ Nerd\ Font\ Mono:h8
 	GuiTabline 0

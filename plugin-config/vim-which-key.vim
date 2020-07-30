@@ -151,6 +151,9 @@ try
 		\ 'c' : [':source ' . g:nvimcolordir . 'onedark.vim'          , 'onedark'],
 		\ 'd' : [':source ' . g:nvimcolordir . 'onehalflight.vim'     , 'onehalflight'],
 		\ 'e' : [':source ' . g:nvimcolordir . 'onehalfdark.vim'      , 'onehalfdark'],
+		\ 'f' : [':source ' . g:nvimcolordir . 'ayu.vim'              , 'ayu'],
+		\ 'g' : [':source ' . g:nvimcolordir . 'solarized.vim'        , 'solarized'],
+		\ 'h' : [':source ' . g:nvimcolordir . 'purify.vim'           , 'purify'],
 		\ }
 
 	" Register which key map

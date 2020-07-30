@@ -7,7 +7,8 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-let g:material_theme_style = 'darker'
+"let g:material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker'
+let g:material_theme_style = 'palelight'
 let g:material_terminal_italics = 1
 colorscheme material
 

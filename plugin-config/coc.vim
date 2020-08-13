@@ -14,6 +14,7 @@ try
 	" install extensions
 	let g:coc_global_extensions = [
 		\ 'coc-actions',
+		\ 'coc-calc',
 		\ 'coc-diagnostic',
 		\ 'coc-explorer',
 		\ 'coc-json',

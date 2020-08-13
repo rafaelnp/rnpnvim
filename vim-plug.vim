@@ -65,22 +65,6 @@ Plug 'editorconfig/editorconfig-vim'
 "View and search LSP symbols, tags in Vim/NeoVim.
 Plug 'liuchengxu/vista.vim'
 
-"Plug 'majutsushi/tagbar', {
-"\	'for' : [
-"\			'c',
-"\			'cpp',
-"\			'vim',
-"\			'latex',
-"\			'make',
-"\			'python',
-"\			'sh',
-"\			'vhdl',
-"\			'verilog',
-"\			'lua',
-"\		],
-"\	}
-
-
 " sign column to indicate VCS status
 Plug 'mhinz/vim-signify'
 
@@ -125,13 +109,16 @@ Plug 'amal-khailtash/vim-xdc-syntax'
 "6 - Miscelaneous
 "================
 
-" floating terminal integration
+" add vim-plug as a normal plugin
+Plug 'junegunn/vim-plug'
+
+ " floating terminal integration
 Plug 'voldikss/vim-floaterm'
 
 " Vim plugin that shows keybindings in popup
 Plug 'liuchengxu/vim-which-key'
 
-""Insert or delete brackets, parens, quotes in pair
+"Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
 " calculator
@@ -189,14 +176,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " TODO; review plugin
 Plug 'godlygeek/tabular'
-
-"=========================
-"7 - Vim built-in plugins
-"=========================
-
-" BUG: causing problems at start, loading an empty buffer instead of the given
-"      filename
-"runtime! ftplugin/man.vim
 
 "===========================
 "8 - Under test/to be tested

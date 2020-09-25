@@ -17,6 +17,6 @@ let ayucolor="light"  " for light version of theme
 colorscheme ayu
 
 "let g:airline_theme='ayu_dark'
-2let g:airline_theme='ayu_mirage'
+"let g:airline_theme='ayu_mirage'
 let g:airline_theme='ayu_light'
 

@@ -123,8 +123,13 @@
     },
     "hdlchecker": {
        "command": "hdl_checker",
-       "args": ["--lsp"],
-       "filetypes": ["vhdl", "verilog", "systemverilog"]
+       "args": ["--lsp", "--log-level", "DEBUG"],
+       "filetypes": ["verilog", "systemverilog"]
+    },
+    // VHDL, rust_hdl
+    "vhdl_ls": {
+       "command": "vhdl_ls",
+       "filetypes": ["vhdl"]
     }
   } // LanguageServer End
 }

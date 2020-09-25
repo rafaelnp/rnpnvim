@@ -21,7 +21,6 @@ try
 		\ 'fugitiveline',
 		\ 'hunks',
 		\ 'keymap',
-		\ 'nerdtree',
 		\ 'tabline',
 		\ 'vista'
 		\ ]

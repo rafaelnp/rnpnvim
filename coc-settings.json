@@ -121,10 +121,10 @@
       "command": "lua-lsp",
       "filetypes": ["lua"]
     },
-    "hdlchecker": {
-       "command": "hdl_checker",
-       "args": ["--lsp", "--log-level", "DEBUG"],
-       "filetypes": ["verilog", "systemverilog"]
+    // SystemVerilog, Verilog
+    "svls": {
+      "command": "svls",
+      "filetypes": ["systemverilog", "verilog"]
     },
     // VHDL, rust_hdl
     "vhdl_ls": {

@@ -21,6 +21,7 @@ try
 		\ 'coc-json',
 		\ 'coc-marketplace',
 		\ 'coc-markdownlint',
+		\ 'coc-python',
 		\ 'coc-texlab',
 		\ 'coc-utils',
 		\ 'coc-vimlsp',

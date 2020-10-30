@@ -42,7 +42,7 @@ Plug 'kyoz/purify', {'rtp': 'vim/'}
 " conquer of completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 
 Plug 'editorconfig/editorconfig-vim'
 

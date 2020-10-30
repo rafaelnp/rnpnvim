@@ -78,7 +78,9 @@ Plug 'honza/vim-snippets'
 Plug 'sheerun/vim-polyglot'
 
 " find and replace. TODO: review configuration
- Plug 'brooth/far.vim'
+Plug 'brooth/far.vim'
+
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 "==========
 "4 - Denite

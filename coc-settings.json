@@ -14,33 +14,12 @@
     "MD012": { "maximum": 2},
     "MD013": { "line_length": 100 }
   },
+  // coc-clangd
+  "clangd.semanticHighlighting": true,
   "languageserver": {
     // C/C++/OBjectivC
-    "ccls": {
-      "command": "ccls",
-      "filetypes": [
-        "c",
-        "cpp",
-        "objc",
-        "objcpp"
-      ],
-      "rootPatterns": [
-        ".ccls",
-        "build/compile_commands.json",
-        "compile_commands.json",
-        ".vim/",
-        ".git/",
-        ".hg/"
-      ],
-      "initializationOptions": {
-        "cache": {
-          "directory": "/tmp/ccls"
-        },
-        "client": {
-          "snippetSupport": true
-        }
-      }
-    },
+    // using coc-clangd extention
+    //
     // Python
     "python": {
       "command": "python",

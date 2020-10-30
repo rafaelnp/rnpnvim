@@ -5,7 +5,7 @@
 
 syntax on
 set bg=dark
-colorscheme onehalldark
+colorscheme onehalfdark
 
 
 " checks if your terminal has 24-bit color support
@@ -15,4 +15,3 @@ if (has("termguicolors"))
 endif
 
 let g:airline_theme='onehalfdark'
-

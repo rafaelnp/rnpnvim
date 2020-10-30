@@ -19,7 +19,7 @@ filetype plugin indent on    " required!
 
 exec 'source ' . g:nvimdir . 'config.vim'
 
-exec 'source ' . g:nvimdir . 'color/papercolorlight.vim'
+exec 'source ' . g:nvimdir . 'color/onedark.vim'
 
 exec 'source ' . g:nvimdir . 'functions.vim'
 

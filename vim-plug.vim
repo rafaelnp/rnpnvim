@@ -179,6 +179,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " TODO; review plugin
 Plug 'godlygeek/tabular'
 
+Plug 'junegunn/fzf.vim'
+
 "===========================
 "8 - Under test/to be tested
 "===========================

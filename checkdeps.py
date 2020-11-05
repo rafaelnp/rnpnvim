@@ -78,6 +78,7 @@ def main():
     print_filestatus("npm")
     print_filestatus("pip")
     print_filestatus("ranger")
+    print_filestatus("rg")
 
     print("\n2 - javascript packages\n" +
           "=======================")

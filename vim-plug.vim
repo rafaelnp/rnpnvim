@@ -179,6 +179,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " TODO; review plugin
 Plug 'godlygeek/tabular'
 
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 "===========================

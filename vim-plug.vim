@@ -157,9 +157,6 @@ Plug 'Shougo/vinarise.vim'
 " startup screen configuration
 Plug 'https://github.com/mhinz/vim-startify.git'
 
-" 'in-buffer' file browser
-Plug 'jeetsukumaran/vim-filebeagle'
-
 Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 
 Plug 'eugen0329/vim-esearch'
@@ -181,6 +178,9 @@ Plug 'godlygeek/tabular'
 
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+
+" integrate ranger as vim file browser
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
 "===========================
 "8 - Under test/to be tested

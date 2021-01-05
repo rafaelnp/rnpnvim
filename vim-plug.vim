@@ -82,6 +82,8 @@ Plug 'brooth/far.vim'
 
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 
+Plug 'lambdalisue/gina.vim'
+
 "==========
 "4 - Denite
 "==========

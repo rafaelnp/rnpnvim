@@ -23,7 +23,6 @@ try
 		\ 'coc-markdownlint',
 		\ 'coc-python',
 		\ 'coc-texlab',
-		\ 'coc-utils',
 		\ 'coc-vimlsp',
 		\ 'coc-xml',
 		\ 'coc-yank',

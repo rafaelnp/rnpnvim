@@ -154,10 +154,18 @@ Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
 Plug 'Lokaltog/vim-easymotion'
 
 " hexadecimal viewer TODO: review
-Plug 'Shougo/vinarise.vim'
+Plug 'Shougo/vinarise.vim', { 'on': 'Vinarise' }
 
 " startup screen configuration
 Plug 'https://github.com/mhinz/vim-startify.git'
+
+
+if (has("win32") || has("win64"))
+	Plug 'jeetsukumaran/vim-filebeagle'
+else
+	" integrate ranger as vim file browser
+	Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+endif
 
 Plug 'mbbill/undotree', { 'on': ['F6', 'UndotreeToggle'] }
 
@@ -180,9 +188,6 @@ Plug 'godlygeek/tabular'
 
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-
-" integrate ranger as vim file browser
-Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
 "===========================
 "8 - Under test/to be tested

@@ -4,6 +4,7 @@ if has('unix') || has('mac')
 	let g:nvimdir=g:homedir . '/.config/nvim/'
 	let g:nvimcolordir=g:homedir . '/.config/nvim/color/'
 elseif (has("win32") || has("win64"))
+	let g:homedir=$LOCALAPPDATA
 	let g:nvimdir=$LOCALAPPDATA.'\nvim\'
 	let g:nvimcolordir=$LOCALAPPDATA.'\nvim\color\'
 else

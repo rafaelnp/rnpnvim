@@ -1,5 +1,6 @@
 
 {
+  "diagnostic.displayByAle": true,
   // coc-explorer
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,

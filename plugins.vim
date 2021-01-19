@@ -4,6 +4,7 @@
 
 " each plugin has its own configuration file under plugin-config
 
+exec 'source ' . g:nvimdir . 'plugin-config/ale.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/calendar.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/coc.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/denite.vim'

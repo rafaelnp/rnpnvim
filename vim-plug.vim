@@ -84,6 +84,10 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 Plug 'lambdalisue/gina.vim'
 
+Plug 'dense-analysis/ale'
+
+Plug 'desmap/ale-sensible'
+
 "==========
 "4 - Denite
 "==========

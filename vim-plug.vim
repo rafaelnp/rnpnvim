@@ -92,11 +92,11 @@ Plug 'desmap/ale-sensible'
 "4 - Denite
 "==========
 
-Plug 'Shougo/denite.nvim'
-Plug 'ujihisa/unite-colorscheme'
-Plug 'ujihisa/unite-outline'
-Plug 'Shougo/neomru.vim'
-Plug 'Shougo/neoyank.vim'
+" Plug 'Shougo/denite.nvim'
+" Plug 'ujihisa/unite-colorscheme'
+" Plug 'ujihisa/unite-outline'
+" Plug 'Shougo/neomru.vim'
+" Plug 'Shougo/neoyank.vim'
 
 "================
 "5 - Filetypes

@@ -7,7 +7,7 @@
 exec 'source ' . g:nvimdir . 'plugin-config/ale.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/calendar.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/coc.vim'
-exec 'source ' . g:nvimdir . 'plugin-config/denite.vim'
+"exec 'source ' . g:nvimdir . 'plugin-config/denite.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/editorconfig.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/far.vim'
 exec 'source ' . g:nvimdir . 'plugin-config/fzf.vim'

@@ -161,7 +161,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'Shougo/vinarise.vim', { 'on': 'Vinarise' }
 
 " startup screen configuration
-Plug 'https://github.com/mhinz/vim-startify.git'
+Plug 'mhinz/vim-startify.git'
 
 
 if (has("win32") || has("win64"))

@@ -48,6 +48,15 @@ try
 	" - When set, CTRL-N and CTRL-P will be bound to 'next-history' and
 	"   'previous-history' instead of 'down' and 'up'.
 	let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+	" Mappings
+	nnoremap <silent> <space>b  :Buffers<CR>
+	nnoremap <silent> <space>bl :BLines<CR>
+	nnoremap <silent> <space>c  :Commands<CR>
+	nnoremap <silent> <space>co :Colors<CR>
+	nnoremap <silent> <space>f  :Files<CR>
+	nnoremap <silent> <space>h  :History:<CR>
+	nnoremap <silent> <space>l  :Lines<CR>
 catch
 	echo 'fzf.vim is not installed. Add it to vim-plug plugin list and run :PlugInstall'
 endtry

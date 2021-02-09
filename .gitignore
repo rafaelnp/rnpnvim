@@ -17,3 +17,5 @@ tags
 *.pyc
 *~
 
+# sessions
+session

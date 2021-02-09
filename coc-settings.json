@@ -1,0 +1,51 @@
+
+{
+  "diagnostic.displayByAle": true,
+  // coc-explorer
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings.global": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  },
+  "markdownlint.config":
+  {
+    "MD007": { "indent": 2 },
+    "MD009": true,
+    "MD012": { "maximum": 2},
+    "MD013": { "line_length": 100 }
+  },
+  // coc-clangd
+  "clangd.semanticHighlighting": true,
+  "languageserver": {
+    // C/C++/OBjectivC
+    // using coc-clangd extension
+    //
+    // Python
+    // using coc-python extension
+    //
+    // Latex
+    "latex": {
+      "command": "texlab",
+      // not start server at home directory, since it won't work.
+      "ignoredRootPaths": ["~"],
+      "filetypes": ["tex", "bib", "plaintex", "context"]
+    },
+    // Lua
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": ["lua"]
+    },
+    // SystemVerilog, Verilog
+    "svls": {
+      "command": "svls",
+      "filetypes": ["systemverilog", "verilog"]
+    },
+    // VHDL, rust_hdl
+    "vhdl_ls": {
+       "command": "vhdl_ls",
+       "filetypes": ["vhdl"]
+    }
+  } // LanguageServer End
+}
+

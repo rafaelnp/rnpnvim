@@ -79,3 +79,10 @@ function! SetWindowSize()
 	"endif
 endfunction
 
+" Return date and time in the following format:
+" 2020.06.27 (Sa) 15:36:55 (UTC +0200 CEST)
+function! DateTime()
+	let datetime = strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")
+
+	return datetime
+endfunction

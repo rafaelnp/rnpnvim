@@ -8,33 +8,30 @@ Last update: 2020.03.22 (Sun) 20:28:56 (UTC +0100 CET)
 - [Table of Contents](#table-of-contents)
     - [0 Introduction](#0-introduction)
     - [1 Why rnpvim](#1-why-rnpvim)
-        - [1.1 Main features](#11-main-features)
+      - [1.1 Main features](#11-main-features)
     - [2 Requirements](#2-requirements)
     - [3 Installation](#3-installation)
     - [4 References](#4-references)
     - [5 Acknowledgements](#5-acknowledgements)
 
-## 0 Introduction
+### 0 Introduction
 
 This Neovim setup is based on my daily workflow at work/home, where is normaly use
 different programming languages. This is still a work in progress, so
 Suggestions, corrections are welcome, and **expect some glitches**. :-)
 
+### 1 Why rnpvim
 
-## 1 Why rnpvim
-
-Have a Neovim configuration on git (in this case Github) makes easier to use the same
-configuration across different computers, keep a history of what you have done and
-if you do something wrong you can revert it on a sane way.
+Have a Neovim configuration on git (in this case Github) makes easier to use the
+same configuration across different computers, keep a history of what you have
+done and if you do something wrong you can revert it on a sane way.
 
 If you use vim and your workflow includes Assembly, C, C++, LaTeX and HDL(Verilog,VHDL),
 then rnpvim may be a good option for you.
 
-
 **The rnpvim was tested only on Linux and Windows 10. Theoretically it should work on Mac OSX.**
 
-
-### 1.1 Main features
+#### 1.1 Main features
 
 Here are listed the main rnpvim 's features, provided by additional plugins. Those
 plugins are managed by [vim-plug](https://github.com/junegunn/vim-plug)
@@ -52,11 +49,11 @@ Implemented:
 - Git full integration
 - LaTeX integration
 - LSP support
-    - C/C++
-    - Lua
-    - Python
-    - Verilog/SystemVerilog (partial)
-    - VHDL (partial)
+  - C/C++
+  - Lua
+  - Python
+  - Verilog/SystemVerilog (partial)
+  - VHDL (partial)
 - Markdown integration
 - Markdown Preview
 - MRU File/Directory browsing
@@ -75,8 +72,7 @@ Todo:
 - VHDL/Verilog syntax highlight
 - Code/text autocompletion (in progress)
 
-
-## 2 Requirements
+### 2 Requirements
 
 This Vim setup has the following requirements/dependencies:
 
@@ -94,13 +90,11 @@ This Vim setup has the following requirements/dependencies:
 - [The Silver Search](http://geoff.greer.fm/ag/)
 - [Universal ctags](https://github.com/universal-ctags/ctags)
 
-
-## 3 Installation
+### 3 Installation
 
 Work in progress, being rewritten.
 
-
-## 4 References
+### 4 References
 
 1. [Neovim](http://neovim.io)
 2. [Vim](http://www.vim.org)
@@ -124,11 +118,8 @@ Work in progress, being rewritten.
 20. [What is modern vim?](https://medium.com/usevim/what-is-modern-vim-2591f6b1ec04)
 21. [redit neovim](https://www.reddit.com/r/neovim/)
 
-
-## 5 Acknowledgements
+### 5 Acknowledgements
 
 I'd like to thank all NeoVim and Vim developers and the community for the very powerful
 and useful editor we can use on our daily workflow. :)
-
-
 

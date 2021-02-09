@@ -22,14 +22,12 @@
 " 1 - Leader related mappings
 " remap leader
 let mapleader = ","
+let maplocalleader = "´"
 
-nnoremap <leader>c    :call Reloadconfig()<CR>
+"nnoremap <leader>c    :call Reloadconfig()<CR>
 
 " maps jumping tags
-nnoremap <leader>j  <c-]>
-
-" opens .vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+"nnoremap <leader>j  <c-]>
 
 " 2 - Alt related mappings
 " removes carriage return
@@ -51,10 +49,10 @@ nnoremap <a-k> :tabprevious<CR>
 nnoremap <silent> <a-c> :nohlsearch<CR>
 
 " go to next buffer
-nnoremap <a-n> :bn<CR>
+nnoremap <leader>n :bn<CR>
 
 " go to previous buffer
-nnoremap <a-p> :bp<CR>
+nnoremap <leader>p :bp<CR>
 
 " saves all buffers
 nnoremap <a-s> :wa<CR>
@@ -90,15 +88,21 @@ nnoremap <c-up>     <c-w>K
 nnoremap <c-left>   <c-w>H
 nnoremap <c-right>  <c-w>L
 
+" Use alt + hjkl to resize windows
+nnoremap <silent> <c-j>    :resize -2<CR>
+nnoremap <silent> <c-k>    :resize +2<CR>
+nnoremap <silent> <c-h>    :vertical resize -2<CR>
+nnoremap <silent> <c-l>    :vertical resize +2<CR>
+
 " close window
 nnoremap <c-c>      :close
 
 " 4 - Miscelaneous mappings
 
 " Insert current date and time
-nnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
-vnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
-inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>
+nnoremap <leader><F5> i<C-R>=DateTime()<CR><esc>
+vnoremap <leader><F5> "=DateTime()<CR>P
+inoremap <leader><F5> <C-R>=DateTime()<CR>
 
 " Disable arrow keys in normal mode
 noremap <Left>  <Nop>

@@ -5,31 +5,30 @@
 
 - [Conquer-of-Completion Configuration](#conquer-of-completion-configuration)
 - [Table of Contents](#table-of-contents)
-    - [1 - Install coc.nvim](#1---install-cocnvim)
-    - [2 - distro level dependencies](#2---distro-level-dependencies)
-    - [3 - coc.nvim extentions](#3---cocnvim-extentions)
-        - [3.1 - to review](#31---to-review)
-    - [4 - Language level packages](#4---language-level-packages)
-        - [4.1 - javascript](#41---javascript)
-            - [4.1.1 - Update installed packages](#411---update-installed-packages)
-        - [4.2 - Go](#42---go)
-            - [4.2.1 - Upgrade installed packages](#421---upgrade-installed-packages)
-        - [4.3 - Lua](#43---lua)
-        - [4.3.1 - Upgrade installed packages](#431---upgrade-installed-packages)
-        - [4.4 - Python](#44---python)
-        - [4.4 - Upgrade installed packages](#44---upgrade-installed-packages)
-        - [4.5 - HDL: systemverilog, verilog, vhdl](#45---hdl-systemverilog-verilog-vhdl)
-    - [5 - Languages](#5---languages)
-        - [5.1 - C/C++](#51---cc)
-        - [5.2 - Latex](#52---latex)
-        - [5.3 - Python](#53---python)
-        - [5.4 - VHDL](#54---vhdl)
-        - [5.5 - Verilog](#55---verilog)
-        - [5.6 - Lua](#56---lua)
-        - [5.7 - Json](#57---json)
-        - [5.8 - VimL](#58---viml)
-    - [6 - Fonts](#6---fonts)
-    - [7 - Additional reference](#7---additional-reference)
+  - [1 - Install coc.nvim](#1---install-cocnvim)
+  - [2 - distro level dependencies](#2---distro-level-dependencies)
+  - [3 - coc.nvim extentions](#3---cocnvim-extentions)
+    - [3.1 - to review](#31---to-review)
+  - [4 - Language level packages](#4---language-level-packages)
+    - [4.1 - javascript](#41---javascript)
+      - [4.1.1 - Update installed packages](#411---update-installed-packages)
+    - [4.2- Lua](#42--lua)
+    - [4.2.1 - Upgrade installed packages](#421---upgrade-installed-packages)
+    - [4.3 - Python](#43---python)
+    - [4.4 - Upgrade installed packages](#44---upgrade-installed-packages)
+    - [4.5 - HDL: systemverilog, verilog, vhdl](#45---hdl-systemverilog-verilog-vhdl)
+  - [5 - Languages](#5---languages)
+    - [5.1 - C/C++](#51---cc)
+    - [5.2 - Latex](#52---latex)
+    - [5.3 - Python](#53---python)
+    - [5.4 - VHDL](#54---vhdl)
+    - [5.5 - Verilog](#55---verilog)
+    - [5.6 - Lua](#56---lua)
+    - [5.7 - Json](#57---json)
+    - [5.8 - VimL](#58---viml)
+    - [5.9 - Markdown](#59---markdown)
+  - [6 - Fonts](#6---fonts)
+  - [7 - Additional reference](#7---additional-reference)
 
 ## 1 - Install coc.nvim
 
@@ -54,22 +53,31 @@ inside neovim run the following commmands:
 - editorconfig
 - ccls
 
-
 ## 3 - coc.nvim extentions
 
 Installed coc.nvim extentions:
 
 - [coc-diagnostic](https://github.com/iamcco/coc-diagnostic)
+- [coc-explorer](https://github.com/weirongxu/coc-explorer)
 - [coc-json](https://github.com/neoclide/coc-json)
 - [coc-marketplace](https://github.com/fannheyward/coc-marketplace)
-- [coc-explorer](https://github.com/weirongxu/coc-explorer)
+- [coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)
 - [coc-snippets](https://www.npmjs.com/package/coc-snippets)
 - [coc-texlab](https://texlab.netlify.com/)
 - [coc-utils](https://github.com/coc-extensions/coc-utils)
+- [coc-vimlsp](https://github.com/iamcco/coc-vimlsp)
 - [coc-word](https://github.com/neoclide/coc-sources)
+- [coc-yaml](https://github.com/neoclide/coc-yaml)
+
+Command to install extensions:
+
+```vim
+CocInstall coc-diagnostic coc-json coc-explorer coc-marketplace \
+coc-markdownlint coc-snippets coc-texlab coc-utils coc-vimlsp \
+coc-word coc-yaml
+```
 
 More infos: [Using coc extentions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
-
 
 ### 3.1 - to review
 
@@ -83,14 +91,12 @@ More infos: [Using coc extentions](https://github.com/neoclide/coc.nvim/wiki/Usi
   npm install -g nodejs
 
   npm install -g neovim
-
 ```
 
 ```sh
   https://github.com/igorshubovych/markdownlint-cli
   npm install -g markdownlint-cli
 ```
-
 
 #### 4.1.1 - Update installed packages
 
@@ -102,46 +108,31 @@ install the `npm-check-updates`:
 
 to update all installed packages, check if there are updates:
 
-```
+```sh
 sudo ncu -g
 [====================] 10/10 100%
 
-markdownlint-cli  0.18.0  →  0.22.0
 neovim             4.5.0  →   4.8.0
 
 ncu itself cannot upgrade global packages. Run the following to upgrade all global packages:
 
-sudo npm -g install markdownlint-cli@0.22.0 neovim@4.8.0
+sudo npm -g install neovim@4.8.0
 ```
 
 Install the updates:
 
 ```sh
-sudo npm -g install markdownlint-cli@0.22.0 neovim@4.8.0
+sudo npm -g install neovim@4.8.0
 
 ```
 
 or to install neovim related packages:
 
 ```sh
-sudo npm update -g nodejs neovim markdownlint-cli
+sudo npm update -g nodejs neovim
 ```
 
-### 4.2 - Go
-
-to install `efm-langserver`:
-
-```sh
-go get github.com/mattn/efm-langserver
-```
-
-#### 4.2.1 - Upgrade installed packages
-
-```sh
-go get -u github.com/mattn/efm-langserver
-```
-
-### 4.3 - Lua
+### 4.2- Lua
 
 to install lua lsp server and luacheck:
 
@@ -150,25 +141,15 @@ luarocks install --server=http://luarocks.org/dev lua-lsp`
 luarocks install luacheck`
 ```
 
-### 4.3.1 - Upgrade installed packages
+### 4.2.1 - Upgrade installed packages
 
 ```sh
 luarocks install luacheck`lua-lsp
 ```
 
-### 4.4 - Python
+### 4.3 - Python
 
-[vint](https://github.com/Vimjas/vint)
-
-[yamllint](https://github.com/adrienverge/yamllint)
-
-```sh
-pip install --user vim-vint
-
-pip install --user yamllint
-```
-
-  [python-languge-server](https://github.com/palantir/python-language-server)
+[python-languge-server](https://github.com/palantir/python-language-server)
 
 ```sh
 pip install --user 'python-language-server[all]'
@@ -177,9 +158,8 @@ pip install --user 'python-language-server[all]'
 ### 4.4 - Upgrade installed packages
 
 ```sh
-pip install --user vim-vint python-language-server yapf pyflakes rope
+pip install --user python-language-server yapf pyflakes rope
 ```
-
 
 ### 4.5 - HDL: systemverilog, verilog, vhdl
 
@@ -210,7 +190,6 @@ each HDL language:
 3. icarus (Verilog/SystemVerilog)
 4. modelsim (VHDL/Verilog/SystemVerilog)
 
-
 ## 5 - Languages
 
 ### 5.1 - C/C++
@@ -225,16 +204,13 @@ each HDL language:
 
 ### 5.2 - Latex
 
-
 ### 5.3 - Python
-
 
 ### 5.4 - VHDL
 
 - [VHDL](https://github.com/kraigher/rust_hdl)
 
 ### 5.5 - Verilog
-- Verilog
 
 ### 5.6 - Lua
 
@@ -245,13 +221,13 @@ each HDL language:
 
 ### 5.8 - VimL
 
+### 5.9 - Markdown
+
+List of markdown [rules](https://github.com/DavidAnson/markdownlint).
 
 ## 6 - Fonts
-
-
 
 ## 7 - Additional reference
 
 - [How to Build a CMake-Based Project](https://preshing.com/20170511/how-to-build-a-cmake-based-project/)
-
 

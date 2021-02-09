@@ -4,7 +4,9 @@
 " General
 "========
 
-"set autochdir                      " disabled because of vimshell plugin
+set autochdir                      " change the current working directory whenever you
+                                   " open a file, switch buffers, delete a buffer or
+                                   " open/close a window.
 set autowriteall                   " automatically save all buffers
 set nobackup                       " no backup files, we have git :)
 set nowritebackup
@@ -40,14 +42,15 @@ endif
 " centralize undo files
 " the directory must be created manually
 if has("persistent_undo")
-	set undodir=~/.config/nvim/.undodir
+	"set undodir=~/.config/nvim/.undodir
+	let &undodir= g:nvimdir .'.undodir'
 	set undofile
 endif
 
 "======
 " sound
 "======
-set t_vb=                " disable the  annoyng visual and sound bell :)
+set t_vb=                " disable the  annoying visual and sound bell :)
 set novisualbell         " no noise
 set noerrorbells         " no noise
 
@@ -111,15 +114,6 @@ set splitright               " Always splits to the right and below
 set splitbelow
 set showbreak=↳              " Show the linebreak for a long line
 set signcolumn=yes
-set bg=dark
-
-if (has("termguicolors"))
-	set termguicolors
-endif
-
-let g:material_theme_style = 'darker'
-let g:material_terminal_italics = 1
-colorscheme material
 
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.
@@ -130,6 +124,8 @@ set display=uhex             " show unprintable characters hexadecimal
 set listchars=tab:▸\ ,eol:¬,trail:-,extends:>,precedes:<,nbsp:+,space:·
 set list
 
+set relativenumber           " Show the line number relative to the line with the cursor in
+                             " front of each line
 if has('mouse')
 	set mouse=a              " enable mouse in all modes
 	set mousehide            " hides the mouse while typing
@@ -154,8 +150,8 @@ else
 	endif
 endif
 
-let g:python3_host_prog = '/usr/bin/python3'
-let g:python_host_prog = '/usr/bin/python2'
+"let g:python3_host_prog = '/usr/bin/python3'
+"let g:python_host_prog = '/usr/bin/python2'
 
 " settings needed for coc.nvim
 " Give more space for displaying messages.
@@ -164,4 +160,6 @@ set cmdheight=1
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
+
+autocmd bufwritepost vim-plug.vim source vim-plug.vim
 

@@ -22,7 +22,7 @@ try
 	" Default fzf layout
 	" - Popup window
 	let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.9, 'height': 0.6 } }
-	let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+	let $FZF_DEFAULT_OPTS = '-e --layout=reverse --info=inline'
 
 	let g:fzf_tags_command = 'ctags -R'
 	" Customize fzf colors to match your color scheme

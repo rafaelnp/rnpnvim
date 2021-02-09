@@ -7,6 +7,14 @@ try
 	" TODO: review plugin config
 	let g:startify_files_number = 10
 
+	let g:startify_session_dir = '~/.config/nvim/session'
+
+	let g:startify_fortune_use_unicode = 1
+
+	let g:startify_session_persistence = 1
+
+	let g:startify_enable_special = 0
+
 	highlight StartifyFooter  ctermfg=green
 	highlight StartifyFooter  guifg=green
 	highlight StartifyHeader  ctermfg=red
@@ -19,6 +27,15 @@ try
 			\ '\.DS_Store'
 			\ ]
 
+	let g:startify_lists = [
+			\ {'type': 'sessions' , 'header': ['  Sessions'] },
+			\ {'type': 'files'    , 'header': ['  Files'] },
+			\ {'type': 'bookmarks', 'header': ['  Bookmarks'] },
+			\ {'type': 'dir'      , 'header': ['  MRU'. getcwd()] },
+			\ { 'type': 'commands',  'header': ['   Commands']       },
+			\ ]
+
+
 	let g:startify_bookmarks = [
 				\g:nvimdir . 'abbrev.vim',
 				\g:nvimdir . 'coc-settings.json',
@@ -29,7 +46,8 @@ try
 				\g:nvimdir . 'mappings.vim',
 				\g:nvimdir . 'minimal.vim',
 				\g:nvimdir . 'plugins.vim',
-				\g:nvimdir . 'vim-plug.vim'
+				\g:nvimdir . 'vim-plug.vim',
+				\g:nvimdir . 'plugin-config'
 				\]
 
 	" ascii text: http://patorjk.com/software/taag/

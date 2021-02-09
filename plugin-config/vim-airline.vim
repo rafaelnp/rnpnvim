@@ -17,7 +17,6 @@ try
 		\ 'branch',
 		\ 'coc',
 		\ 'clock',
-		\ 'denite',
 		\ 'fugitiveline',
 		\ 'hunks',
 		\ 'keymap',

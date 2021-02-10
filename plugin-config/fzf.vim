@@ -50,13 +50,22 @@ try
 	let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 	" Mappings
+	nnoremap <silent> <space>a  :Ag<CR>
 	nnoremap <silent> <space>b  :Buffers<CR>
 	nnoremap <silent> <space>bl :BLines<CR>
 	nnoremap <silent> <space>c  :Commands<CR>
 	nnoremap <silent> <space>co :Colors<CR>
 	nnoremap <silent> <space>f  :Files<CR>
+	" command history
 	nnoremap <silent> <space>h  :History:<CR>
+	" MRU files
+	nnoremap <silent> <space>m  :History:<CR>
+	" search history
+	nnoremap <silent> <space>s  :History/<CR>
 	nnoremap <silent> <space>l  :Lines<CR>
+
+	inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
+
 catch
 	echo 'fzf.vim is not installed. Add it to vim-plug plugin list and run :PlugInstall'
 endtry

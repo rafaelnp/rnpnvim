@@ -56,10 +56,12 @@ try
 	nnoremap <silent> <space>c  :Commands<CR>
 	nnoremap <silent> <space>co :Colors<CR>
 	nnoremap <silent> <space>f  :Files<CR>
+	" run git status in curent project
+	nnoremap <silent> <space>gs :GFiles?<CR>
 	" command history
 	nnoremap <silent> <space>h  :History:<CR>
 	" MRU files
-	nnoremap <silent> <space>m  :History:<CR>
+	nnoremap <silent> <space>m  :History<CR>
 	" search history
 	nnoremap <silent> <space>s  :History/<CR>
 	nnoremap <silent> <space>l  :Lines<CR>

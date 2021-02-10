@@ -34,6 +34,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'ayu-theme/ayu-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'kyoz/purify', {'rtp': 'vim/'}
+Plug 'drewtempelmeyer/palenight.vim'
 
 "================
 "2 -  Programming

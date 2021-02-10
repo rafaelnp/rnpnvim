@@ -1,7 +1,7 @@
-"============================================
-" papercolor
-" https://github.com/NLKNguyen/papercolor-theme
-"============================================
+"=================================================
+" palenight
+" https://github.com/drewtempelmeyer/palenight.vim
+"=================================================
 
 syntax on
 set bg=dark

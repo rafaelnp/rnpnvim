@@ -66,7 +66,38 @@ try
 	nnoremap <silent> <space>s  :History/<CR>
 	nnoremap <silent> <space>l  :Lines<CR>
 
-	inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
+	inoremap <expr> <c-x><c-f>  fzf#vim#complete#path('rg --files')
+
+	nnoremap <silent> <space>gl :call fzf#run({'source': 'git log --pretty=oneline --abbrev-commit',
+								\ 'options': '--multi --margin 15%,0',
+								\ 'window': { 'width': 0.9, 'height': 0.7 },
+								\ 'sink': 'tabedit' })<CR>
+
+	"nnoremap <silent> <space>pu :call fzf#run({'source': ':PlugStatus',
+	"							\ 'options': '--multi --margin 15%,0',
+	"							\ 'window': { 'width': 0.9, 'height': 0.7 },
+	"							\ 'sink': 'tabedit' })<CR>
+
+	" delete buffer based on:
+	" https://github.com/junegunn/fzf.vim/pull/733#issuecomment-559720813
+	function! s:list_buffers()
+		redir => list
+		silent ls
+		redir END
+		return split(list, "\n")
+	endfunction
+
+	function! s:delete_buffers(lines)
+		execute 'bwipeout' join(map(a:lines, {_, line -> split(line)[0]}))
+	endfunction
+
+	command! BD call fzf#run(fzf#wrap({
+				\ 'source': s:list_buffers(),
+				\ 'sink*': { lines -> s:delete_buffers(lines) },
+				\ 'options': '--multi --reverse --bind ctrl-a:select-all+accept'
+				\ }))
+
+	nnoremap <silent> <space>bd :BD<CR>
 
 catch
 	echo 'fzf.vim is not installed. Add it to vim-plug plugin list and run :PlugInstall'

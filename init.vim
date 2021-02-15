@@ -20,7 +20,8 @@ filetype plugin indent on    " required!
 
 exec 'source ' . g:nvimdir . 'config.vim'
 
-exec 'source ' . g:nvimdir . 'color/palenight.vim'
+" color themes: https://www.dunebook.com/best-vim-themes/
+exec 'source ' . g:nvimdir . 'color/vimone_light.vim'
 
 exec 'source ' . g:nvimdir . 'functions.vim'
 

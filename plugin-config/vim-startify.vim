@@ -7,7 +7,7 @@ try
 	" TODO: review plugin config
 	let g:startify_files_number = 10
 
-	let g:startify_session_dir = '~/.config/nvim/session'
+	let g:startify_session_dir = g:nvimdir . 'session'
 
 	let g:startify_fortune_use_unicode = 1
 

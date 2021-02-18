@@ -35,6 +35,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'kyoz/purify', {'rtp': 'vim/'}
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'morhetz/gruvbox'
 
 "================
 "2 -  Programming

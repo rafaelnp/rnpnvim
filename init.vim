@@ -24,7 +24,7 @@ exec 'source ' . g:nvimdir . 'config.vim'
 if  has('unix') || has('mac')
 	exec 'source ' . g:nvimdir . 'color/vimone_light.vim'
 else
-	exec 'source ' . g:nvimdir . 'color/purify.vim'
+	exec 'source ' . g:nvimdir . 'color/molokai.vim'
 endif
 
 exec 'source ' . g:nvimdir . 'functions.vim'

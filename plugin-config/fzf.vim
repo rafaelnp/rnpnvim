@@ -16,13 +16,15 @@ try
 		\ 'ctrl-t': 'tab split',
 		\ 'ctrl-x': 'split',
 		\ 'ctrl-v': 'vsplit',
-		\ 'ctrl-c': 'q'
+		\ 'ctrl-c': 'q',
+		\ 'ctrl-a': 'bd'
 		\ }
 
 	" Default fzf layout
 	" - Popup window
 	let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.9, 'height': 0.6 } }
 	let $FZF_DEFAULT_OPTS = '-e --layout=reverse --info=inline'
+	let $BAT_THEME = "Monokai Extended Light"
 
 	let g:fzf_tags_command = 'ctags -R'
 	" Customize fzf colors to match your color scheme
@@ -73,10 +75,10 @@ try
 								\ 'window': { 'width': 0.9, 'height': 0.7 },
 								\ 'sink': 'tabedit' })<CR>
 
-	"nnoremap <silent> <space>pu :call fzf#run({'source': ':PlugStatus',
-	"							\ 'options': '--multi --margin 15%,0',
-	"							\ 'window': { 'width': 0.9, 'height': 0.7 },
-	"							\ 'sink': 'tabedit' })<CR>
+	nnoremap <silent> <space>pu :call fzf#run({'source': ':call s:status()',
+								\ 'options': '--multi --margin 15%,0',
+								\ 'window': { 'width': 0.9, 'height': 0.7 },
+								\ 'sink': 'tabedit' })<CR>
 
 	" delete buffer based on:
 	" https://github.com/junegunn/fzf.vim/pull/733#issuecomment-559720813
@@ -99,6 +101,14 @@ try
 
 	nnoremap <silent> <space>bd :BD<CR>
 
+	" FZF for all vim runtime files
+	command! VimRuntime call fzf#run(fzf#wrap({
+				\ 'source': split(substitute(execute('scriptnames'), ' *\d*: ', '', 'g'), "\n"),
+				\ 'options': '--multi --margin 15%,0',
+				\ 'sink': 'tabedit',
+				\ }))
+
+"				\ 'options': ['--prompt', 'Vim> ', '--nth=2'],
 catch
 	echo 'fzf.vim is not installed. Add it to vim-plug plugin list and run :PlugInstall'
 endtry

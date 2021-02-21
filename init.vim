@@ -22,7 +22,7 @@ exec 'source ' . g:nvimdir . 'config.vim'
 
 " color themes: https://www.dunebook.com/best-vim-themes/
 if  has('unix') || has('mac')
-	exec 'source ' . g:nvimdir . 'color/vimone_light.vim'
+	exec 'source ' . g:nvimdir . 'color/material.vim'
 else
 	exec 'source ' . g:nvimdir . 'color/molokai.vim'
 endif

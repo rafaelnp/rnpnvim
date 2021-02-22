@@ -196,6 +196,8 @@ Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+Plug 'antoinemadec/coc-fzf'
+
 "===========================
 "8 - Under test/to be tested
 "===========================

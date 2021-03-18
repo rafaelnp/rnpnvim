@@ -13,7 +13,7 @@ try
 
 	let g:startify_session_persistence = 1
 
-	let g:startify_enable_special = 0
+	let g:startify_enable_special = 1
 
 	highlight StartifyFooter  ctermfg=green
 	highlight StartifyFooter  guifg=green
